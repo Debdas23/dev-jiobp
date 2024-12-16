@@ -1,0 +1,628 @@
+@import "../common/var";
+@import "../common/mixins";
+
+.cng_v3 {
+    & * {
+        font-family: JioType;
+    }
+
+    .container {
+        max-width: 1216px;
+    }
+
+
+
+    .pill_underline {
+        position: relative;
+        display: block;
+        border-radius: 10px;
+        width: 40px;
+        height: 4px;
+        background: #FFE041;
+    }
+
+    .static-banner {
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            z-index: -1;
+            bottom: -50px;
+            background-image: url(../../assets/images/backgrounds/green_curve.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        position: relative;
+        width: 100%;
+        // height: 458px;       
+        background: transparent linear-gradient(106deg, #018837 0%, #68A81E 100%) 0% 0% no-repeat padding-box;
+        padding-top: 0px;
+
+        .block_info--title {
+            font-family: JioType;
+            font-weight: bold;
+            font-size: 50px;
+            letter-spacing: 0em;
+            line-height: 49.5px;
+            text-align: left;
+            color: #ffe041;
+            margin-top: 100px;
+        }
+
+
+        .block_info--desc {
+            font-family: JioType;
+            margin-top: 32px;
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 34px;
+            text-align: left;
+            color: #fff;
+        }
+
+        picture {
+            img {
+                max-width: 100%;
+                height: auto;
+                position: relative;
+                top: 100px;
+            }
+        }
+    }
+
+    .our-feature {
+        margin-top: 136px;
+
+        .block_info--title {
+            font-family: JioType;
+            font-weight: bold;
+            font-size: 40px;
+            letter-spacing: 0em;
+            line-height: 49.5px;
+            text-align: center;
+            color: #018837;
+        }
+
+        .pill_underline {
+            background-color: #018837;
+            width: 60px;
+            margin: 0 auto;
+        }
+
+        .our_feature--card {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            background: linear-gradient(#018837 0%, #68a81e 100%);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            margin-top: 40px;
+
+            .card-title {
+                font-family: JioType;
+                font-weight: 500;
+                font-size: 25px;
+                line-height: 34px;
+                text-align: center;
+                color: #fff;
+                margin-top: 21px;
+                margin-bottom: 16px;
+
+            }
+
+            .card-desc {
+                font-family: JioType;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 29px;
+                text-align: center;
+                color: #fff;
+                margin: 0;
+                letter-spacing: 1px;
+            }
+        }
+
+    }
+
+    .faq {
+
+        margin-bottom: 114px;
+
+        #accordion {
+            .card {
+                border: none;
+                border-bottom: 1px solid #ddd;
+
+                .card-header {
+                    background-color: transparent;
+                    border: none;
+                    padding: 0;
+
+                    h5 {
+                        button {
+                            font-family: JioType;
+                            font-weight: 500;
+                            font-size: 25px;
+                            line-height: 34px;
+                            text-align: left;
+                            color: #111;
+                            transition: 0.2s linear;
+                            background-color: transparent;
+                            border: none;
+
+                            img {
+                                position: absolute;
+                                right: 0;
+                                top: 40px;
+                                transition: 0.2s linear;
+                            }
+
+                            &:focus,
+                            &:active {
+                                border: none;
+                                box-shadow: none;
+                                text-decoration: none;
+                                outline: none;
+                            }
+
+                            &:hover {
+                                text-decoration: none;
+                                opacity: 0.8;
+                            }
+                        }
+
+                        button[aria-expanded="false"] {
+                            padding: 33px 20px;
+                        }
+
+                        button[aria-expanded="true"] {
+                            padding: 33px 33px 20px 20px;
+
+                            img {
+                                transform: rotateZ(-180deg);
+                            }
+                        }
+                    }
+                }
+
+                .card-body {
+                    padding-top: 0px;
+                    font-family: JioType;
+                    font-weight: 300;
+                    font-size: 20px;
+                    line-height: 29px;
+                    text-align: left;
+                    color: #111;
+                    padding-bottom: 40px;
+                }
+            }
+
+        }
+
+        .btn-faq {
+            width: 286px;
+            height: 52px;
+            border-radius: 26px;
+            background: #f0f0f0;
+            font-family: JioType;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 29px;
+            text-align: center;
+            color: #018837;
+            margin-top: 80px;
+            // margin-bottom: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+
+            &:hover {
+                text-decoration: none;
+                background-color: #ddd;
+            }
+        }
+
+        .block_info--title {
+            font-family: JioType;
+            font-weight: bold;
+            font-size: 40px;
+            letter-spacing: 0em;
+            line-height: 49.5px;
+            text-align: center;
+            color: #018837;
+        }
+
+        .pill_underline {
+            background-color: #018837;
+            width: 60px;
+            margin: 0 auto;
+        }
+
+
+    }
+
+    .safety_instruction {
+        position: relative;
+        margin-top: 88px;
+        margin-bottom: 122px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-image: $gradientyellow;
+        background-size: cover;
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #fff url(../../assets/images/backgrounds/yellow_curve_left.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #fff url(../../assets/images/backgrounds/yellow_curve_right.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .pill_underline {
+            background: #018837;
+            margin-bottom: 42px;
+        }
+
+        .block_info--title {
+            font-family: JioType;
+            font-weight: 500;
+            font-size: 40px;
+            letter-spacing: 0em;
+            line-height: 49.5px;
+            text-align: left;
+            color: #018837;
+        }
+
+        .block_info--desc {
+            margin-top: 32px;
+            font-family: JioType;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 29px;
+            text-align: left;
+            color: #111;
+            margin-bottom: 45px;
+        }
+
+        picture {
+            img {
+                max-width: 100%;
+                height: auto;
+                position: relative;
+                // top: 58px;
+            }
+        }
+
+        .card_li {
+            width: 100%;
+            height: 600px;
+            background: transparent;
+            overflow-y: auto;
+            padding-right: 5px;
+            padding-top: 2px;
+
+            /* width */
+            &::-webkit-scrollbar {
+                width: 5px;
+                display: none;
+            }
+
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: #edd654;
+                border-radius: 10px;
+            }
+
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #d5bf44;
+                border-radius: 10px;
+            }
+
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: #b2a242;
+            }
+
+
+            ul {
+                padding: 0;
+                list-style: none;
+                margin: 0;
+
+                li {
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    &:hover {
+                        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+                    }
+
+                    transition: 0.3s linear all;
+                    position: relative;
+                    border-radius: 10px;
+                    background: #fff;
+                    padding: 40px 30px;
+                    font-family: JioType;
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 29px;
+                    text-align: left;
+                    color: #111111;
+                    padding-left: 60px;
+                    margin-bottom: 32px;
+
+                    img {
+                        position: absolute;
+                        top: 45px;
+                        left: 20px;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    /* For mobile phones: */
+    .cng_v3 {
+        .static-banner {
+            .block_info--title {
+                font-size: 35px;
+                line-height: 35px;
+                margin-top: 80px;
+            }
+
+            .block_info--desc {
+                margin-top: 12px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 1.3;
+            }
+
+            picture img {
+                top: 50px;
+            }
+
+            .align-items-center .col-md-6:first-child {
+                top: 30px;
+            }
+        }
+
+        .our-feature {
+            margin-top: 60px;
+
+            .block_info--title {
+                font-size: 30px;
+                line-height: 1.3;
+                // margin-top: 50px;
+            }
+
+            .our_feature--card {
+                padding: 20px;
+                margin-top: 25px;
+
+                picture {
+                    img {
+                        width: 80px;
+                    }
+                }
+
+                .card-title {
+                    font-size: 20px;
+                    line-height: 1.3;
+                }
+
+                .card-desc {
+                    font-size: 16px;
+                    line-height: 1.3;
+                }
+            }
+
+            h2.feature-content {
+                padding-left: 20px;
+                padding-right: 20px;
+                font-size: 20px;
+                line-height: 1.3;
+            }
+        }
+
+        .faq {
+            margin-top: 60px;
+            margin-bottom: 0;
+
+            .block_info--title {
+                font-size: 30px;
+                line-height: 1.3;
+            }
+
+            #accordion {
+                .card {
+                    border: none;
+                    border-bottom: 1px solid #ddd;
+
+                    .card-header {
+                        background-color: transparent;
+                        border: none;
+                        padding: 0;
+
+                        h5 {
+                            button {
+                                font-size: 18px;
+                                line-height: 1.3;
+
+                                img {
+                                    top: 35px;
+                                    width: 20px;
+                                }
+
+                            }
+
+                            button[aria-expanded="false"] {
+                                padding: 33px 20px;
+                            }
+
+                            button[aria-expanded="true"] {
+                                padding: 33px 33px 20px 20px;
+                            }
+                        }
+                    }
+
+                    .card-body {
+                        font-size: 16px;
+                        line-height: 1.3;
+                    }
+                }
+
+            }
+
+            .btn-faq{
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+        }
+
+        .safety_instruction {
+            margin-top: 60px;
+            margin-bottom: 60px;
+            padding-bottom: 50px;
+            padding-top: 60px;
+            &::after{
+                height: 18px;
+            }
+            &::before{
+                height: 18px;
+            }
+            .block_info--title {
+                font-size: 30px;
+                line-height: 1.3;
+            }
+
+            .block_info--desc {
+                line-height: 1.3;
+                margin-bottom: 25px;
+            }
+
+            .card_li {
+                width: 100%;
+                margin-bottom: 25px;
+                margin-top: 25px;
+
+                ul {
+                    li {
+                        font-size: 16px;
+                        line-height: 1.3;
+                        margin-bottom: 20px;
+                        position: relative;
+                        padding-top: 25px;
+                        padding-bottom: 25px;
+
+                        img {
+                            top: 30px;
+                            left: 20px;
+                            max-width: 6%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .cng_v3 {
+        .static-banner {
+            .block_info--title {
+                margin-top: 50px;
+                font-size: 34px;
+                line-height: 1.3;
+            }
+            &::after{
+                bottom: -48px;
+            }
+            .block_info--desc{
+                font-size: 22px;
+            }
+        }
+
+        .our-feature {
+            margin-top: 60px;
+
+            .block_info--title {                
+                font-size: 34px;
+                line-height: 1.3;
+            }
+
+            .our_feature--card {
+                padding: 30px;
+
+                picture {
+                    img {
+                        width: 80px;
+                    }
+                }
+
+                .card-desc {
+                    font-size: 18px;
+                    line-height: 1.3;
+                }
+            }
+        }
+
+        .safety_instruction{
+            .block_info--title{
+                font-size: 34px;
+                line-height: 1.3;
+            }
+        }
+        .faq{
+            .block_info--title {                
+                font-size: 34px;
+                line-height: 1.3;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+    .cng_v3 {
+        .our-feature {
+            // margin-top: 100px;
+        }
+
+
+    }
+}

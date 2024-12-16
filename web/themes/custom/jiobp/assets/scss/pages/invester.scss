@@ -1,0 +1,196 @@
+@import "../common/var";
+@import "../common/mixins";
+
+body.invester {
+  .formSection {
+    position: relative;
+    background-color: transparent;
+    margin-bottom: 57px;
+    &_container {
+      background-image: $gradientyellow;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    &_title {
+      font-family: JioType;
+      font-weight: bold;
+      font-size: 40px;
+      letter-spacing: 0em;
+      line-height: 49.5px;
+      text-align: center;
+      max-width: 820px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+    }
+    .verification_form {
+      max-width: 553px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 32px;
+      text-align: center;
+      label {
+        margin-bottom: 0;
+        width: 100%;
+        input {
+          width: 100%;
+        }
+      }
+      .btn_gray {
+        margin-top: 48px;
+      }
+    }
+    &_topimg {
+      width: 100%;
+      vertical-align: bottom;
+    }
+    &_bottomimg {
+      width: 100%;
+      vertical-align: top;
+    }
+    .pdfs {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      &-tabs {
+        border: 0;
+        .nav-link {
+          position: relative;
+          padding: 0;
+          border-radius: 0;
+          border: 0;
+          font-family: JioType;
+          font-weight: bold;
+          font-size: 30px;
+          text-align: left;
+          color: $black;
+          &.active {
+            background-color: transparent;
+            color: $green;
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: -8px;
+              width: 100%;
+              height: 4px;
+              background-color: $green;
+              border-radius: 10px;
+            }
+          }
+        }
+        .nav-item {
+          position: relative;
+          &:nth-child(n + 2) {
+            margin-left: 32px;
+          }
+          &:first-child {
+            margin-left: 20px;
+          }
+        }
+        label[for="selectYear"] {
+          position: relative;
+          display: flex;
+          align-items: center;
+          margin-left: auto;
+          .selectYear_text {
+            flex-shrink: 0;
+            font-family: JioType;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+            text-align: left;
+            color: #5f5f5f;
+          }
+          select {
+            position: relative;
+            min-width: 120px;
+            margin-left: 32px;
+            border-color: $green;
+            appearance: none;
+            &:focus {
+              box-shadow: 0 0 0 0.2rem transparentize($color: $green, $amount: 0.75);
+            }
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: block;
+            margin: auto;
+            width: 12px;
+            height: 6px;
+            right: 15px;
+            border-top: solid 6px $green;
+            border-left: solid 6px transparent;
+            border-right: solid 6px transparent;
+            border-radius: 10px;
+          }
+        }
+      }
+      &-content {
+        margin-top: 40px;
+        .card {
+          display: flex;
+          flex-direction: row;
+          padding: 24px 15px 24px 32px;
+          align-items: center;
+          justify-content: space-between;
+          border: 0;
+          background-color: $white2;
+          border-radius: $border10;
+          &:nth-child(n + 2) {
+            margin-top: 24px;
+          }
+          &_text {
+            font-family: JioType;
+            font-weight: bold;
+            font-size: 22px;
+            text-align: left;
+            color: $black;
+            margin-bottom: 0;
+          }
+          &_icon {
+            width: 69px;
+            height: 69px;
+          }
+        }
+      }
+    }
+    @include media(mobile) {
+      &_title {
+        font-size: 32px;
+        line-height: 38px;
+      }
+      .pdfs {
+        &-tabs {
+          .nav-link {
+            font-size: calc(30px - 2vw);
+          }
+          .nav-item {
+            &:nth-child(n + 2) {
+              margin-top: 20px;
+            }
+            &:nth-child(2) {
+              margin-left: 0;
+            }
+            &:first-child {
+              margin-left: 0;
+              width: 100%;
+            }
+          }
+          label[for="selectYear"] {
+            margin-left: auto;
+            margin-top: 40px;
+            .selectYear_text {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

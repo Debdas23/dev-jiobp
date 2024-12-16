@@ -1,0 +1,90 @@
+{# <section>
+    <div class="container -custom fleet">
+        <div class="row">
+            <div class="col-md-4 title_contain" data-aos="fade-in">
+                <h3 class="title" data-aos="fade-up">{{ content.field_cstitle.0 }}</h3>
+                <span class="pill_underline -bg_blue" data-aos="fade-up"></span>
+            </div>
+            <div class="col-md-8" data-aos="fade-in">
+                <p class="subtitle" data-aos="fade-up">{{ content.field_cscontent.0 }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8" data-aos="fade-up">
+            <div class="swiper fleet_charging">
+                    <div class="swiper-wrapper">
+                    {% if content.field_station_gallery %}
+                        {% for key, item in content.field_station_gallery if key|first != '#' %}
+                        <div class="swiper-slide">
+                            <img src="{{ file_url(item['#paragraph'].field_galupload_image.entity.fileuri) }}" alt="{{ content.field_cstitle.0 }}" class="img-fluid" />
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="navigations">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="map">
+                    <img src="{{ content.field_map_ima.0 }}" alt="{{ content.field_cstitle.0 }}" class="img-fluid" />
+                    <button class="map_btn" data-toggle="popover" data-placement="bottom" data-html="true" data-content="<h5 class='map_pop_title'>{{ content.field_map_title.0 }}</h5><p class='map_pop_text'>{{ content.field_map_address.0 }}</p><a target='_blank' href='{{ content.field_directions_link.0 }}' class='btn map_pop_btn'>Get Direction</a>">
+			<img src="/themes/custom/jiobp/assets/images/icons/map_circle.svg" alt="{{ content.field_cstitle.0 }}" />                    
+		    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> #}
+
+    <section>
+        <div class="container -custom fleet">
+            <div class="row">
+                <div class="col-md-5 d-flex flex-column justify-content-center" data-aos="fade-in">
+
+                    <div class="swiper fleet_charging w-100">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+			    {% if content.field_station_gallery %}
+                        	{% for key, item in content.field_station_gallery if key|first != '#' %}
+                            <div class="swiper-slide d-flex flex-column">
+                                <h3 class="title">{{ item['#paragraph'].field_image_title[0].value|raw }}</h3>
+                                <span class="pill_underline -bg_blue"></span>
+                                <p class="subtitle">{{ item['#paragraph'].field_image_description[0].value|raw }}</p>
+                            </div>
+                        	{% endfor %}
+                           {% endif %}
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-7" data-aos="fade-in">
+                    <!-- Slider main container -->
+                    <div class="swiper fleet_charging">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+			    {% if content.field_station_gallery %}
+                        	{% for key, item in content.field_station_gallery if key|first != '#' %}
+                            <div class="swiper-slide">
+                                <img src="{{ file_url(item['#paragraph'].field_galupload_image.entity.fileuri) }}" alt="{{ content.field_cstitle.0 }}" class="img-fluid" />
+                            </div>
+                        	{% endfor %}
+                           {% endif %}
+                        </div>
+                        <!-- If we need navigation buttons -->
+                        <div class="navigations">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+    </section>

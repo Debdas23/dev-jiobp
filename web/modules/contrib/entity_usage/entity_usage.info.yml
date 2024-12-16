@@ -1,0 +1,24 @@
+name: Entity Usage
+type: module
+description: Track usage of entities referenced by other entities.
+core_version_requirement: ^9
+configure: entity_usage.settings.form
+package: Other
+dependencies:
+  - entity_track:entity_track
+
+test_dependencies:
+  - entity_embed:entity_embed
+  - entity_reference_revisions:entity_reference_revisions
+  - paragraphs:paragraphs
+  - webform:webform
+  - block_field:block_field
+  - dynamic_entity_reference:dynamic_entity_reference
+  - entity_browser:entity_browser
+  - entity_browser_block:entity_browser_block
+  - inline_entity_form:inline_entity_form
+
+# Information added by Drupal.org packaging script on 2021-04-26
+version: '8.x-4.x-dev'
+project: 'entity_usage'
+datestamp: 1619464613

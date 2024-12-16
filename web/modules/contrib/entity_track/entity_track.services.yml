@@ -1,0 +1,19 @@
+services:
+  plugin.manager.entity_track.track:
+    class: Drupal\entity_track\EntityTrackPluginManager
+    parent: default_plugin_manager
+  entity_track.manager:
+    class: Drupal\entity_track\EntityTrackManager
+    arguments: ['@plugin.manager.entity_track.track', '@config.factory']
+  entity_track.batch_manager:
+    class: Drupal\entity_track\EntityTrackBatchManager
+    arguments: ['@entity_type.manager', '@string_translation', '@config.factory']
+  entity_track.background_tracking:
+    class: Drupal\entity_track\EntityTrackBackgroundTracking
+    arguments: ['@entity_track.manager']
+    tags:
+      - { name: needs_destruction }
+  entity_track.storage_collector:
+    class: Drupal\entity_track\EntityTrackStorageCollector
+    tags:
+      - { name: service_collector, tag: entity_track_storage, call: addStorage }

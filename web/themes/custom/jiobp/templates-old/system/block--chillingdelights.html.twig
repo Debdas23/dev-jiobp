@@ -1,0 +1,49 @@
+<style>
+.beverages .col-md-6:nth-child(n+3) {
+    margin-top: 60px;
+}
+</style>
+<section>
+    <div class="container beverages">
+           <h2 class="title food-title" data-aos="fade-up">{{ content.field_fo_title.0 }}</h2>
+	   <span class="pill_underline -green mx-auto mb-4" data-aos="fade-up"></span>
+        <div class="row text-center justify-content-center">
+        {% if content.field_fgallery %}
+            {% for key, item in content.field_fgallery if key|first != '#' %}
+            <div class="col-md-3  pt-4 pt-md-0">
+		<a href="javascript:;" data-toggle="modal" data-target="#beveragesModal{{key}}" style="display:block;" >
+                <img src="{{ file_url(item['#paragraph'].field_csupload_image.entity.fileuri) }}" alt="Delights" class="img-fluid beverages_img" data-aos="fade-up" />
+		</a>
+            </div>
+
+<div class="modal fade beveragesModal{{key}}" id="beveragesModal{{key}}" tabindex="-1" aria-labelledby="ourFoodModal{{key}}Title" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21.213" height="21.214" viewBox="0 0 21.213 21.214" class="svg replaced-svg">
+  <path id="close" d="M15.986,18.107,7.5,9.621,9.621,7.5l8.486,8.486L26.592,7.5l2.121,2.121-8.486,8.486,8.486,8.486-2.121,2.121-8.486-8.486L9.62,28.714,7.5,26.592Z" transform="translate(-7.5 -7.5)"></path>
+</svg>
+                </button>
+                <img src="{{ file_url(item['#paragraph'].field_csupload_image.entity.fileuri) }}" alt="Food offerings" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+</div>
+
+            {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+</section>
+<style>
+.food-title{
+    font-family: JioType;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 13px;
+    color: #018837;
+    text-align: center;
+}
+</style>

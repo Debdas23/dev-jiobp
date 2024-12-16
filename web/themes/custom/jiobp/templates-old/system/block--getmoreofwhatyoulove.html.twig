@@ -1,0 +1,50 @@
+<section class="get-more-slidar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-9 col-8">
+                        <h1 class="block_info--title" data-aos="fade-up">
+                            {{ content.field_bottom_text.0 }}
+                        </h1>
+                        <span class="pill_underline mb-5" data-aos="fade-up"></span>
+                    </div>
+                    <div class="col-md-3 col-4 d-flex align-items-center justify-content-end" data-aos="fade-up">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <!-- Swiper -->
+                <div class="swiper get-moreSlidar">
+                    <div class="swiper-wrapper">
+                    {% if content.field_our_features %}
+                        {% for key, item in content.field_our_features if key|first != '#' %}
+                        <div class="swiper-slide" data-aos="fade-left">
+                            <div class="icon_block_v3">
+                                <div class="icon_block--img">
+                                    <img src="{{ file_url(item['#paragraph'].field_oficon.entity.fileuri) }}" data-aos="fade" class="img-fluid" alt="{{ item['#paragraph'].field_oftitle[0].value|raw }}" data-aos="fade-in">
+                                </div>
+                                <div class="icon_block_info">
+                                    <div class="icon_block_info--title" data-aos="fade-in">
+                                        {{ item['#paragraph'].field_oftitle[0].value|raw }}
+                                    </div>
+                                    <div class="icon_block_info--text" data-aos="fade-in">
+                                        <p>
+                                            {{ item['#paragraph'].field_oftext[0].value|raw }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

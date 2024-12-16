@@ -1,0 +1,7 @@
+services:
+  entity_track_test.numeric_manager:
+    class: Drupal\entity_track_test\NumericTrackerManager
+    arguments: ['@entity_type.manager']
+    tags:
+      - { name: entity_track_storage }
+

@@ -1,0 +1,402 @@
+<style>
+.form .field {
+  width: 100%;
+  border: solid 1px #F2F9F5;
+  height: 80px;
+  border-radius: 6px;
+  background: #FFF;
+  -webkit-box-shadow: 0px 0px 15px 0px #F2F9F5;
+          box-shadow: 0px 0px 15px 0px #F2F9F5;
+  padding: 10px 30px;
+}
+
+.form .field:focus {
+  outline: none;
+}
+
+.form .field-textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #FFF;
+  -webkit-box-shadow: 0px 0px 10px 0px #F2F9F5;
+          box-shadow: 0px 0px 10px 0px #F2F9F5;
+  height: 250px;
+  padding: 10px;
+}
+
+.form .field-textarea:focus {
+  outline: none;
+}
+
+.form .btn_green {
+  width: 100%;
+  height: 80px;
+  resize: none;
+}
+
+
+.rcb-form .field {
+  padding: 10px 30px;
+}
+
+.rcb-form .field::-webkit-input-placeholder {
+  color: #0000004d;
+}
+
+.rcb-form .field:-ms-input-placeholder {
+  color: #0000004d;
+}
+
+.rcb-form .field::-ms-input-placeholder {
+  color: #0000004d;
+}
+
+.rcb-form .field::placeholder {
+  color: #0000004d;
+}
+
+.rcb-form .input-group-text {
+  height: 80px;
+  border-radius: 6px;
+  background: #FFF;
+  padding: 0px 10px 0px 30px;
+  border: solid 1px #F2F9F5;
+  border-radius: 6px;
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  position: relative;
+  color: #0000004d;
+  -webkit-box-shadow: 0px 0px 15px 0px #f2f9f5;
+          box-shadow: 0px 0px 15px 0px #f2f9f5;
+}
+
+.rcb-form .input-group-text::after {
+  content: '';
+  position: absolute;
+  height: 60%;
+  width: 1px;
+  right: 0;
+  top: 20%;
+  background: #a3c85457;
+  z-index: 5;
+}
+
+.rcb-form .input-group > .form-control {
+  -webkit-box-shadow: 5px 0px 15px 0px #f2f9f5;
+          box-shadow: 5px 0px 15px 0px #f2f9f5;
+  border-radius: 6px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0;
+  padding-left: 10px;
+  width: auto;
+}
+
+.rcb-form .input-group > .form-control:focus {
+  outline: none;
+  border-color: #F2F9F5;
+}
+
+.rcb-form .field-textarea {
+  height: 230px;
+  padding: 10px 30px;
+  resize: none;
+}
+
+.rcb-form .field-textarea::-webkit-input-placeholder {
+  color: #0000004d;
+}
+
+.rcb-form .field-textarea:-ms-input-placeholder {
+  color: #0000004d;
+}
+
+.rcb-form .field-textarea::-ms-input-placeholder {
+  color: #0000004d;
+}
+
+.rcb-form .field-textarea::placeholder {
+  color: #0000004d;
+}
+
+.rcb-form select.field {
+  color: #0000004d;
+  -webkit-appearance: none;
+  -moz-appearance: window;
+  background-image: url("../images/icons/selectArrow.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) 50%;
+}
+
+.rcb-form .form-check-input {
+  background: #fff;
+  width: 22px;
+  height: 22px;
+  border: solid 1px #129048;
+}
+
+.rcb-form .form-check-inline {
+  margin: 10px 40px 10px 0;
+}
+
+.rcb-form .btn_green {
+  width: 287px;
+  height: 64px;
+}
+
+.rcb-form .input-group {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+  .rcb-form .btn_green {
+    width: 100%;
+  }
+}
+
+.rcb-form select.active {
+  color: #000;
+}
+   /*   .ratings-wrapper {
+           border: thin solid #999;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .ratings {
+            display: flex;
+            flex-direction: row-reverse;
+	    float: left;
+        }
+
+        .ratings span {
+            cursor: pointer;
+	    transition: filter .2s;
+	    font-size: 50px;
+	    //filter: grayscale(100%);
+        }
+
+        .ratings span:hover {
+            color: orange;
+	//filter: grayscale(0%);
+        }
+
+        .ratings span:hover~span {
+            color: orange;
+        }
+
+        .ratings span[data-clicked] {
+            color: orange;
+	//filter: grayscale(0%);
+        }
+
+        .ratings span[data-clicked]~span {
+           color: orange;
+	//filter: grayscale(100%);
+        }
+      */
+.ratings-wrapper {
+              display: flex;
+              margin-bottom: 20px;
+             // margin-top: 7px;
+              padding-left: 25px;
+              flex-direction: column;
+              flex-wrap: nowrap;
+              align-items: baseline;
+          }
+
+          .ratings {
+              display: flex;
+              flex-direction: row-reverse;
+              gap: 28px;
+              margin-bottom: 10px;
+          }
+
+          .ratings img {
+              height: 70px;
+              transition: transform .2s;
+          }
+
+          .ratings img.zoom {
+              transform: scale(1.2);
+          }
+
+          .rating-slider {
+            -webkit-appearance: none;
+            width: 355px;
+            height: 10px;
+            background: linear-gradient(to right, #F20C17, #FF4F09, #FFC10E, #F3DB00, #3DD900);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            outline: none;
+            opacity: 0.7;
+            transition: opacity .15s ease-in-out;
+            border-radius: 40px;
+            cursor: pointer;
+                left: 6px;
+  position: relative;
+        }
+
+        .rating-slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 15px;
+          height: 15px;
+          background: #FFFFFF;
+          border: 1px solid #000000;
+          cursor: pointer;
+          border-radius: 50%;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          transition: background 0.3s, transform 0.3s;
+      }
+
+      .rating-slider::-webkit-slider-thumb:hover {
+          background: #f0f0f0;
+          transform: scale(1.1);
+      }
+
+      .rating-slider::-moz-range-thumb {
+        width: 15px;
+        height: 15px;
+        background: #FFFFFF;
+        border: 1px solid #000000;
+        cursor: pointer;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: background 0.3s, transform 0.3s;
+    }
+
+    .rating-slider::-moz-range-thumb:hover {
+        background: #f0f0f0;
+        transform: scale(1.1);
+    }
+
+</style>
+<section>
+    <div class="container aos-init aos-animate" data-aos="fade-in">
+        <form id="requestForm" class="rcb-form form" novalidate="novalidate" _lpchecked="1">
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <input name="name" id="name" type="text" minlength="2" class="field" placeholder="Name*" data-rule-required="true" data-msg-required="Please enter name" data-rule-notplaceholder="true" data-msg-notplaceholder="Please enter name" aria-required="true">
+                    <span id="name_error"></span>
+                </div>
+                <div class="col-md-6 input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">+ 91</span>
+                    </div>
+                    <input name="mobile" id="mobile" type="text" class="field form-control" placeholder="Mobile Number*" data-rule-required="true" data-msg-required="Please enter mobile number" data-rule-maxlength="10" data-msg-maxlength="Please enter 10 digit number only" data-rule-minlength="10" data-msg-minlength="Please enter 10 digit number only" data-rule-range="[6000000000,9999999999]" data-msg-range="Please enter valid number" data-rule-number="true" data-msg-number="Please enter numbers only" data-rule-notplaceholder="true" data-msg-notplaceholder="Please enter mobile number" aria-required="true">
+                    <span id="mobile_error"></span>
+                </div>
+                <div class="col-md-6 form-group">
+                    <input class="field" name="email" id="email" type="text" placeholder="Email Address*" data-rule-required="true" data-msg-required="Please enter email" data-rule-notplaceholder="true" data-msg-notplaceholder="Please enter email" data-rule-email="true" data-msg-email="Please enter valid email id" aria-required="true">
+                    <span id="email_error"></span>
+                </div>
+                <div class="col-md-6 form-group">
+                    <select name="feedback" id="feedback" class="field" data-rule-required="true" data-msg-required="Please select feedback on" aria-required="true">
+                        <option value="">Feedback on*</option>
+                        <option value="Retail Outlet Related">Retail Outlet Related</option>
+                        <option value="Trans-Connect">Trans-Connect</option>
+<option value="Air Facility">Air Facility</option>
+<option value="Washroom Facility">Washroom Facility</option>
+<option value="Water Facility">Water Facility</option>
+<option value="Staff Behaviour">Staff Behaviour</option>
+<option value="Parking">Parking</option>
+<option value="EV Charging">EV Charging</option>
+<option value="Wild Bean Cafe">Wild Bean Cafe</option>
+<option value="Digital Transactions">Digital Transactions</option>
+<option value="Product Related">Product Related</option>
+<option value="Quality & Quantity">Quality & Quantity</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <span id="feedback_error"></span>
+                </div>
+                <div class="col-md-6 form-group">
+                    <select name="product" id="product" class="field" data-rule-required="true" data-msg-required="Please select Product" aria-required="true">
+                        <option value="">Product Used*</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="Auto LPG">Auto LPG</option>
+                        <option value="Lubricants">Lubricants</option>
+                        <option value="NA">NA</option>
+                    </select>
+                    <span id="product_error"></span>
+                </div>
+                <div class="col-md-6 form-group">
+                    <select name="state" id="state" class="field" data-rule-required="true" data-msg-required="Please select State" aria-required="true">
+                        <option value="" selected="">Select State</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                        <option value="Daman and Diu">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Puducherry">Puducherry</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                    </select>
+                    <span id="state_error"></span>
+                </div>
+<div class="col-md-6 form-group">
+                    <input class="field" name="ro_code" id="ro_code" type="text" placeholder="Ro Code" value="{{ rocode }}">
+                    
+                </div>
+		<div class="col-md-6 form-group ratings-wrapper">
+     <!--   <input type="hidden" name="user_ratings" id="user_ratings" value="">
+        <div class="ratings">
+            <span data-rating="5">&#9733</span>
+            <span data-rating="4">&#9733</span>
+            <span data-rating="3">&#9733</span>
+            <span data-rating="2">&#9733</span>
+            <span data-rating="1">&#9733</span>
+        </div>  -->
+	
+    </div>
+                <div class="col-md-12">
+                    <textarea class="field-textarea" id="message" name="message" placeholder="Message / Description"></textarea>
+                    <span id="message_error"></span>
+                </div>
+            </div>
+            <!-- <input class="submit btn_green" id="form_submit" name="submit2" type="submit" value="Submit"> -->
+	    <button type="submit" class="submit btn_green" id="form_submit" name="submit2" >
+              <span class="btn__text">Submit</span>
+	      <div class="__uploading hide"><span class="uploading__circle"></span><span class="uploading__circle"></span><span class="uploading__circle"></span><span class="uploading__circle"></span></div>
+	    </button>
+            <span class="validation_error redmessage" id="validation_error"></span>
+            <div class="spinner-border text-secondary" style="display: none;"></div>
+        </form>
+        <div id="thanksMsg" class="thanksMsg">
+            <h2>Thank you for your message, our team representative will get back to you at the earliest</h2>
+        </div>
+    </div>
+</section>
+<div class="gap_100"></div>

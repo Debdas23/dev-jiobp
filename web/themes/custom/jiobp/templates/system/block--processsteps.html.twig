@@ -1,0 +1,69 @@
+<style>
+.loyalty-program-V3 .redeem .redeem-card.v1 {
+  background: #fff
+}
+
+.loyalty-program-V3 .redeem .redeem-card.v1 .feature-num {
+  background: -webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));
+  background: linear-gradient(to right, #018837, #68a81e);
+  color: #fff
+}
+
+.loyalty-program-V3 .redeem .redeem-card.v1 .card-desc,
+.loyalty-program-V3 .redeem .redeem-card.v1 .card-title {
+  color: #111
+}
+
+.loyalty-program-V3 .redeem .redeem-card.v1 .img_block span {
+  background: -webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));
+  background: linear-gradient(to right, #018837, #68a81e);
+  color: #fff
+}
+</style>
+<section class="redeem">
+<div class="gifts"></div>
+<div class="gifts1"></div>
+<div id="stars"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12  align-self-center">
+                <h1 class="block_info--title" data-aos="fade-up">
+                     Enrollment Process Steps                </h1>
+                <span class="pill_underline mb-4" data-aos="fade-up"></span>
+               	<p class="subtitle" data-aos="fade-up">{{ content.field_bottom_text.0 }}</p>
+            </div>
+            {% set i = 1 %}
+            {% set c = 0 %}
+            {% set d = 250 %}
+            {% if content.field_our_features %}
+                {% for key, item in content.field_our_features if key|first != '#' %}
+                  {% set c = c + 1 %}
+                {% endfor %}
+
+                {% for key, item in content.field_our_features if key|first != '#' %}
+                <div class="col-lg-3 col-md-6">
+                    {% if c > i %}
+                    {% set e = d + 250 %}
+                    <span class="rltFlow_arrow" data-aos="fade-right" data-aos-delay="{{ e }}">
+                        <img src="../themes/custom/jiobp/assets/images/loyalty-program_V3/arrow-right.png" alt="jioBp">
+                    </span>
+		    {% else %}
+                    {% endif %}
+                    <div class="redeem-card v1 mt-0"  data-aos="fade-up" data-aos-delay="{{ d }}">
+                        <div class="img_block" data-aos="fade-up">
+                            <img src="{{ file_url(item['#paragraph'].field_oficon.entity.fileuri) }}" alt="{{ item['#paragraph'].field_oftitle[0].value|raw }}" width="96px">
+                            <span>{{ i }}</span>
+                        </div>
+                        <h3 class="card-title" data-aos="fade-up">{{ item['#paragraph'].field_oftitle[0].value|raw }}</h3>
+                        <p class="card-desc" data-aos="fade-up">
+                            {{ item['#paragraph'].field_oftext[0].value|raw }}
+                        </p>
+                    </div>
+                </div>
+                {% set i = i + 1 %}
+                {% set d = e + 250 %}
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</section>

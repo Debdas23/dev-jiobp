@@ -1,0 +1,74 @@
+.jio_news {
+    // background: #F8F8F8;
+    > .container{max-width: 960px; margin: 0 auto;}
+    .desc {max-width: 100%;}
+    .title{font-size: 30px; font-weight: 600;color: #4A9953; position: relative; margin-bottom: 30px;
+        &:after{content: ''; position: absolute; width: 50px; height: 2px; background: #4A9953; bottom: -13px; left: 0;} 
+    }
+    .btn-light-green{padding: 14px 30px; background: #F0F0F0; color: #1D9350; border-radius: 20px; transition: all ease .5s; margin-top: 50px; display: inline-block; min-width: 200px; text-align: center;
+        &:hover{text-decoration: none; background:#1D9350 ; color: #fff;}
+    }
+    &_each {
+        border-bottom:#CCCCCC 1px solid;
+        padding: 35px 0;
+        cursor: pointer;
+        &--label {
+            color: rgba($color: #000000, $alpha: .4);
+            font-size: 15px;
+            margin-bottom: 10px;
+
+            span {
+                color: #000000;
+                display: inline-flex;
+                align-items: center;
+                background: #FAF5DA;
+                border-radius: 18px;
+                height: 28px;
+                padding: 15px;
+                margin-right: 12px;
+            }
+        }
+
+        &--title {
+            font-size: 25px;
+            color: #000000;
+            line-height: 34px;
+            font-weight: 500;
+            margin-bottom: 10px;
+
+            @media (max-width:1500px) {
+                font-size: 22px;
+                line-height: 28px;
+            }
+        }
+
+        &--text {
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: 300;
+            margin-bottom: 15px;
+
+            @media (max-width:1500px) {
+                // font-size: 16px;
+                // line-height: 26px;
+            }
+        }
+        &:hover{
+            border-bottom: solid 1px #1D9350;
+            .jio_news_each--label{color: #000000;}
+            .jio_news_each--title {
+                color: #1D9350;
+            }
+        }
+    }
+
+    .block_v4 {
+        margin-left: -15px;
+
+        @media (max-width:767px) {
+            margin: 0 -15px;
+            margin-bottom: 15px;
+            height: auto;
+        }
+    }
+}

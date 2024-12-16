@@ -1,0 +1,16 @@
+jiobp_jobs.job_application_page:
+  path: '/job'
+  defaults:
+    _controller: '\Drupal\jiobp_jobs\Controller\JobApplicationController::content'
+    _title: 'Job Application'
+  requirements:
+    _permission: 'access content'
+
+jiobp_jobs.jioev:
+  path: '/jioev'
+  defaults:
+    _controller: '\Drupal\jiobp_jobs\Controller\JioevController::content'
+    _title: 'Jioev Page'
+  requirements:
+    _permission: 'access content'
+

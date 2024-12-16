@@ -1,0 +1,57 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'about_us',
+  ]
+%}
+{% block content %}
+    {{ content.nid.0 }}
+    {% if content.field_block %}
+        {% for key, item in content.field_block if key|first != '#' %}
+            {% if item['#paragraph'].field_id[0].value|raw == 'Our Purpose' %}
+                <section class="curveAnim" style="overflow: hidden;">
+                    <div class="gap_60"></div>
+                    <div class="container">
+                        <div class="imgblock">
+                            <div class="imgblock-info">
+                                <h2 class="title" data-aos="fade-right">{{ item['#paragraph'].field_sec1_title[0].value|raw }}</h2>
+                                <div class="text" data-aos="fade-right">{{ item['#paragraph'].field_sec1_text[0].value|raw }}</div>
+                                <a data-aos="fade-right" href="{{ item['#paragraph'].field_sec1_link[0].url|raw }}" class="btn-light">Know More</a>
+                            </div>
+                            <div class="imgblock-img" data-aos="fade-left">
+                                <picture>
+                                    <source media="(min-width:768px)" srcset="{{ file_url(item['#paragraph'].field_sec1_upload_image.entity.fileuri) }}">
+                                    <source media="(max-width:767px)" srcset="{{ file_url(item['#paragraph'].field_sec1_upload_image.entity.fileuri) }}">
+                                    <img src="{{ file_url(item['#paragraph'].field_sec1_upload_image.entity.fileuri) }}" class="img-fluid" alt="{{ item['#paragraph'].field_sec1_title[0].value|raw }}">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            {% endif %}
+            {% if item['#paragraph'].field_id[0].value|raw == 'At a Glance' %}
+                <section style="overflow: hidden;" />
+                    <div class="gap_60"></div>
+                    <div class="container">
+                        <div class="imgblock reverse">
+                            <div class="imgblock-info">
+                                <h2 class="title" data-aos="fade-left">{{ item['#paragraph'].field_sec1_title[0].value|raw }}</h2>
+                                <div class="text" data-aos="fade-left">{{ item['#paragraph'].field_sec1_text[0].value|raw }}</div>
+                                <a data-aos="fade-left" href="{{ item['#paragraph'].field_sec1_link[0].url|raw }}" class="btn-light">Read More</a>
+                            </div>
+                            <div class="imgblock-img" data-aos="fade-right">
+                                <picture>
+                                    <source media="(min-width:768px)" srcset="{{ file_url(item['#paragraph'].field_sec1_upload_image.entity.fileuri) }}">
+                                    <source media="(max-width:767px)" srcset="{{ file_url(item['#paragraph'].field_sec1_upload_image.entity.fileuri) }}">
+                                    <img src="{{ file_url(item['#paragraph'].field_sec1_upload_image.entity.fileuri) }}" class="img-fluid" alt="{{ item['#paragraph'].field_sec1_title[0].value|raw }}">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gap_60"></div>
+                </section>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

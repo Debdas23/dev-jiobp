@@ -1,0 +1,76 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'offerings_beyond_fuel',
+  ]
+%}
+{% block content %}
+<section class="offeringsSection" data-aos="fade-in">
+<!-- <div class="gap_100"></div> -->
+<div class="gap_30 gap_m_100"></div>
+<div class="container">
+    <h2 class="title text-center" data-aos="fade-up">
+        {{ content.field_obf_title.0 }}
+    </h2>
+    <div class="swiper bannerSwiperv2" data-aos="fade-up">
+        <div class="swiper-wrapper">
+        {% if content.field_offerings_beyond_fuel %}
+            {% for key, item in content.field_offerings_beyond_fuel if key|first != '#' %}
+                <div class="swiper-slide">
+                    <div class="block_v2">
+                        <div class="block--img">
+                            <img src="{{ file_url(item['#paragraph'].field_obf_upload_image.entity.fileuri) }}" id="wbc-coffee" alt="{{ item['#paragraph'].field_obf_title[0].value|raw }}">
+                        </div>
+                        <div class="block_info--play">
+                            <a href="javascript:;" onclick="playPause('{{ file_url(item['#paragraph'].field_obf_ogg_video_file.entity.fileuri) }}}', '{{ file_url(item['#paragraph'].field_obf_mp4_video_file.entity.fileuri) }}')">
+                                <img src="themes/custom/jiobp/assets/images/icons/play.svg" alt="" id="videoImgvideo1">
+                            </a>
+                        </div>
+                        <div class="block_info">
+                            <h3 class="block_info--title" data-aos="fade-up">
+                                {{ item['#paragraph'].field_obf_title[0].value|raw }}
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+        <div class="swiper-buttons-wrapper">
+            <div class="swiper-button-next">
+                <img src="themes/custom/jiobp/assets/images/icons/arrow.svg" class="svg" alt="">
+            </div>
+            <div class="swiper-button-prev">
+                <img src="themes/custom/jiobp/assets/images/icons/arrow.svg" class="svg" alt="">
+            </div>
+        </div>
+        <div class="jio_swiper_pagination">
+            <div class="swiper-pagination text-left"></div>
+        </div>
+    </div>
+</div>
+<div class="gap_100"></div>
+<!-- Video Popup -->
+<div class="modal fade videoPopup" id="videoPopup" tabindex="-1" role="dialog" aria-labelledby="videoPopupTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <img class="svg" src="themes/custom/jiobp/assets/images/icons/close.svg" alt="">
+                </button>
+                <div class="video-container">
+                    <video controls id="popupVideo">
+                        <source src="themes/custom/jiobp/assets/media/wbc-coffee.mp4" type="video/mp4" id="popupVSrc">
+                        <source src="themes/custom/jiobp/assets/media/wbc-coffee.ogg" type="video/ogg" id="popupOSrc">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- /Video Popup -->
+{% endblock %}

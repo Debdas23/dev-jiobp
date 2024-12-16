@@ -1,0 +1,22 @@
+{
+  "name": "drupal/entity_track",
+  "type": "drupal-module",
+  "description": "Track usage of entities referenced by other entities",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/entity_track",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/entity_track",
+    "source": "http://cgit.drupalcode.org/entity_track"
+  },
+  "require": { },
+  "require-dev": { },
+  "extra": {
+    "drush": {
+      "services": {
+        "drush.services.yml": "^9"
+      }
+    }
+  }
+}

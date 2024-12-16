@@ -1,0 +1,104 @@
+.Frieght4U *{font-family:JioType}.Frieght4U .container{max-width:1216px}.Frieght4U .pill_underline{position:relative;display:block;border-radius:10px;width:40px;height:4px;background:#FFE041}.Frieght4U .static-banner{position:relative;position:relative;width:100%;background:transparent linear-gradient(106deg, #018837 0%, #68A81E 100%) 0% 0% no-repeat padding-box;}.Frieght4U .static-banner:after{content:"";position:absolute;width:100%;height:50px;z-index:-1;bottom:-50px;background-image:url(../../assets/images/backgrounds/green_curve.png);background-repeat:no-repeat;background-size:contain}.Frieght4U .static-banner .block_info--title{font-weight:bold;font-size:50px;letter-spacing:0em;line-height:49.5px;text-align:left;color:#ffe041;margin-top:100px}.Frieght4U .static-banner .block_info--desc{margin-top:32px;font-weight:500;font-size:25px;line-height:34px;text-align:left;color:#fff}.Frieght4U .why-choose{margin-top:180px;margin-bottom:80px}.Frieght4U .why-choose .block_info--title{font-family:JioType;font-weight:bold;font-size:40px;letter-spacing:0em;line-height:49.5px;text-align:left;color:#018837}.Frieght4U .why-choose .pill_underline{background-color:#018837;width:60px}.Frieght4U .why-choose .why-choose--card{width:100%;height:100%;border-radius:8px;background:-webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));background:linear-gradient(to right, #018837, #68a81e);padding:40px 24px;text-align:center;-webkit-transition:0.2s ease all;transition:0.2s ease all}.Frieght4U .why-choose .why-choose--card:hover{background:#FFE041}.Frieght4U .why-choose .why-choose--card:hover .feature-num{background:-webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));background:linear-gradient(to right, #018837, #68a81e);color:#fff}.Frieght4U .why-choose .why-choose--card:hover .card-desc{color:#111}.Frieght4U .why-choose .why-choose--card .feature-num{width:72px;height:72px;border-radius:100px;background:#FFE041;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;font-family:JioType;font-weight:500;font-size:25px;line-height:34px;color:#111111;margin:auto}.Frieght4U .why-choose .why-choose--card .card-desc{font-weight:500;font-size:20px;line-height:29px;text-align:center;color:#fff;margin:0;margin-top:30px}.Frieght4U .vision{margin-top:126px;background:#38992a url(../images/freight4u/truck.png) no-repeat;width:100%;background-position:right bottom !important;height:711px;background-size:cover !important;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.Frieght4U .vision:after{content:"";position:absolute;width:100%;height:70px;z-index:1;top:-2px;background-image:url(../../assets/images/curve-left-top.svg);background-repeat:no-repeat;background-size:contain}.Frieght4U .vision .floating-Container{width:518px;border-radius:10px;background:-webkit-gradient(linear, left top, right top, from(#FFE041), to(#fff088));background:linear-gradient(to right, #FFE041 0%, #fff088 100%);padding:72px 44px;margin-left:auto}.Frieght4U .vision .floating-Container .block_info--title{font-family:JioType;font-weight:bold;font-size:40px;letter-spacing:0em;line-height:49.5px;color:#018837}.Frieght4U .vision .floating-Container .pill_underline{width:60px;margin-bottom:24px;background-color:#018837}.Frieght4U .vision .floating-Container .block_info--desc{font-family:JioType;font-weight:500;font-size:20px;line-height:29px;color:#111111;margin-bottom:0px}.Frieght4U .fual-station{background:url(../images/freight4u/keyBG.png);background-position:-1px bottom;background-size:cover;width:100%;height:800px;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:120px}.Frieght4U .fual-station .floating-Container .block_info--title{font-family:JioType;font-weight:bold;font-size:40px;letter-spacing:0em;line-height:49.5px;color:#FFE041}.Frieght4U .fual-station .floating-Container .pill_underline{width:60px;margin-bottom:24px;background-color:#FFE041}.Frieght4U .fual-station .floating-Container .block_info--desc{font-family:JioType;font-weight:500;font-size:20px;line-height:29px;color:#fff;margin-bottom:0px}.Frieght4U .fual-station img{max-width:100%;height:auto;position:relative;top:-20px}.Frieght4U .key_offerings{position:relative;margin-top:0px;margin-bottom:100px}.Frieght4U .key_offerings .pill_underline{background:#018837;margin-bottom:0px}.Frieght4U .key_offerings .block_info--title{font-family:JioType;font-weight:bold;font-size:40px;letter-spacing:0em;line-height:49.5px;text-align:left;color:#018837}.Frieght4U .key_offerings .block_info--desc{margin-top:0px;font-family:JioType;font-weight:500;font-size:20px;line-height:29px;text-align:left;color:#111;margin-bottom:40px}.Frieght4U .key_offerings img{max-width:100%;height:auto;position:relative}.Frieght4U .key_offerings .card_li{width:calc(100% + 50px);height:auto;left:-50px;position:relative;z-index:-1;border-radius:10px;background:-webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));background:linear-gradient(to right, #018837, #68a81e);padding-right:80px;padding-left:105px;padding-top:40px;padding-bottom:40px;top:40px}.Frieght4U .key_offerings .card_li ul{padding:0;list-style:none;margin:0}.Frieght4U .key_offerings .card_li ul li{position:relative;font-family:JioType;font-weight:500;font-size:19px;line-height:29px;text-align:left;color:#fff;margin-bottom:20px}.Frieght4U .key_offerings .card_li ul li:last-child{margin-bottom:0}.Frieght4U .key_offerings .card_li ul li img{position:absolute;left:-50px;top:8px}.Frieght4U .key_offerings .card_li.lft{width:calc(100% + 50px);height:auto;left:auto;right:0;padding-right:60px;padding-left:90px;top:40px;padding-top:40px;padding-bottom:40px}.Frieght4U .appSection{padding-top:60px;padding-bottom:80px}.Frieght4U .appSection_container{position:relative;background-image:-webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));background-image:linear-gradient(to right, #018837, #68a81e);border-radius:10px;padding-top:114px;padding-bottom:96px;padding-left:99px}.Frieght4U .appSection_container .title{margin-bottom:15px;font-family:JioType;font-weight:bold;font-size:30px;letter-spacing:0em;line-height:35px;color:#FFE041}.Frieght4U .appSection_container .subtitle{margin-top:16px;font-family:JioType;font-weight:500;font-size:20px;line-height:29px;color:#fff;margin-bottom:24px}.Frieght4U .appSection_container .btns{display:-webkit-box;display:-ms-flexbox;display:flex}.Frieght4U .appSection_container .btns .anchor:nth-child(n+2){margin-left:8px}.Frieght4U .appSection_img{position:absolute;bottom:-5px;right:80px;z-index:1}.Frieght4U .appSection.lft{padding-top:140px;padding-bottom:0}.Frieght4U .appSection.lft .appSection_container{padding-left:450px}.Frieght4U .appSection.lft .appSection_img{top:auto;right:auto;bottom:-5px;left:50px}.Frieght4U .contact_section{margin-top:160px;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:140px}.Frieght4U .contact_section .brd-lft{border-left:2px solid #fff}.Frieght4U .contact_section .contact-card{border-radius:10px;background:-webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));background:linear-gradient(to right, #018837, #68a81e);padding:80px 102px}.Frieght4U .contact_section .contact-card .block_info--title{font-family:JioType;font-weight:bold;font-size:30px;letter-spacing:0em;color:#FFE041}.Frieght4U .contact_section .contact-card .pill_underline{width:60px;margin-bottom:24px;background-color:#FFE041}.Frieght4U .contact_section .contact-card .block_info--desc{font-family:JioType;font-weight:500;font-size:20px;line-height:29px;color:#fff;margin-bottom:0px}.Frieght4U .contact_section .contact-card .contact-list .cnt-name{font-family:JioType;font-weight:300;font-size:20px;line-height:29px;text-align:left;color:#fff;margin-bottom:2px}.Frieght4U .contact_section .contact-card .contact-list .cnt-desc{font-family:JioType;font-weight:bold;font-size:15px;text-align:left;color:#fff}@media only screen and (max-width: 767px){.Frieght4U .ord2{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}.Frieght4U .static-banner .block_info--title{font-size:32px;line-height:1.3;margin-top:80px}.Frieght4U .static-banner .block_info--desc{margin-top:12px;font-weight:500;font-size:18px;line-height:1.3}.Frieght4U .static-banner img{top:60px}.Frieght4U .static-banner .align-items-center .col-md-6:first-child{top:30px}.Frieght4U .why-choose{margin-top:110px;margin-bottom:60px}.Frieght4U .why-choose .block_info--title{font-size:32px;line-height:1.3;margin-top:0px}.Frieght4U .why-choose .block_info--desc{margin-top:12px;font-weight:500;font-size:18px;line-height:1.3}.Frieght4U .why-choose .why-choose--card{margin-bottom:20px;height:-webkit-max-content;height:-moz-max-content;height:max-content}.Frieght4U .vision{height:500px;background:#148e32 url(../images/freight4u/truck.png) no-repeat;background-size:cover;background-position:right bottom;margin-top:60px}.Frieght4U .vision:after{top:-1px}.Frieght4U .vision .floating-Container{width:100%;padding:30px 30px}.Frieght4U .vision .floating-Container .block_info--title{font-size:32px;margin-top:0px;line-height:1.3}.Frieght4U .vision .floating-Container .pill_underline{background-color:#018837;width:58px}.Frieght4U .vision .floating-Container .block_info--desc{font-size:16px;line-height:1.3;margin-top:15px}.Frieght4U .key_offerings{margin-top:60px;margin-bottom:60px}.Frieght4U .key_offerings .pill_underline{margin-bottom:20px}.Frieght4U .key_offerings .block_info--title{font-size:32px;line-height:1.3}.Frieght4U .key_offerings .block_info--desc{line-height:1.3;margin-bottom:25px;font-size:18px}.Frieght4U .key_offerings .card_li,.Frieght4U .key_offerings .card_li.lft{width:100%;left:0;padding-right:30px;padding-left:50px;top:0;padding-top:30px;padding-bottom:30px;margin-bottom:20px}.Frieght4U .key_offerings .card_li ul li,.Frieght4U .key_offerings .card_li.lft ul li{font-size:14px;line-height:1.3}.Frieght4U .key_offerings .card_li ul li img,.Frieght4U .key_offerings .card_li.lft ul li img{max-width:8%;left:-32px;top:5px}.Frieght4U .key_offerings .card_li.rtl{margin-top:20px}.Frieght4U .appSection{padding-top:0}.Frieght4U .appSection .row{margin:0}.Frieght4U .appSection .col-md-12{background-image:-webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));background-image:linear-gradient(to right, #018837, #68a81e);border-radius:10px}.Frieght4U .appSection_container{padding-top:20px;padding-bottom:20px;padding-left:5px;padding-right:5px;background-image:none}.Frieght4U .appSection_container .title{font-size:26px;line-height:1.2}.Frieght4U .appSection_container .subtitle{font-size:18px;line-height:1.25;margin-top:22px}.Frieght4U .appSection_img{position:relative;top:unset;right:unset;bottom:-4px}.Frieght4U .appSection.lft{padding-top:0px;padding-bottom:0}.Frieght4U .appSection.lft .appSection_container{padding-left:15px;padding-right:15px}.Frieght4U .appSection.lft .appSection_img{left:0px}.Frieght4U .fual-station{margin-top:-1px;width:100%;height:auto;margin-bottom:50px}.Frieght4U .fual-station .floating-Container{margin-top:80px;margin-bottom:40px}.Frieght4U .fual-station .floating-Container .block_info--title{font-size:32px;line-height:1.3}.Frieght4U .fual-station .floating-Container .pill_underline{width:60px;margin-bottom:24px;background-color:#FFE041}.Frieght4U .fual-station .floating-Container .block_info--desc{font-size:16px;line-height:1.3}.Frieght4U .fual-station picture img{margin-bottom:60px}.Frieght4U .contact_section{margin-top:60px;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:100px}.Frieght4U .contact_section .brd-lft{border-left:2px solid #fff}.Frieght4U .contact_section .contact-card{padding:30px 30px}.Frieght4U .contact_section .contact-card .brd-lft{border:none}.Frieght4U .contact_section .contact-card .block_info--title{font-size:24px}.Frieght4U .contact_section .contact-card .block_info--desc{font-size:16px;line-height:1.3}.Frieght4U .contact_section .contact-card .contact-list{margin-top:30px}.Frieght4U .contact_section .contact-card .contact-list .cnt-name{font-size:18px;line-height:1.3}.Frieght4U .contact_section .contact-card .contact-list .cnt-desc{font-size:14px}}@media screen and (max-width: 1024px) and (min-width: 768px){.Frieght4U .static-banner{padding-top:110px}.Frieght4U .static-banner .block_info--title{margin-top:0}.Frieght4U .static-banner .block_info--desc{font-size:22px;line-height:1.3}.Frieght4U .static-banner picture img{top:80px}.Frieght4U .static-banner::after{bottom:-48px}.Frieght4U .vision{margin-top:50px;height:600px}.Frieght4U .vision::after{top:-1px}.Frieght4U .vision .floating-Container{width:100%;padding:50px 44px}.Frieght4U .vision .floating-Container .block_info--title{font-size:34px;margin-top:0px;line-height:1.3}.Frieght4U .vision .floating-Container .pill_underline{background-color:#018837;width:58px}.Frieght4U .vision .floating-Container .block_info--desc{font-size:18px;line-height:1.3;margin-top:15px}.Frieght4U .why-choose .col-lg-3.col-md-6{margin-bottom:25px}.Frieght4U .key_offerings{margin-top:80px;margin-bottom:80px}.Frieght4U .key_offerings .block_info--title{font-size:34px;line-height:1.3}.Frieght4U .key_offerings .block_info--desc{line-height:1.3;margin-bottom:25px;font-size:18px}.Frieght4U .key_offerings .card_li{width:100%;padding-right:30px;padding-top:25px;padding-bottom:25px;margin-top:0}.Frieght4U .key_offerings .card_li ul li{font-size:16px;line-height:1.3}.Frieght4U .appSection{padding-top:100px;padding-bottom:0}.Frieght4U .appSection .appSection_container{padding-top:60px;padding-bottom:60px;padding-left:60px;padding-right:260px}.Frieght4U .appSection .appSection_img{right:0}.Frieght4U .appSection.lft .appSection_container{padding-left:320px;padding-right:50px}.Frieght4U .appSection.lft .appSection_img{left:-50px}.Frieght4U .fual-station{height:600px;margin-bottom:60px;top:-2px}.Frieght4U .fual-station .floating-Container{margin-top:0px;margin-bottom:0px}.Frieght4U .fual-station .floating-Container .block_info--title{font-size:36px;line-height:1.3}.Frieght4U .fual-station .floating-Container .pill_underline{width:60px;margin-bottom:24px;background-color:#FFE041}.Frieght4U .fual-station .floating-Container .block_info--desc{font-size:18px;line-height:1.3}.Frieght4U .fual-station img{margin-bottom:0px}.Frieght4U .contact_section{margin-top:60px;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:100px}.Frieght4U .contact_section .brd-lft{border-left:2px solid #fff}.Frieght4U .contact_section .contact-card{padding:30px 30px}.Frieght4U .contact_section .contact-card .brd-lft{border:none}.Frieght4U .contact_section .contact-card .block_info--title{font-size:24px}.Frieght4U .contact_section .contact-card .block_info--desc{font-size:16px;line-height:1.3}.Frieght4U .contact_section .contact-card .contact-list{margin-top:30px}.Frieght4U .contact_section .contact-card .contact-list .cnt-name{font-size:18px;line-height:1.3}.Frieght4U .contact_section .contact-card .contact-list .cnt-desc{font-size:14px}}@media screen and (max-width: 1024px) and (min-width: 768px) and (max-width: 1366px) and (min-width: 1024px){.Frieght4U .static-banner{padding-top:110px}.Frieght4U .static-banner .block_info--title{margin-top:0}.Frieght4U .static-banner .block_info--desc{font-size:22px;line-height:1.3}.Frieght4U .static-banner picture img{top:80px}.Frieght4U .static-banner::after{bottom:-48px}.Frieght4U .vision{margin-top:50px}.Frieght4U .vision::after{height:70px}.Frieght4U .vision .floating-Container{width:100%;padding:50px 44px}.Frieght4U .vision .block_info--title{font-size:30px;margin-top:20px;line-height:1.3}.Frieght4U .vision .pill_underline{background-color:#018837;width:58px}.Frieght4U .vision .block_info--desc{font-size:16px;line-height:1.3;margin-top:15px}.Frieght4U .key_offerings{margin-top:80px;margin-bottom:80px}.Frieght4U .key_offerings .block_info--title{font-size:36px;line-height:1.3}.Frieght4U .key_offerings .block_info--desc{line-height:1.3;margin-bottom:25px;font-size:18px}.Frieght4U .why-choose .block_info--title{font-size:36px;line-height:1.3}.Frieght4U .why-choose .why-choose--card .card-desc{font-size:17px;line-height:1.3}.Frieght4U .fual-station .floating-Container{margin-top:0px;margin-bottom:0px}.Frieght4U .fual-station .floating-Container .block_info--title{font-size:36px;line-height:1.3}.Frieght4U .fual-station .floating-Container .pill_underline{width:60px;margin-bottom:24px;background-color:#FFE041}.Frieght4U .fual-station .floating-Container .block_info--desc{font-size:18px;line-height:1.3}.Frieght4U .fual-station img{margin-bottom:0px}.Frieght4U .appSection{padding-top:100px;padding-bottom:0}.Frieght4U .appSection .appSection_container{padding-top:60px;padding-bottom:60px;padding-left:60px;padding-right:260px}.Frieght4U .appSection .appSection_img{right:0}.Frieght4U .appSection.lft{padding-top:250px;padding-bottom:0}.Frieght4U .appSection.lft .appSection_container{padding-left:320px;padding-right:50px}.Frieght4U .appSection.lft .appSection_img{left:-50px}.Frieght4U .contact_section{margin-top:100px;margin-bottom:100px}.Frieght4U .contact_section .brd-lft{border-left:2px solid #fff}.Frieght4U .contact_section .contact-card{padding:30px 30px}.Frieght4U .contact_section .contact-card .brd-lft{border:none}.Frieght4U .contact_section .contact-card .block_info--title{font-size:24px}.Frieght4U .contact_section .contact-card .block_info--desc{font-size:16px;line-height:1.3}.Frieght4U .contact_section .contact-card .contact-list{margin-top:30px}.Frieght4U .contact_section .contact-card .contact-list .cnt-name{font-size:18px;line-height:1.3}.Frieght4U .contact_section .contact-card .contact-list .cnt-desc{font-size:14px}}
+
+.Frieght4U .fual-station{
+    background-position: -2px bottom;
+    background-size: 101%;
+}
+.Frieght4U .static-banner .imgblock {
+    padding: 4% 0;
+}
+.Frieght4U  .static-banner .imgblock img {
+    margin-bottom: -150px;
+}
+.Frieght4U  .static-banner .imgblock-info .title:after {
+    background: #ffe041;
+    bottom: -15px;
+}
+.Frieght4U  .static-banner {
+    padding-top: 60px;
+}
+.Frieght4U .static-banner .imgblock .title{
+color:#ffe041;
+}
+
+.Frieght4U .why-choose ,.Frieght4U .vision ,.Frieght4U .fual-station,
+.Frieght4U .key_offerings, .Frieght4U .appSection ,.Frieght4U .contact_section 
+{
+	overflow: hidden;
+}
+.Frieght4U .appSection {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.Frieght4U .key_offerings {
+    margin-bottom: 90px;
+}
+
+@media only screen and (max-width: 767px) {
+	.Frieght4U  .static-banner .imgblock .title {
+ 	   font-size: 35px;
+	   line-height:1;
+	}
+	.Frieght4U .fual-station{
+  	  background-position: -2px bottom;
+   	 background-size: cover;
+	}
+	.Frieght4U  .vision{
+ 	   background: #118d33 url(/sites/default/files/2022-05/truck.png) no-repeat;
+	}
+	.Frieght4U .static-banner {
+   	 padding-top: 70px;
+	}
+	.Frieght4U  .static-banner .imgblock img {
+  	  margin-bottom: -105px;
+	}
+	.Frieght4U .contact_section {
+ 	   margin-bottom: 60px;
+	}
+.Frieght4U .appSection {
+    padding-top: 0 !important;
+}
+.Frieght4U .key_offerings {
+    margin-bottom: 60px !important;
+}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	.Frieght4U .why-choose ,.Frieght4U .vision ,.Frieght4U .fual-station,
+	.Frieght4U .key_offerings, .Frieght4U .appSection ,.Frieght4U .contact_section 
+	{
+		overflow: unset;
+	}
+	.Frieght4U .fual-station{
+  	  background-size: cover;
+	}
+}
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+.Frieght4U .why-choose ,.Frieght4U .vision ,.Frieght4U .fual-station,
+	.Frieght4U .key_offerings, .Frieght4U .appSection ,.Frieght4U .contact_section 
+	{
+		overflow: hidden;
+	}
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+.Frieght4U .static-banner .imgblock .title{
+		font-size: 40px;
+	}
+	.Frieght4U  .static-banner .imgblock .text {
+   		 color: #FFFFFF;
+  		  font-size: 20px;
+  		  line-height: 1.3;
+	}
+}
+
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+	.Frieght4U .static-banner .imgblock .title{
+		font-size: 40px;
+	}
+	.Frieght4U  .static-banner .imgblock .text {
+   		 color: #FFFFFF;
+  		  font-size: 20px;
+  		  line-height: 1.3;
+	}
+}

@@ -1,0 +1,173 @@
+.serveSwiper, 
+.fuelSwiper{
+    .swiper-slide {
+        height: auto;
+    }
+}
+
+.jio_swiper_pagination {
+    &.poa-abs {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        bottom: 40px;
+    }
+
+    .swiper-pagination {
+        position: relative;
+        bottom: 0px;
+        margin-top: 40px;
+
+        @media (max-width:767px) {
+            bottom: 20px;
+        }
+
+        &-bullet {
+            width: 65px;
+            border-radius: 12px;
+            height: 5px;
+            background: #129048;
+            opacity: 0.2;
+            @include easeInOut();
+
+            &-active {
+                opacity: 1;
+            }
+        }
+    }
+    .swiper-button-next, .swiper-button-prev{color: #129048;padding: 1rem;}
+}
+
+.bannerSwiperv1 {
+    .jio_swiper_pagination {
+        padding-left: 30px;
+    }
+}
+
+.newsSwiper {
+    padding-bottom: 20px;
+    @media (max-width:767px) {
+        .swiper-wrapper{flex-direction: column; gap: 30px;}
+    }
+
+    .swiper-slide {
+        height: auto;
+    }
+
+    .jio_news_each {
+        height: 100%;
+    }
+}
+
+.bannerSwiperv2 {
+    @media (max-width:767px) {
+        padding-bottom: 10px;
+        background: #F7FCF9;
+    }
+
+    .jio_swiper_pagination {
+        @media (max-width:767px) {
+            bottom: 0px;
+        }
+    }
+}
+
+.fuelSwiper {
+    margin-top: -70px;
+    padding-top: 70px;
+    padding-bottom: 80px;
+    overflow: inherit;
+    .swiper-buttons-wrapper{display: none;}
+    .jio_swiper_pagination .swiper-pagination-bullet{background:#fff;}
+    // .swiper-wrapper{}
+    .icon_block_v1 {
+        display: flex;
+        text-align:left;
+        gap: 45px;
+        background: #fff;
+        border-radius: 5px;
+        padding: 45px 38px 55px 38px;
+        align-items: center;
+        min-height: 260px;
+        .icon_block--img{
+            margin-bottom: 0; 
+            transition: all ease .5s;
+            background: #178B49;
+            .svg{
+                // path{fill: #FFE600;transition: all ease .5s;}
+                // rect{fill:#FFE600;}
+            }
+        }
+        .icon_block_info{
+            width: calc(100% - 190px);
+            p{margin-bottom: 0;}
+            a{opacity: 0;transition: opacity 0.5s ease; color: #1D9350; font-weight: 400; position: absolute; margin-top: 10px;
+                width: max-content; margin-bottom: 0;
+                &::after{content: ''; position: absolute; right: -40px; top: 7px; background: url('../images/icons/link-arrow.svg') no-repeat; width: 21px; height: 10px;}
+            }
+            .icon_block_info--text{
+                margin-bottom: 0;
+                font-size: 15px; 
+                line-height: 20px;
+                color: #5F5F5F;
+            }
+        }
+        
+
+        &:hover{
+            box-shadow:#00000029 0px 8px 15px 10px;
+            .icon_block_info{
+                a{opacity: 1; }
+            }
+            .icon_block--img{
+                background: #FEEA2B;
+                .svg{
+                    path,
+                    rect,
+                    circle,
+                    text{fill: #1D9350;}
+                    #Rectangle_267,
+                    #Path_44188,
+                    #Path_44189,
+                    #Path_44190,
+                    #Path_44191,
+                    #Path_44194{fill: #fff;}
+                }
+            }
+        }
+        
+        @media (max-width:1280px) {
+            padding: 20px 20px 40px 20px;
+        }
+        @media (max-width:575px) {
+            padding: 20px;
+            gap: 20px;
+            .icon_block--img{width: 90px; height: 90px;}
+            .icon_block_info{width: calc(100% - 105px);
+                a{opacity: 1; position: relative; display: block;}
+            }
+        }
+    }
+
+    .swiper-slide {
+        @media (max-width:767px) {
+            height: auto;
+        }
+    }
+    @media (max-width:767px) {
+        
+        .swiper-wrapper{justify-content: left; margin-left: 0;}
+    }
+    .jio_swiper_pagination .swiper-pagination{display: flex; justify-content: center;}
+    
+    @media (min-width:768px) {
+        .whyJioSwiper{
+            .swiper-buttons-wrapper{display: block;}  
+            
+        }
+    }
+    
+}
+@media (max-width:767px) {
+    .swiper-button-prev:after, .swiper-button-next:after{font-size: 30px;}
+}

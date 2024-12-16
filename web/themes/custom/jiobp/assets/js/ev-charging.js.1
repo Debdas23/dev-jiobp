@@ -1,0 +1,41 @@
+const swiperrrrr8 = new Swiper(".fleet_charging", {
+  // Optional parameters
+  direction: "horizontal",
+  slidesPerView: 1,
+  userSelect: false,
+
+  // if we navigate to the next slide, we want to slide to the left
+  navigation: {
+    nextEl: ".fleet_charging .swiper-button-next",
+    prevEl: ".fleet_charging .swiper-button-prev",
+  },
+});
+const swiperrrrr9 = new Swiper(".station_charging", {
+  // Optional parameters
+  direction: "horizontal",
+  slidesPerView: 1,
+  userSelect: false,
+
+  // if we navigate to the next slide, we want to slide to the left
+  navigation: {
+    nextEl: ".station_charging .swiper-button-next",
+    prevEl: ".station_charging .swiper-button-prev",
+  },
+});
+
+$(document).ready(function () {
+var options = {
+  placement: 'bottom',
+  fallbackPlacement: ['bottom'],
+};
+  // $('[data-toggle="popover"]').popover();
+  $(".fleet .map_btn").popover(options).popover("show");
+  $(".station .map_btn").popover(options).popover("show");
+});
+
+var appsectionbtns = document.querySelector(".appSection .btns");
+var appsectionimgcontainer = document.querySelector(".appSection_img");
+var appsectionbtnschilds = appsectionbtns.childElementCount;
+if(appsectionbtnschilds == 0) {
+    appsectionimgcontainer.classList.add("-offset-top");
+}

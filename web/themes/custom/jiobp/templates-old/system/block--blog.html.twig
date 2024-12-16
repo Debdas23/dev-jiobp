@@ -1,0 +1,37 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'blog',
+  ]
+%}
+{% block content %}
+{% if nid == '154' %}
+<section>
+    <div class="jio_news press-release"  data-aos="fade-up">
+        <div class="gap_100"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 pr-md-0">
+                    <div class="title" data-aos="fade-up">
+                        Latest Blogs
+                    </div>
+                    <div class="desc ml-0" data-aos="fade-up">
+                        Blog Content
+                    </div>
+                    <div class="gap_60"></div>
+                        {{ blogs }}
+                    <div class="gap_30"></div>
+                    <div data-aos="fade-up">
+                        <div class="jio_social content-area">
+                            <a href="#" id="loadMoreBtn" class="btn-light-green">Load More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gap_100"></div>
+    </div>
+</section>
+{% endif %}
+{% endblock %}

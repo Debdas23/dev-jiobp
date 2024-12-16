@@ -1,0 +1,151 @@
+{# <section>
+    <div class="container-fluid jiobp_curve station p-0" data-aos="fade-in">
+        <img src="assets/images/backgrounds/blue_curve_left.png" alt="" class="station_topImg d-none" />
+        <div class="container-fluid py-4 p-0">
+            <div class="container -custom station_container">
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="card">
+                            <h3 class="title" data-aos="fade-up">{{ content.field_cstitle.0 }}</h3>
+                            <span class="pill_underline -bg_blue" data-aos="fade-up"></span>
+                            <h4 class="title2" data-aos="fade-up">{{ content.field_cssub_title.0 }}</h4>
+                            <p class="subtitle" data-aos="fade-up">{{ content.field_cscontent.0 }}</p>
+                        </div>
+                        <div class="map" data-aos="fade-up">
+                            <img src="{{ content.field_map_ima.0 }}" alt="" class="img-fluid" />
+                            <button class="map_btn" data-toggle="popover" data-placement="bottom" data-html="true" data-content="<h5 class='map_pop_title'>{{ content.field_map_title.0 }}</h5><p class='map_pop_text'>{{ content.field_map_address.0 }}</p><a target='_blank' href='{{ content.field_directions_link.0 }}' class='btn map_pop_btn'>Get Direction</a>">
+                            <img src="/themes/custom/jiobp/assets/images/icons/map_circle.svg" alt="{{ content.field_cstitle.0 }}" /> 
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="swiper station_charging">
+                            <div class="swiper-wrapper">
+                            {% if content.field_station_gallery %}
+                                {% for key, item in content.field_station_gallery if key|first != '#' %}
+                                <div class="swiper-slide">
+                                    <img src="{{ file_url(item['#paragraph'].field_galupload_image.entity.fileuri) }}" alt="{{ content.field_cstitle.0 }}" class="img-fluid" />
+                                </div>
+                                {% endfor %}
+                            {% endif %}
+                            </div>
+                            <div class="navigations">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="../themes/custom/jiobp/assets/images/backgrounds/blue_curve_right.png" alt="" class="station_bottomImg d-none" />
+    </div>
+    </section> #}
+
+<section>
+        <div class="container-fluid station" data-aos="fade-in">
+            <img src="assets/images/backgrounds/blue_curve_left.png" alt="" class="station_topImg" />
+            <div class="container-fluid p-0">
+                <div class="container -custom station_container">
+                    <section class="pb-4 pt-4">
+                        <div class="contact__form1 contact__form">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <form method="post" novalidate class="contactForm">
+                                        <div class="form__grad">
+                                            <div class="form__top">
+                                                <h2 class="form__title">
+                                                    Locate a EV Charging station
+                                                </h2>
+                                                <span class="pill_underline -bg_blue2 mb=0"></span>
+                                                <p class="form__title-para">Find the nearest one.</p>
+                                            </div>
+                                            <div class="form__inputs1 form__inputs">
+                                                <div class="form-group mb-0">
+                                                    <select class="form-control" id="stateSelect1">
+                                                        <option selected value="">Enter State</option>
+                                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                        <option value="Assam">Assam</option>
+                                                        <option value="Bihar">Bihar</option>
+                                                        <option value="Chhattisgarh">Chhattisgarh</option>
+							<option value="Delhi">Delhi</option>
+                                                        <option value="Goa">Goa</option>
+                                                        <option value="Gujarat">Gujarat</option>
+                                                        <option value="Haryana">Haryana</option>
+                                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                        <option value="Jharkhand">Jharkhand</option>
+                                                        <option value="Karnataka">Karnataka</option>
+                                                        <option value="Kerala">Kerala</option>
+                                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                        <option value="Maharashtra">Maharashtra</option>
+                                                        <option value="Manipur">Manipur</option>
+                                                        <option value="Meghalaya">Meghalaya</option>
+                                                        <option value="Mizoram">Mizoram</option>
+                                                        <option value="Nagaland">Nagaland</option>
+                                                        <option value="Odisha">Odisha</option>
+                                                        <option value="Punjab">Punjab</option>
+                                                        <option value="Rajasthan">Rajasthan</option>
+                                                        <option value="Sikkim">Sikkim</option>
+                                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                                        <option value="Telangana">Telangana</option>
+                                                        <option value="Tripura">Tripura</option>
+                                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                        <option value="Uttarakhand">Uttarakhand</option>
+                                                        <option value="West Bengal">West Bengal</option>
+                                                    </select>
+                                                    <img src="/themes/custom/jiobp/assets/images/contact-us/dropdown.svg" alt=""
+                                                        class="select_arrow" />
+                                                </div>
+                                                <button type="button" class="show_result1 show_result">Show Results</button>
+                                            </div>
+                                            <div class="form__resetSec1 form__resetSec d-none">
+                                                <div class="tags">
+                                                    <div id="setstate1" class="tag">Karnataka</div>
+                                                </div>
+                                                <button type="button" class="reset_btn1 reset_btn">Reset</button>
+                                            </div>
+                                        </div>
+                                        <div class="form__results1 form__results d-none">
+                                            <div class="result_card">
+                                                <h3 class="result_card_title">Doddaballapur - Bangalore - Rural</h3>
+                                                <div class="result_card_ro">
+                                                    <div class="ro_">
+                                                        Lorem ipsum dolor sit amet,<br /> consectetur adipiscing elit,<br /> sed
+                                                        do eiusmod magna aliqua.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="result_card">
+                                                <h3 class="result_card_title">Doddaballapur - Bangalore - Rural</h3>
+                                                <div class="result_card_ro">
+                                                    <div class="ro_">
+                                                        Lorem ipsum dolor sit amet,<br /> consectetur adipiscing elit,<br /> sed
+                                                        do eiusmod magna aliqua.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="result_card">
+                                                <h3 class="result_card_title">Doddaballapur - Bangalore - Rural</h3>
+                                                <div class="result_card_ro">
+                                                    <div class="ro_">
+                                                        Lorem ipsum dolor sit amet,<br /> consectetur adipiscing elit,<br /> sed
+                                                        do eiusmod magna aliqua.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-7" id="map_canvas1" style="border-radius:10px">
+                                    <img src="assets/images/contact-us/group_11668.png" alt="" class="iframe_map" />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+              
+            </div>          
+            <img src="assets/images/backgrounds/blue_curve_right.png" alt="" class="station_bottomImg" />
+        </div>
+    </section>

@@ -1,0 +1,165 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'home_video',
+  ]
+%}
+{% block content %}
+<style>
+.jio-bp-home .why-jio{
+overflow: hidden;
+}
+.jio-bp-home .why-jio .whyJioSwiper{
+overflow: hidden;
+}
+.jio-bp-home .why-jio .homeSlideMobile {
+position: relative;
+}
+.jio-bp-home .why-jio .parentSticky {
+position: sticky;
+top: 150px;
+}
+@media only screen and (max-width: 767px) {
+	.jio-bp-home .why-jio {
+		overflow: initial !important;
+	}
+	.jio-bp-home .why-jio .whyJioSwiper{
+		overflow: hidden !important;
+	}
+
+.jio-bp-home .why-jio .whyJioSwiper {
+    padding-bottom: 20px;
+}
+}
+</style>
+<section class="why-jio" id="why-jio" data-aos="fade-in">
+  <div class="container">
+    <div class="container">
+        <div class="gap_100"></div>
+        <div class="row">
+            <div class="col-md-12 order-md-1">
+                {% if content.field_title %}
+                    <h1 class="title" data-aos="fade-up">{{ content.field_title.0 }}</h1>
+                {% endif %}
+                {% if content.field_text %}
+                <div class="desc" data-aos="fade-up">
+                    {{ content.field_text.0 }}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="swiper whyJioSwiper homeSlideDesktop">
+            <div class="container">
+                <div class="swiper-buttons-wrapper">
+                    <div class="swiper-button-next">
+                        <img src="themes/custom/jiobp/assets/images/icons/arrow.svg" class="svg" alt="">
+                    </div>
+                    <div class="swiper-button-prev">
+                        <img src="themes/custom/jiobp/assets/images/icons/arrow.svg" class="svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-wrapper">
+                {% if content.field_why_jio %}
+                    {% for key, item in content.field_why_jio if key|first != '#' %}
+                        <div class="swiper-slide">
+                            <div class="card" data-aos="fade-left">
+                                <div class="card-img">
+                                    <img src="{{ file_url(item['#paragraph'].field_upload_image.entity.fileuri) }}" alt="{{ item['#paragraph'].field_title[0].value|raw }}">
+                                </div>
+                                <!--<div class="card-body">
+                                    <h2 class="card-title">{{ item['#paragraph'].field_title[0].value|raw }}</h2>
+                                    <p class="card-text" style="font-weight:400">{{ item['#paragraph'].field_text[0].value|raw }}</p>
+                                </div>-->
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+
+	<div class="homeSlideMobile">
+	<div class="parentSticky">
+        <div class="swiper whyJioSwiper">
+            <div class="container">
+                <div class="swiper-buttons-wrapper">
+                    <div class="swiper-button-next">
+                        <img src="themes/custom/jiobp/assets/images/icons/arrow.svg" class="svg" alt="">
+                    </div>
+                    <div class="swiper-button-prev">
+                        <img src="themes/custom/jiobp/assets/images/icons/arrow.svg" class="svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-wrapper">
+                {% if content.field_why_jio %}
+                    {% for key, item in content.field_why_jio if key|first != '#' %}
+                        <div class="swiper-slide">
+                            <div class="card" data-aos="fade-left">
+                                <div class="card-img">
+                                    <img src="{{ file_url(item['#paragraph'].field_upload_image.entity.fileuri) }}" alt="{{ item['#paragraph'].field_title[0].value|raw }}">
+                                </div>
+                                <!--<div class="card-body">
+                                    <h2 class="card-title">{{ item['#paragraph'].field_title[0].value|raw }}</h2>
+                                    <p class="card-text">{{ item['#paragraph'].field_text[0].value|raw }}</p>
+                                </div>-->
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+        </div>
+	</div>
+	</div>
+
+    </div>
+  </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script>
+document.body.classList.add("jio-bp-home");
+
+// Animation
+if(window.innerWidth < 768){
+function stickAnimate() {
+//  let swiperEl = document.querySelector(".homeSlideMobile .whyJioSwiper");
+  let overflowingEl = document.querySelector(".homeSlideMobile .whyJioSwiper");
+  let stickyWrapperEl = document.querySelector(".homeSlideMobile");
+  let parentEl = document.querySelector(".homeSlideMobile .parentSticky");
+  let parentHeight = parentEl.getBoundingClientRect().height;
+  let overflow = overflowingEl.scrollWidth;
+  stickyWrapperEl.style.height = parentHeight + overflow + 300 + "px";
+
+  let userScrolledPixels = 0;
+  let programScrolledPixels = 0;
+  let startY = parentEl.getBoundingClientRect().top + window.pageYOffset;
+  let endY = startY + overflow;
+
+console.log("overflowScroll: ", overflowingEl.scrollWidth);
+console.log("overflow: ", overflow);
+
+  window.addEventListener("scroll", () => {
+    let scrollY = window.pageYOffset;
+    programScrolledPixels = gsap.utils.mapRange(startY, endY, 0, overflow, scrollY);
+    programScrolledPixels = gsap.utils.clamp(0, overflow, programScrolledPixels);
+    overflowingEl.scrollLeft = programScrolledPixels;
+  });
+
+  overflowingEl.addEventListener("scroll", () => {
+    userScrolledPixels = overflowingEl.scrollLeft;
+  });
+}
+
+window.addEventListener("load", () => {
+  stickAnimate();
+});
+
+window.addEventListener("resize", () => {
+  stickAnimate();
+});
+}
+</script>
+{% endblock %}

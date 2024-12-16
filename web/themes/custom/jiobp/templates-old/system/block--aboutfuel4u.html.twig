@@ -1,0 +1,36 @@
+<section>
+    <div class="container about">
+        <h3 class="title" data-aos="fade-up">{{ content.field_abtitle.0 }}</h3>
+        <span class="pill_underline -green" data-aos="fade-up"></span>
+        <p class="subtitle" data-aos="fade-up">{{ content.field_abtext.0 }}</p>
+    </div>
+</section>
+
+<section>
+    <div class="container appSection">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="appSection_container">
+                    <h2 class="title" data-aos="fade-up">{{ content.field_absub_title.0 }}</h2>
+                    <span class="pill_underline -yellow" data-aos="fade-up"></span>
+                    <p class="subtitle" data-aos="fade-up">{{ content.field_absub_text.0 }}</p>
+                    <div class="btns">
+                        {% if content.field_google_store_link.0 %}
+                        <a href="{{ content.field_google_store_link.0 }}" target="_blank" class="anchor">
+                            <img src="{{ content.field_google_play_image.0 }}" alt="google store" class="img-fluid" />
+                        </a>
+                        {% endif %}
+                        {% if content.field_app_store_link.0 %}
+                        <a href="{{ content.field_app_store_link.0 }}" target="_blank" class="anchor">
+                            <img src="{{ content.field_app_store_image.0 }}" alt="app store" class="img-fluid" />
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="appSection_img" data-aos="fade-in" data-aos-delay="450">
+                    <img src="{{ content.field_abupload_image.0 }}" alt="" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

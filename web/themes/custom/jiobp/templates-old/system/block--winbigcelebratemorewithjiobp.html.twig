@@ -1,0 +1,44 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'heretoserve',
+  ]
+%}
+{% block content %}
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-819850928"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-819850928'); </script>
+<section class="curveAnim">
+    <div class="gap_60"></div>
+    <div class="container">
+		<p style="text-align: center; margin-bottom: 3em; font-size: 25px;">{{ content.field_win_text.0 }}</p>
+        <div class="imgblock">
+            <div class="imgblock-img" data-aos="fade-left">
+                <picture>
+                    <source media="(min-width:768px)" srcset="{{ content.field_image_left.0 }}">
+                    <source media="(max-width:767px)" srcset="{{ content.field_image_left.0 }}">
+                    <img src="{{ content.field_image_left.0 }}" class="img-fluid" alt="Win Big">
+                </picture>
+            </div>
+	    <div class="imgblock-img" data-aos="fade-left">
+                <picture>
+                    <source media="(min-width:768px)" srcset="{{ content.field_image_middle.0 }}">
+                    <source media="(max-width:767px)" srcset="{{ content.field_image_middle.0 }}">
+                    <img src="{{ content.field_image_middle.0 }}" class="img-fluid" alt="Win Big">
+                </picture>
+            </div>
+            <div class="imgblock-img" data-aos="fade-left">
+                <picture>
+                    <source media="(min-width:768px)" srcset="{{ content.field_image_right.0 }}">
+                    <source media="(max-width:767px)" srcset="{{ content.field_image_right.0 }}">
+                    <img src="{{ content.field_image_right.0 }}" class="img-fluid" alt="Win Big">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+	document.querySelector('.region-menu-area').style.display = 'none';
+	document.querySelector('.navbar-icons').style.display = 'none';
+	document.querySelector('.navbar-toggler').style.display = 'none';
+</script>
+{% endblock %}

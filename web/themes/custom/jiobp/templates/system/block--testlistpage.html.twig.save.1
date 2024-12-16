@@ -1,0 +1,351 @@
+
+   <style>
+
+    .filters {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        gap: 15px;
+    }
+
+    .filters select {
+        padding: 10px;
+    border: 0px;
+    border-bottom: 1px solid black;
+    background-color: #ececec;
+    font-size: 16px;
+    color: #5c4b69;
+    }
+
+    .filters select:hover {
+        border-color: #b3b3b3;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border-bottom: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+        font-size: 15px;
+        color: #2b2347;
+        cursor: pointer;
+    }
+
+    th {
+        background-color: #f7f6f9;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 13px;
+        color: #5c4b69;
+    }
+
+    tr:hover {
+        background-color: #cce7d7;
+    }
+
+    thead th:nth-child(1) {
+        width: 35%;
+    }
+
+    thead th:nth-child(2),
+    thead th:nth-child(3),
+    thead th:nth-child(4),
+    thead th:nth-child(5) {
+        width: 16%;
+    }
+
+    tbody tr td:nth-child(1) {
+        width: 35%;
+    }
+
+    tbody tr td:nth-child(2),
+    tbody tr td:nth-child(3),
+    tbody tr td:nth-child(4),
+    tbody tr td:nth-child(5) {
+        width: 16%;
+    }
+
+    tbody tr {
+        height: 50px;
+    }
+    .table-title{
+        width: 40%;
+    }
+    .custom-btn {
+        background-color: #018837;
+        color: white;
+        margin-bottom: 10px;
+        border-radius: 25px;
+        border: none;
+        padding: 5px 20px;
+    }
+    @media (max-width: 768px) {
+        .table-title{
+            width: 100%;
+            padding: 10px;
+        }
+    }
+
+    
+</style>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="table-title">
+                <h1>Rewrite your future. Search and apply for a job today.</h1>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="filters">
+                <select id="locationFilter" onchange="filterJobs()">
+                    <option value="">Location</option>
+                </select>
+                <select id="experienceFilter" onchange="filterJobs()">
+                    <option value="">Experience Level</option>
+                </select>
+                <select id="communityFilter" onchange="filterJobs()">
+                    <option value="">Professional Communities</option>
+                </select>
+                <select id="contractTypeFilter" onchange="filterJobs()">
+                    <option value="">Contract Type</option>
+                </select>
+            </div>
+
+            <div class="swiper-wrapper">
+    {% if content.field_why_jio %}
+        {% for key, item in content.field_why_jio if key|first != '#' %}
+            <div class="swiper-slide">
+                <div class="card" data-aos="fade-left">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ item['#paragraph'].field_job_title[0].value|raw }}</h2>
+                        <p class="card-text"><strong>Experience Level:</strong> {{ item['#paragraph'].field_experience_level[0].value|raw }}</p>
+                        <p class="card-text"><strong>Location:</strong> {{ item['#paragraph'].field_location[0].value|raw }}</p>
+                        <p class="card-text"><strong>Validity:</strong> {{ item['#paragraph'].field_validity[0].value|raw }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <button class="custom-btn">Load More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    // Job data array
+    const jobs = [
+        { jobName: 'Lead Full Stack Engr - Dig-JioBPAM – FA', location: 'Navi Mumbai', experience: 'Experienced', community: 'Big Data & Analytics', contract: 'Permanent' },
+        { jobName: 'Lead2 Anlyst Data Acq&Engg-Dig-Data Engg', location: 'Navi Mumbai', experience: 'Experienced', community: 'Financial Services', contract: 'Permanent' },
+        { jobName: 'Fullstack Developer - Lead2 Anlyst App Dev - Dig – JioBP', location: 'Navi Mumbai', experience: 'Experienced', community: 'Financial Services', contract: 'Permanent' },
+        { jobName: 'Team Lead Video Analytics & IoT Solution - Digital Instru Automtn', location: 'Navi Mumbai', experience: 'Experienced', community: 'Consulting & Business Transformation', contract: 'Permanent' },
+        { jobName: 'Lead1 Prod Dev - Dig - JioBPAM&JioBPMF', location: 'Navi Mumbai', experience: 'Experienced', community: 'Financial Services', contract: 'Permanent' },
+        { jobName: 'Fullstack Developer - Lead2 Prod Dev - Dig – JioBPMF', location: 'Navi Mumbai', experience: 'Experienced', community: 'Big Data & Analytics', contract: 'Permanent' },
+        { jobName: 'Sr. Buyer Mechanical (Buyer role in Procurement)', location: 'Navi Mumbai', experience: 'Experienced', community: 'Financial Services', contract: 'Permanent' },
+        { jobName: 'Area Business Manager', location: 'Anywhere India', experience: 'Experienced', community: 'Financial Services', contract: 'Permanent' },
+        { jobName: 'TL Prod Mgmt NDM', location: 'PAN INDIA', experience: 'Experienced', community: 'Big Data & Analytics', contract: 'Permanent' },
+        { jobName: 'TL Prod Mgmt KAM', location: 'PAN INDIA', experience: 'Experienced', community: 'Financial Services', contract: 'Permanent' },
+        { jobName: 'TL BD - Netwk Devlpt - Pulse', location: 'Surat', experience: 'Experienced', community: 'Financial Services', contract: 'Permanent' },
+    ];
+
+    // Filter arrays
+    const locations = ['Bangalore', 'Pune', 'Gurgaon', 'Chennai'];
+    const experiences = ['Experienced'];
+    const communities = ['Big Data & Analytics', 'Financial Services', 'Consulting & Business Transformation'];
+    const contracts = ['Permanent'];
+
+    // Function to populate filters
+    function populateFilters() {
+        populateFilter('locationFilter', locations);
+        populateFilter('experienceFilter', experiences);
+        populateFilter('communityFilter', communities);
+        populateFilter('contractTypeFilter', contracts);
+    }
+
+    // Helper to populate individual filter dropdowns
+    function populateFilter(filterId, filterArray) {
+        const filterSelect = document.getElementById(filterId);
+        filterArray.forEach(option => {
+            const opt = document.createElement('option');
+            opt.value = option;
+            opt.textContent = option;
+            filterSelect.appendChild(opt);
+        });
+    }
+
+    // Function to display jobs
+    function displayJobs(filteredJobs) {
+        const tableBody = document.getElementById('jobTable');
+        tableBody.innerHTML = ''; // Clear previous data
+
+        filteredJobs.forEach(job => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${job.jobName}</td>
+                <td>${job.location}</td>
+                <td>${job.experience}</td>
+                <td>${job.community}</td>
+                <td>${job.contract}</td>
+            `;
+
+            row.addEventListener('click', () => {
+                window.location.href = 'job-des.html'; // Redirect to job.html
+            });
+
+            tableBody.appendChild(row);
+        });
+    }
+
+    // Function to filter jobs
+    function filterJobs() {
+        const locationFilter = document.getElementById('locationFilter').value;
+        const experienceFilter = document.getElementById('experienceFilter').value;
+        const communityFilter = document.getElementById('communityFilter').value;
+        const contractTypeFilter = document.getElementById('contractTypeFilter').value;
+
+        const filteredJobs = jobs.filter(job => {
+            return (!locationFilter || job.location.includes(locationFilter)) &&
+                   (!experienceFilter || job.experience === experienceFilter) &&
+                   (!communityFilter || job.community === communityFilter) &&
+                   (!contractTypeFilter || job.contract === contractTypeFilter);
+        });
+
+        displayJobs(filteredJobs);
+    }
+
+    // Sorting functionality
+    let sortDirection = true; // True for ascending, false for descending
+
+    function sortTable(columnIndex) {
+        const sortedJobs = [...jobs].sort((a, b) => {
+            const valA = Object.values(a)[columnIndex].toLowerCase();
+            const valB = Object.values(b)[columnIndex].toLowerCase();
+
+            if (valA < valB) {
+                return sortDirection ? -1 : 1;
+            }
+            if (valA > valB) {
+                return sortDirection ? 1 : -1;
+            }
+            return 0;
+        });
+
+        sortDirection = !sortDirection; // Toggle sorting direction for the next click
+        displayJobs(sortedJobs);
+    }
+
+    // Initialize page
+    window.onload = () => {
+        populateFilters();
+        displayJobs(jobs); // Display all jobs initially
+    };
+</script>
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'home_video',
+  ]
+%}
+{% block content %}
+<style>
+.jio-bp-home .why-jio{
+overflow: hidden;
+}
+.jio-bp-home .why-jio .whyJioSwiper{
+overflow: hidden;
+}
+.jio-bp-home .why-jio .homeSlideMobile {
+position: relative;
+}
+.jio-bp-home .why-jio .parentSticky {
+position: sticky;
+top: 150px;
+}
+@media only screen and (max-width: 767px) {
+	.jio-bp-home .why-jio {
+		overflow: initial !important;
+	}
+	.jio-bp-home .why-jio .whyJioSwiper{
+		overflow: hidden !important;
+	}
+
+.jio-bp-home .why-jio .whyJioSwiper {
+    padding-bottom: 20px;
+}
+}
+</style>
+<section class="why-jio" id="why-jio" data-aos="fade-in">
+  <div class="container">
+    <div class="container">
+        <div class="gap_100"></div>
+        <div class="row">
+            
+        </div>
+
+        <div class="swiper whyJioSwiper homeSlideDesktop">
+            <div class="container">
+                <div class="swiper-buttons-wrapper">
+                    <div class="swiper-button-next">
+                        <img src="themes/custom/jiobp/assets/images/icons/arrow.svg" class="svg" alt="">
+                    </div>
+                    <div class="swiper-button-prev">
+                        <img src="themes/custom/jiobp/assets/images/icons/arrow.svg" class="svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-wrapper">
+    
+        {% for key, item in content.field_why_jio if key|first != '#' %}
+            <div class="swiper-slide">
+                <div class="card" data-aos="fade-left">
+                    <div class="card-body">
+                        <h2 class="card-title">Hello  {{ item['#paragraph'].field_job_title[0].value|raw }}</h2>
+                        <p class="card-text"><strong>Experience Level:</strong> {{ item['#paragraph'].field_experience_level[0].value|raw }}</p>
+                        <p class="card-text"><strong>Location:</strong> {{ item['#paragraph'].field_location[0].value|raw }}</p>
+                        <p class="card-text"><strong>Validity:</strong> {{ item['#paragraph'].field_validity[0].value|raw }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    
+</div>
+
+        </div>
+
+	<div class="homeSlideMobile">
+	<div class="parentSticky">
+        <div class="swiper whyJioSwiper">
+            <div class="container">
+                <div class="swiper-buttons-wrapper">
+                    <div class="swiper-button-next">
+                        <img src="themes/custom/jiobp/assets/images/icons/arrow.svg" class="svg" alt="">
+                    </div>
+                    <div class="swiper-button-prev">
+                        <img src="themes/custom/jiobp/assets/images/icons/arrow.svg" class="svg" alt="">
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+	</div>
+	</div>
+
+    </div>
+  </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
+

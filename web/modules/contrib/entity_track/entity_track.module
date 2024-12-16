@@ -1,0 +1,86 @@
+<?php
+
+/**
+ * @file
+ * Contains entity_track.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\entity_track\EntityTrackBackgroundTracking;
+
+/**
+ * Implements hook_help().
+ */
+function entity_track_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the entity_track module.
+    case 'help.page.entity_track':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('TThis module provides an API to track entities.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function entity_track_entity_insert(EntityInterface $entity) {
+  if (\Drupal::configFactory()->get('entity_track.settings')->get('background_tracking')) {
+    \Drupal::service('entity_track.background_tracking')->registerEntity(EntityTrackBackgroundTracking::OPERATION_INSERT, $entity);
+  }
+  else {
+    \Drupal::service('entity_track.manager')->trackUpdateOnCreation($entity);
+  }
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function entity_track_entity_update(EntityInterface $entity) {
+  if (\Drupal::configFactory()->get('entity_track.settings')->get('background_tracking')) {
+    \Drupal::service('entity_track.background_tracking')->registerEntity(EntityTrackBackgroundTracking::OPERATION_UPDATE, $entity);
+  }
+  else {
+    \Drupal::service('entity_track.manager')->trackUpdateOnEdition($entity);
+  }
+}
+
+/**
+ * Implements hook_entity_predelete().
+ */
+function entity_track_entity_predelete(EntityInterface $entity) {
+  if (\Drupal::configFactory()->get('entity_track.settings')->get('background_tracking')) {
+    \Drupal::service('entity_track.background_tracking')->registerEntity(EntityTrackBackgroundTracking::OPERATION_PREDELETE, $entity);
+  }
+  else {
+    \Drupal::service('entity_track.manager')->trackUpdateOnDeletion($entity);
+  }
+}
+
+/**
+ * Implements hook_entity_translation_delete().
+ */
+function entity_track_entity_translation_delete(EntityInterface $translation) {
+  if (\Drupal::configFactory()->get('entity_track.settings')->get('background_tracking')) {
+    \Drupal::service('entity_track.background_tracking')->registerEntity(EntityTrackBackgroundTracking::OPERATION_TRANSLATION_DELETE, $translation);
+  }
+  else {
+    \Drupal::service('entity_track.manager')->trackUpdateOnDeletion($translation, 'translation');
+  }
+}
+
+/**
+ * Implements hook_entity_revision_delete().
+ */
+function entity_track_entity_revision_delete(EntityInterface $entity) {
+  if (\Drupal::configFactory()->get('entity_track.settings')->get('background_tracking')) {
+    \Drupal::service('entity_track.background_tracking')->registerEntity(EntityTrackBackgroundTracking::OPERATION_REVISION_DELETE, $entity);
+  }
+  else {
+    \Drupal::service('entity_track.manager')->trackUpdateOnDeletion($entity, 'revision');
+  }
+}

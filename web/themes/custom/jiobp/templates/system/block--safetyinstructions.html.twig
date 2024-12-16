@@ -1,0 +1,40 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'heretoserve',
+  ]
+%}
+{% block content %}
+<section class="safety_instruction jiobp_curve">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="block_info--title" data-aos="fade-up">
+                    {{ content.field_cbtitle.0 }}
+                </h2>
+                <span class="pill_underline" data-aos="fade-up"></span>
+                <div class="img-container" data-aos="fade-up">
+                    <picture data-aos="fade-up">
+                        <img src="{{ content.field_cbupload_image.0 }}" alt="{{ content.field_cbtitle.0 }}">
+                    </picture>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card_li" data-aos="fade-up">
+                    <ul>
+                        {% if content.field_features %}
+                            {% for key, item in content.field_features if key|first != '#' %}
+                            <li data-aos="fade-up">
+                                <img src="../themes/custom/jiobp/assets/images/cng_v3/icons/checked.svg" alt="">
+                                {{ item['#paragraph'].field_cbftext[0].value|raw }}
+                            </li>
+                            {% endfor %}
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

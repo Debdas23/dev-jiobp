@@ -1,0 +1,60 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'heretoserve',
+  ]
+%}
+{% block content %}
+<section class="mediums-section">
+    <div class="container -custom mediums">
+
+        <div class="stickyWrapper">
+          <div class="parent_stick">
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="mediums_top">
+                    <h2 class="mediums_title -text_green" data-aos="fade-up">{{ content.field_dmtitle.0 }}</h2>
+                    <span class="pill_underline -green" data-aos="fade-up"></span>
+                    <p class="subtitle" data-aos="fade-up">{{ content.field_dmtext.0 }}</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+            <!-- Slider main container -->
+                <div class="swiper mediums_swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    {% if content.field_delivery_mediums %}
+                        {% for key, item in content.field_delivery_mediums if key|first != '#' %}
+                        <div class="swiper-slide">
+                            <div class="card mediums_card align-items-center" data-aos="fade-up">
+                                <div class="card-img">
+                                    <picture>
+                                        <img src="{{ file_url(item['#paragraph'].field_dmupload_image.entity.fileuri) }}" class="img-fluid" alt="{{ item['#paragraph'].field_dmtitle[0].value|raw }}" />
+                                    </picture>
+                                </div>
+                                <img src="{{ file_url(item['#paragraph'].field_dmicon.entity.fileuri) }}" alt="{{ item['#paragraph'].field_dmtitle[0].value|raw }}" class="card_middle" />
+                                <div class="card-info">
+                                    <h3 class="card_title">{{ item['#paragraph'].field_dmtitle[0].value|raw }}</h3>
+                                    <p class="subtitle">{{ item['#paragraph'].field_dmtext[0].value|raw }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination d-block d-md-none" data-aos="fade-up"></div>
+                </div>
+            </div>
+        </div>
+
+</div>
+</div>
+
+    </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% block content %}
+<section class="mission-wrapper jiobp_curve">
+    <div class="gap_60"></div>
+    <div class="container">
+        <div class="imgblock mission">
+            <div class="imgblock-info">
+                <h2 class="title" data-aos="fade-up">{{ content.field_om_title.0 }}</h2>
+                <div class="text" data-aos="fade-up">{{ content.field_om_text.0 }}</div>
+            </div>
+            <div class="imgblock-img" data-aos="fade-up">
+                <picture>
+                    <source media="(min-width:768px)" srcset="{{ content.field_upload_image_1.0 }}">
+                    <source media="(max-width:767px)" srcset="{{ content.field_upload_image_1.0 }}">
+                    <img src="{{ content.field_upload_image_1.0 }}" class="img-fluid" alt="{{ content.field_om_title.0 }}">
+                </picture>
+            </div>
+            <div class="imgblock-img" data-aos="fade-up">
+                <picture>
+                    <source media="(min-width:768px)" srcset="{{ content.field_upload_image_big.0 }}">
+                    <source media="(max-width:767px)" srcset="{{ content.field_upload_image_big.0 }}">
+                    <img src="{{ content.field_upload_image_big.0 }}" class="img-fluid" alt="{{ content.field_om_title.0 }}">
+                </picture>
+            </div>
+            <div class="imgblock-img" data-aos="fade-up">
+                <picture>
+                    <source media="(min-width:768px)" srcset="{{ content.field_small_upload_image_2.0 }}">
+                    <source media="(max-width:767px)" srcset="{{ content.field_small_upload_image_2.0 }}">
+                    <img src="{{ content.field_small_upload_image_2.0 }}" class="img-fluid" alt="{{ content.field_om_title.0 }}">
+                </picture>
+            </div>
+        </div>
+    </div>
+    <div class="gap_60"></div>
+</section>
+{% endblock %}

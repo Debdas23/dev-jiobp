@@ -1,0 +1,63 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'whatsnew',
+  ]
+%}
+{% block content %}
+<section class="activeTech_work">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="block_info--title" data-aos="fade-up">
+            How ACTIVE technology works?
+          </h1>
+          <span class="pill_underline mb-4" data-aos="fade-up"></span>
+        </div>
+        <div class="col-md-12">
+          <div class="video-section" data-aos="fade-up">
+            <!--Video Modal -->
+            <div class="modal fade " id="myModal" tabindex="-1">
+              <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <div class="modal-body">
+                    <video width="" height="" class="heroImage" controls autoplay>
+                      <source src="{{ content.field_atwvideo.0 }}" type="video/mp4">
+                    </video>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <img src="{{ content.field_video_poster_image.0 }}" class="heroImage" alt="Jio-bp" data-aos="fade-up">
+            <a href="#myModal" class="video-btn" data-toggle="modal" data-aos="fade-up">
+              <img src="../themes/custom/jiobp/assets/images/fuels-at-jio-bp/icons/play.svg" data-bs-toggle="modal" class="play-icon" alt="Jio-bp">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="row">
+            {% if content.field_how_active_technology_work %}
+                {% for key, item in content.field_how_active_technology_work if key|first != '#' %}
+                <div class="col-md-4">
+                    <div class="activeTech_work--card mt-0" data-aos="fade-up">
+                        <h2 class="card-title" data-aos="fade-up">
+                           {{ item['#paragraph'].field_teotitle[0].value|raw }}
+                        </h2>
+                        <p class="card-desc" data-aos="fade-up">
+                            {{ item['#paragraph'].field_teotext[0].value|raw }}
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

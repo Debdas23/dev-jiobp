@@ -1,0 +1,38 @@
+{% block content %}
+    <section data-aos="fade-in" class="heretoserve aos-init aos-animate">
+        <div class="jiobp_curve">
+            <div class="container">
+                <div class="gap_60"></div>
+                <h2 class="title" data-aos="fade-up">{{ content.field_qo_title.0 }}</h2>
+                <div class="desc" data-aos="fade-up">{{ content.field_qo_text.0 }}</div>
+                <!-- Swiper -->
+                <div class="swiper serveSwiper" data-aos="fade-in">
+                    <div class="swiper-wrapper">
+                        {% if content.field_quick_overview %}
+                            {% for key, item in content.field_quick_overview if key|first != '#' %}
+                                {% if nid != item['#paragraph'].field_dont_display_on_page.entity.id %}
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card-img" data-aos="fade-up">
+                                                <img src="{{ file_url(item['#paragraph'].field_qo_upload_image.entity.fileuri) }}" alt="{{ item['#paragraph'].field_qo_title[0].value|raw }}">
+                                            </div>
+                                            <div class="card-body">
+                                                <h3 class="card-title" data-aos="fade-up">{{ item['#paragraph'].field_qo_title[0].value|raw }}</h3>
+                                                <p class="card-text" data-aos="fade-up">{{ item['#paragraph'].field_qo_text[0].value|raw }}</p>
+                                                <a href="{{ item['#paragraph'].field_qo_know_more_link[0].url|raw }}" data-aos="fade-left">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="jio_swiper_pagination">
+                        <div class="swiper-pagination text-left"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="gap_60"></div>
+        </div>
+    </section>
+{% endblock %}

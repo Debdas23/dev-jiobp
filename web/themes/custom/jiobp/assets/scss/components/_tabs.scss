@@ -1,0 +1,117 @@
+.jio_tabs {
+    .nav-tabs {
+        border: none;
+        // justify-content: center;
+        margin-bottom: 35px;
+        border-bottom: solid 2px #4CD386;
+        gap: 40px;
+        display: inline-flex;
+
+        @media (max-width:767px) {
+            flex-wrap: nowrap;
+            overflow-y: hidden;
+            overflow-x: auto;
+            justify-content: flex-start;
+            gap: 3px;
+        }
+
+        .nav-link {
+            border: none;
+            color: #4CD386;
+            @include easeInOut();
+            padding: 10px 10px 10px 0;
+            margin-bottom: -2px;
+            font-size: 23px;
+            &.active {
+                border: none;
+                color: #FFE001;
+                background: transparent;
+                border-bottom: solid 2px #FFE001;
+            }
+
+            &:hover {
+                border: none;
+                color: #FFE001;
+                border-bottom: solid 2px #FFE001;
+            }
+            
+
+            @media (max-width:767px) {
+                // min-width: 130px;
+                height: 45px;
+                white-space: nowrap;
+                font-size: 14px;
+                // padding: 0 20px;
+                &.active {
+                    // padding: 0 20px;
+                }
+            }
+
+        }
+    }
+}
+.investor_tabs {
+    .tab-content{
+        .col-md-4{margin-bottom: 1rem;}
+        .card{
+            min-height: 60px;
+            justify-content: center;
+            padding: 1rem;
+            height: 100%;
+            a{
+                font-size: 1.3rem;
+                line-height: normal;
+            }
+        }
+    }
+    .nav-tabs {
+        border: none;
+        justify-content: start;
+        margin-bottom: 35px;
+        gap: 60px;
+
+        @media (max-width:767px) {
+            flex-wrap: nowrap;
+            overflow-y: hidden;
+            overflow-x: auto;
+            justify-content: flex-start;
+            gap: 3px;
+        }
+
+        .nav-link {
+            border: none;
+            color: #000000;
+            @include easeInOut();
+            // min-width: 160px;
+            height: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: start;
+            &.active {
+                border: none;
+                background: transparent;
+                background: #81C341;
+                border-radius: 10px;
+                box-shadow: #81C341BF 0 0 3px;
+                color: #fff;
+                padding: 0 60px;
+            }
+
+            &:hover {
+                border: none;
+            }
+            
+
+            @media (max-width:767px) {
+                // min-width: 130px;
+                height: 45px;
+                white-space: nowrap;
+                padding: 0 20px;
+                &.active {
+                    padding: 0 20px;
+                }
+            }
+
+        }
+    }
+}

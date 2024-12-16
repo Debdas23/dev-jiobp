@@ -1,0 +1,220 @@
+header{position: relative; height: 81px;}
+.jio_navbar {
+    height: 81px;
+    position: fixed;
+    width: 100%;
+    z-index: 11;
+    background: #fff;
+
+    &::before {
+        content: '';
+        background:  url('../images/header-line-bg.svg') no-repeat left top; width: 100%; height: 81px; position: absolute; left: 0; bottom: -81px; z-index: 2;
+    }
+
+    .navbar {
+        height: 81px;
+        .navbar-collapse {
+            @media (max-width:991px) {
+                position: fixed;
+                top: 80px;
+                background: #fff;
+                width: 100%;
+                left: 0;
+                padding-bottom: 30px;
+                z-index: -1;
+            }
+        }
+
+        .navbar-toggler {
+            @media (max-width:991px) {
+                padding: 0px;
+                border: none;
+                outline: none;
+                position: absolute;
+                right: 15px;
+                top: 34px;
+
+                span {
+                    width: 17px;
+                    height: 1px;
+                    background: #129048;
+                    display: block;
+                    margin-bottom: 5px;
+                    @include easeInOut();
+
+                    &:nth-child(2) {
+                        width: 10px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+
+            &[aria-expanded="true"] {
+                span {
+                    &:nth-child(2) {
+                        width: 0px;
+                    }
+
+                    &:nth-child(1) {
+                        transform: rotate(45deg) translate(2px, 6px);
+                    }
+
+                    &:nth-child(3) {
+                        transform: rotate(-45deg) translate(2px, -6px);
+                    }
+                }
+            }
+        }
+
+        .navbar-brand {
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 50px;
+            top: 20px;
+        }
+
+        .nav-item {
+            margin-right: 40px;
+
+            .nav-link {
+                color: #000000;
+                font-size: 18px;
+                line-height: 22px;
+                font-weight: 500;
+                padding: 29px 0;
+                @include easeInOut();
+
+                @media (max-width:1500px) {
+                    font-size: 15px;
+                    line-height: 20px;
+                    // padding: 36px 0;
+                }
+
+                @media (max-width:991px) {
+                    padding: 15px;
+                }
+
+                svg path {
+                    @include easeInOut();
+                }
+
+                &:hover {
+                    color: #129048;
+
+                    svg path {
+                        fill: #129048;
+                        stroke: #129048;
+                    }
+                    circle{
+                        fill: #129048;
+                    }
+                }
+            }
+
+            @media (max-width:1280px) {
+                margin-right: 20px;
+            }
+            @media (max-width:1000px) {
+                margin-right: 10px;
+            }
+
+            &.active {
+                a {
+                    color: #129048;
+                }
+            }
+        }
+
+        &-icons {
+            .nav-item {
+                margin-right: 25px;
+
+                @media (max-width:991px) {
+                    margin-right: 0px;
+                }
+
+                &:last-child {
+                    margin-right: 0px;
+                }
+
+                .nav-link {
+                    @media (max-width:991px) {
+                        padding: 15px 10px;
+                    }
+                }
+            }
+
+            @media (max-width:991px) {
+                position: fixed;
+                // top: 4px;
+                right: 40px;
+
+                .navbar-nav {
+                    flex-direction: row;
+                }
+            }
+        }
+
+        .dropdown-menu {
+            border: none;
+            border-radius: 0px;
+            box-shadow: #f2f2f2 0 0px 6px 0px;
+            margin: 0;
+        }
+    }
+}
+
+// .fullHead{
+//     padding-top: 80px;
+//     .jio_navbar{        
+//         &::before {
+//             background: #fff;
+//             // box-shadow: #00000017 0 0px 10px 3px;
+//         }
+//         .navbar{
+//             .navbar-brand {
+//                 box-shadow: inset 0 -4px 8px #0000002e;
+//             }
+//         }
+//     }
+// }
+.loader {position: fixed;z-index: 99999;background: #fff;width: 100%;height: 100%;left: 0;top: 0;display: flex;align-items: center;justify-content: center; }
+.loader_spin {border: 4px solid #f3f3f3;border-radius: 50%;border-top: 4px solid #129048;width: 60px;height: 60px;-webkit-animation: spin 1.35s linear infinite;/* Safari */animation: spin 1.35s linear infinite; }
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.search-bar{
+    background: #fff;
+    border-top:solid 1px #ccc;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    z-index: -1;
+    padding: 20px;
+    left: 0;
+    display: flex;
+    display: none;
+    gap: 20px;
+    max-height:70px;
+    box-shadow:#00000017 0 4px 5px -2px;
+    padding-left: 150px;
+    padding-right: 100px;
+    input{background: #fff; border: 0; width: 100%; 
+        &:focus{border: 0;outline: none;}
+    }
+}

@@ -1,0 +1,8 @@
+perform batch updates entity track:
+  title: 'Access the form to launch batch updates on existing entities'
+  description: 'Users with this permission will be able to reset/relaunch the statistics counts on all existing entities in the system.'
+  restrict access: TRUE
+administer entity track:
+  title: 'Administer Entity Track'
+  description: 'Users with this permission will be able to administer the Entity Track module settings.'
+  restrict access: TRUE

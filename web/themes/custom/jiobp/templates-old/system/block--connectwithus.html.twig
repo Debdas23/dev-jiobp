@@ -1,0 +1,33 @@
+<section class="connectBoxSection">
+        <div class="jiobp_curve">
+            <div class="gap_60"></div>
+
+        <div class="container">
+            <div class="row row-md cards">
+                {% if content.field_here_to_serve %}
+                    {% for key, item in content.field_here_to_serve if key|first != '#' %}
+                    <div class="col-md-4">
+                        <div class="card-block">
+                            <div class="card-block--img" data-aos="fade-up">
+                                <img  src="{{ file_url(item['#paragraph'].field_heretoserve_upload_image.entity.fileuri) }}" class="svg" alt="{{ item['#paragraph'].field_heretoserve_title[0].value|raw }}">
+                            </div>
+                            <div class="card-block--info">
+                                <h4 data-aos="fade-up">{{ item['#paragraph'].field_heretoserve_title[0].value|raw }}</h4>
+                                <div data-aos="fade-up" class="txt">{{ item['#paragraph'].field_heretoserve_text[0].value|raw }}</div>
+                                <a data-aos="fade-up" href="{{ item['#paragraph'].field_know_more_link[0].url|raw }}">Know More</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+                <!--<div class="col-md-12 text-center">
+                    <h5 data-aos="fade-down">For career opportunities contact : <a href="mailto:{{ content.field_heretoserve_text.0 }}">{{ content.field_heretoserve_text.0 }}</a></h5>
+                </div>-->
+            </div>
+        </div>
+
+        <div class="gap_60"></div>
+        <div class="gap_60"></div>
+        </div>
+    </section>
+<div class="gap_100"></div>

@@ -1,0 +1,50 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'whatsnew',
+  ]
+%}
+{% block content %}
+<section class="jio_news" data-aos="fade-in">
+    <div class="jio_news"  data-aos="fade-in">
+        <div class="gap_100"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 pr-md-0">
+                    <div class="title" data-aos="fade-in">
+                        {{ content.field_news_title.0 }}
+                    </div>
+                    <div class="desc ml-0" data-aos="fade-in">
+                        {{ content.field_news_text.0 }}
+                    </div>
+                    <div class="gap_60"></div>
+                    <div>
+                        {% if content.field_whats_new %}
+                            {% for key, item in content.field_whats_new if key|first != '#' %}
+                              <a href="/news/{{ item['#paragraph'].field_slug[0].value|raw }}">
+                                <div class="jio_news_each" data-aos="fade-in">
+                                    <div class="jio_news_each--label">
+                                        {{ item['#paragraph'].field_date[0].value|raw|date("d M, Y") }}
+                                    </div>
+                                    <div class="jio_news_each--title">
+                                        {{ item['#paragraph'].field_ntitle[0].value|raw }}
+                                    </div>
+                                </div>
+			     </a>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="gap_30"></div>
+                    <div data-aos="fade-in">
+                        <div class="jio_social content-area">
+                            <a href="news-room" class="btn-light-green">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gap_100"></div>
+    </div>
+</section>
+{% endblock %}

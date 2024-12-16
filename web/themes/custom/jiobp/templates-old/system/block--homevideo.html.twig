@@ -1,0 +1,104 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+     'home_video',
+  ]
+%}
+
+{% block content %}
+    {% if content.field_mp4_video_file %}
+      <section class="banner videoSection">
+        <video class="video-js vjs-16-9" id="main-video" poster="{{ content.field_poster_image.0 }}" preload="auto" autoplay muted loop>
+            <source src="{{ content.field_mp4_video_file.0 }}" type="video/mp4">
+            Your browser does not support HTML video.
+        </video>
+        <div id="muteBtn1" class="muted" onclick="togglemute();"><img class="imgmuted" src="themes/custom/jiobp/assets/images/icons/sound-on.svg" alt=""></div>
+      </section>
+    {% endif %}
+{% endblock %}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.10.2/video-js.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/7.10.2/video.min.js"></script>
+<style>
+#main-video {
+width: 100vw;
+height: unset;
+}
+@media only screen and (max-width: 768px) {
+#main-video {
+width: unset;
+height: unset;
+}
+}
+.videoSection #muteBtn1{
+    position: sticky;
+    bottom: 0;
+    right: 10px;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.videoSection #muteBtn1 img {
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+}
+</style>
+<script>
+var options = { muted: false };
+var player = videojs('main-video', options, function onPlayerReady() {
+  videojs.log('Your player is ready!');
+  this.play();
+});
+
+setTimeout(function(){ console.log(player.play()) }, 10000);
+
+//var video = document.getElementById('main-video');
+
+function isInViewport(el) {
+  var top = el.offsetTop;
+  var left = el.offsetLeft;
+  var width = el.offsetWidth;
+  var height = el.offsetHeight;
+
+  while(el.offsetParent) {
+    el = el.offsetParent;
+    top += el.offsetTop;
+    left += el.offsetLeft;
+  }
+
+  return (
+    top < (window.pageYOffset + window.innerHeight) &&
+    left < (window.pageXOffset + window.innerWidth) &&
+    (top + height) > window.pageYOffset &&
+    (left + width) > window.pageXOffset
+  );
+}
+
+function togglemute()
+{
+    const btn = document.querySelector('.imgmuted');
+    if(player.tech_.el_.muted == false)
+    {
+       player.tech_.el_.muted = true;
+       btn.src = 'themes/custom/jiobp/assets/images/icons/sound-off.svg';
+    }
+    else
+    {
+       player.tech_.el_.muted = false;
+       btn.src = 'themes/custom/jiobp/assets/images/icons/sound-on.svg';
+    }
+}
+
+document.getElementsByTagName('body')[0].onscroll = function() {
+    const box = document.querySelector('.videoSection');
+    const btn = document.querySelector('.imgmuted');
+    if(!isInViewport(box))
+    {
+       player.tech_.el_.muted = true;
+       btn.src = 'themes/custom/jiobp/assets/images/icons/sound-off.svg';
+    }
+};
+</script>

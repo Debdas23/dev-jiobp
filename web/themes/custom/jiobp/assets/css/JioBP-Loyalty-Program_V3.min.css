@@ -1,0 +1,1585 @@
+.loyalty-program-V3 {
+  overflow-x: hidden
+}
+
+.loyalty-program-V3 * {
+  font-family: JioType
+}
+
+.loyalty-program-V3 .container {
+  max-width: 1216px
+}
+
+.loyalty-program-V3 .pill_underline {
+  position: relative;
+  display: block;
+  border-radius: 10px;
+  width: 40px;
+  height: 4px;
+  background: #FFE041
+}
+
+.loyalty-program-V3 .static-banner {
+  position: relative;
+  position: relative;
+  width: 100%;
+  background: transparent linear-gradient(106deg, #018837 0%, #68A81E 100%) 0% 0% no-repeat padding-box;
+  padding-top: 0px
+}
+
+.loyalty-program-V3 .static-banner:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  z-index: -1;
+  bottom: -50px;
+  background-image: url(../images/backgrounds/green_curve.png);
+  background-repeat: no-repeat;
+  background-size: contain
+}
+
+.loyalty-program-V3 .static-banner .block_info--title {
+  font-weight: bold;
+  font-size: 50px;
+  letter-spacing: 0em;
+  line-height: 49.5px;
+  text-align: left;
+  color: #ffe041;
+  margin-top: 100px
+}
+
+.loyalty-program-V3 .static-banner .block_info--desc {
+  margin-top: 32px;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 34px;
+  text-align: left;
+  color: #fff
+}
+
+.loyalty-program-V3 .static-banner img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  top: 100px
+}
+
+.loyalty-program-V3 .get-more-slidar {
+  margin-bottom: 80px;
+  margin-top: 150px;
+  background: -webkit-gradient(linear, left top, right top, from(#FFE041), to(#fff088));
+  background: linear-gradient(to right, #FFE041 0%, #fff088 100%);
+  width: 100%;
+  padding-bottom: 100px;
+  position: relative
+}
+
+.loyalty-program-V3 .get-more-slidar .swiper.get-moreSlidar {
+  overflow: visible
+}
+
+.loyalty-program-V3 .get-more-slidar:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+  top: 0px;
+  background-image: url(../images/curve-left-top.svg);
+  background-repeat: no-repeat;
+  background-size: contain
+}
+
+.loyalty-program-V3 .get-more-slidar::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 50px;
+  z-index: 1;
+  bottom: 0;
+  background: url(../images/curve-right-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 0
+}
+
+.loyalty-program-V3 .get-more-slidar .swiper-button-prev {
+  background-color: #018837;
+  z-index: 1;
+  top: 10%;
+  position: relative;
+  right: auto;
+  bottom: unset;
+  left: 0;
+  margin: 5px;
+  height: 50px;
+  width: 50px
+}
+
+.loyalty-program-V3 .get-more-slidar .swiper-button-prev::after {
+  content: "";
+  background-image: url(../images/icons/arrow-left.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
+  height: 100%;
+  z-index: inherit;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
+
+.loyalty-program-V3 .get-more-slidar .swiper-button-prev.swiper-button-disabled {
+  opacity: 0.5
+}
+
+.loyalty-program-V3 .get-more-slidar .swiper-button-next {
+  background-color: #018837;
+  z-index: 1;
+  top: 10%;
+  position: relative;
+  right: 0;
+  bottom: unset;
+  margin: 5px;
+  left: auto;
+  height: 50px;
+  width: 50px
+}
+
+.loyalty-program-V3 .get-more-slidar .swiper-button-next::after {
+  content: "";
+  background-image: url(../images/icons/arrow-left.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
+  height: 100%;
+  z-index: inherit
+}
+
+.loyalty-program-V3 .get-more-slidar .swiper-button-next.swiper-button-disabled {
+  opacity: 0.5
+}
+
+.loyalty-program-V3 .get-more-slidar .block_info--title {
+  font-family: JioType;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 0em;
+  line-height: 49.5px;
+  text-align: left;
+  color: #018837;
+  margin-top: 100px
+}
+
+.loyalty-program-V3 .get-more-slidar .pill_underline {
+  background-color: #018837;
+  width: 60px
+}
+
+.loyalty-program-V3 .get-more-slidar .icon_block_v3 {
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0);
+  -webkit-filter: drop-shadow(0px 13px 26px rgba(0, 0, 0, 0.04));
+  filter: drop-shadow(0px 13px 26px rgba(0, 0, 0, 0.04));
+  padding: 32px 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center
+}
+
+.loyalty-program-V3 .get-more-slidar .icon_block_v3:hover {
+  -webkit-box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1)
+}
+
+.loyalty-program-V3 .get-more-slidar .icon_block_v3 .icon_block--img {
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%
+}
+
+.loyalty-program-V3 .get-more-slidar .icon_block_v3 .icon_block_info {
+  -ms-flex-preferred-size: 70%;
+  flex-basis: 70%;
+  padding-left: 25px;
+  padding-right: 0
+}
+
+.loyalty-program-V3 .get-more-slidar .icon_block_v3 .icon_block_info--title {
+  font-family: JioType;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 33px;
+  text-align: left;
+  color: #080808;
+  margin-bottom: 10px
+}
+
+.loyalty-program-V3 .get-more-slidar .icon_block_v3 .icon_block_info--text {
+  font-family: JioType;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: left;
+  color: #5f5f5f
+}
+
+.loyalty-program-V3 .get-more-slidar .icon_block_v3 .icon_block_info--text p {
+  margin-bottom: 0
+}
+
+.loyalty-program-V3 .how-it-work {
+  margin-top: 20px;
+  margin-bottom: 100px
+}
+
+.loyalty-program-V3 .how-it-work .block_info--title {
+  font-family: JioType;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 0em;
+  line-height: 49.5px;
+  text-align: center;
+  color: #018837;
+  margin-top: 0px
+}
+
+.loyalty-program-V3 .how-it-work .pill_underline {
+  background-color: #018837;
+  width: 58px;
+  margin: 0 auto
+}
+
+.loyalty-program-V3 .how-it-work--wrapper {
+  background-image: url(../images/loyalty-program_V3/path.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  background-size: 60%;
+  background-position: 50% 0
+}
+
+.loyalty-program-V3 .how-it-work--card {
+  text-align: center
+}
+
+.loyalty-program-V3 .how-it-work--card .img_block {
+  position: relative;
+  margin-bottom: 35px;
+  display: inline-block
+}
+
+.loyalty-program-V3 .how-it-work--card .img_block span {
+  width: 30px;
+  height: 30px;
+  background: -webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));
+  background: linear-gradient(to right, #018837, #68a81e);
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  right: 0;
+  border-radius: 50px
+}
+
+.loyalty-program-V3 .how-it-work--card .txt-title {
+  font-family: JioType;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  color: #080808
+}
+
+.loyalty-program-V3 .how-it-work--card .txt-desc {
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #5f5f5f
+}
+
+.loyalty-program-V3 .our-feature {
+  margin-top: 150px
+}
+
+.loyalty-program-V3 .our-feature .our_feature--card {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#018837), to(#68a81e));
+  background: linear-gradient(#018837 0%, #68a81e 100%);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 50px;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear
+}
+
+.loyalty-program-V3 .our-feature .our_feature--card:hover {
+  -webkit-box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1)
+}
+
+.loyalty-program-V3 .our-feature .our_feature--card .card-title {
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 34px;
+  text-align: center;
+  color: #fff;
+  margin-top: 21px;
+  margin-bottom: 16px
+}
+
+.loyalty-program-V3 .our-feature .our_feature--card .card-desc {
+  font-family: JioType;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: center;
+  color: #fff;
+  margin: 0
+}
+
+.loyalty-program-V3 .earn {
+  background-image: url(../images/loyalty-program_V3/coins_bg.svg), -webkit-gradient(linear, left top, left bottom, from(#ffe041), to(#fff088));
+  background-image: url(../images/loyalty-program_V3/coins_bg.svg), linear-gradient(#ffe041 0%, #fff088 100%);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-bottom: 0;
+  background-position: 0% 0%;
+  margin-top: 20px;
+  width: 100%;
+  padding-bottom: 120px;
+  padding-top: 60px;
+  position: relative
+}
+
+.loyalty-program-V3 .earn:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+  top: 0px;
+  background-image: url(../images/curve-left-top.svg);
+  background-repeat: no-repeat;
+  background-size: contain
+}
+
+.loyalty-program-V3 .earn::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 50px;
+  z-index: 1;
+  bottom: 0;
+  background: url(../images/curve-right-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 0
+}
+
+.loyalty-program-V3 .earn .block_info--title {
+  font-family: JioType;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 0em;
+  line-height: 49.5px;
+  text-align: center;
+  color: #018837
+}
+
+.loyalty-program-V3 .earn .pill_underline {
+  background-color: #018837;
+  width: 60px;
+  margin: 0 auto
+}
+
+.loyalty-program-V3 .earn .subtitle {
+  margin-top: 16px;
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: #111;
+  text-align: center;
+  margin-bottom: 65px
+}
+
+.loyalty-program-V3 .earn .earn--card {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: #fff;
+  padding: 40px 24px;
+  text-align: center;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+  -webkit-box-shadow: 0px 13px 16px #0000000A;
+  box-shadow: 0px 13px 16px #0000000A
+}
+
+.loyalty-program-V3 .earn .earn--card:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));
+  background: linear-gradient(to right, #018837, #68a81e)
+}
+
+.loyalty-program-V3 .earn .earn--card:hover .feature-num {
+  background: -webkit-gradient(linear, left top, right top, from(#FFE041), to(#fff088));
+  background: linear-gradient(to right, #FFE041 0%, #fff088 100%);
+  color: #111
+}
+
+.loyalty-program-V3 .earn .earn--card:hover .card-desc,
+.loyalty-program-V3 .earn .earn--card:hover .top-subtitle,
+.loyalty-program-V3 .earn .earn--card:hover .bottom-subtitle {
+  color: #fff
+}
+
+.loyalty-program-V3 .earn .earn--card .feature-num {
+  width: 76px;
+  height: 76px;
+  border-radius: 100px;
+  background: #FFE041;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
+  color: #018837;
+  margin: auto
+}
+
+.loyalty-program-V3 .earn .earn--card .top-subtitle,
+.loyalty-program-V3 .earn .earn--card .bottom-subtitle,
+.loyalty-program-V3 .earn .earn--card .card-desc {
+  font-family: JioType;
+  line-height: 1.3;
+  text-align: center;
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 18px
+}
+
+.loyalty-program-V3 .earn .earn--card .top-subtitle {
+  font-weight: 500;
+  font-size: 18px;
+  color: #5F5F5F
+}
+
+.loyalty-program-V3 .earn .earn--card .bottom-subtitle {
+  font-weight: bold;
+  font-size: 35px;
+  color: #018837;
+  margin-bottom: 25px;
+  margin-top: 5px
+}
+
+.loyalty-program-V3 .earn .earn--card .card-desc {
+  font-weight: 500;
+  font-size: 18px;
+  color: #5f5f5f;
+  margin-bottom: 0
+}
+
+.loyalty-program-V3 .redeem {
+  background-image: url(../images/loyalty-program_V3/redeem_bg.svg), -webkit-gradient(linear, left top, left bottom, from(#ffe041), to(#fff088));
+  background-image: url(../images/loyalty-program_V3/redeem_bg.svg), linear-gradient(#ffe041 0%, #fff088 100%);
+  background-size: 100%;
+  margin-bottom: 0;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  width: 100%;
+  padding-bottom: 120px;
+  padding-top: 60px;
+  position: relative
+}
+
+.loyalty-program-V3 .redeem:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+  top: 0px;
+  background-image: url(../images/curve-left-top.svg);
+  background-repeat: no-repeat;
+  background-size: contain
+}
+
+.loyalty-program-V3 .redeem::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 50px;
+  z-index: 1;
+  bottom: 0;
+  background: url(../images/curve-right-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 0
+}
+
+.loyalty-program-V3 .redeem .block_info--title {
+  font-family: JioType;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 0em;
+  line-height: 49.5px;
+  text-align: center;
+  color: #018837
+}
+
+.loyalty-program-V3 .redeem .pill_underline {
+  background-color: #018837;
+  width: 60px;
+  margin: 0 auto
+}
+
+.loyalty-program-V3 .redeem .subtitle {
+  margin-top: 16px;
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: #111;
+  text-align: center;
+  margin-bottom: 65px
+}
+
+.loyalty-program-V3 .redeem .col-lg-3 {
+  position: relative
+}
+
+.loyalty-program-V3 .redeem .col-lg-3 .rltFlow_arrow {
+  position: absolute;
+  top: 20%;
+  right: -60px;
+  z-index: 1;
+  -webkit-filter: drop-shadow(2px 2px 6px #666);
+  filter: drop-shadow(2px 2px 6px #666)
+}
+
+.loyalty-program-V3 .redeem .redeem-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: -webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));
+  background: linear-gradient(to right, #018837, #68a81e);
+  padding: 40px 24px;
+  text-align: center;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all
+}
+
+.loyalty-program-V3 .redeem .redeem-card:hover {
+  background: #fff
+}
+
+.loyalty-program-V3 .redeem .redeem-card:hover .feature-num {
+  background: -webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));
+  background: linear-gradient(to right, #018837, #68a81e);
+  color: #fff
+}
+
+.loyalty-program-V3 .redeem .redeem-card:hover .card-desc,
+.loyalty-program-V3 .redeem .redeem-card:hover .card-title {
+  color: #111
+}
+
+.loyalty-program-V3 .redeem .redeem-card:hover .img_block span {
+  background: -webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));
+  background: linear-gradient(to right, #018837, #68a81e);
+  color: #fff
+}
+
+.loyalty-program-V3 .redeem .redeem-card .img_block {
+  position: relative;
+  margin-bottom: 25px;
+  display: inline-block
+}
+
+.loyalty-program-V3 .redeem .redeem-card .img_block span {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #111111;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  left: -2px;
+  border-radius: 50px
+}
+
+.loyalty-program-V3 .redeem .redeem-card .card-title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 16px
+}
+
+.loyalty-program-V3 .redeem .redeem-card .card-desc {
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22.5px;
+  text-align: center;
+  color: #fff;
+  margin-top: 0px
+}
+
+.loyalty-program-V3 .appSection {
+  padding-top: 80px;
+  padding-bottom: 80px
+}
+
+.loyalty-program-V3 .appSection_container {
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));
+  background-image: linear-gradient(to right, #018837, #68a81e);
+  border-radius: 10px;
+  padding-top: 114px;
+  padding-bottom: 96px;
+  padding-left: 99px
+}
+
+.loyalty-program-V3 .appSection_container .title {
+  margin-bottom: 15px;
+  font-family: JioType;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 0em;
+  line-height: 35px;
+  color: #FFE041
+}
+
+.loyalty-program-V3 .appSection_container .subtitle {
+  margin-top: 16px;
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 29px;
+  color: #fff;
+  margin-bottom: 24px
+}
+
+.loyalty-program-V3 .appSection_container .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
+.loyalty-program-V3 .appSection_container .btns .anchor:nth-child(n+2) {
+  margin-left: 8px
+}
+
+.loyalty-program-V3 .appSection_img {
+  position: absolute;
+  bottom: 0px;
+  right: 80px;
+  z-index: 1
+}
+
+.loyalty-program-V3 .faq {
+  margin-top: 160px;
+  margin-bottom: 132px
+}
+
+.loyalty-program-V3 .faq #accordion .card {
+  border: none;
+  border-bottom: 1px solid #ddd
+}
+
+.loyalty-program-V3 .faq #accordion .card .card-header {
+  background-color: transparent;
+  border: none;
+  padding: 0
+}
+
+.loyalty-program-V3 .faq #accordion .card .card-header h5 button {
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: left;
+  color: #080808;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  background-color: transparent;
+  border: none
+}
+
+.loyalty-program-V3 .faq #accordion .card .card-header h5 button img {
+  position: absolute;
+  right: 0;
+  top: 28px;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear
+}
+
+.loyalty-program-V3 .faq #accordion .card .card-header h5 button:focus,
+.loyalty-program-V3 .faq #accordion .card .card-header h5 button:active {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-decoration: none;
+  outline: none
+}
+
+.loyalty-program-V3 .faq #accordion .card .card-header h5 button:hover {
+  text-decoration: none;
+  opacity: 0.8
+}
+
+.loyalty-program-V3 .faq #accordion .card .card-header h5 button[aria-expanded="false"] {
+  padding: 30px 30px 30px 0
+}
+
+.loyalty-program-V3 .faq #accordion .card .card-header h5 button[aria-expanded="true"] {
+  padding: 30px 30px 30px 0
+}
+
+.loyalty-program-V3 .faq #accordion .card .card-header h5 button[aria-expanded="true"] img {
+  -webkit-transform: rotateZ(-180deg);
+  transform: rotateZ(-180deg)
+}
+
+.loyalty-program-V3 .faq #accordion .card .card-body {
+  padding-top: 0px;
+  font-family: JioType;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: left;
+  color: #383838;
+  padding-left: 0;
+}
+
+.loyalty-program-V3 .faq .btn-faq {
+  width: 204px;
+  height: 36px;
+  border-radius: 26px;
+  background: #f0f0f0;
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 29px;
+  text-align: center;
+  color: #018837;
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.loyalty-program-V3 .faq .btn-faq:hover {
+  text-decoration: none;
+  background-color: #ddd
+}
+
+.loyalty-program-V3 .faq .block_info--title {
+  font-family: JioType;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 0em;
+  line-height: 38px;
+  text-align: center;
+  color: #018837
+}
+
+.loyalty-program-V3 .faq .pill_underline {
+  background-color: #018837;
+  width: 60px;
+  margin: 0 auto
+}
+
+@media only screen and (max-width: 767px) {
+  .loyalty-program-V3 .ord2 {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2
+  }
+
+  .loyalty-program-V3 .static-banner {
+    margin-bottom: 80px
+  }
+
+  .loyalty-program-V3 .static-banner .block_info--title {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-top: 80px
+  }
+
+  .loyalty-program-V3 .static-banner .block_info--desc {
+    margin-top: 12px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.3
+  }
+
+  .loyalty-program-V3 .static-banner img {
+    top: 60px
+  }
+
+  .loyalty-program-V3 .static-banner .align-items-center .col-md-6:first-child {
+    top: 30px
+  }
+
+  .loyalty-program-V3 .our-feature {
+    margin-top: 0px
+  }
+
+  .loyalty-program-V3 .our-feature .our_feature--card {
+    padding: 20px;
+    margin-top: 25px
+  }
+
+  .loyalty-program-V3 .our-feature .our_feature--card .card-title {
+    font-size: 20px;
+    line-height: 1.3
+  }
+
+  .loyalty-program-V3 .our-feature .our_feature--card picture img {
+    width: 80px
+  }
+
+  .loyalty-program-V3 .our-feature .our_feature--card .card-desc {
+    font-size: 16px;
+    line-height: 1.3
+  }
+
+  .loyalty-program-V3 .our-feature h2.feature-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    line-height: 1.3
+  }
+
+  .loyalty-program-V3 .get-more-slidar {
+    margin-top: 80px
+  }
+
+  .loyalty-program-V3 .get-more-slidar .block_info--title {
+    font-size: 26px;
+    line-height: 1.3
+  }
+
+  .loyalty-program-V3 .get-more-slidar .swiper-button-prev,
+  .loyalty-program-V3 .get-more-slidar .swiper-button-next {
+    height: 40px;
+    width: 40px
+  }
+
+  .loyalty-program-V3 .get-more-slidar .icon_block_v3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+
+  .loyalty-program-V3 .get-more-slidar .icon_block_v3 .icon_block_info {
+    padding-left: 0
+  }
+
+  .loyalty-program-V3 .get-more-slidar .icon_block_v3 .icon_block_info--title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 15px
+  }
+
+  .loyalty-program-V3 .get-more-slidar .icon_block_v3 .icon_block--img {
+    text-align: center
+  }
+
+  .loyalty-program-V3 .get-more-slidar .icon_block_v3 .icon_block--img img {
+    max-width: 80%
+  }
+
+  .loyalty-program-V3 .how-it-work {
+    margin-top: 0;
+    margin-bottom: 60px
+  }
+
+  .loyalty-program-V3 .how-it-work .block_info--title {
+    font-size: 32px;
+    line-height: 1.3
+  }
+
+  .loyalty-program-V3 .how-it-work .how-it-work--wrapper {
+    background: none
+  }
+
+  .loyalty-program-V3 .how-it-work .how-it-work--card .img_block {
+    margin-bottom: 20px
+  }
+
+  .loyalty-program-V3 .how-it-work .how-it-work--card .txt-desc {
+    margin-bottom: 40px
+  }
+
+  .loyalty-program-V3 .earn {
+    padding-top: 100px
+  }
+
+  .loyalty-program-V3 .earn .block_info--title {
+    font-size: 32px;
+    line-height: 1.3
+  }
+
+  .loyalty-program-V3 .earn .subtitle {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 40px
+  }
+
+  .loyalty-program-V3 .earn .earn--card {
+    padding: 25px 25px;
+    margin-bottom: 25px
+  }
+
+  .loyalty-program-V3 .earn .row {
+    display: block
+  }
+
+  .loyalty-program-V3 .redeem {
+    padding-top: 100px;
+    margin-top: 80px;
+    margin-bottom: 80px
+  }
+
+  .loyalty-program-V3 .redeem .block_info--title {
+    font-size: 32px;
+    line-height: 1.3
+  }
+
+  .loyalty-program-V3 .redeem .subtitle {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 40px
+  }
+
+  .loyalty-program-V3 .redeem .redeem-card {
+    padding: 25px;
+    margin-bottom: 25px
+  }
+
+  .loyalty-program-V3 .redeem .row {
+    display: block
+  }
+
+  .loyalty-program-V3 .redeem .col-lg-3 {
+    text-align: center
+  }
+
+  .loyalty-program-V3 .redeem .col-lg-3 .rltFlow_arrow {
+    top: auto;
+    right: 0;
+    bottom: -30px;
+    left: 0;
+    -webkit-transform: rotate(90deg) !important;
+    transform: rotate(90deg) !important
+  }
+
+  .loyalty-program-V3 .redeem .col-lg-3 .rltFlow_arrow img {
+    max-width: 22%
+  }
+
+  .loyalty-program-V3 .appSection {
+    padding-top: 0
+  }
+
+  .loyalty-program-V3 .appSection .row {
+    margin: 0
+  }
+
+  .loyalty-program-V3 .appSection .col-md-12 {
+    background-image: -webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));
+    background-image: linear-gradient(to right, #018837, #68a81e);
+    border-radius: 10px
+  }
+
+  .loyalty-program-V3 .appSection_container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-image: none
+  }
+
+  .loyalty-program-V3 .appSection_container .title {
+    font-size: 26px;
+    line-height: 1.2
+  }
+
+  .loyalty-program-V3 .appSection_container .subtitle {
+    font-size: 18px;
+    line-height: 1.25;
+    margin-top: 22px
+  }
+
+  .loyalty-program-V3 .appSection_img {
+    position: relative;
+    top: unset;
+    right: unset;
+    bottom: 0px;
+    text-align: center
+  }
+
+  .loyalty-program-V3 .faq {
+    margin-top: 60px;
+    margin-bottom: 0
+  }
+
+  .loyalty-program-V3 .faq .block_info--title {
+    font-size: 30px;
+    line-height: 1.3
+  }
+
+  .loyalty-program-V3 .faq #accordion .card {
+    border: none;
+    border-bottom: 1px solid #ddd
+  }
+
+  .loyalty-program-V3 .faq #accordion .card .card-header {
+    background-color: transparent;
+    border: none;
+    padding: 0
+  }
+
+  .loyalty-program-V3 .faq #accordion .card .card-header h5 button {
+    font-size: 18px;
+    line-height: 1.3;
+    padding-right: 28px !important
+  }
+
+  .loyalty-program-V3 .faq #accordion .card .card-header h5 button img {
+    top: 28px;
+    width: 20px
+  }
+
+  .loyalty-program-V3 .faq #accordion .card .card-body {
+    font-size: 16px;
+    line-height: 1.3
+  }
+
+  .loyalty-program-V3 .faq .btn-faq {
+    margin-top: 50px;
+    margin-bottom: 50px
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .loyalty-program-V3 .static-banner {
+    padding-top: 110px
+  }
+
+  .loyalty-program-V3 .static-banner .block_info--title {
+    margin-top: 0
+  }
+
+  .loyalty-program-V3 .static-banner .block_info--desc {
+    font-size: 22px;
+    line-height: 1.3
+  }
+
+  .loyalty-program-V3 .static-banner picture img {
+    top: 80px
+  }
+
+  .loyalty-program-V3 .static-banner::after {
+    bottom: -48px
+  }
+
+  .loyalty-program-V3 .our-feature {
+    margin-top: 60px
+  }
+
+  .loyalty-program-V3 .our-feature .our_feature--card {
+    margin-top: 0;
+    padding: 20px
+  }
+
+  .loyalty-program-V3 .why-choose .col-lg-3.col-md-6 {
+    margin-bottom: 25px
+  }
+
+  .loyalty-program-V3 .appSection {
+    padding-top: 100px;
+    padding-bottom: 80px
+  }
+
+  .loyalty-program-V3 .appSection .appSection_container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    padding-right: 260px
+  }
+
+  .loyalty-program-V3 .appSection .appSection_img {
+    right: 0
+  }
+
+  .loyalty-program-V3 .redeem .row .col-lg-3.col-md-6:nth-child(3) .rltFlow_arrow {
+    display: none
+  }
+
+  .loyalty-program-V3 .redeem .col-lg-3.col-md-6 {
+    margin-bottom: 25px
+  }
+
+  .loyalty-program-V3 .faq {
+    margin-top: 100px;
+    margin-bottom: 100px
+  }
+
+  .loyalty-program-V3 .faq .block_info--title {
+    font-size: 34px;
+    line-height: 1.3
+  }
+
+  .loyalty-program-V3 .faq #accordion .card .card-header h5 button {
+    padding-right: 35px !important;
+    font-size: 20px;
+    line-height: 1.3
+  }
+
+  .loyalty-program-V3 .faq #accordion .card .card-header h5 button img {
+    top: 25px
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) and (max-width: 1366px) and (min-width: 1024px) {
+  .loyalty-program-V3 .static-banner {
+    margin-bottom: 140px;
+    padding-top: 110px
+  }
+
+  .loyalty-program-V3 .static-banner .block_info--title {
+    margin-top: 0
+  }
+
+  .loyalty-program-V3 .static-banner .block_info--desc {
+    font-size: 22px;
+    line-height: 1.3
+  }
+
+  .loyalty-program-V3 .static-banner picture img {
+    top: 80px
+  }
+
+  .loyalty-program-V3 .static-banner::after {
+    bottom: -48px
+  }
+
+  .loyalty-program-V3 .why-choose .block_info--title {
+    font-size: 36px;
+    line-height: 1.3
+  }
+
+  .loyalty-program-V3 .why-choose .why-choose--card .card-desc {
+    font-size: 17px;
+    line-height: 1.3
+  }
+
+  .loyalty-program-V3 .appSection {
+    padding-top: 150px;
+    padding-bottom: 80
+  }
+
+  .loyalty-program-V3 .appSection .appSection_container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    padding-right: 260px
+  }
+
+  .loyalty-program-V3 .appSection .appSection_img {
+    right: 0
+  }
+
+  .loyalty-program-V3 .redeem .row .col-lg-3.col-md-6:nth-child(3) .rltFlow_arrow {
+    display: inline-block
+  }
+
+  .loyalty-program-V3 .get-more-slidar {
+    margin-top: 100px
+  }
+}
+
+.loyalty-program-V3 .get-more-slidar {
+  overflow: hidden;
+}
+
+.loyalty-program-V3 .earn,
+.loyalty-program-V3 .redeem {
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.loyalty-program-V3 .static-banner:after {
+  background-image: url(../images/green_curve.png);
+}
+
+.loyalty-program-V3 .get-more-slidar::before {
+  background: url(../images/curve-right-bottom.svg);
+}
+
+.loyalty-program-V3 .earn:after {
+  background-image: url(../images/curve-left-top.svg);
+}
+
+.loyalty-program-V3 .earn::before {
+  background: url(../images/curve-right-bottom.svg);
+}
+
+.loyalty-program-V3 .redeem:after {
+  background-image: url(../images/curve-left-top.svg);
+}
+
+.loyalty-program-V3 .redeem::before {
+  background: url(../images/curve-right-bottom.svg);
+}
+
+.loyalty-program-V3 .get-more-slidar:after {
+  background-image: url(../images/curve-left-top.svg);
+}
+
+.loyalty-program-V3 .static-banner .imgblock {
+  padding: 4% 0;
+}
+
+.loyalty-program-V3 .static-banner .imgblock img {
+  margin-bottom: -150px;
+  top: 0;
+}
+
+.loyalty-program-V3 .static-banner .imgblock-info .title:after {
+  background: #ffe041;
+  bottom: -15px;
+}
+
+.loyalty-program-V3 .static-banner {
+  padding-top: 60px;
+}
+
+.loyalty-program-V3 .static-banner .imgblock .title {
+  color: #ffe041;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .loyalty-program-V3 .static-banner .imgblock .title {
+    font-size: 35px;
+    line-height: 1;
+  }
+
+  .loyalty-program-V3 .fual-station {
+    background-position: -2px bottom;
+    background-size: cover;
+  }
+
+  .loyalty-program-V3 .vision {
+    background: #118d33 url(/sites/default/files/2022-05/truck.png) no-repeat;
+  }
+
+  .loyalty-program-V3 .static-banner {
+    padding-top: 70px;
+  }
+
+  .loyalty-program-V3 .static-banner .imgblock {
+    gap: 30px;
+  }
+
+  .loyalty-program-V3 .static-banner .imgblock img {
+    margin-bottom: -105px;
+  }
+
+  .loyalty-program-V3 .get-more-slidar .swiper-button-prev,
+  .loyalty-program-V3 .get-more-slidar .swiper-button-next {
+    height: 38px;
+    width: 40px;
+  }
+
+  .loyalty-program-V3 .redeem {
+    margin-bottom: 0;
+  }
+
+  .path__img__con .path__image {
+    opacity: 0;
+  }
+
+}
+
+.loyalty-program-V3 .how-it-work--wrapper {
+  background-image: none;
+}
+
+.path__img__con {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.path__image {
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 60%;
+  object-fit: cover;
+}
+
+/********************/
+.coins,
+.gifts {
+  width: 30%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.coins1,
+.gifts1 {
+  width: 30%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+#stars {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+
+.box {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -150px;
+  transition: transform 1.5s linear;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.move {
+  transform: translateY(120vh);
+}
+
+/*********************/
+.loyalty-program-V3 .earn,
+.loyalty-program-V3 .redeem {
+  background-image: none;
+  background-image: linear-gradient(#ffe041 0%, #fff088 100%);
+}
+
+.btn-tc {
+  padding: 14px 30px;
+  background-color: #018837;
+  border-radius: 20px;
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  border: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.btn-tc:hover {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.link-tc {
+  text-decoration: underline !important;
+}
+
+.text-tc {
+  display: block;
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.how-it-work {
+  overflow: unset !important;
+}
+
+.tc-container {
+  position: absolute;
+  bottom: -142px;
+}
+
+.pos-re {
+  position: relative;
+}
+
+@media only screen and (max-width: 1024px) {
+  .tc-container {
+    position: absolute;
+    bottom: -92px;
+  }
+}
+
+.faq #accordion .card .card-header h5 button {
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 34px;
+  text-align: left;
+  color: #111;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  background-color: transparent;
+  border: none;
+}
+
+.btn_white {
+  padding: 10px 30px;
+  background: #fff;
+  color: #1D9350;
+  border-radius: 20px;
+  margin-top: 20px;
+  display: inline-block;
+  transition: ease all .5s;
+}
+
+
+.btn_white:hover {
+  text-decoration: none;
+  background: #129048;
+  color: #FFF;
+}
+
+@media (max-width:1500px) {
+  .btn_white {
+    font-size: 16px;
+  }
+}
+
+@-moz-keyframes my-sparkle {
+  0% {
+    opacity: 0;
+    -moz-transform: rotate(0deg) scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    -moz-transform: rotate(360deg) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    -moz-transform: rotate(720deg) scale(0);
+  }
+}
+
+@-webkit-keyframes my-sparkle {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(0deg) scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: rotate(360deg) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(720deg) scale(0);
+  }
+}
+
+@keyframes my-sparkle {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg) scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(360deg) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(720deg) scale(0);
+  }
+}

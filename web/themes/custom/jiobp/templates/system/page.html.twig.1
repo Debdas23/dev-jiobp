@@ -1,0 +1,102 @@
+﻿<header>
+<!-- navbar -->
+<div class="jio_navbar">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top jio_max_1640">
+        {{ page.logo }}
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""></span>
+            <span class=""></span>
+            <span class=""></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            {{ page.menu_area }}
+        </div>
+        <div class="navbar-icons">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link searchLink" href="#">
+                        <img src="/themes/custom/jiobp/assets/images/icons/search-icon.svg" class="" alt="">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/locate-fuel-station">
+                        <img src="/themes/custom/jiobp/assets/images/icons/location-pin.svg" class="svg" alt="">
+                    </a>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="/locate-fuel-station">
+                        <img src="/themes/custom/jiobp/assets/images/icons/FuelPrice.svg" class="svg" alt="">
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <a href="#"><img src="/themes/custom/jiobp/assets/images/icons/search-icon.svg" class="svg" alt=""></a>
+        </div>
+	<div class="search-container">
+	<ul class="search-result">
+	<li class="result-item"><a href="javascript:;">Fuel4Jio</a></li>
+	<li class="result-item"><a href="javascript:;">Fuel4Jio</a></li>
+	<li class="result-item"><a href="javascript:;">Fuel4Jio</a></li>
+	<li class="result-item"><a href="javascript:;">Fuel4Jio</a></li>
+	<li class="result-item"><a href="javascript:;">Fuel4Jio</a></li>
+	<li class="result-item"><a href="javascript:;">Fuel4Jio</a></li>
+	<li class="result-item"><a href="javascript:;">Fuel4Jio</a></li>
+	<li class="result-item"><a href="javascript:;">Fuel4Jio</a></li>
+	</ul>
+	</div>
+    </nav>
+</div>
+<!-- /navbar -->
+
+  <!-- sticky social -->
+  <div class="jio_social sticky" data-aos="fade-in">
+      <div>
+        {{ page.jio_social }}
+      </div>
+  </div>
+  <!-- /sticky social -->
+</header>
+<div class="maindiv" style="display: block;">
+  <div class="main_container container">
+    <div class="row">
+      {% if page.sidebar_first %}
+          <aside class="sidebar_first">
+            {{ page.sidebar_first }}
+          </aside>
+        {% endif %}
+        {% if page.sidebar_second %}
+          <aside class="sidebar_second">
+            {{ page.sidebar_second }}
+          </aside>
+        {% endif %}
+    </div>
+  </div>
+</div>
+{{ page.banner }}
+
+{{ page.why_jio }}
+
+{{ page.here_to_serve }}
+
+{{ page.products_services }}
+
+{{ page.offerings }}
+
+{{ page.hp_about }}
+
+{{ page.jio_news }}
+
+{{ page.content }}
+
+{{ page.quick_overview }}
+
+{{ page.footer }}
+
+{{ page.notice }}
+
+<div class="loader">
+    <div class="loader_spin"></div>
+</div>

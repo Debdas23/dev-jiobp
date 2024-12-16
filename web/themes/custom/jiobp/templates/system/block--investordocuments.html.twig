@@ -1,0 +1,267 @@
+<section class="formSection jiobp_curve" data-aos="fade-in">
+    <img src="/themes/custom/jiobp/assets/images/backgrounds/yellow_curve_left.png" alt="" class="img-fluid formSection_topimg d-none" />
+    <div class="formSection_container py-6">
+        {% if allowed == 0 %}
+        <div class="container">
+            <h2 class="formSection_title -text_green" data-aos="fade-up">Enter your registered email ID to access stakeholder documents</h2>
+            <span class="pill_underline -green mx-auto" data-aos="fade-up"></span>
+            <form class="verification_form" id="verification_form" novalidate data-aos="fade-up">
+                <div class="form-group">
+                    <label for="EmailInput">
+                        <input type="email" class="form-control" id="EmailInput" placeholder="Email ID" required />
+                    </label>
+                </div>
+                <p style="display: none;" id="otp_msg">Please wait...</p>
+                <button type="submit" class="btn btn_gray" id="otp_btn">Send OTP</button>
+            </form>
+            <form class="verification_form" id="otpverification_form" novalidate style="display: none;" data-aos="fade-up">
+                <div class="form-group">
+                    <label for="OTPInput">
+                        <input type="tel" class="form-control" id="OTPInput" placeholder="OTP" required />
+                    </label>
+                </div>
+                <p style="display: none;" id="verify_msg">Please wait...</p>
+                <button type="submit" class="btn btn_gray" id="verify_btn">Verify OTP</button>
+            </form>
+        </div>
+        {% endif %}
+        {% if allowed == 1 %}
+        {% set tabsarray = [] %}
+        {% set tabsyarray = [] %}
+        {% if content.field_documents %}
+            {% for key, item in content.field_documents if key|first != '#' %}
+                {% set tabt = item['#paragraph'].field_document_type[0].value|raw %}
+                {% set taby = item['#paragraph'].field_year[0].value|raw %}
+                {% if tabt not in tabsarray %}
+                    {% set tabsarray = tabsarray|merge([tabt]) %}
+                {% endif %}
+                {% if taby not in tabsyarray %}
+                    {% set tabsyarray = tabsyarray|merge([taby]) %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        <div class="container -custom pdfs" style="display: block">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs pdfs-tabs" id="myTab" role="tablist" data-aos="fade-up">
+                {% for tabitem in tabsarray %}
+                    {% set tabs_title = tabitem|lower|replace({' ': "-"}) %}
+                    {% if loop.first %}
+                    <li class="nav-item" role="presentation" data-aos="fade-up">
+                        <a class="nav-link active" id="{{ tabs_title }}-tab" data-toggle="tab" href="#{{ tabs_title }}" role="tab" aria-controls="{{ tabs_title }}" aria-selected="true">{{ tabitem }}</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item" role="presentation" data-aos="fade-up">
+                        <a class="nav-link" id="{{ tabs_title }}-tab" data-toggle="tab" href="#{{ tabs_title }}" role="tab" aria-controls="{{ tabs_title }}" aria-selected="true">{{ tabitem }}</a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+                <label for="selectYear" data-aos="fade-up">
+                    <span class="selectYear_text">Choose Year</span>
+                    <select class="form-control selectYearInput">
+                    {% set tabsyarray = tabsyarray|sort %}
+                    {% for tabitemy in tabsyarray|reverse %}
+                        {% if loop.first %}
+                        <option value="{{ tabitemy }}" selected>{{ tabitemy }}</option>
+                        {% else %}
+                        <option value="{{ tabitemy }}">{{ tabitemy }}</option>
+                        {% endif %}
+                    {% endfor %}
+                    </select>
+                </label>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content pdfs-content">
+                {% for tabitem_in in tabsarray %}
+                    {% set tabs_title = tabitem_in|lower|replace({' ': "-"}) %}
+                    {% if loop.first %}
+                    <div class="tab-pane fade show active" id="{{ tabs_title }}" role="tabpanel" aria-labelledby="{{ tabs_title }}-tab">
+                    {% else %}
+                    <div class="tab-pane fade show" id="{{ tabs_title }}" role="tabpanel" aria-labelledby="{{ tabs_title }}-tab">
+                    {% endif %}
+                        <div class="cards" data-aos="fade-up">
+                            {% if content.field_documents %}
+                                {% for key, item in content.field_documents if key|first != '#' %}
+                                    {% set category = item['#paragraph'].field_document_type[0].value|raw %}
+                                    {% if tabitem_in == category %}
+                                    <div class="card" data-year="{{ item['#paragraph'].field_year[0].value|raw }}" data-aos="fade-up">
+                                        <p class="card_text" data-aos="fade-up">{{ item['#paragraph'].field_document_name[0].value|raw }}</p>
+                                        <a target="_blank" href="{{ file_url(item['#paragraph'].field_upload_document.entity.fileuri) }}" data-aos="fade-up">
+                                            <img src="/themes/custom/jiobp/assets/images/icons/document_download.svg" alt="" class="card_icon" />
+                                        </a>
+                                    </div>
+                                    {% endif %}
+                                {% endfor %}
+                                <div class="card" data-category="{{ tabs_title }}" data-year="all" data-aos="fade-up">
+                                  <p class="card_text" data-aos="fade-up">No data present for this category</p>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <img src="/themes/custom/jiobp/assets/images/backgrounds/yellow_curve_right.png" alt="" class="img-fluid formSection_bottomimg d-none" />
+</section>
+
+<script src="https://www.google.com/recaptcha/api.js?render=6LfrnqsdAAAAAFRLS6kXNaQGoVpkhtbGr_T5yehD"></script>
+<script>
+    let otpForm = document.querySelector("#verification_form");
+    let verifyotpForm = document.querySelector("#otpverification_form");
+    let emailInput = otpForm.querySelector("#EmailInput");
+    let otpInput = verifyotpForm.querySelector("#OTPInput");
+    let otp_msg = otpForm.querySelector("#otp_msg");
+    let otp_btn = otpForm.querySelector("#otp_btn");
+    let verify_msg = verifyotpForm.querySelector("#verify_msg");
+    let verify_btn = verifyotpForm.querySelector("#verify_btn");
+    otpForm.addEventListener("submit", sendotp);
+    verifyotpForm.addEventListener("submit", verifyotp);
+    function sendotp(e)
+    {
+        e.preventDefault();
+	var ttoken = '';
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LfrnqsdAAAAAFRLS6kXNaQGoVpkhtbGr_T5yehD', { action: 'request_submit' }).then(function(token) {
+		ttoken = token;
+                $('#verification_form').prepend('<input type="hidden" name="token" id="token" value="' + token + '">');
+                $('#verification_form').prepend('<input type="hidden" name="action" value="Customer Feedback ">');
+                $('#verification_form').prepend('<input type="hidden" name="id" value="2">');
+            });
+        });
+
+        let isFormValid = true;
+        if (emailInput) {
+            let emailInputValue = emailInput.value;
+            if (emailInputValue === "") {
+                isFormValid = false;
+                alert('Please enter your registered email ID to access stakeholders documents.');
+            } else if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInputValue) == false) {
+                isFormValid = false;
+                alert('Please enter a valid registered email ID to access stakeholders documents.');
+            }
+        }
+        if (isFormValid) {
+            setTimeout(function(){
+            let tokenInput = otpForm.querySelector("#token");
+            otp_btn.style.display = 'none';
+            otp_msg.style.display = 'block';
+            var data = new FormData();
+            data.append("email", emailInput.value);
+            data.append("token", tokenInput.value);
+
+            var xhr = new XMLHttpRequest();
+            xhr.withCredentials = true;
+
+            xhr.addEventListener("readystatechange", function() {
+            if(this.readyState === 4) {
+                if(this.responseText == 1)
+                {
+                    otpForm.style.display = 'none';
+                    verifyotpForm.style.display = 'block';
+                }
+	        else if(this.responseText == 3)
+                {
+                    alert('You have reached the limit. Please try again after sometime.');
+                    otp_btn.style.display = 'inline';
+                    otp_msg.style.display = 'none';
+                }
+                else if(this.responseText == 4)
+                {
+                    alert('Invalid captcha code.');
+                    otp_btn.style.display = 'inline';
+                    otp_msg.style.display = 'none';
+                }
+                else
+                {
+                    alert('The email ID you have entered doesn`t have access to stakeholder documents');
+                    otp_btn.style.display = 'inline';
+                    otp_msg.style.display = 'none';
+                }
+            }
+            });
+
+            xhr.open("POST", "/send-otp.php");
+            xhr.send(data);
+            }, 2000);
+        }
+    }
+
+    function verifyotp(e)
+    {
+        e.preventDefault();
+
+	grecaptcha.ready(function() {
+            grecaptcha.execute('6LfrnqsdAAAAAFRLS6kXNaQGoVpkhtbGr_T5yehD', { action: 'request_submit' }).then(function(token) {
+                $('#verification_form').prepend('<input type="hidden" name="token" id="token" value="' + token + '">');
+                $('#verification_form').prepend('<input type="hidden" name="action" value="Customer Feedback ">');
+                $('#verification_form').prepend('<input type="hidden" name="id" value="2">');
+            });
+        });
+
+
+        let isFormValid = true;
+        if (otpInput) {
+            let otpInputValue = otpInput.value;
+            if (otpInputValue === "") {
+                isFormValid = false;
+                alert('Please enter the OTP sent to your registered email ID.');
+            }
+        }
+        if (isFormValid) {
+            setTimeout(function(){
+            let tokenInput = otpForm.querySelector("#token");
+            verify_btn.style.display = 'none';
+            verify_msg.style.display = 'block';
+            var data = new FormData();
+            data.append("otp", otpInput.value);
+            data.append("token", tokenInput.value);
+
+            var xhr = new XMLHttpRequest();
+            xhr.withCredentials = true;
+
+            xhr.addEventListener("readystatechange", function() {
+                if(this.readyState === 4) {
+                    if(this.responseText == 1)
+                    {
+                        window.location.reload();
+                    }
+                else if(this.responseText == 4)
+                {
+                    alert('Invalid captcha code.');
+                    otp_btn.style.display = 'inline';
+                    otp_msg.style.display = 'none';
+                }
+                    else
+                    {
+                        alert('OTP expired.');
+                        verify_btn.style.display = 'block';
+                        verify_msg.style.display = 'none';
+                    }
+                }
+            });
+            xhr.open("POST", "/verify-otp.php");
+            xhr.send(data);
+            }, 2000);
+        }
+    }
+
+    /*function filterCards(val) {
+        var selectedYear = val;
+        var getAllCards = Array.from(document.querySelectorAll(".pdfs-content .card"));
+        // filter all cards data attribute year matching the selectYear
+        var filteredCards = getAllCards.filter(function (card) {
+        if (card.dataset.year == selectedYear) {
+            card.style.display = "flex";
+        } else {
+            card.style.display = "none";
+        }
+        });
+    }
+    var selectYearInput = document.querySelector(".selectYearInput");
+    selectYearInput.addEventListener("change", function (e) {
+        filterCards(e.target.value);
+    });
+    filterCards(selectYearInput.value);*/
+</script>

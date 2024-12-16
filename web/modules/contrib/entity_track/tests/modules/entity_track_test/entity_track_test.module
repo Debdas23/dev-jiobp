@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Contains entity_track_test.module.
+ */
+
+use Drupal\field\FieldStorageConfigInterface;
+
+/**
+ * Implements hook_ENTITY_TYPE_delete().
+ */
+function entity_track_test_field_storage_config_delete(FieldStorageConfigInterface $field) {
+  // Delete all tracking information for the deleted field.
+  \Drupal::service('entity_track_test.numeric_manager')->deleteByField($field->getTargetEntityTypeId(), $field->getName());
+}

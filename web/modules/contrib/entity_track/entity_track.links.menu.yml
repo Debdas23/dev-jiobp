@@ -1,0 +1,5 @@
+entity_track.configuration_form:
+  title: 'Entity Track Settings'
+  parent: system.admin_config_content
+  description: 'Configure Entity Track settings'
+  route_name: entity_track.settings.form

@@ -1,0 +1,565 @@
+@import url(../common/media.scss);
+
+.fuels-jioBp {
+    & * {
+        font-family: JioType;
+    }
+
+    .container {
+        max-width: 1216px;
+    }
+
+    .pill_underline {
+        position: relative;
+        display: block;
+        border-radius: 10px;
+        width: 40px;
+        height: 4px;
+        background: #FFE041;
+    }
+
+    .static-banner {
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 50px;
+            z-index: -1;
+            bottom: -50px;
+            background-image: url(../../assets/images/backgrounds/green_curve.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        position: relative;
+        width: 100%;
+        // height: 458px;       
+        background: transparent linear-gradient(106deg, #018837 0%, #68A81E 100%) 0% 0% no-repeat padding-box;
+        padding-top: 0px;
+
+        .block_info--title {            
+            font-weight: bold;
+            font-size: 50px;
+            letter-spacing: 0em;
+            line-height: 49.5px;
+            text-align: left;
+            color: #ffe041;
+            margin-top: 100px;
+        }
+
+
+        .block_info--desc {
+            // font-family: JioType-Medium;
+            margin-top: 32px;
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 34px;
+            text-align: left;
+            color: #fff;
+        }
+
+        picture {
+            img {
+                max-width: 100%;
+                height: auto;
+                position: relative;
+                top: 100px;
+            }
+        }
+    }
+
+    .our-feature {
+        margin-top: 180px;
+
+        .our_feature--card {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            background: linear-gradient(#018837 0%, #68a81e 100%);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            // margin-top: 40px;
+
+            .card-title {
+                font-family: JioType;
+                font-weight: 500;
+                font-size: 25px;
+                line-height: 34px;
+                text-align: center;
+                color: #fff;
+                margin-top: 21px;
+                margin-bottom: 16px;
+            }
+
+            .card-desc {
+                font-family: JioType;
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 29px;
+                text-align: center;
+                color: #fff;
+                margin: 0;
+            }
+        }
+
+        .feature-content {
+            // font-family: JioType-Medium;
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 34px;
+            text-align: center;
+            color: #111;
+            padding-left: 103px;
+            padding-right: 103px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .why-choose {
+        margin-top: calc(135px - 40px);
+        margin-bottom: calc(167px);
+
+        .block_info--title {
+            font-family: JioType;
+            font-weight: bold;
+            font-size: 40px;
+            letter-spacing: 0em;
+            line-height: 49.5px;
+            text-align: left;
+            color: #018837;
+        }
+
+        .pill_underline {
+            background-color: #018837;
+            width: 60px;
+        }
+
+        .why-choose--card {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            background: linear-gradient(#ffe041 0%, #fff088 100%);
+            padding: 35px 23px;
+
+            .card-title {
+                // font-family: JioType;
+                font-weight: bold;
+                font-size: 30px;
+                text-align: left;
+                color: #018837;
+                margin-bottom: 12px;
+            }
+
+            .card-desc {
+                //font-family: JioType;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 29px;
+                text-align: left;
+                color: #111;
+                margin: 0;
+            }
+        }
+    }
+
+    .activeTech_work {
+        .video-section {
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 24px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: transparent radial-gradient(closest-side at 50% 50%, #0000001A 0%, #000000 100%) 0% 0% no-repeat padding-box;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                opacity: 0.6;
+            }
+
+            position: relative;
+
+            .heroImage {
+                max-width: 100%;
+                height: auto;
+                width: 100%;
+                display: block;
+            }
+
+            .play-icon {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                z-index: 9;
+            }
+
+            .modal-content {
+                .close {
+                    position: absolute;
+                    right: -30px;
+                    top: -12px;
+                    font-size: 40px;
+                    color: #fff;
+                    opacity: 1;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .block_info--title {
+            // font-family: JioType;
+            font-weight: bold;
+            font-size: 40px;
+            letter-spacing: 0em;
+            line-height: 49.5px;
+            text-align: center;
+            color: #018837;
+        }
+
+        .pill_underline {
+            background-color: #018837;
+            width: 60px;
+            margin: 0 auto;
+        }
+
+        .activeTech_work--card {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            background: linear-gradient(#018837 0%, #68a81e 100%);
+
+            padding: 35px 23px;
+
+            .card-title {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 34px;
+                text-align: left;
+                color: #fff;
+                margin-bottom: 12px;
+            }
+
+            .card-desc {
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 22.5px;
+                text-align: left;
+                color: #fff;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .benefits {
+        position: relative;
+        margin-top: 158px;
+        margin-bottom: 158px;
+
+        .pill_underline {
+            background: #018837;
+        }
+
+        .block_info--title {
+            font-weight: bold;
+            font-size: 40px;
+            letter-spacing: 0em;
+            line-height: 49.5px;
+            text-align: left;
+            color: #018837;
+        }
+
+        .block_info--desc {
+            margin-top: 32px;
+            font-family: JioType;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 29px;
+            text-align: left;
+            color: #111;
+            margin-bottom: 45px;
+        }
+
+        picture {
+            img {
+                max-width: 100%;
+                height: auto;
+                position: relative;
+                // top: 58px;
+            }
+        }
+
+        .card_li {
+            width: calc(100% + 50px);
+            height: auto;
+            border-radius: 10px;
+            background: linear-gradient(#018837 0%, #68a81e 100%);
+            padding: 40px;
+            padding-left: 85px;
+
+            ul {
+                padding: 0;
+                list-style: none;
+                margin: 0;
+
+                li {
+                    position: relative;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 29px;
+                    text-align: left;
+                    color: #fff;
+                    margin-bottom: 32px;
+
+                    img {
+                        position: absolute;
+                        left: -50px;
+                        top: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    /* For mobile phones: */
+    .fuels-jioBp {
+        .static-banner {
+            .block_info--title {
+                font-size: 35px;
+                line-height: 35px;
+                margin-top: 50px;
+            }
+
+            .block_info--desc {
+                margin-top: 12px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 1.3;
+            }
+
+            picture img {
+                top: 50px;
+            }
+
+            .align-items-center .col-md-6:first-child {
+                top: 30px;
+            }
+        }
+
+        .our-feature {
+            margin-top: 60px;
+
+            .our_feature--card {
+                padding: 20px;
+                margin-top: 25px;
+                height: auto;
+                picture {
+                    img {
+                        width: 80px;
+                    }
+                }
+
+                .card-title {
+                    font-size: 20px;
+                    line-height: 1.3;
+                }
+
+                .card-desc {
+                    font-size: 16px;
+                    line-height: 1.3;
+                }
+            }
+
+            h2.feature-content {
+                padding-left: 20px;
+                padding-right: 20px;
+                font-size: 20px;
+                line-height: 1.3;
+            }
+        }
+
+        .why-choose {
+            margin-top: 20px;
+            margin-bottom: 60px;
+
+            .block_info--title {
+                font-size: 26px;
+                line-height: 1.3;
+            }
+
+            .why-choose--card {
+                margin-top: 25px;
+                height: auto;
+
+                .card-title {
+                    font-size: 24px;
+                }
+
+                .card-desc {
+                    font-size: 18px;
+                    line-height: 1.3;
+                }
+            }
+        }
+
+        .activeTech_work {
+            .block_info--title {
+                font-size: 26px;
+                line-height: 1.3;
+            }
+
+            .activeTech_work--card {
+                padding: 20px;
+                height: auto;
+                margin-top: 25px;
+
+                .card-desc {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .benefits {
+            margin-top: 60px;
+            margin-bottom: 60px;
+
+            .block_info--title {
+                font-size: 30px;
+                line-height: 1.3;
+            }
+
+            .block_info--desc {
+                line-height: 1.3;
+                margin-bottom: 25px;
+            }
+
+            .card_li {
+                width: 100%;
+                padding: 20px;
+                margin-bottom: 25px;
+
+                ul {
+                    li {
+                        font-size: 16px;
+                        line-height: 1.3;
+                        margin-bottom: 20px;
+                        position: relative;
+                        padding-left: 20px;
+
+                        img {
+                            margin-right: 15px;
+                            position: absolute;
+                            left: -10px;
+                            width: 20px;
+                            top: 4px;
+                            width: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    .fuels-jioBp {
+        .static-banner {
+            padding-top: 110px;
+
+            .block_info--title {
+                margin-top: 0;
+            }
+
+            .block_info--desc {
+                font-size: 22px;
+                line-height: 1.3;
+            }
+
+            picture {
+                img {
+                    top: 80px;
+                }
+            }
+
+            &::after {
+                bottom: -48px;
+            }
+        }
+
+        .our-feature {
+            margin-top: 60px;
+
+            .feature-content {
+                padding-left: 50px;
+                padding-right: 50px;
+                font-size: 22px;
+                line-height: 1.3;
+            }
+        }
+
+        .why-choose {
+            margin-top: 60px;
+            margin-bottom: 80px;
+
+            .block_info--title {
+                font-size: 36px;
+                line-height: 1.3;
+            }
+
+            .why-choose--card {
+                margin-top: 0;
+            }
+        }
+
+        .activeTech_work {
+            .block_info--title {
+                font-size: 36px;
+                line-height: 1.3;
+            }
+
+            .activeTech_work--card {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1366px) and (min-width: 1024px) {
+    .fuels-jioBp {
+        .our-feature {
+            // margin-top: 100px;
+        }
+
+        .why-choose {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        .benefits {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+    }
+}

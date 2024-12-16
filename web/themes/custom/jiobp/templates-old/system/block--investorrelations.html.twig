@@ -1,0 +1,85 @@
+<section>
+    <div class="static-banner2" data-aos="fade-in">
+        <div class="full"></div>
+        <div class="container -custom">
+            <div class="imgblock">
+                <div class="imgblock-info">
+                    <h1 class="title -yellow" data-aos="fade-up">{{ content.field_irtitle.0 }}</h1>
+                    <span class="pill_underline -yellow" data-aos="fade-up"></span>
+                    <div class="card card1" data-aos="fade-up">
+                        <div class="card_container">
+                            <h2 class="card_title" data-aos="fade-up">{{ content.field_company_name.0 }}</h2>
+                            <p class="card_subtitle" data-aos="fade-up">{{ content.field_formerly_known.0 }}</p>
+<br>
+                          {#  <h3 class="card_title" data-aos="fade-up">{{ content.field_transfer_agent_name.0 }}</h3> #}
+                            <p class="card_subtitle" data-aos="fade-up">{{ content.field_transfer_agent_title.0 }}</p>
+                            <ul class="list-unstyled">
+                            <li data-aos="fade-up">
+                                <img src="themes/custom/jiobp/assets/images/icons/call_icon.svg" alt="" class="card_icon" />
+                                <a href="tel:{{ content.field_contact_no.0 }}" target="_blank" class="card_text ml8">{{ content.field_contact_no.0 }}</a>
+                            </li>
+                            <li data-aos="fade-up">
+                                <img src="themes/custom/jiobp/assets/images/icons/tel_icon.svg" alt="" class="card_icon" />
+                                <a href="tel:{{ content.field_fax_no.0 }}" target="_blank" class="card_text ml12">{{ content.field_fax_no.0 }}</a>
+                            </li data-aos="fade-up">
+                            <li data-aos="fade-up">
+                                <img src="themes/custom/jiobp/assets/images/icons/mail_icon.svg" alt="" class="card_icon" />
+                                <a href="mailto:{{ content.field_email_id.0 }}" target="_blank" class="card_text ml12">{{ content.field_email_id.0 }}</a>
+                            </li>
+                            <li data-aos="fade-up">
+                               {# <img src="themes/custom/jiobp/assets/images/icons/website_icon.svg" alt="" class="card_icon" /> 
+                                <a href="https://{{ content.field_website_link.0 }}" target="_blank" class="card_text ml12">{{ content.field_website_link.0 }}</a> #}
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card2" data-aos="fade-up">
+                        <div class="card_container">
+                            <h2 class="card_title" data-aos="fade-up">{{ content.field_registered_office_name.0 }}</h2>
+                          {#  <p class="card_subtitle" data-aos="fade-up">{{ content.field_registered_office_title.0 }}</p> #}
+                            <ul class="list-unstyled" data-aos="fade-up">
+                                <li class="align-items-start" data-aos="fade-up">
+                                    <img src="themes/custom/jiobp/assets/images/icons/location_icon.svg" alt="" class="card_icon" />
+                                    <a href="javascript:;" target="_blank" class="card_text ml16">{{ content.field_address.0 }}</a>
+                                </li>
+                                <li data-aos="fade-up">
+                                    <img src="themes/custom/jiobp/assets/images/icons/call_icon.svg" alt="" class="card_icon" />
+                                    <a href="tel:+{{ content.field_rcontact_no.0 }}" target="_blank" class="card_text ml13">+{{ content.field_rcontact_no.0 }}</a>
+                                </li>
+                             {#   <li data-aos="fade-up">
+                                    <p class="card_label">CIN:</p>
+                                    <p class="card_text ml7">{{ content.field_cin_no.0 }}</p>
+                                </li> #}
+                            </ul>
+                        </div>
+                    </div>
+                    {% if content.field_contact_det %}
+                        {% for key, item in content.field_contact_det if key|first != '#' %}
+                            {% if nid != item['#paragraph'].field_dont_display_on_page.entity.id %}
+                            <div class="card card3" data-aos="fade-up">
+                                <div class="card_container">
+                                    <h2 class="card_title" data-aos="fade-up">{{ item['#paragraph'].field_name[0].value|raw }}</h2>
+                                    <p class="card_subtitle" data-aos="fade-up">{{ item['#paragraph'].field_designation[0].value|raw }}</p>
+                                    <ul class="list-unstyled" data-aos="fade-up">
+                                        <li data-aos="fade-up">
+                                           {# <img src="themes/custom/jiobp/assets/images/icons/mail_icon.svg" alt="" class="card_icon" /> #}
+                                          CIN: <a href="mailto:{{ item['#paragraph'].field_cin[0].value|raw }}" target="_blank" class="card_text ml12">{{ item['#paragraph'].field_cin[0].value|raw }}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="imgblock-img">
+                    <picture data-aos="fade-up">
+                    <!-- <source media="(min-width:768px)" srcset="themes/custom/jiobp/assets/images/who-we-are/banner.jpg" />
+                        <source media="(max-width:767px)" srcset="themes/custom/jiobp/assets/images/who-we-are/banner-mob.jpg" /> -->
+                    <img src="{{ content.field_irupload_image.0 }}" class="img-fluid" alt="" />
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

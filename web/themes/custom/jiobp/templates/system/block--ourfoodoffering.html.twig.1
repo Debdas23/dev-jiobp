@@ -1,0 +1,18 @@
+ <section class="menu1">
+    <div class="container cafe pt-0">
+        <div class="row">
+            <div class="col-md-12" data-aos="fade-up">
+                <p class="subtitle2 p-0">
+                    {{ content.field_ftext.0 }}
+                </p>
+            </div>
+        </div>
+    </div>
+    {% if content.field_fgallery %}
+        {% for key, item in content.field_fgallery if key|first != '#' %}
+        <div class="container -custom pt-5">
+            <img src="{{ file_url(item['#paragraph'].field_csupload_image.entity.fileuri) }}" alt="Food offerings" class="img-fluid menu_img" data-aos="fade-up" />
+        </div>
+        {% endfor %}
+    {% endif %}
+</section>

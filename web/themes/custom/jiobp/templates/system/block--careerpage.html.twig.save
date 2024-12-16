@@ -1,0 +1,796 @@
+ <style>
+                                                .search-section-main {
+                                                    margin: 0;
+                                                    height: 600px;
+                                                    background-image: url('http://www.jiobp.com/sites/default/files/2024-10/career-banner.png');
+                                                    /* Ensure the path is correct */
+                                                    background-size: cover;
+                                                    background-position: center;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    color: white;
+                                                    font-family: Arial, sans-serif;
+                                                    overflow: hidden;
+                                                    /* Prevents scrollbars */
+                                                    text-align: center;
+                                                    /* Center the text */
+                                                }
+                                                footer:nth-of-type(2) {
+    display: none;
+}
+
+                                                .search-heading-main {
+                                                    font-size: 4.5em;
+                                                    padding: 20px;
+                                                    font-weight: bolder;
+                                                    border-radius: 10px;
+                                                    margin-bottom: 30px;
+                                                    /* Space between the text and the search bar */
+                                                    transform: translateY(-60px);
+                                                    /* Moves the text up by 60 pixels */
+                                                }
+
+                                                .search-container-main {
+                                                    width: 87%;
+                                                    border: 1px solid #ddd;
+                                                    border-radius: 100px;
+                                                    padding: 4px 5px;
+                                                    background-color: #ffffff;
+                                                    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+                                                    flex-direction: column;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                }
+
+                                                .search-label-main {
+                                                    font-size: 9px;
+                                                    font-weight: bold;
+                                                    color: #666;
+                                                    margin-top: 10px;
+                                                    margin-left: 5px;
+                                                    padding-left: 5px;
+                                                    align-self: flex-start;
+                                                }
+
+                                                .search-bar-container-main {
+                                                    align-items: center;
+                                                    /*gap: 190px;*/
+                                                    position: relative;
+                                                    /* Space between the search bar and the button */
+                                                    justify-content: space-between;
+                                                }
+
+                                                .search-bar-main {
+                                                    display: inline-flex;
+                                                    align-items: center;
+                                                    border-radius: 50px;
+                                                    height: 70px;
+                                                    width: 80%;
+                                                    margin-left: 20px;
+                                                    padding-right: 10px;
+                                                    border: 1px solid #a9a8a8;
+                                                }
+
+                                                .search-jobs-main {
+                                                    color: #000;
+    font-size: 12px;
+    background-color: #fff;
+    position: absolute;
+    top: -9px;
+    font-weight: 700;
+    width: 110px;
+    left: 30px;
+                                                }
+
+                                                .search-category-main {
+                                                    padding-left: 20px;
+                                                    padding-right: 10px;
+                                                    border-right: 1px solid #ddd;
+                                                    /* Keeps the separation line */
+                                                }
+
+                                                .search-category-main select {
+                                                    border: none;
+                                                    background: transparent;
+                                                    font-size: 16px;
+                                                    outline: none;
+                                                    padding: 15px 10px;
+                                                    width: 180px;
+                                                    color: #333;
+                                                    cursor: pointer;
+                                                }
+
+                                                .search-bar-main input[type="text"] {
+                                                    border: none;
+                                                    padding: 15px 10px;
+                                                    background: transparent;
+                                                    font-size: 18px;
+                                                    outline: none;
+                                                    color: #333;
+                                                }
+
+                                                .search-location-main {
+                                                    display: flex;
+                                                    align-items: center;
+                                                    padding-right: 10px;
+                                                    margin-left: 10px;
+                                                    /* Space between the two input fields */
+                                                }
+
+                                                .search-location-main i {
+                                                    margin-right: 10px;
+                                                    /* Adjusted for better alignment */
+                                                    color: #888;
+                                                }
+
+                                                .search-location-main input {
+                                                    border: none;
+                                                    background: transparent;
+                                                    font-size: 16px;
+                                                    outline: none;
+                                                    padding: 15px 10px;
+                                                    color: #333;
+                                                    width: 150px;
+                                                }
+
+                                                .search-container-main button {
+                                                    background: linear-gradient(to right, #6FB22B, #0F9A3A);
+                                                    border: none;
+                                                    padding: 30px;
+                                                    cursor: pointer;
+                                                    font-size: 24px;
+                                                    border-radius: 50%;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    margin-top: 2px;
+                                                    justify-content: center;
+                                                }
+
+                                                .search-container-main button i {
+                                                    font-size: 22px;
+                                                    color: #fff;
+                                                }
+
+                                                .vl {
+                                                    border-left: 1px solid;
+                                                    height: 50px;
+                                                    color: #d7d5d5;
+                                                }
+
+                                                @media (max-width: 450px) {
+                                                    .search-section-main {
+                                                        position: relative;
+                                                        top: -21px;
+                                                        height: 700px;
+                                                    }
+                                                    .search-heading-main{
+                                                        zoom: 0.8;
+                                                    }
+                                                }
+
+
+
+                                                /* Responsive adjustments for small screens */
+                                                @media (max-width: 768px) {
+
+                                                    /* Reduce the overall size and width of the search container */
+                                                    .search-container-main {
+                                                        height: 80px;
+                                                        border: 0;
+                                                        border-radius: 0;
+                                                        padding: 5px 20px;
+                                                        background-color: transparent;
+                                                        box-shadow: none;
+                                                        flex-direction: column;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                    }
+
+                                                    .search-heading-main {
+                                                        font-size: 4.0em;
+                                                        padding: 20px;
+                                                        font-weight: bolder;
+                                                        border-radius: 10px;
+                                                        margin-bottom: 30px;
+                                                        /* Space between the text and the search bar */
+                                                        transform: translateY(40px);
+                                                        /* Moves the text up by 60 pixels */
+                                                    }
+
+                                                    .search-section-main {
+                                                        height: 83vh;
+                                                    }
+
+                                                    /* Adjust search bar width and layout */
+                                                    .search-bar-main {
+                                                        /*width: 100%;
+                                                        /* Make the search bar fill the container */
+                                                        flex-direction: column;
+                                                        /* Stack the elements vertically */
+                                                        align-items: center;
+                                                        /* Center align the content */
+                                                        padding: 10px 0;
+                                                        /* Add padding for better spacing */
+                                                    }
+
+                                                    .search-category-main {
+                                                        padding: 0;
+                                                        border-right: 0;
+                                                        width: 100%;
+                                                    }
+
+                                                    .search-container-main .form-select {
+                                                        background-color: #fff;
+                                                        text-align: justify;
+                                                        padding: 20px 6px;
+                                                        
+                                                        border-radius: 8px;
+                                                    }
+
+                                                    /* Reduce the width of the input fields and text */
+                                                    .search-bar-main input[type="text"],
+                                                    .search-category-main select {
+                                                        width: 90%;
+                                                        /* Adjust width for input fields */
+                                                        margin: 5px 0;
+                                                        /* Add some margin for spacing */
+                                                        text-align: center;
+                                                        /* Center the text inside the input */
+                                                    }
+
+                                                    /* Adjust the location icon and input field for smaller screens */
+                                                    .search-location-main {
+                                                        margin-top: 10px;
+                                                        /* Add margin for better spacing */
+                                                        justify-content: center;
+                                                        /* Center the location input */
+                                                    }
+
+                                                    .search-location-main i {
+                                                        margin-right: 5px;
+                                                        /* Adjust margin */
+                                                    }
+
+                                                    .search-location-main input {
+                                                        width: 85%;
+                                                        /* Adjust width for location input */
+                                                        text-align: center;
+                                                        /* Center the text */
+                                                    }
+
+                                                    /* Adjust the search button size for small screens */
+                                                    .search-container-main button {
+                                                        width: 80px;
+                                                        /* Reduce button size */
+                                                        height: 60px;
+                                                        margin-top: 0;
+                                                        margin-bottom: 40px;
+                                                        /* Keep the circular aspect ratio */
+                                                    }
+
+                                                    /* Adjust spacing between the form elements */
+                                                    .search-bar-container-main {
+                                                        flex-direction: column;
+                                                        /* Stack the form elements */
+                                                        gap: 20px;
+                                                        /* Add spacing between elements */
+                                                    }
+
+                                                    /* Adjust the vertical line divider for small screens */
+                                                    .vl {
+                                                        height: 1px;
+                                                        /* Reduce height */
+                                                        width: 80%;
+                                                        /* Increase width */
+                                                        margin: 10px auto;
+                                                        /* Center the divider */
+                                                    }
+                                                }
+
+                                                /* Hide mobile search bar initially */
+                                                .search-bar-mob {
+                                                    display: none;
+                                                }
+
+                                                @media (max-width: 376px) {
+                                                    .search-heading-main {
+                                                        font-size: 40px !important;
+                                                    }
+
+                                                    .search-container-main {
+                                                        transform: scale(0.9) !important;
+                                                    }
+                                                }
+
+                                                /* For screens below 1024px, show mobile search bar and hide web search bar */
+                                                @media (max-width: 1024px) {
+                                                    .search-container-main {
+                                                        height: 288px;
+                                                        border: 0;
+                                                        border-radius: 0;
+                                                        padding: 5px 20px;
+                                                        background-color: transparent;
+                                                        box-shadow: none;
+                                                        flex-direction: column;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                    }
+
+                                                    .search-heading-main {
+                                                        font-size: 4.0em;
+                                                        padding: 20px;
+                                                        font-weight: bolder;
+                                                        border-radius: 10px;
+                                                        margin-bottom: 30px;
+                                                        /* Space between the text and the search bar */
+                                                        transform: translateY(40px);
+                                                        /* Moves the text up by 60 pixels */
+                                                    }
+
+                                                    .search-section-main {
+                                                        height: 83vh;
+                                                    }
+
+                                                    .search-bar-web {
+                                                        display: none !important;
+                                                    }
+
+                                                    .search-container-main .form-select {
+                                                        background-color: #fff;
+                                                        text-align: justify;
+                                                        padding: 20px 6px;
+                                                        
+                                                        border-radius: 8px;
+                                                    }
+
+                                                    .search-bar-mob {
+                                                        display: block !important;
+                                                        width: 100%;
+
+                                                    }
+
+                                                    .search-bar-mobile {
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        align-items: center;
+                                                        margin-bottom: 10px;
+							gap:6px;
+                                                    }
+
+                                                    .search-bar-mobile select,
+                                                    .search-bar-mobile input[type="text"] {
+                                                        width: 100%;
+                                                        padding: 10px;
+                                                        /*margin: 5px 0;*/
+                                                    }
+
+                                                    .search-bar-mobile button {
+                                                        width: 100%;
+                                                        padding: 10px;
+                                                        background-color: #6FB22B;
+                                                        color: white;
+                                                        font-size: 18px;
+                                                        border: none;
+                                                        cursor: pointer;
+                                                        border-radius: 5px;
+                                                    }
+
+                                                    .search-category-main {
+                                                        padding: 0;
+                                                        border-right: 0;
+                                                        width: 100%;
+                                                    }
+
+                                                    .search-bar-mobile button:hover {
+                                                        background-color: #0F9A3A;
+                                                    }
+
+                                                    .search-jobs-main {
+                                                        font-size: 14px;
+                                                        margin-bottom: 10px;
+                                                    }
+                                                }
+                                            </style>
+                                            <section class="search-section-main">
+                                                <h1 class="search-heading-main">Power your ambitions.<br> Fuel the
+                                                    future!</h1>
+                                                <div class="search-container-main container">
+                                                    <form id="jobSearchForm" action="/hrfitui/career-4ever" method="GET">
+                                                        <!-- Web Search Bar -->
+                                                        <div class="search-bar-container-main row g-0 search-bar-web">
+                                                            <div class="col-12 col-md-auto d-flex search-bar-main">
+                                                                <p class="search-jobs-main">SEARCH JOBS</p>
+                                                                <div class="search-category-main">
+                                                                    <select name="career_area" class="form-select">
+                                                                    <option value="">Functional Area</option>
+                                                                    <option value="Big Data &amp; Analytics">Big Data &amp; Analytics</option>
+                                                                    <option value="Financial Services">Financial Services</option>
+                                                                    <option value="Consulting &amp; Business Transformation">Consulting &amp; Business Transformation </option>
+                                                                    </select>
+ 
+                                                                   
+                                                                </div>
+ 
+                                                                <input type="text" name="keyword"
+                                                                    placeholder="Search job title or keyword"
+                                                                    class="form-control" />
+                                                                <div class="vl"></div>
+                                                                <div class="search-category-main" style="border-right: none;">
+                                                           
+                                                                    <select name="location" class="form-select">
+                                                                        <option value="">Location</option>
+                                                                       
+                                                                        <option value="Bangalore">Bangalore</option>
+                                                                        <option value="Pune">Pune</option>
+                                                                        <option value="Gurgaon">Gurgaon</option>
+                                                                        <option value="Chennai">Chennai</option>
+                                                                        <option value="Navi Mumbai">Navi Mumbai</option>
+                                                                        <option value="PAN INDIA">PAN INDIA</option>
+                                                                    </select>
+                                                                </div>
+ 
+                                                            </div>
+                                                            <div class="col-12 col-md-auto mt-2 mt-md-0">
+                                                                <button type="submit" class="btn">
+                                                                    <i class="fa fa-search"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Mobile Search Bar -->
+                                                        <div class="search-bar-mob">
+                                                            <div class="search-bar-mobile">
+                                                                <div class="search-category-main">
+                                                                    <select name="career_area" class="form-select">
+                                                                        <option value="">All Career Areas</option>
+                                                                        <option value="">Functional Area</option>
+                                                                    <option value="Big Data &amp; Analytics">Big Data &amp; Analytics</option>
+                                                                    <option value="Financial Services">Financial Services</option>
+                                                                    <option value="Consulting &amp; Business Transformation">Consulting &amp; Business Transformation </option>
+                                                                    </select>
+                                                                </div>
+                                                                <input type="text" name="keyword"
+                                                                    placeholder="Search job title or keyword"
+                                                                    class="form-control" />
+								<div class="search-category-main" style="border-right: none;">
+                                                           
+                                                                <select name="location" class="form-select">
+                                                                    <option value="">Location</option>
+                                                                   
+                                                                    <option value="Bangalore">Bangalore</option>
+                                                                    <option value="Pune">Pune</option>
+                                                                    <option value="Gurgaon">Gurgaon</option>
+                                                                    <option value="Chennai">Chennai</option>
+                                                                    <option value="Navi Mumbai">Navi Mumbai</option>
+                                                                    <option value="PAN INDIA">PAN INDIA</option>
+                                                                </select>
+                                                            </div>
+                                                            </div>
+                                                            
+ 
+                                                            <div class="search-bar-mobile">
+                                                                <button type="submit" class="btn">Search</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </section>
+     
+   <br>
+   <br>
+   <style>
+
+    .filters {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        gap: 15px;
+        width:100%;
+    }
+
+    .filters select {
+        padding: 10px;
+    
+    border: 1px solid black;
+    background-color: #ececec;
+    font-size: 16px;
+    color: #5c4b69;
+    flex-grow:1;
+    border-radius:10px;
+    }
+
+    .filters select:hover {
+        border-color: #b3b3b3;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border-bottom: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+        font-size: 15px;
+        color: #2b2347;
+        cursor: pointer;
+    }
+
+    th {
+        background-color: #f7f6f9;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 13px;
+        color: #5c4b69;
+    }
+
+    tr:hover {
+        background-color: #cce7d7;
+    }
+
+    thead th:nth-child(1) {
+        width: 35%;
+    }
+
+    thead th:nth-child(2),
+    thead th:nth-child(3),
+    thead th:nth-child(4),
+    thead th:nth-child(5) {
+        width: 16%;
+    }
+
+    tbody tr td:nth-child(1) {
+        width: 35%;
+    }
+
+    tbody tr td:nth-child(2),
+    tbody tr td:nth-child(3),
+    tbody tr td:nth-child(4),
+    tbody tr td:nth-child(5) {
+        width: 16%;
+    }
+
+    tbody tr {
+        height: 50px;
+    }
+.loader{
+display:none;
+}
+    .custom-btn {
+        background-color: #018837;
+        color: white;
+        margin-bottom: 10px;
+        border-radius: 25px;
+        border: none;
+        padding: 5px 20px;
+    }
+    @media (max-width: 768px) {
+        .table-title{
+            width: 100%;
+            padding: 10px;
+        }
+    }
+
+    
+</style>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="table-title">
+                <h1>
+                    Rewrite your future. Search and apply for a job today.
+                </h1>
+            </div>
+            
+        </div>
+        <br>
+        <br>
+
+<div class="row">
+    <div class="filters">
+        <select id="locationFilter" onchange="filterJobs()">
+            <option value="">Location</option>
+        <option value="Bangalore">Bangalore</option><option value="Pune">Pune</option><option value="Gurgaon">Gurgaon</option><option value="Chennai">Chennai</option><option value="Navi Mumbai">Navi Mumbai</option><option value="PAN INDIA">PAN INDIA</option></select>
+        <select id="experienceFilter" onchange="filterJobs()">
+            <option value="">Experience Level</option>
+        <option value="Experienced">Experienced</option></select>
+        <select id="communityFilter" onchange="filterJobs()">
+            <option value="">Functional Area</option>
+        <option value="Big Data &amp; Analytics">Big Data &amp; Analytics</option><option value="Financial Services">Financial Services</option><option value="Consulting &amp; Business Transformation">Consulting &amp; Business Transformation</option></select>
+        
+    </div>
+</div>
+
+        <div class="row" style="
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap;
+">
+
+            <table>
+                <thead>
+                <tr>
+            <th onclick="sortTable(0)">Job Name</th>
+            <th onclick="sortTable(1)">Location</th>
+            <th onclick="sortTable(2)">Experience Level</th>
+            <th onclick="sortTable(3)">Functional Area</th>
+        </tr>
+                </thead>
+                <tbody id="jobTable">
+                    <!-- Dynamic job rows will be populated here -->
+                </tbody>
+            
+            </table>
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+<script>
+// Job data array
+const jobs = [
+    { id: 81321919, jobName: 'Lead Full Stack Engr - Dig-JioBPAM – FA', location: 'Navi Mumbai', experience: 'Experienced', community: 'Big Data & Analytics', contract: 'Permanent' },
+    { id: 81721961, jobName: 'Lead2 Anlyst Data Acq&Engg-Dig-Data Engg', location: 'Navi Mumbai', experience: 'Experienced', community: 'Financial Services', contract: 'Permanent' },
+    { id: 81627576, jobName: 'Fullstack Developer - Lead2 Anlyst App Dev - Dig – JioBP', location: 'Navi Mumbai', experience: 'Experienced', community: 'Financial Services', contract: 'Permanent' },
+    { id: 81543177, jobName: 'Team Lead Video Analytics & IoT Solution - Digital Instru Automtn', location: 'Navi Mumbai', experience: 'Experienced', community: 'Consulting & Business Transformation', contract: 'Permanent' },
+    { id: 81685055, jobName: 'Lead1 Prod Dev - Dig - JioBPAM&JioBPMF', location: 'Navi Mumbai', experience: 'Experienced', community: 'Financial Services', contract: 'Permanent' },
+    { id: 81677157, jobName: 'Fullstack Developer - Lead2 Prod Dev - Dig – JioBPMF', location: 'Navi Mumbai', experience: 'Experienced', community: 'Big Data & Analytics', contract: 'Permanent' },
+    
+    { id: 81572374, jobName: 'Area Business Manager', location: 'Anywhere India', experience: 'Experienced', community: 'Financial Services', contract: 'Permanent' },
+    { id: 81197904, jobName: 'TL Prod Mgmt NDM', location: 'PAN INDIA', experience: 'Experienced', community: 'Big Data & Analytics', contract: 'Permanent' },
+    { id: 81623067, jobName: 'TL Prod Mgmt KAM', location: 'PAN INDIA', experience: 'Experienced', community: 'Financial Services', contract: 'Permanent' },
+    
+    { id: 81642476, jobName: 'Field Engr EV/BSS - EPC ', location: 'Mumbai, Bangalore, Noida ', experience: 'Experienced', community: 'Electrical / Civil / Mechanical', contract: 'Permanent' },
+    { id: 13, jobName: 'TL Network Planning (Network Development)', location: 'Pan India', experience: 'Experienced', community: 'Financial Services', contract: 'Permanent' },
+    { id: 14, jobName: 'Area Supply Manager', location: 'Anywhere India', experience: 'Experienced', community: 'Financial Services', contract: 'Permanent' }
+];
+
+const locations = ['Bangalore', 'Pune', 'Gurgaon', 'Chennai', 'Navi Mumbai', 'PAN INDIA'];
+const experiences = ['Experienced'];
+const communities = ['Big Data & Analytics', 'Financial Services', 'Consulting & Business Transformation'];
+
+// Function to populate filters
+function populateFilters() {
+    populateFilter('locationFilter', locations);
+    populateFilter('experienceFilter', experiences);
+    populateFilter('communityFilter', communities);
+}
+
+// Helper to populate individual filter dropdowns
+function populateFilter(filterId, filterArray) {
+    const filterSelect = document.getElementById(filterId);
+    filterArray.forEach(option => {
+        const opt = document.createElement('option');
+        opt.value = option;
+        opt.textContent = option;
+        filterSelect.appendChild(opt);
+    });
+}
+
+// Function to display jobs
+function displayJobs(filteredJobs) {
+    const tableBody = document.getElementById('jobTable');
+    tableBody.innerHTML = ''; // Clear previous data
+
+    const fragment = document.createDocumentFragment(); // Create a DocumentFragment for batch insertion
+
+    filteredJobs.forEach(job => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${job.jobName}</td>
+            <td>${job.location}</td>
+            <td>${job.experience}</td>
+            <td>${job.community}</td>
+        `;
+
+        row.addEventListener('click', () => {
+            window.location.href = `/hrfitui/job-des?id=${job.id}`; // Redirect with job id in URL
+        });
+
+        fragment.appendChild(row); // Add each row to the fragment
+    });
+
+    tableBody.appendChild(fragment); // Append all rows at once
+}
+
+// Function to get URL parameters and return an object
+function getURLParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+        career_area: params.get('career_area') || '',
+        keyword: params.get('keyword') || '',
+        location: params.get('location') || ''
+    };
+}
+
+// Updated filterJobs to handle both URL parameters and user input
+function filterJobs() {
+    const filters = getURLParams(); // Get search params from URL
+    const locationFilter = filters.location || document.getElementById('locationFilter').value;
+    const experienceFilter = document.getElementById('experienceFilter').value;
+    const communityFilter = document.getElementById('communityFilter').value;
+    const keywordSearch = filters.keyword.toLowerCase() || document.querySelector('input[name="keyword"]').value.toLowerCase();
+
+    // Filter jobs based on the selected criteria and keyword search
+    const filteredJobs = jobs.filter(job => {
+        const matchesLocation = !locationFilter || job.location.toLowerCase().includes(locationFilter.toLowerCase());
+        const matchesExperience = !experienceFilter || job.experience === experienceFilter;
+        const matchesCommunity = !communityFilter || job.community === communityFilter;
+        const matchesKeyword = !keywordSearch || job.jobName.toLowerCase().includes(keywordSearch);
+
+        return matchesLocation && matchesExperience && matchesCommunity && matchesKeyword;
+    });
+
+    // If there are matching jobs, display them; otherwise, show "no results" message
+    displayJobs(filteredJobs);
+    handleNoResults(filteredJobs);
+}
+
+// Sorting functionality
+let sortDirection = true; // True for ascending, false for descending
+
+function sortTable(columnKey) {
+    const sortedJobs = [...jobs].sort((a, b) => {
+        const valA = a[columnKey].toLowerCase();
+        const valB = b[columnKey].toLowerCase();
+
+        if (valA < valB) {
+            return sortDirection ? -1 : 1;
+        }
+        if (valA > valB) {
+            return sortDirection ? 1 : -1;
+        }
+        return 0;
+    });
+
+    sortDirection = !sortDirection; // Toggle sorting direction for the next click
+    displayJobs(sortedJobs);
+}
+
+// Handle showing/hiding "No result matching your search" message
+function handleNoResults(filteredJobs) {
+    const table = document.querySelector('table');
+    const tableContainer = table.parentNode; // Get the parent of the table
+
+    let noResultMessage = document.getElementById('no-results-message');
+    
+    if (!noResultMessage) {
+        noResultMessage = document.createElement('p');
+        noResultMessage.id = 'no-results-message';
+        noResultMessage.textContent = 'No result matching your search';
+        noResultMessage.style.textAlign = 'center';
+        noResultMessage.style.fontSize = '30px';
+        noResultMessage.style.display = 'none'; // Hide by default
+        noResultMessage.style.width = '100%';
+        noResultMessage.style.marginBottom = '100px';
+        tableContainer.appendChild(noResultMessage); // Add <p> below the table
+    }
+
+    if (filteredJobs.length === 0) {
+        table.style.display = 'none'; // Hide the table
+        noResultMessage.style.display = 'block'; // Show the <p> message
+    } else {
+        table.style.display = ''; // Show the table
+        noResultMessage.style.display = 'none'; // Hide the <p> message
+    }
+}
+
+// Initialize page on load
+window.onload = () => {
+    populateFilters();
+    filterJobs(); // Filter jobs based on URL parameters, if any
+};
+
+// Add event listeners for filter changes
+document.getElementById('locationFilter').addEventListener('change', filterJobs);
+document.getElementById('experienceFilter').addEventListener('change', filterJobs);
+document.getElementById('communityFilter').addEventListener('change', filterJobs);
+document.querySelector('input[name="keyword"]').addEventListener('input', filterJobs);
+</script>

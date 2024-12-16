@@ -1,0 +1,63 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'heretoserve',
+  ]
+%}
+{% block content %}
+<style>
+  .Frieght4U .key_offerings {
+    margin-top: 80px;
+  }
+  .Frieght4U .key_offerings .card_li.lft {
+    top: 0;
+  }
+  @media only screen and (max-width: 768px) {
+    .Frieght4U .key_offerings {
+      margin-top: 10px;
+    }
+    .Frieght4U .key_offerings .card_li.lft{
+      margin-top: 0px;
+    }
+  }
+</style>
+<section class="key_offerings">
+    <div class="container">
+<h2 class="block_info--title d-flex justify-content-center -text_green aos-init aos-animate" data-aos="fade-up">Fighting dirt through innovation</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="block_info--title" data-aos="fade">
+                    {{ content.field_cbtitle.0 }}
+                </h2>
+                <span class="pill_underline" data-aos="fade"></span>
+
+
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 align-self-center">
+                <div class="card_li lft" data-aos="patch-left">
+<div class="desc aos-init aos-animate" data-aos="fade-up">{{ content.field_cbtext.0 }}</div>
+                    <ul>
+                    {% if content.field_features %}
+                        {% for key, item in content.field_features if key|first != '#' %}
+                        <li data-aos="fade">
+                            <img src="../themes/custom/jiobp/assets/images/fuels-at-jio-bp/icons/checked.svg" alt="">
+                            {{ item['#paragraph'].field_cbftext[0].value|raw }}
+                        </li>
+                        {% endfor %}
+                    {% endif %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 align-self-center">
+                <picture>
+                    <img src="{{ content.field_cbupload_image.0 }}"  alt="{{ content.field_cbtitle.0 }}">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

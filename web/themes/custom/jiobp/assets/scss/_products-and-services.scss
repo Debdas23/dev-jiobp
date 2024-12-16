@@ -1,0 +1,132 @@
+.productServices{
+    .icon_block_v1 {
+        display: flex;
+        text-align:left;
+        gap: 45px;
+        background: #fff;
+        border-radius: 5px;
+        padding: 45px 38px 55px 38px;
+        align-items: center;
+        min-height: 260px;
+        .icon_block--img{
+            margin-bottom: 0; 
+            transition: all ease .5s;
+            background: #178B49;
+            .svg{
+                // path{fill: #fff;transition: all ease .5s;}
+            }
+        }
+        .icon_block_info{
+            width: calc(100% - 190px);
+            p{margin-bottom: 0;}
+            a{opacity: 0;transition: opacity 0.5s ease; color: #1D9350; font-weight: 400; position: absolute; margin-top: 10px;
+                width: max-content; margin-bottom: 0;
+                &::after{content: ''; position: absolute; right: -40px; top: 7px; background: url('../images/icons/link-arrow.svg') no-repeat; width: 21px; height: 10px;}
+            }
+            .icon_block_info--text{
+                margin-bottom: 0;
+                font-size: 15px; 
+                line-height: 20px;
+                color: #5F5F5F;
+            }
+        }
+        
+
+        &:hover{
+            box-shadow:#00000029 0px 8px 15px 10px;
+            .icon_block_info{
+                a{opacity: 1; }
+            }
+            .icon_block--img{
+                background: #FEEA2B;
+                .svg{
+                    path,
+                    rect,
+                    circle,
+                    text{fill: #1D9350;}
+                    #Rectangle_267,
+                    #Path_44188,
+                    #Path_44189,
+                    #Path_44190,
+                    #Path_44191,
+                    #Path_44194{fill: #fff;}
+                }
+            }
+        }
+        
+        @media (max-width:1280px) {
+            padding: 20px 20px 40px 20px;
+        }
+        @media (max-width:575px) {
+            padding: 20px;
+            gap: 20px;
+            .icon_block--img{width: 90px; height: 90px;}
+            .icon_block_info{width: calc(100% - 105px);
+                a{opacity: 1; position: relative; display: block;}
+            }
+        }
+    }
+    .feature-block{
+        margin:0; padding:40px 0; list-style: none; display: flex; justify-content: space-between; gap: 20px;
+        @media (max-width:767px) {
+            flex-wrap: wrap;
+        }
+        li{
+            display: flex; gap: 25px; flex-direction: column; text-align: center; flex-basis: 25%;padding: 0 40px; position: relative;
+            &::after{content: ''; width: 1px; height: 80px; background: #A3C854; position: absolute; left: -15px; top: 50%; transform: translate(0, -50%);}
+            &:first-child{&::after{display: none;}}
+            @media (max-width:767px) {
+                flex-basis: calc(50% - 20px);
+            }
+            .block-img{height: 115px; width: 115px; margin: 0 auto; background:#FFE600; display: flex; align-items: center; justify-content: center; position: relative; border-radius: 100%;
+                img{transform: translate(-50%, -50%); position: absolute; left: 50%; top:50%;}
+            }
+            @media (max-width:767px) {
+                &:nth-child(odd){ &::after{display: none;} }
+                &:nth-child(even){
+                    &::after{content: ''; width: 1px; height: 80px; background: #A3C854; position: absolute; left: -15px; top: 50%; transform: translate(0, -50%);}
+                }
+            }
+        }
+        .block_info{
+            &--title{
+                font-size: 22px;
+                color: #000;
+                font-weight: 700;
+                margin-bottom: 10px;
+                line-height: 100%;
+                @media (max-width:1500px) {
+                    font-size: 28px;
+                }
+            }
+            &--text{
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 300;
+                @media (max-width:1500px) {
+                    // font-size: 16px;
+                    // line-height: 26px;
+                }
+
+            }
+        }
+    }
+
+    .productContainer {
+        > .row{
+            margin-bottom: 120px;
+            &:last-of-type{margin-bottom: 75px;}
+            margin-right:-10px;
+            margin-left:-10px;
+            > [class^="col"]{
+                margin-bottom: 25px;
+                padding-right:10px;
+                padding-left:10px;
+            }
+            @media (max-width:600px){
+                margin-bottom: 90px;
+                &:last-of-type{margin-bottom: 45px;}
+            }
+        }
+    }
+}

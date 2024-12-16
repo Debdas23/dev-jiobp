@@ -1,0 +1,52 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'heretoserve',
+  ]
+%}
+{% block content %}
+<section class="heretoserve aos-init aos-animate" data-aos="fade-in">
+    <div class="jiobp_curve">
+        <div class="container">
+            <div class="gap_60"></div>
+            {% if content.field_heretoserve_title %}
+                <h2 class="title" data-aos="fade-up">{{ content.field_heretoserve_title.0 }}</h2>
+            {% endif %}
+            {% if content.field_heretoserve_text %}
+                <div class="desc" data-aos="fade-up">{{ content.field_heretoserve_text.0 }}</div>
+            {% endif %}
+
+            <!-- Swiper -->
+            <div class="swiper serveSwiper" data-aos="fade-in">
+                <div class="swiper-wrapper">
+                    {% if content.field_here_to_serve %}
+                        {% for key, item in content.field_here_to_serve if key|first != '#' %}
+                            <div class="swiper-slide">
+                                <div class="card" data-aos="fade-left">
+                                    <div class="card-img" data-aos="fade-up">
+                                        <img src="{{ file_url(item['#paragraph'].field_heretoserve_upload_image.entity.fileuri) }}" alt="{{ item['#paragraph'].field_heretoserve_title[0].value|raw }}">
+                                    </div>
+                                    <div class="card-body">
+                                        <h3 class="card-title" data-aos="fade-up">
+                                            {{ item['#paragraph'].field_heretoserve_title[0].value|raw }}
+                                        </h3>
+                                        <p class="card-text" data-aos="fade-up">
+                                            {{ item['#paragraph'].field_heretoserve_text[0].value|raw }}
+                                        </p>
+                                        <a href="{{ item['#paragraph'].field_know_more_link[0].url|raw }}">Know More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="jio_swiper_pagination">
+                    <div class="swiper-pagination text-left"></div>
+                </div>
+            </div>
+        </div>
+        <div class="gap_60"></div>
+    </div>
+</section>
+{% endblock %}

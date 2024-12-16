@@ -1,0 +1,20 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'heretoserve',
+  ]
+%}
+{% block content %}
+    <div class="jio_social sticky" data-aos="fade-in">
+        <div>
+            {% if content.field_social_links %}
+                {% for key, item in content.field_social_links if key|first != '#' %}
+                    <a href="{{ item['#paragraph'].field_social_link[0].url|raw }}" target="_blank" class="jio_social--link {{ item['#paragraph'].field_short_code[0].value|raw }}">
+                        <img src="{{ file_url(item['#paragraph'].field_social_icon.entity.fileuri) }}" class="svg" alt="">
+                    </a>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

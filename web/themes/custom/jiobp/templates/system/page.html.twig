@@ -1,0 +1,116 @@
+﻿<header>
+<!-- navbar -->
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00D5g00000KLljZ',
+				'FR_MIAW_Bot_Web_Deployment',
+				'https://one-jiobp.my.site.com/ESWFRMIAWBotWebDeploy1718970462609',
+				{
+					scrt2URL: 'https://one-jiobp.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://one-jiobp.my.site.com/ESWFRMIAWBotWebDeploy1718970462609/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+<div class="jio_navbar">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top jio_max_1640">
+        {{ page.logo }}
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""></span>
+            <span class=""></span>
+            <span class=""></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            {{ page.menu_area }}
+        </div>
+        <div class="navbar-icons">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link searchLink" href="#">
+                        <img src="/themes/custom/jiobp/assets/images/icons/search-icon.svg" class="" alt="">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a title="Locate nearest Mobility Station" class="nav-link" href="/locate-fuel-station">
+                        <img src="/themes/custom/jiobp/assets/images/icons/FuelPrice.svg" class="svg" alt="">
+                    </a>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="/locate-fuel-station">
+                        <img src="/themes/custom/jiobp/assets/images/icons/location-pin.svg" class="svg" alt="">
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search" id="search_txt">
+            <a href="#"><img src="/themes/custom/jiobp/assets/images/icons/search-icon.svg" class="svg" alt=""></a>
+        </div>
+	<div class="search-container">
+	<p class="border-bottom mb-0 pb-2 pl-3 text-muted">Your search results are in the pages below</p>
+    <ul class="search-result">
+
+    </ul>
+	</div>
+    </nav>
+</div>
+<!-- /navbar -->
+
+  <!-- sticky social -->
+  <div class="jio_social sticky" data-aos="fade-in">
+      <div>
+        {{ page.jio_social }}
+      </div>
+  </div>
+  <!-- /sticky social -->
+</header>
+<div class="maindiv" style="display: block;">
+  <div class="main_container container">
+    <div class="row">
+      {% if page.sidebar_first %}
+          <aside class="sidebar_first">
+            {{ page.sidebar_first }}
+          </aside>
+        {% endif %}
+        {% if page.sidebar_second %}
+          <aside class="sidebar_second">
+            {{ page.sidebar_second }}
+          </aside>
+        {% endif %}
+    </div>
+  </div>
+</div>
+{{ page.banner }}
+
+{{ page.why_jio }}
+
+{{ page.here_to_serve }}
+
+{{ page.products_services }}
+
+{{ page.offerings }}
+
+{{ page.hp_about }}
+
+{{ page.jio_news }}
+
+{{ page.content }}
+
+{{ page.quick_overview }}
+
+{{ page.footer }}
+
+{{ page.notice }}
+
+<div class="loader">
+    <div class="loader_spin"></div>
+</div>

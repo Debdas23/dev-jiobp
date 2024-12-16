@@ -1,0 +1,31 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'heretoserve',
+  ]
+%}
+{% block content %}
+<section>
+    <div class="gap_60"></div>
+    <div class="container">
+        <div class="imgblock reverse">
+            <div class="imgblock-info">
+                <h2 class="title" data-aos="fade-up">{{ content.field_fms_title.0 }}</h2>
+                <div class="text" data-aos="fade-up">
+                    {{ content.body.0 }}
+                </div>
+               	<a href="{{ content.field_apply_now_link.0 }}" data-aos="fade-up" target="_blank" class="btn-light">Disclaimer</a>
+            </div>
+            <div class="imgblock-img" data-aos="fade-right">
+                <picture>
+                    <source media="(min-width:768px)" srcset="{{ content.field_fms_upload_image_desktop.0 }}">
+                    <source media="(max-width:767px)" srcset="{{ content.field_fms_upload_image_mobile.0 }}">
+                    <img src="{{ content.field_fms_upload_image_desktop.0 }}" class="img-fluid" alt="{{ content.field_fms_title.0 }}">
+                </picture>
+            </div>
+        </div>
+    </div>
+    <div class="gap_60"></div>
+</section>
+{% endblock %}

@@ -1,0 +1,104 @@
+{% set tabsarray = [] %}
+{% if content.field_feature_and_benefits %}
+    {% for key, item in content.field_feature_and_benefits if key|first != '#' %}
+        {% set tabt = item['#paragraph'].field_feature_and_benefit_type[0].value|raw %}
+        {% if tabt not in tabsarray %}
+            {% set tabsarray = tabsarray|merge([tabt]) %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+<section class="features-benefits">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="block_info--title" data-aos="fade-up">
+                    Features and Benefits
+                </h2>
+                <span class="pill_underline" data-aos="fade-up"></span>
+            </div>
+            <div class="col-md-11 offset-md-1">
+                <div class="tabs">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        {% for tabitem in tabsarray %}
+                            {% set tabs_title = tabitem|lower|replace({' ': "-"}) %}
+                            {% if loop.first %}
+                            <li class="nav-item" data-aos="fade-up">
+                                <a class="nav-link active" id="{{ tabs_title }}-tab" data-toggle="tab" href="#{{ tabs_title }}" role="tab" aria-controls="{{ tabs_title }}" aria-selected="true">
+                                    {{ tabitem }}
+                                </a>
+                            </li>
+                            {% else %}
+                            <li class="nav-item" data-aos="fade-up">
+                                <a class="nav-link" id="{{ tabs_title }}-tab" data-toggle="tab" href="#{{ tabs_title }}" role="tab" aria-controls="{{ tabs_title }}" aria-selected="true">
+                                    {{ tabitem }}
+                                </a>
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        {% for tabitem_in in tabsarray %}
+                            {% set tabs_title = tabitem_in|lower|replace({' ': "-"}) %}
+                            {% if loop.first %}
+                            <div class="tab-pane fade show active" id="{{ tabs_title }}">
+                                {% else %}
+                            <div class="tab-pane fade show" id="{{ tabs_title }}">
+                                {% endif %}
+                                <div class="row">
+                                    <div class="col-md-6  pr-4">
+                                        <div class="card_li">
+                                            <h4 class="block_info--title text-left" data-aos="fade-up">
+                                                Features
+                                            </h4>
+                                            <ul class="brd-rlt pr-5">
+                                                {% for key, item in content.field_feature_and_benefits if key|first != '#' %}
+                                                {% set benefit_type = item['#paragraph'].field_feature_and_benefit_type[0].value|raw %}
+                                                {% if tabitem_in == benefit_type %}
+                                                {% for i in 0..20 %}
+                                                {% if item['#paragraph'].field_airbp_feature[i] %}
+                                                <li data-aos="fade-up">
+                                                    <img src="../themes/custom/jiobp/assets/images/fuels-at-jio-bp/icons/checked.svg" alt="">
+                                                    {{ item['#paragraph'].field_airbp_feature[i].value|raw }}
+                                                </li>
+                                                {% else %}
+                                                {% set i = i + 20 %}
+                                                {% endif %}
+                                                {% endfor %}
+                                                {% endif %}
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card_li  pl-4">
+                                            <h4 class="block_info--title text-left" data-aos="fade-up">
+                                                Benefits
+                                            </h4>
+                                            <ul>
+                                                {% for key, item in content.field_feature_and_benefits if key|first != '#' %}
+                                                {% set benefit_type = item['#paragraph'].field_feature_and_benefit_type[0].value|raw %}
+                                                {% if tabitem_in == benefit_type %}
+                                                {% for i in 0..20 %}
+                                                {% if item['#paragraph'].field_benefit[i] %}
+                                                <li data-aos="fade-up">
+                                                    <img src="../themes/custom/jiobp/assets/images/fuels-at-jio-bp/icons/checked.svg" alt="">
+                                                    {{ item['#paragraph'].field_benefit[i].value|raw }}
+                                                </li>
+                                                {% else %}
+                                                {% set i = i + 20 %}
+                                                {% endif %}
+                                                {% endfor %}
+                                                {% endif %}
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

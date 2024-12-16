@@ -1,0 +1,96 @@
+{% set tabsarray = [] %}
+{% if content.field_offer_details %}
+    {% for key, item in content.field_offer_details if key|first != '#' %}
+        {% set tabt = item['#paragraph'].field_type[0].value|raw %}
+        {% if tabt not in tabsarray %}
+            {% set tabsarray = tabsarray|merge([tabt]) %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+<section class="formSection" data-aos="fade-in">
+    <img src="../themes/custom/jiobp/assets/images/backgrounds/yellow_curve_left.png" alt="" class="img-fluid formSection_topimg" />
+    <div class="formSection_container">
+        <div class="container">
+            <h2 class="formSection_title -text_green" data-aos="fade-up">Types of offers available</h2>
+            <span class="pill_underline -green mx-auto" data-aos="fade-up"></span>
+        </div>
+        <div class="container -custom offers">
+          <!-- Nav tabs -->
+            <ul class="nav nav-tabs offers-tabs" id="myTab" role="tablist">
+                {% for tabitem in tabsarray %}
+                    {% set tabs_title = tabitem|lower|replace({' ': "-"}) %}
+                    {% if loop.first %}
+                    <li class="nav-item" role="presentation" data-aos="fade-up">
+                        <a class="nav-link active" id="{{ tabs_title }}-tab" data-toggle="tab" href="#{{ tabs_title }}" role="tab" aria-controls="{{ tabs_title }}" aria-selected="true">{{ tabitem }}<span class="open_count">(1)</span></a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item" role="presentation" data-aos="fade-up">
+                        <a class="nav-link" id="{{ tabs_title }}-tab" data-toggle="tab" href="#{{ tabs_title }}" role="tab" aria-controls="{{ tabs_title }}" aria-selected="true">{{ tabitem }}<span class="open_count"></span></a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+          <!-- Tab panes -->
+            <div class="tab-content offers-content">
+                {% set tabc = 0 %}
+                {% for tabitem_in in tabsarray %}
+                    {% set tabs_title = tabitem_in|lower|replace({' ': "-"}) %}
+                    {% if loop.first %}
+                        <div class="tab-pane fade show active" id="{{ tabs_title }}" role="tabpanel" aria-labelledby="open-tab">
+                    {% else %}
+                        <div class="tab-pane fade show" id="{{ tabs_title }}" role="tabpanel" aria-labelledby="open-tab">
+                    {% endif %}
+                        <div class="cards" data-aos="fade-up">
+                        {% for key, item in content.field_offer_details if key|first != '#' %}
+                            {% set offer_type = item['#paragraph'].field_offer_title[0].value|raw %}
+                            {% set field_type = item['#paragraph'].field_type[0].value|raw %}
+                                {% if tabitem_in == field_type %}
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">
+                                            <button class="" data-toggle="collapse" data-target="#colsp{{ tabc }}" aria-expanded="false">
+                                                {{ offer_type }}
+                                                <img src="../themes/custom/jiobp/assets/images/cng_v3/icons/downArrow.svg" alt="btn" />
+                                            </button>
+                                            </h5>
+                                        </div>
+                                        <div id="colsp{{ tabc }}" class="collapse">
+                                            <div class="card-body">
+                                            <hr class="divider -green" />
+                                            <div class="row row1">
+                                                <div class="col-md-5">
+                                                <div class="offer_details checkList_ul ">
+                                                    <h5 class="offer_details_title">Offer Details</h5>
+                                                    {{ item['#paragraph'].field_offer_details[0].value|raw }}
+                                                </div>
+                                                </div>
+                                                <div class="col-md-7">
+                                                <div class="t-c">
+                                                    <h5 class="t-c_title">Terms & Conditions</h5>
+                                                    <hr class="divider -green"/>
+                                                    {{ item['#paragraph'].field_terms_conditions[0].value|raw }}
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <h4 class="title2 d-block">Frequently Asked Questions</h4>
+                                            <span class="pill_underline -green"></span>
+                                            {{ item['#paragraph'].field_frequently_asked_questions[0].value|raw }}
+                                            <h4 class="title3" data-aos="fade-up">Progress</h4>
+                                            <span class="pill_underline -green"></span>
+                                            {{ item['#paragraph'].field_progress[0].value|raw }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% set tabc = tabc + 1 %}
+                        {% endfor %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <img src="../themes/custom/jiobp/assets/images/backgrounds/yellow_curve_right.png" alt="" class="img-fluid formSection_bottomimg" />
+</section>

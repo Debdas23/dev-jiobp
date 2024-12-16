@@ -1,0 +1,28 @@
+<section>
+    <div class="container appSection">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="appSection_container" data-aos="fade-up">
+                    <h2 class="title" data-aos="fade-up">{{ content.field_apptitle.0 }}</h2>
+                    <span class="pill_underline -yellow" data-aos="fade-up"></span>
+                    <p class="subtitle" data-aos="fade-up">{{ content.field_apptext.0 }}</p>
+                    <div class="btns" data-aos="fade-up">
+		        {% if content.field_appgoogle_store_link.0 %}
+                        <a href="{{ content.field_appgoogle_store_link.0 }}" target="_blank" class="anchor">
+                            <img src="{{ content.field_appgoogle_play_image.0 }}" alt="googleplay" class="img-fluid" />
+                        </a>
+               	        {% endif %}
+		        {% if content.field_aapp_store_link.0 %}
+                        <a href="{{ content.field_aapp_store_link.0 }}" target="_blank" class="anchor">
+                            <img src="{{ content.field_appapp_store_image.0 }}" alt="applestore" class="img-fluid" />
+                        </a>
+               	        {% endif %}
+                    </div>
+                </div>
+                <div class="appSection_img" data-aos="fade" data-aos-delay="450">
+                    <img src="{{ content.field_appmobile_image.0 }}" alt="{{ content.field_apptitle.0 }}" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

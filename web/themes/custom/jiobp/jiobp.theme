@@ -1,0 +1,72 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+use Drupal\views\Form\ViewsForm;
+
+function jiobp_preprocess_block(&$vars){
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof \Drupal\node\NodeInterface) {
+      // You can get nid and anything else you need from the node object.
+      $vars["nid"] = $node->id();
+      \Drupal::service('page_cache_kill_switch')->trigger();
+
+      $vars["allowed"] = 0; // uncomment below 3 lines of code and set allowed value to 0 if you want to show otp section in investor relations page
+       if (isset($_COOKIE["allowed"])) { 
+         $vars["allowed"] = $_COOKIE['allowed'];
+       }
+
+      $vars["node_title"] = $node->getTitle();
+      $vars["body"] = $node->body->value;
+      $vars["field_text"] = $node->field_text->value;
+      $vars['latest_news'] = views_embed_view('latest_news', 'block_1');
+      $vars['rocode'] = (\Drupal::request()->query->get('rocode'))?\Drupal::request()->query->get('rocode'):'';
+
+    }
+
+    $vars['base_path'] = base_path();
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for page templates.
+ */
+function jiobp_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  // Add content type suggestions.
+  if ($node = \Drupal::request()->attributes->get('node')) {
+    array_splice($suggestions, 1, 0, 'page__node__' . $node->getType());
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function jiobp_preprocess_page(&$variables) {
+  // Load job applications data.
+  $query = \Drupal::entityTypeManager()->getStorage('node')->getQuery();
+  $query->condition('type', 'job_applicant');
+  $query->condition('status', 1); // Only published nodes.
+  $query->accessCheck(TRUE);
+  $query->sort('created', 'DESC'); // Sort by creation date (newest first).
+  $nids = $query->execute();
+
+  $nodes = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple($nids);
+
+  $jobs = [];
+  foreach ($nodes as $node) {
+    $jobs[] = [
+      'jobId' => $node->get('field_job_id')->value,
+      'jobName' => $node->label(),
+      'postedDate' => $node->get('field_posted_on')->value,
+      'body' => $node->get('body')->value,
+    ];
+  }
+
+  // Attach jobs data to drupalSettings if not empty.
+  if (!empty($jobs)) {
+    $variables['#attached']['drupalSettings']['blogs']['jobApplications'] = $jobs;
+    $variables['jd_list'] = $jobs;
+  }
+}
+

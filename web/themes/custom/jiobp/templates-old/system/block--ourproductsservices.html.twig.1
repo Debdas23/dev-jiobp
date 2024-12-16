@@ -1,0 +1,143 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'our_products_services',
+  ]
+%}
+{% block content %}
+{% if nid == '1' %}
+<section class="productsServices" data-aos="fade-in">
+    <div class="gap_100"></div>
+    <div class="container">
+        {% if content.field_ops_title %}
+        <div class="title" data-aos="fade-in">
+            {{ content.field_ops_title.0 }}
+        </div>
+        {% endif %}
+        {% if content.field_pos_text %}
+        <div class="desc" data-aos="fade-in">
+            {{ content.field_pos_text.0 }}
+        </div>
+        {% endif %}
+
+        {% set tabsarray = [] %}
+        {% if content.field_products_services %}
+            {% for key, item in content.field_products_services if key|first != '#' %}
+                {% set tabt = item['#paragraph'].field_category[0].value|raw %}
+                {% if tabt not in tabsarray %}
+                    {% set tabsarray = tabsarray|merge([tabt]) %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        <nav class="jio_tabs" data-aos="fade-in">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                {% for tabitem in tabsarray %}
+                    {% set tabs_title = tabitem|lower|replace({' ': "-"}) %}
+                    {% if loop.first %}
+                    <a class="nav-item nav-link active" id="nav-{{ tabs_title }}-tab" data-toggle="tab" href="#nav-{{ tabs_title }}" role="tab" aria-controls="nav-{{ tabs_title }}" aria-selected="true">{{ tabitem }}</a>
+                    {% else %}
+                    <a class="nav-item nav-link" id="nav-{{ tabs_title }}-tab" data-toggle="tab" href="#nav-{{ tabs_title }}" role="tab" aria-controls="nav-{{ tabs_title }}" aria-selected="true">{{ tabitem }}</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent" data-aos="fade-in">
+            {% for tabitem_in in tabsarray %}
+                {% set tabs_title = tabitem_in|lower|replace({' ': "-"}) %}
+                {% if loop.first %}
+                <div class="tab-pane fade show active" id="nav-{{ tabs_title }}" role="tabpanel" aria-labelledby="nav-{{ tabs_title }}-tab">
+                {% else %}
+                <div class="tab-pane fade" id="nav-{{ tabs_title }}" role="tabpanel" aria-labelledby="nav-{{ tabs_title }}-tab">
+                {% endif %}
+                    <div class="swiper fuelSwiper">
+                        <div class="swiper-wrapper">
+                            {% if content.field_products_services %}
+                                {% for key, item in content.field_products_services if key|first != '#' %}
+                                    {% set category = item['#paragraph'].field_category[0].value|raw %}
+                                    {% if tabitem_in == category %}
+                                    <div class="swiper-slide">
+                                        <div class="icon_block_v1">
+                                            <div class="icon_block--img">
+                                                <img src="{{ file_url(item['#paragraph'].field_ups_upload_image.entity.fileuri) }}" class="svg" alt="{{ item['#paragraph'].field_ops_title[0].value|raw }}">
+                                            </div>
+                                            <div class="icon_block_info">
+                                                <div class="icon_block_info--title">
+                                                    {{ item['#paragraph'].field_ops_title[0].value|raw }}
+                                                </div>
+                                                <div class="icon_block_info--text">
+                                                    <p>
+                                                        {{ item['#paragraph'].field_ops_text[0].value|raw }}
+                                                    </p>
+                                                    <a href="{{ item['#paragraph'].field_link[0].url|raw }}">Know More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                        <div class="swiper-buttons-wrapper">
+                            <div class="swiper-button-next">
+                                <img src="themes/custom/jiobp/assets/images/icons/arrow.svg" class="svg" alt="">
+                            </div>
+                            <div class="swiper-button-prev">
+                                <img src="themes/custom/jiobp/assets/images/icons/arrow.svg" class="svg" alt="">
+                            </div>
+                        </div>
+                        <div class="jio_swiper_pagination">
+                            <div class="swiper-pagination text-left"></div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% elseif nid == 10 %}
+{% set tabsarray = [] %}
+{% if content.field_products_services %}
+    {% for key, item in content.field_products_services if key|first != '#' %}
+        {% set tabt = item['#paragraph'].field_category[0].value|raw %}
+        {% if tabt not in tabsarray %}
+            {% set tabsarray = tabsarray|merge([tabt]) %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+<section class="productsServices"  data-aos="fade-in">
+    <div class="gap_100"></div>
+    <div class="container productContainer">
+        {% for tabitem_in in tabsarray %}
+            <div class="row">
+                {% if content.field_products_services %}
+                    {% for key, item in content.field_products_services if key|first != '#' %}
+                        {% set category = item['#paragraph'].field_category[0].value|raw %}
+                        {% if tabitem_in == category %}
+                            <div class="col-md-6">
+                                <div class="icon_block_v1">
+                                    <div class="icon_block--img">
+                                        <img src="{{ file_url(item['#paragraph'].field_ups_upload_image.entity.fileuri) }}" class="svg" alt="{{ item['#paragraph'].field_ops_title[0].value|raw }}">
+                                    </div>
+                                    <div class="icon_block_info">
+                                        <div class="icon_block_info--title">
+                                            {{ item['#paragraph'].field_ops_title[0].value|raw }}
+                                        </div>
+                                        <div class="icon_block_info--text">
+                                            <p>
+                                                {{ item['#paragraph'].field_ops_text[0].value|raw }}
+                                            </p>
+                                            <a href="{{ item['#paragraph'].field_link[0].url|raw }}">Know More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+{% endblock %}

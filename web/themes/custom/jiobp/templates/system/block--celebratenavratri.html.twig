@@ -1,0 +1,71 @@
+<style>
+.redeem-card.custom1{ display: flex; justify-content: center; align-items: center; padding: 30px 40px !important;}
+.redeem-btn {
+    padding: 11px 30px;
+    background: #f0f0f0;
+    color: #018837;
+    border-radius: 26px;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    margin-top: 50px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 300;
+    min-width: 200px;
+    text-align: center;
+}
+.redeem-btn:hover {
+    text-decoration: none;
+    background: #018837;
+    color: #fff;
+}
+
+</style>
+<section class="redeem">
+<div class="gifts"></div>
+<div class="gifts1"></div>
+<div id="stars"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12  align-self-center">
+                <h1 class="block_info--title" data-aos="fade-up">
+                    
+                </h1>
+                <!--<span class="pill_underline mb-4" data-aos="fade-up"></span>-->
+                <p class="subtitle" data-aos="fade-up">{{ content.field_bottom_text.0 }}</p>
+            </div>
+            {% set i = 1 %}
+            {% set c = 0 %}
+            {% set d = 250 %}
+            {% if content.field_our_features %}
+                {% for key, item in content.field_our_features if key|first != '#' %}
+                  {% set c = c + 1 %}
+                {% endfor %}
+
+                {% for key, item in content.field_our_features if key|first != '#' %}
+                <div class="col-lg-3 col-md-6">
+                    {% if c > i %}
+                    {% set e = d + 250 %}
+                    <span class="rltFlow_arrow" data-aos="fade-right" data-aos-delay="{{ e }}">
+                        <img src="../themes/custom/jiobp/assets/images/loyalty-program_V3/arrow-right.png" alt="jioBp">
+                    </span>
+		    {% else %}
+                    {% endif %}
+                    <div class="redeem-card custom1 mt-0"  data-aos="fade-up" data-aos-delay="{{ d }}">
+                        <p class="card-desc" data-aos="fade-up">
+                            {{ item['#paragraph'].field_oftext[0].value|raw }}
+                        </p>
+                    </div>
+                </div>
+                {% set i = i + 1 %}
+                {% set d = e + 250 %}
+                {% endfor %}
+            {% endif %}
+        </div>
+	<div class="row">
+		<div class="col text-center">
+			<a href="https://docs.google.com/document/d/1sisZTplflbs_vOh_QhP6ycoSzY7A-J8O/edit?usp=sharing&ouid=114666659674211897519&rtpof=true&sd=true" target="_blank" data-aos="fade-up" class="redeem-btn aos-init aos-animate">Terms &amp; Conditions</a>
+		</div>
+	</div>
+    </div>
+</section>

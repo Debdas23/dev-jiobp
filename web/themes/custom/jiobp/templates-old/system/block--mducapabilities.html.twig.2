@@ -1,0 +1,175 @@
+{% set mdu_capabilities = [] %}
+{% if content.field_mdu_capabilities %}
+    {% for key, item in content.field_mdu_capabilities if key|first != '#' %}
+        {% set tabt = item['#paragraph'].field_mdu_capabilities[0].value|raw %}
+        {% if tabt not in mdu_capabilities %}
+            {% set mdu_capabilities = mdu_capabilities|merge([tabt]) %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{% set mdu_capabilities_type = [] %}
+{% if content.field_mdu_capabilities %}
+    {% for key, item in content.field_mdu_capabilities if key|first != '#' %}
+        {% set tabty = item['#paragraph'].field_mdu_capabilities_type1[0].value|raw %}
+        {% if tabty not in mdu_capabilities_type %}
+            {% set mdu_capabilities_type = mdu_capabilities_type|merge([tabty]) %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+<section class="capabilities">
+    <div class="container-fluid">
+        <div class="container -custom">
+            <nav class="capabilities_nav">
+                <div class="nav nav-tabs" id="nav-tab" role="tablist" data-aos="fade-up">
+                    {% for tabitem in mdu_capabilities %}
+                        {% set tabs_title = tabitem|lower|replace({' ': "-"}) %}
+                        {% if loop.first %}
+                        <a class="nav-link active" id="{{ tabs_title }}-tab" data-toggle="tab" href="#{{ tabs_title }}" role="tab" aria-controls="{{ tabs_title }}" aria-selected="true" data-aos="fade-up">{{ tabitem }}</a>
+                        {% else %}
+                        <a class="nav-link" id="{{ tabs_title }}-tab" data-toggle="tab" href="#{{ tabs_title }}" role="tab" aria-controls="{{ tabs_title }}" aria-selected="false" data-aos="fade-up">{{ tabitem }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </nav>
+            <div class="tab-content capabilities_content" id="nav-tabContent">
+                {% set t = 0 %}
+                {% for tabitem in mdu_capabilities %}
+                    {% set tabs_title = tabitem|lower|replace({' ': "-"}) %}
+                    {% if loop.first %}
+                    <div class="tab-pane fade show active" id="{{ tabs_title }}" role="tabpanel" aria-labelledby="{{ tabs_title }}-tab">
+                        <div class="row">
+                            <div class="col-md-5 pr-md-0">
+                                <div class="nav flex-column nav-pills capabilities_innerpills" id="v-pills-tab" role="tablist" aria-orientation="vertical" data-aos="fade-left" data-aos-delay="500">
+                                    {% for tabitem_type in mdu_capabilities_type %}
+                                        {% set tabs_title_type = tabitem_type|lower|replace({' ': "-"}) %}
+                                        {% if loop.first %}
+                                            <a class="nav-link active" id="v-{{ tabs_title_type }}-{{ t }}-tab" data-toggle="pill" href="#v-{{ tabs_title_type }}-{{ t }}" role="tab" aria-controls="v-{{ tabs_title_type }}" aria-selected="true" data-aos="fade-up">{{ tabitem_type }}</a>
+                                        {% else %}
+                                            <a class="nav-link" id="v-{{ tabs_title_type }}-{{ t }}-tab" data-toggle="pill" href="#v-{{ tabs_title_type }}-{{ t }}" role="tab" aria-controls="v-{{ tabs_title_type }}" aria-selected="false" data-aos="fade-up">{{ tabitem_type }}</a>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="col-md-7 pl-md-0">
+                                <div class="tab-content capabilities_innerContent" id="v-pills-tabContent" data-aos="fade-up" data-aos-delay="250">
+                                   {% for tabitem_type in mdu_capabilities_type %}
+                                        {% set tabs_title_type = tabitem_type|lower|replace({' ': "-"}) %}
+                                        {% if loop.first %}
+                                            <div class="tab-pane fade show active" id="v-{{ tabs_title_type }}-{{ t }}" role="tabpanel" aria-labelledby="v-{{ tabs_title_type }}-tab">
+                                                <ul class="list-unstyled">
+                                                {% if content.field_mdu_capabilities %}
+                                                    {% for key, item in content.field_mdu_capabilities if key|first != '#' %}
+                                                        {% set type1 = item['#paragraph'].field_mdu_capabilities[0].value|raw %}
+                                                        {% set type2 = item['#paragraph'].field_mdu_capabilities_type1[0].value|raw %}
+                                                        {% if type1 == tabitem and type2 == tabitem_type %}
+                                                            <li class="list_item" data-aos="fade-up">
+                                                                <img src="../themes/custom/jiobp/assets/images/icons/checked.svg" alt="" class="list_item_icon" />
+                                                                <div class="list_item_content">
+                                                                <p class="list_item_title">{{ item['#paragraph'].field_mdutitle[0].value|raw }}</p>
+                                                                <p class="list_item_subtitle">{{ item['#paragraph'].field_mdutext[0].value|raw }}</p>
+                                                                </div>
+                                                            </li>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                {% endif %}
+                                                </ul>
+                                            </div>
+                                        {% else %}
+                                            <div class="tab-pane fade" id="v-{{ tabs_title_type }}-{{ t }}" role="tabpanel" aria-labelledby="v-{{ tabs_title_type }}-tab">
+                                                <ul class="list-unstyled">
+                                                    {% if content.field_mdu_capabilities %}
+                                                        {% for key, item in content.field_mdu_capabilities if key|first != '#' %}
+                                                            {% set type1 = item['#paragraph'].field_mdu_capabilities[0].value|raw %}
+                                                            {% set type2 = item['#paragraph'].field_mdu_capabilities_type1[0].value|raw %}
+                                                            {% if type1 == tabitem and type2 == tabitem_type %}
+                                                                <li class="list_item">
+                                                                    <img src="../themes/custom/jiobp/assets/images/icons/checked.svg" alt="" class="list_item_icon" />
+                                                                    <div class="list_item_content">
+                                                                        <p class="list_item_title">{{ item['#paragraph'].field_mdutitle[0].value|raw }}</p>
+                                                                        <p class="list_item_subtitle">{{ item['#paragraph'].field_mdutext[0].value|raw }}</p>
+                                                                    </div>
+                                                                </li>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    {% endif %}
+                                                </ul>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="tab-pane fade" id="{{ tabs_title }}" role="tabpanel" aria-labelledby="{{ tabs_title }}-tab">
+                        <div class="row">
+                            <div class="col-md-5 pr-md-0">
+                                <div class="nav flex-column nav-pills capabilities_innerpills" id="v-pills-tab" role="tablist" aria-orientation="vertical" data-aos="fade-left" data-aos-delay="500">
+                                    {% for tabitem_type in mdu_capabilities_type %}
+                                        {% set tabs_title_type = tabitem_type|lower|replace({' ': "-"}) %}
+                                        {% if loop.first %}
+                                            <a class="nav-link active" id="v-{{ tabs_title_type }}-{{ t }}-tab" data-toggle="pill" href="#v-{{ tabs_title_type }}-{{ t }}" role="tab" aria-controls="v-{{ tabs_title_type }}" aria-selected="true">{{ tabitem_type }}</a>
+                                        {% else %}
+                                            <a class="nav-link" id="v-{{ tabs_title_type }}-{{ t }}-tab" data-toggle="pill" href="#v-{{ tabs_title_type }}-{{ t }}" role="tab" aria-controls="v-{{ tabs_title_type }}" aria-selected="false">{{ tabitem_type }}</a>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="col-md-7 pl-md-0">
+                                <div class="tab-content capabilities_innerContent" id="v-pills-tabContent" data-aos="fade-in" data-aos-delay="250">
+                                   {% for tabitem_type in mdu_capabilities_type %}
+                                        {% set tabs_title_type = tabitem_type|lower|replace({' ': "-"}) %}
+                                        {% if loop.first %}
+                                            <div class="tab-pane fade show active" id="v-{{ tabs_title_type }}-{{ t }}" role="tabpanel" aria-labelledby="v-{{ tabs_title_type }}-tab">
+                                                <ul class="list-unstyled">
+                                                {% if content.field_mdu_capabilities %}
+                                                    {% for key, item in content.field_mdu_capabilities if key|first != '#' %}
+                                                        {% set type1 = item['#paragraph'].field_mdu_capabilities[0].value|raw %}
+                                                        {% set type2 = item['#paragraph'].field_mdu_capabilities_type1[0].value|raw %}
+                                                        {% if type1 == tabitem and type2 == tabitem_type %}
+                                                            <li class="list_item">
+                                                                <img src="../themes/custom/jiobp/assets/images/icons/checked.svg" alt="" class="list_item_icon" />
+                                                                <div class="list_item_content">
+                                                                    <p class="list_item_title">{{ item['#paragraph'].field_mdutitle[0].value|raw }}</p>
+                                                                    <p class="list_item_subtitle">{{ item['#paragraph'].field_mdutext[0].value|raw }}</p>
+                                                                </div>
+                                                            </li>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                {% endif %}
+                                                </ul>
+                                            </div>
+                                        {% else %}
+                                            <div class="tab-pane fade" id="v-{{ tabs_title_type }}-{{ t }}" role="tabpanel" aria-labelledby="v-{{ tabs_title_type }}-tab">
+                                                <ul class="list-unstyled">
+                                                    {% if content.field_mdu_capabilities %}
+                                                        {% for key, item in content.field_mdu_capabilities if key|first != '#' %}
+                                                            {% set type1 = item['#paragraph'].field_mdu_capabilities[0].value|raw %}
+                                                            {% set type2 = item['#paragraph'].field_mdu_capabilities_type1[0].value|raw %}
+                                                            {% if type1 == tabitem and type2 == tabitem_type %}
+                                                                <li class="list_item">
+                                                                    <img src="../themes/custom/jiobp/assets/images/icons/checked.svg" alt="" class="list_item_icon" />
+                                                                    <div class="list_item_content">
+                                                                        <p class="list_item_title">{{ item['#paragraph'].field_mdutitle[0].value|raw }}</p>
+                                                                        <p class="list_item_subtitle">{{ item['#paragraph'].field_mdutext[0].value|raw }}</p>
+                                                                    </div>
+                                                                </li>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    {% endif %}
+                                                </ul>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% set t = t + 1 %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

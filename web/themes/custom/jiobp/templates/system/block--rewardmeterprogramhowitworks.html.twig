@@ -1,0 +1,37 @@
+<section class="how-it-work">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="block_info--title" data-aos="fade-up">
+                    {{ content.field_bottom_text.0 }}
+                </h1>
+                <span class="pill_underline mb-5" data-aos="fade-up"></span>
+            </div>
+            <div class="col-md-12">
+                <div class="how-it-work--wrapper">
+		    <div class="path__img__con" data-aos="fade-right" data-aos-delay="900">
+		    <img src="/themes/custom/jiobp/assets/images/loyalty-program_V3/path.gif" class="path__image" />
+		    </div>
+                    <div class="row">
+                    {% set i = 1 %}
+                    {% if content.field_our_features %}
+                        {% for key, item in content.field_our_features if key|first != '#' %}
+                        <div class="col-md-4">
+                            <div class="how-it-work--card" data-aos="fade-right" data-aos-delay="{{i * 500}}">
+                                <div class="img_block" data-aos="fade" data-aos-delay="{{i * 600}}">
+                                    <img src="{{ file_url(item['#paragraph'].field_oficon.entity.fileuri) }}" alt="{{ item['#paragraph'].field_oftitle[0].value|raw }}" width="123px">
+                                    <span>{{ i }}</span>
+                                </div>
+                                <h3 class="txt-title" data-aos="fade" data-aos-delay="{{i * 700}}">{{ item['#paragraph'].field_oftitle[0].value|raw }}</h3>
+                                <p class="txt-desc" data-aos="fade" data-aos-delay="{{i * 800}}">{{ item['#paragraph'].field_oftext[0].value|raw }}</p>
+                            </div>
+                        </div>
+                        {% set i = i + 1 %}
+                        {% endfor %}
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

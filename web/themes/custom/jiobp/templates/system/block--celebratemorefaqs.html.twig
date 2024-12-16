@@ -1,0 +1,58 @@
+﻿{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'heretoserve',
+  ]
+%}
+{% block content %}
+<section class="faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="block_info--title" data-aos="fade-up" style="color: #018837">{{ content.field_faqstitle.0 }}</h1>
+                <span class="pill_underline mb-4 -bg_blue" data-aos="fade-up" style="background-color: #018837"></span>
+            </div>
+
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="accordion">
+                        {% if content.field_faqs %}
+                            {% set i = 0 %}
+                            {% for key, item in content.field_faqs if key|first != '#' %}
+                                {% if nid == item['#paragraph'].field_display_on_page.entity.id %}
+                                <div class="card" data-aos="fade-up">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="" data-toggle="collapse" data-target="#colsp{{ i }}" aria-expanded="false">
+                                                {{ item['#paragraph'].field_question[0].value|raw }}
+                                                <img src="../themes/custom/jiobp/assets/images/cng_v3/icons/downArrow.svg" alt="btn" />
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="colsp{{ i }}" class="collapse">
+                                        <div class="card-body">
+                                            {{ item['#paragraph'].field_answer[0].value|raw }}
+                                            {{ item['#paragraph'].field_html_answer[0].value|raw }}
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                                {% set i = i + 1 %}
+                            {% endfor %}
+                        {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+	body.ev-charging .jio_footer
+	{
+		background-color: #129048 !important;
+	}
+</style>
+{% endblock %}

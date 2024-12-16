@@ -1,0 +1,283 @@
+﻿{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'heretoserve',
+  ]
+%}
+{% block content %}
+
+{% if nid == 52 %}
+<style>
+body[data-aos-easing] section.faq {
+ overflow: unset;
+}
+
+.border-faq{
+    padding-top: 50px;
+    width: 115%;
+    border-bottom: 2px solid #148C47;
+    margin-left: -85px;
+}
+.__faqsticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 150px;
+  padding: 40px;
+  border-radius: 10px;
+  border: 1px solid #EDEDED;
+  box-shadow: 0px 13px 26px #0000000A;
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  min-width: 250px;
+  width: 250px;
+  margin-left: 40px;
+}
+.__faqsticky .nav-item {
+  width: 100%;
+}
+.__faqsticky .nav-item:nth-child(n+2) {
+  margin-top: 30px;
+}
+.__faqsticky .nav-link {
+  color: #000;
+  font-size: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  padding: 0;
+  width: 100%;
+}
+.__faqsticky .nav-link.active {
+  color: #018837;
+}
+label[for="selectCat"] {
+display:none;
+}
+.cngv3 .faq #accordion .card .card-header h5 button img {
+top: 30px;
+}
+@media only screen and (max-width: 767px) {
+.__faqsticky {
+display: none;
+}
+.border-faq{
+    padding-top: 50px;
+    width: 108%;
+    border-bottom: 2px solid #148C47;
+    margin-left: 0;
+    position: relative;
+    left: -12px;
+}
+label[for="selectCat"] {
+    display: block;
+    position: relative;
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: auto;
+}
+label[for="selectCat"] select {
+    position: relative;
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: #018837;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+label[for="selectCat"] select:focus {
+    box-shadow: none;
+    border-color: #018837;
+}
+label[for="selectCat"]::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    margin: auto;
+    width: 12px;
+    height: 6px;
+    right: 15px;
+    border-top: solid 6px #018837;
+    border-left: solid 6px transparent;
+    border-right: solid 6px transparent;
+    border-radius: 10px;
+}
+}
+</style>
+{% set tabsarray = [] %}
+{% if content.field_faqs %}
+  {% for key, item in content.field_faqs if key|first != '#' %}
+    {% set tab = item['#paragraph'].field_display_on_page.entity.title.value %}
+    {% if tab not in tabsarray %}
+      {% set tabsarray = tabsarray|merge([tab]) %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+
+<section class="faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              <h2 class="block_info--title" data-aos="fade-up">{{ content.field_faqstitle.0 }}</h2>
+              <span class="pill_underline mb-4 -bg_blue" data-aos="fade-up"></span>
+              <label for="selectCat" data-aos="fade-up">
+                <select class="form-control selectCatInput">
+                {% for tabitem in tabsarray %}
+                  {% set tabs_title = tabitem|lower|replace({' ': "-"})|replace({"'": ""}) %}
+                  {% if loop.first %}
+                  <option value="#{{ tabs_title }}" selected>{{ tabitem }}</option>
+                  {% else %}
+                  <option value="#{{ tabs_title }}">{{ tabitem }}</option>
+                  {% endif %}
+                {% endfor %}
+                </select>
+              </label>
+            </div>
+
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12 d-flex align-items-start">
+                        <div id="accordion">
+                        {% if content.field_faqs %}
+                            {% set i = 0 %}
+                            {% for tabitem in tabsarray %}
+                            {% set tabs_title1 = tabitem|lower|replace({' ': "-"})|replace({"'": ""}) %}
+                            {% if loop.first %}
+                            <div class="h-0" id="{{ tabs_title1 }}">&nbsp;</div>
+                            {% else %}
+                            <div class="h-0 border-faq" id="{{ tabs_title1 }}">&nbsp;</div>
+                            {% endif %}
+                            {% for key, item in content.field_faqs if key|first != '#' %}
+                                {% set tab = item['#paragraph'].field_display_on_page.entity.title.value %}
+                                {% set tabs_title = tab|lower|replace({' ': "-"})|replace({"'": ""}) %}
+                                  {% if tabitem == tab %}
+                                    <div class="card" data-aos="fade-up">
+                                      <div class="card-header">
+                                          <h5 class="mb-0">
+                                              <button class="" data-toggle="collapse" data-target="#colsp{{ i }}" aria-expanded="false">
+                                                  {{ item['#paragraph'].field_question[0].value|raw }}
+                                                  <img src="../themes/custom/jiobp/assets/images/cng_v3/icons/downArrow.svg" alt="btn" />
+                                              </button>
+                                          </h5>
+                                      </div>
+                                      <div id="colsp{{ i }}" class="collapse">
+                                          <div class="card-body">
+                                              {{ item['#paragraph'].field_answer[0].value|raw }}
+                                              {{ item['#paragraph'].field_html_answer[0].value|raw }}
+                                          </div>
+                                      </div>
+                                    </div>
+                                    {% set i = i + 1 %}
+                                  {% endif %}
+                                {% endfor %}
+                            {% endfor %}
+                        {% endif %}
+                        </div>
+			  <nav id="faqscollection" class="navbar navbar-light bg-light __faqsticky">
+                          <ul class="nav">
+                          {% for tabitem in tabsarray %}
+                            {% set tabs_title = tabitem|lower|replace({' ': "-"})|replace({"'": ""}) %}
+                            <li class="nav-item">
+                              <a class="nav-link" href="#{{ tabs_title }}">{{ tabitem }}</a>
+                            </li>
+                          {% endfor %}
+                           </ul>
+                         </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 text-center">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+if(window.innerWidth < 768) {
+var selectCatInput = document.querySelector(".selectCatInput");
+  selectCatInput.addEventListener("change", function (e) {
+    var tar = document.querySelector(e.target.value);
+    var tarPos = tar.offsetTop + 650;
+    window.scrollTo({
+      top: tarPos,
+      behavior: "smooth",
+    });
+  });
+} else {
+var scrollToEles = Array.from(document.querySelectorAll(".__faqsticky .nav-link"));
+scrollToEles.map(function (ele, index) {
+  ele.addEventListener("click", function (e) {
+    e.preventDefault();
+    var target = document.querySelector(ele.getAttribute("href"));
+    var targetPos = target.offsetTop + 625;
+    window.scrollTo({
+      top: targetPos,
+      behavior: "smooth",
+    });
+  });
+});
+}
+</script>
+{% else %}
+<section class="faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="block_info--title" data-aos="fade-up">{{ content.field_faqstitle.0 }}</h2>
+                <span class="pill_underline mb-4 -bg_blue" data-aos="fade-up"></span>
+            </div>
+
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="accordion">
+                        {% if content.field_faqs %}
+                            {% set i = 0 %}
+                            {% for key, item in content.field_faqs if key|first != '#' %}
+                                {% if nid == item['#paragraph'].field_display_on_page.entity.id %}
+                                <div class="card" data-aos="fade-up">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">
+                                            <button class="" data-toggle="collapse" data-target="#colsp{{ i }}" aria-expanded="false">
+                                                {{ item['#paragraph'].field_question[0].value|raw }}
+                                                <img src="../themes/custom/jiobp/assets/images/cng_v3/icons/downArrow.svg" alt="btn" />
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="colsp{{ i }}" class="collapse">
+                                        <div class="card-body">
+                                            {{ item['#paragraph'].field_answer[0].value|raw }}
+                                            {{ item['#paragraph'].field_html_answer[0].value|raw }}
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                                {% set i = i + 1 %}
+                            {% endfor %}
+                        {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 text-center" data-aos="fade-up">
+            <a href="/disclaimer-diesel" class="btn-faq" role="button" target="_blank">Disclaimer</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+{% endblock %}

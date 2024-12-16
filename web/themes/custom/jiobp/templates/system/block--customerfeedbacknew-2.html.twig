@@ -1,0 +1,583 @@
+<style>
+    .form .field {
+        width: 100%;
+        border: solid 1px #F2F9F5;
+        height: 80px;
+        border-radius: 6px;
+        background: #FFF;
+        -webkit-box-shadow: 0px 0px 15px 0px #F2F9F5;
+        box-shadow: 0px 0px 15px 0px #F2F9F5;
+        padding: 10px 30px;
+    }
+
+    .form .field:focus {
+        outline: none;
+    }
+
+    .form .field-textarea {
+        width: 100%;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 8px;
+        background: #FFF;
+        -webkit-box-shadow: 0px 0px 10px 0px #F2F9F5;
+        box-shadow: 0px 0px 10px 0px #F2F9F5;
+        height: 250px;
+        padding: 10px;
+    }
+
+    .form .field-textarea:focus {
+        outline: none;
+    }
+
+    .form .btn_green {
+        width: 100%;
+        height: 80px;
+        resize: none;
+    }
+
+
+    .rcb-form .field {
+        padding: 10px 30px;
+    }
+
+    .rcb-form .field::-webkit-input-placeholder {
+        color: #0000004d;
+    }
+
+    .rcb-form .field:-ms-input-placeholder {
+        color: #0000004d;
+    }
+
+    .rcb-form .field::-ms-input-placeholder {
+        color: #0000004d;
+    }
+
+    .rcb-form .field::placeholder {
+        color: #0000004d;
+    }
+
+    .rcb-form .input-group-text {
+        height: 80px;
+        border-radius: 6px;
+        background: #FFF;
+        padding: 0px 10px 0px 30px;
+        border: solid 1px #F2F9F5;
+        border-radius: 6px;
+        border-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        position: relative;
+        color: #0000004d;
+        -webkit-box-shadow: 0px 0px 15px 0px #f2f9f5;
+        box-shadow: 0px 0px 15px 0px #f2f9f5;
+    }
+
+    .rcb-form .input-group-text::after {
+        content: '';
+        position: absolute;
+        height: 60%;
+        width: 1px;
+        right: 0;
+        top: 20%;
+        background: #a3c85457;
+        z-index: 5;
+    }
+
+    .rcb-form .input-group>.form-control {
+        -webkit-box-shadow: 5px 0px 15px 0px #f2f9f5;
+        box-shadow: 5px 0px 15px 0px #f2f9f5;
+        border-radius: 6px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-left: 0;
+        padding-left: 10px;
+        width: auto;
+    }
+
+    .rcb-form .input-group>.form-control:focus {
+        outline: none;
+        border-color: #F2F9F5;
+    }
+
+    .rcb-form .field-textarea {
+        height: 230px;
+        padding: 10px 30px;
+        resize: none;
+    }
+
+    .rcb-form .field-textarea::-webkit-input-placeholder {
+        color: #0000004d;
+    }
+
+    .rcb-form .field-textarea:-ms-input-placeholder {
+        color: #0000004d;
+    }
+
+    .rcb-form .field-textarea::-ms-input-placeholder {
+        color: #0000004d;
+    }
+
+    .rcb-form .field-textarea::placeholder {
+        color: #0000004d;
+    }
+
+    .rcb-form select.field {
+        color: #0000004d;
+        -webkit-appearance: none;
+        -moz-appearance: window;
+        background-image: url("../images/icons/selectArrow.svg");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 20px) 50%;
+    }
+
+    .rcb-form .form-check-input {
+        background: #fff;
+        width: 22px;
+        height: 22px;
+        border: solid 1px #129048;
+    }
+
+    .rcb-form .form-check-inline {
+        margin: 10px 40px 10px 0;
+    }
+
+    .rcb-form .btn_green {
+        width: 287px;
+        height: 64px;
+    }
+
+    .rcb-form .input-group {
+        margin-bottom: 1rem;
+    }
+
+    @media (max-width: 767px) {
+        .rcb-form .btn_green {
+            width: 100%;
+        }
+    }
+
+    .rcb-form select.active {
+        color: #000;
+    }
+
+    .nav-link.active {
+        background: linear-gradient(145deg, #018837 8%, #68a81e 70%);
+border-radius: 50px;
+    }
+    section .nav-link{
+background: #eaeaea;
+border-radius: 50px!important;
+}
+    .rating-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: auto;
+        padding: 10px 0px 5px 0;
+        position: relative;
+	zoom: 0.85;
+    }
+
+    .rating-box {
+        width: 10%;
+        padding: 10px 0;
+        text-align: center;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .rating-box.filled {
+        background-color: #3AB55C;
+        border: none;
+        color: #fff;
+    }
+
+    .rating-box[data-rating="1"].filled {
+        background-color: #F04561;
+    }
+
+    .rating-box[data-rating="2"].filled {
+        background-color: #F95A4F;
+    }
+
+    .rating-box[data-rating="3"].filled {
+        background-color: #FF793C;
+    }
+
+    .rating-box[data-rating="4"].filled {
+        background-color: #FC942D;
+    }
+
+    .rating-box[data-rating="5"].filled {
+        background-color: #FFB92C;
+    }
+
+    .rating-box[data-rating="6"].filled {
+        background-color: #E3D919;
+    }
+
+    .rating-box[data-rating="7"].filled {
+        background-color: #BFDB2D;
+    }
+
+    .rating-box[data-rating="8"].filled {
+        background-color: #83D73F;
+    }
+
+    .rating-box[data-rating="9"].filled {
+        background-color: #44D06A;
+    }
+
+    .rating-box[data-rating="10"].filled {
+        background-color: #3AB55C;
+    }
+
+    .rating-labels {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        font-size: 14px;
+        color: #777;
+    }
+
+    .feedback-container {
+        display: none;
+        margin-top: 20px;
+    }
+    .rating-container > *:first-child {
+    border-radius: 10px 0 0 10px; /* Applies to the first child */
+}
+
+.rating-container > *:last-child {
+    border-radius: 0 10px 10px 0; /* Applies to the last child */
+}
+.form-group label {
+    color: #5C5C5C;
+}
+.col-md-12 p{
+font-size:18px;
+}
+</style>
+<section>
+    <div class="container mt-4">
+        <!-- Nav pills -->
+        <ul class="nav nav-pills" style="gap:5px;"  role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" href="#english"><i class="fa fa-language"
+                        ></i> English</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/customer-feedback-new/hindi"><i class="fa fa-language"
+                        ></i> हिंदी</a>
+            </li>
+        </ul>
+
+        <!-- Tab content -->
+            <div id="english" class="container tab-pane active"><br>
+                <div class="container aos-init aos-animate" data-aos="fade-in">
+                    <form id="requestForm" class="rcb-form form" novalidate="novalidate" _lpchecked="1">
+                        <!-- Your form content here -->
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input name="name" id="name" type="text" minlength="2" class="field" placeholder="Name*"
+                                    data-rule-required="true" data-msg-required="Please enter your name here">
+                                <span id="name_error"></span>
+                            </div>
+                            <div class="col-md-6 input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">+ 91</span>
+                                </div>
+                                <input name="mobile" id="mobile" type="text" class="field form-control"
+                                    placeholder="Mobile Number*" data-rule-required="true" data-msg>
+                                <span id="mobile_error"></span>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input class="field" name="email" id="email" type="text" placeholder="Email Address"
+                                     >
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <select name="product" id="product" class="field" data-rule-required="true"
+                                    data-msg-required="Please select Product" aria-required="true">
+                                    <option value="">Product Used*</option>
+                                    <option value=" Petrol">Petrol</option>
+                                    <option value="Diesel">Diesel</option>
+                                    <option value="Auto LPG">Auto LPG</option>
+                                    <option value="Cng/Cbg">CNG/CBG</option>
+                                    <option value="Other">Others</option>
+                                </select>
+                                <span id="product_error"></span>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input class="field" name="ro_code" id="ro_code" type="text" placeholder="Ro Code">
+                            </div>
+                            <div class="col-md-12">
+                                <p>
+                                    <b>Rate your level of satisfaction with Jio-bp at an overall level* </b>
+                                </p>
+                            </div>
+                            <div class="col-md-12 form-group">
+			    <div class="rating-container" id="rating-container">
+			        <div class="rating-box" data-rating="1" data-target="#satisfactionFeedback">1</div>
+                                <div class="rating-box" data-rating="2" data-target="#satisfactionFeedback">2</div>
+    	                        <div class="rating-box" data-rating="3" data-target="#satisfactionFeedback">3</div>
+                                <div class="rating-box" data-rating="4" data-target="#satisfactionFeedback">4</div>
+            	                <div class="rating-box" data-rating="5" data-target="#satisfactionFeedback">5</div>
+                                <div class="rating-box" data-rating="6" data-target="#satisfactionFeedback">6</div>
+                    	        <div class="rating-box" data-rating="7" data-target="#satisfactionFeedback">7</div>
+                                <div class="rating-box" data-rating="8" data-target="#satisfactionFeedback">8</div>
+                                <div class="rating-box" data-rating="9" data-target="#satisfactionFeedback">9</div>
+                                <div class="rating-box" data-rating="10" data-target="#satisfactionFeedback">10</div>
+			    </div>
+				 <div id="cust_satisfaction_rating_error">
+
+                          </div>
+
+			 <div class="rating-labels">
+                                    <span>Least Satisfied</span>
+<input style="visibility:hidden;" name="cust_satisfaction_rating" id="custSatisfactionRating" value="" required
+                                    data-msg-required="Please select rating" aria-required="true">
+                         
+           <span>Highly Satisfied</span>
+                         </div>
+			 <textarea id="satisfactionFeedback" name="satisfaction_rating_feedback" class="form-control feedback-container" placeholder="Kindly share the reason for your rating" style="display: none;"></textarea>
+			  
+			</div>
+
+                            <div class="col-md-12">
+                                <p class="text-bold">How satisfied are you with Jio-bp on following parameters?</p>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <label>• Quality and Quantity of Fuel</label>
+                                <div class="rating-container">
+                                    <div class="rating-box" data-rating="1" data-target="#qnqFuelRating">1</div>
+                                    <div class="rating-box" data-rating="2" data-target="#qnqFuelRating">2</div>
+                                    <div class="rating-box" data-rating="3" data-target="#qnqFuelRating">3</div>
+                                    <div class="rating-box" data-rating="4" data-target="#qnqFuelRating">4</div>
+                                    <div class="rating-box" data-rating="5" data-target="#qnqFuelRating">5</div>
+                                    <div class="rating-box" data-rating="6" data-target="#qnqFuelRating">6</div>
+                                    <div class="rating-box" data-rating="7" data-target="#qnqFuelRating">7</div>
+                                    <div class="rating-box" data-rating="8" data-target="#qnqFuelRating">8</div>
+                                    <div class="rating-box" data-rating="9" data-target="#qnqFuelRating">9</div>
+                                    <div class="rating-box" data-rating="10" data-target="#qnqFuelRating">10
+                                    </div>
+                                </div>
+                                <div class="rating-labels">
+                                    <span>Least Satisfied</span>
+                                    <span>Highly Satisfied</span>
+                                </div>
+                                <textarea id="qnqFuelRating" name="qnq_fuel_rating_feedback" class="form-control feedback-container" placeholder="Kindly share the reason for your rating"></textarea>
+				<input type="hidden" name="qnq_fuel_rating" id="qnqFuelRatingFeedback" value="">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <label>• Staff Behaviour</label>
+                                <div class="rating-container">
+                                    <div class="rating-box" data-rating="1" data-target="#staffBehaviourRating">1</div>
+                                    <div class="rating-box" data-rating="2" data-target="#staffBehaviourRating">2</div>
+                                    <div class="rating-box" data-rating="3" data-target="#staffBehaviourRating">3</div>
+                                    <div class="rating-box" data-rating="4" data-target="#staffBehaviourRating">4</div>
+                                    <div class="rating-box" data-rating="5" data-target="#staffBehaviourRating">5</div>
+                                    <div class="rating-box" data-rating="6" data-target="#staffBehaviourRating">6</div>
+                                    <div class="rating-box" data-rating="7" data-target="#staffBehaviourRating">7</div>
+                                    <div class="rating-box" data-rating="8" data-target="#staffBehaviourRating">8</div>
+                                    <div class="rating-box" data-rating="9" data-target="#staffBehaviourRating">9</div>
+                                    <div class="rating-box" data-rating="10" data-target="#staffBehaviourRating">10
+                                    </div>
+                                </div>
+                                <div class="rating-labels">
+                                    <span>Least Satisfied</span>
+                                    <span>Highly Satisfied</span>
+                                </div>
+                                <textarea id="staffBehaviourRating" name="staff_behaviour_rating_feedback" class="form-control feedback-container" placeholder="Kindly share the reason for your rating"></textarea>
+				<input type="hidden" name="staff_behaviour_rating" id="staffBehaviourRatingFeedback" value="">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <label>• Availability of Facilities (Air, Washrooms and Drinking Water)</label>
+                                <div class="rating-container">
+                                    <div class="rating-box" data-rating="1" data-target="#facilitiesRating">1</div>
+                                    <div class="rating-box" data-rating="2" data-target="#facilitiesRating">2</div>
+                                    <div class="rating-box" data-rating="3" data-target="#facilitiesRating">3</div>
+                                    <div class="rating-box" data-rating="4" data-target="#facilitiesRating">4</div>
+                                    <div class="rating-box" data-rating="5" data-target="#facilitiesRating">5</div>
+                                    <div class="rating-box" data-rating="6" data-target="#facilitiesRating">6</div>
+                                    <div class="rating-box" data-rating="7" data-target="#facilitiesRating">7</div>
+                                    <div class="rating-box" data-rating="8" data-target="#facilitiesRating">8</div>
+                                    <div class="rating-box" data-rating="9" data-target="#facilitiesRating">9</div>
+                                    <div class="rating-box" data-rating="10" data-target="#facilitiesRating">10
+                                    </div>
+                                </div>
+                                <div class="rating-labels">
+                                    <span>Least Satisfied</span>
+                                    <span>Highly Satisfied</span>
+                                </div>
+                                <textarea id="facilitiesRating" name="facilities_rating_feedback" class="form-control feedback-container" placeholder="Kindly share the reason for your rating"></textarea>
+				<input type="hidden" name="facilities_rating" id="facilitiesRatingFeedback" value="">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <label>• Cleanliness (Washrooms and Fuelling Area)</label>
+                                <div class="rating-container">
+                                    <div class="rating-box" data-rating="1" data-target="#cleanlinessRating">1</div>
+                                    <div class="rating-box" data-rating="2" data-target="#cleanlinessRating">2</div>
+                                    <div class="rating-box" data-rating="3" data-target="#cleanlinessRating">3</div>
+                                    <div class="rating-box" data-rating="4" data-target="#cleanlinessRating">4</div>
+                                    <div class="rating-box" data-rating="5" data-target="#cleanlinessRating">5</div>
+                                    <div class="rating-box" data-rating="6" data-target="#cleanlinessRating">6</div>
+                                    <div class="rating-box" data-rating="7" data-target="#cleanlinessRating">7</div>
+                                    <div class="rating-box" data-rating="8" data-target="#cleanlinessRating">8</div>
+                                    <div class="rating-box" data-rating="9" data-target="#cleanlinessRating">9</div>
+                                    <div class="rating-box" data-rating="10" data-target="#cleanlinessRating">10
+                                    </div>
+                                </div>
+                                <div class="rating-labels">
+                                    <span>Least Satisfied</span>
+                                    <span>Highly Satisfied</span>
+                                </div>
+                                <textarea id="cleanlinessRating" name="cleanliness_rating_feedback" class="form-control feedback-container" placeholder="Kindly share the reason for your rating"></textarea>
+				<input type="hidden" name="cleanliness_rating" id="cleanlinessRatingFeedback" value="">
+                            </div>
+			    <div class="col-md-12 form-group">
+			    <label>• Transactions (Modes of Payment and Speed of Transactions)</label>
+			    <div class="rating-container">
+			        <div class="rating-box" data-rating="1" data-target="#transactionRating">1</div>
+			        <div class="rating-box" data-rating="2" data-target="#transactionRating">2</div>
+			        <div class="rating-box" data-rating="3" data-target="#transactionRating">3</div>
+			        <div class="rating-box" data-rating="4" data-target="#transactionRating">4</div>
+			        <div class="rating-box" data-rating="5" data-target="#transactionRating">5</div>
+			        <div class="rating-box" data-rating="6" data-target="#transactionRating">6</div>
+			        <div class="rating-box" data-rating="7" data-target="#transactionRating">7</div>
+			        <div class="rating-box" data-rating="8" data-target="#transactionRating">8</div>
+			        <div class="rating-box" data-rating="9" data-target="#transactionRating">9</div>
+			        <div class="rating-box" data-rating="10" data-target="#transactionRating">10</div>
+			    </div>
+			    <div class="rating-labels">
+			        <span>Least Satisfied</span>
+			        <span>Highly Satisfied</span>
+			    </div>
+			    <textarea id="transactionRating" name="transactions_rating_feedback" class="form-control feedback-container" placeholder="Kindly share your feedback" style="display: none;"></textarea>
+			    <input type="hidden" name="transactions_rating" id="transactionRatingFeedback" value="">
+			</div>
+
+                            <div class="col-md-12 form-group">
+                                <label>• Innovation (Extra Mileage and Extra Rewards)</label>
+                                <div class="rating-container">
+                                    <div class="rating-box" data-rating="1" data-target="#innovationRating">1</div>
+                                    <div class="rating-box" data-rating="2" data-target="#innovationRating">2</div>
+                                    <div class="rating-box" data-rating="3" data-target="#innovationRating">3</div>
+                                    <div class="rating-box" data-rating="4" data-target="#innovationRating">4</div>
+                                    <div class="rating-box" data-rating="5" data-target="#innovationRating">5</div>
+                                    <div class="rating-box" data-rating="6" data-target="#innovationRating">6</div>
+                                    <div class="rating-box" data-rating="7" data-target="#innovationRating">7</div>
+                                    <div class="rating-box" data-rating="8" data-target="#innovationRating">8</div>
+                                    <div class="rating-box" data-rating="9" data-target="#innovationRating">9</div>
+                                    <div class="rating-box" data-rating="10" data-target="#innovationRating">10
+                                    </div>
+                                </div>
+                                <div class="rating-labels">
+                                    <span>Least Satisfied</span>
+                                    <span>Highly Satisfied</span>
+                                </div>
+                                <textarea id="innovationRating" name="innovation_rating_feedback" class="form-control feedback-container" placeholder="Kindly share the reason for your rating"></textarea>
+				<input type="hidden" name="innovation_rating" id="innovationRatingFeedback" value="">
+                            </div>
+                            <div class="col-md-12">
+                                <p><b>What is the likelihood that you would recommend Jio-bp to others?</b></p> 
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <div class="rating-container">
+                                    <div class="rating-box" data-rating="1" data-target="#recommendationRating">1</div>
+                                    <div class="rating-box" data-rating="2" data-target="#recommendationRating">2</div>
+                                    <div class="rating-box" data-rating="3" data-target="#recommendationRating">3</div>
+                                    <div class="rating-box" data-rating="4" data-target="#recommendationRating">4</div>
+                                    <div class="rating-box" data-rating="5" data-target="#recommendationRating">5</div>
+                                    <div class="rating-box" data-rating="6" data-target="#recommendationRating">6</div>
+                                    <div class="rating-box" data-rating="7" data-target="#recommendationRating">7</div>
+                                    <div class="rating-box" data-rating="8" data-target="#recommendationRating">8</div>
+                                    <div class="rating-box" data-rating="9" data-target="#recommendationRating">9</div>
+                                    <div class="rating-box" data-rating="10" data-target="#recommendationRating">10
+                                    </div>
+                                </div>
+                                <div class="rating-labels">
+                                    <span>Least Satisfied</span>
+                                    <span>Highly Satisfied</span>
+                                </div>
+                                <textarea id="recommendationRating" name="recommendation_rating_feedback" class="form-control feedback-container" placeholder="Kindly share the reason for your rating"></textarea>
+				<input type="hidden" name="recommendation_rating" id="recommendationRatingFeedback" value="">
+                            </div>
+
+
+                        </div>
+                        <button type="submit" class="submit btn_green" id="form_submit" name="submit2">
+                            <span class="btn__text">Submit</span>
+                            <div class="__uploading hide"><span class="uploading__circle"></span><span
+                                    class="uploading__circle"></span><span class="uploading__circle">
+                                    </>
+                        </button>
+                        <span class="validation_error redmessage" id="validation_error"></span>
+                        <div class="spinner-border text-secondary" style="display: none;"></div>
+                    </form>
+ <div class="col-md-12">
+    <p>
+        <strong>Disclaimer:</strong> This section is intended for feedback only. To register a query, please email us at
+        <a href="mailto:customercare.petroleum@jiobp.com">customercare.petroleum@jiobp.com</a>
+        or call our toll-free number at
+        <a href="tel:18008919023">1800-891-9023</a>.
+    </p>
+</div>
+
+                </div>
+                <div id="thanksMsg" class="thanksMsg">
+                    <h2>Thank you for your message, our team representative will get back to you at the earliest</h2>
+                </div>
+            </div>
+    </div>
+</section>
+<div class="gap_100"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.rating-box').forEach(box => {
+        box.addEventListener('click', function() {
+            // Get the parent form group to determine which hidden input and feedback container to update
+            const formGroup = this.closest('.form-group');
+            const targetId = this.getAttribute('data-target');
+            const hiddenInput = formGroup.querySelector('input');
+
+            // Update the hidden input value
+            hiddenInput.value = this.dataset.rating;
+
+            // Reset all boxes in the current group
+            const siblingBoxes = this.parentElement.querySelectorAll('.rating-box');
+            siblingBoxes.forEach(b => b.classList.remove('filled'));
+
+            // Fill up to the selected rating
+            for (let i = 0; i < this.dataset.rating; i++) {
+                siblingBoxes[i].classList.add('filled');
+            }
+
+            // Highlight the selected rating box (optional)
+            siblingBoxes.forEach(r => r.classList.remove('selected'));
+            this.classList.add('selected');
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.rating-box').forEach(box => {
+        box.addEventListener('click', function() {
+            // Get the parent form group to determine which feedback container to update
+            const formGroup = this.closest('.form-group');
+            const targetId = this.getAttribute('data-target');
+            const feedbackContainer = formGroup.querySelector(targetId);
+
+            // Show feedback container if rating is 8 or below
+            if (this.dataset.rating <= 8) {
+                feedbackContainer.style.display = 'block';
+            } else {
+                feedbackContainer.style.display = 'none';
+            }
+        });
+    });
+});
+
+</script>
+

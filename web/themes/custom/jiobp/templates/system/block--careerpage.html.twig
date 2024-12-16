@@ -1,0 +1,1064 @@
+ <style>
+#paginationControls button:disabled {
+    color:#cccccc;
+    pointer-events:none;
+}
+#paginationControls button {
+    color:#000;
+}
+#pageNumbers button:disabled{
+    color: #fff;
+    background-color: #018837;
+}
+#prevBtn{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#nextBtn{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+/* Hide the desktop footer on mobile */
+footer.desktop {
+    display: block;
+}
+.filters select{
+    -webkit-appearance: none;
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"%3E%3Cpath d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"%3E%3C/path%3E%3C/svg%3E') no-repeat right center;
+    background-size: 14px;
+    background-color: #ececec;
+    background-position: right 10px center;
+    cursor:pointer;
+}
+/* Hide the mobile footer on desktop */
+footer.mobile {
+    display: none;
+}
+
+/* For screens larger than 991px (desktop) */
+@media (min-width: 992px) {
+    footer.desktop {
+        display: block;
+    }
+
+    footer.mobile {
+        display: none;
+    }
+}
+
+/* For screens 991px or smaller (mobile/tablets) */
+@media (max-width: 991px) {
+    footer.desktop {
+        display: none;
+    }
+
+    footer.mobile {
+        display: block;
+    }
+}
+input[type="text"]::placeholder {
+    color: #000;          /* Set placeholder color to black */
+    font-size: 18px;      /* Set placeholder font size to 16px */
+}
+.reset-button1 {
+padding: 11px 20px;
+  background: #fff;
+  color: #018837;
+  border-radius: 26px;
+  -webkit-transition: all ease 0.5s;
+ transition: all ease 0.5s;
+ display: inline-block;
+  min-width: 120px;
+  text-align: center;
+  font-size: 15px;
+}
+
+thead th:nth-child(1){
+  width:10% !important;
+}
+
+tbody tr td:nth-child(1){
+   width:10% !important;
+}
+
+@media (max-width: 450px) {
+
+.search-section-main {
+
+margin-top: 36px;
+
+min-height: 39vh !important;
+
+}
+
+}
+
+@media (max-width: 768px) {
+
+.search-section-main {
+
+margin-top: 65px;
+
+min-height: 68vh;
+
+}
+
+}
+
+@media (max-width: 912px) {
+
+.search-section-main {
+
+min-height: 62vh;
+
+}
+
+}
+@media (min-width: 913px) {
+
+.search-section-main {
+
+min-height: 100vh;
+
+}
+
+}
+.search-section-main {
+                                                        margin: 0;
+    
+    background-image: url('http://www.jiobp.com/sites/default/files/2024-11/final-banner-4.png');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+                                                }
+
+                                                .search-heading-main {
+                                                    font-size: 4.5em;
+                                                    padding: 20px;
+                                                    font-weight: 900;
+                                                    border-radius: 10px;
+                                                    /* Space between the text and the search bar */
+                                                    transform: translateY(-60px);
+                                                    /* Moves the text up by 60 pixels */
+                                                    position:absolute;
+                                                    bottom:100px;
+                                                }
+
+                                                .search-container-main {
+                                                    width: 87%;
+
+                                                    flex-direction: column;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    bottom: 110px;
+                                                    position: absolute;
+                                                }
+
+
+                                                .search-label-main {
+                                                    font-size: 9px;
+                                                    font-weight: bold;
+                                                    color: #666;
+                                                    margin-top: 10px;
+                                                    margin-left: 5px;
+                                                    padding-left: 5px;
+                                                    align-self: flex-start;
+                                                }
+
+                                                .search-bar-container-main {
+                                                    align-items: center;
+                                                    /*gap: 190px;*/
+                                                    position: relative;
+                                                    /* Space between the search bar and the button */
+                                                    justify-content: space-between;
+                                                }
+
+                                                .search-bar-main {
+                                                    display: inline-flex;
+                                                    align-items: center;
+                                                    border-radius: 50px;
+                                                    height: 70px;
+                                                    width: 88%;
+                                                    margin-left: 20px;
+                                                    padding-right: 10px;
+                                                    
+                                                }
+
+                                                .search-jobs-main {
+                                                    color: #000;
+    font-size: 12px;
+    background-color: #fff;
+    position: absolute;
+    top: -9px;
+    font-weight: 700;
+    width: 110px;
+    left: 30px;
+                                                }
+
+                                                .search-category-main {
+                                                        padding-left: 20px;
+    padding-right: 10px;
+    margin-left: 10px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    border-radius: 30px;
+                                                }
+
+                                                .search-category-main select {
+                                                    border: none;
+                                                    background: transparent;
+                                                    font-size: 18px;
+                                                    outline: none;
+                                                    padding: 15px 10px;
+                                                    width: 180px;
+                                                    color: #cccccc;
+                                                    cursor: pointer;
+                                                }
+						.search-category-main select option{ 
+						    color:#000;
+}
+                                                .search-bar-main input[type="text"] {
+                                                        border: none;
+    padding: 15px 25px;
+    background: #fff;
+    font-size: 18px;
+    outline: none;
+    color: #333;
+    border-radius: 30px;
+                                                }
+
+                                                .search-location-main {
+                                                    display: flex;
+                                                    align-items: center;
+                                                    padding-right: 10px;
+                                                    margin-left: 10px;
+                                                    /* Space between the two input fields */
+                                                }
+
+                                                .search-location-main i {
+                                                    margin-right: 10px;
+                                                    /* Adjusted for better alignment */
+                                                    color: #888;
+                                                }
+
+                                                .search-location-main input {
+                                                    border: none;
+                                                    background: transparent;
+                                                    font-size: 16px;
+                                                    outline: none;
+                                                    padding: 15px 10px;
+                                                    color: #333;
+                                                    width: 150px;
+                                                }
+
+                                                .search-container-main button {
+                                                    background: linear-gradient(to right, #6FB22B, #0F9A3A);
+                                                    border: none;
+                                                    padding: 20px;
+                                                    cursor: pointer;
+                                                    font-size: 24px;
+                                                    border-radius: 50%;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    margin-top: 2px;
+                                                    justify-content: center;
+                                                }
+
+                                                .search-container-main button i {
+                                                    font-size: 22px;
+                                                    color: #fff;
+                                                }
+
+                                                .vl {
+                                                    border-left: 1px solid;
+                                                    height: 50px;
+                                                    color: #d7d5d5;
+                                                }
+                                                @media (max-width: 450px) {
+                                                
+                                                }
+
+
+
+                                                /* Responsive adjustments for small screens */
+                                                @media (max-width: 912px) {
+
+                                                    /* Reduce the overall size and width of the search container */
+                                                    .search-container-main {
+                                                        height: 80px;
+                                                        border: 0;
+                                                        border-radius: 0;
+                                                        padding: 5px 20px;
+                                                        background-color: transparent;
+                                                        box-shadow: none;
+                                                        flex-direction: column;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                    }
+                                                    .web-btn{
+                                                        display:none !important;
+                                                    }
+                                                    .mob-btn{
+                                                        display:block !important;
+                                                    }
+                                                    .search-bar-main{
+                                                        border:none;
+
+                                                    }
+                                                    .vl{
+                                                        display:none;
+                                                        }
+
+                                                    .search-heading-main {
+                                                        font-size: 4.0em;
+                                                        padding: 20px;
+                                                        font-weight: bolder;
+                                                        border-radius: 10px;
+                                                        margin-bottom: 30px;
+                                                        /* Space between the text and the search bar */
+                                                        transform: translateY(40px);
+                                                        /* Moves the text up by 60 pixels */
+                                                    }
+
+                                                    
+
+                                                    /* Adjust search bar width and layout */
+                                                    .search-bar-main {
+                                                            flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    height: 230px !important;
+                                                    }
+
+                                                    .search-category-main {
+                                                        padding: 0;
+                                                        border-right: 0;
+                                                        width: 100%;
+                                                    }
+
+                                                    .search-container-main .form-select {
+                                                        background-color: #fff;
+                                                        text-align: justify;
+                                                        padding: 6px;
+                                                        
+                                                        border-radius: 8px;
+                                                    }
+
+                                                    /* Reduce the width of the input fields and text */
+                                                    .search-bar-main input[type="text"],
+                                                    .search-category-main select {
+                                                        width: 90%;
+                                                        /* Adjust width for input fields */
+                                                        margin: 5px 0;
+                                                        /* Add some margin for spacing */
+                                                        text-align: center;
+							margin-bottom: 3%;
+                                                        /* Center the text inside the input */
+                                                    }
+
+                                                    /* Adjust the location icon and input field for smaller screens */
+                                                    .search-location-main {
+                                                        margin-top: 10px;
+                                                        /* Add margin for better spacing */
+                                                        justify-content: center;
+                                                        /* Center the location input */
+                                                    }
+
+                                                    .search-location-main i {
+                                                        margin-right: 5px;
+                                                        /* Adjust margin */
+                                                    }
+
+                                                    .search-location-main input {
+                                                        width: 85%;
+                                                        /* Adjust width for location input */
+                                                        text-align: center;
+                                                        /* Center the text */
+                                                    }
+
+                                                    /* Adjust the search button size for small screens */
+                                                    .search-container-main button {
+                                                        width: 80px;
+                                                        /* Reduce button size */
+                                                        height: 60px;
+                                                        margin-top: 0;
+                                                        margin-bottom: 40px;
+                                                        /* Keep the circular aspect ratio */
+                                                    }
+
+                                                    /* Adjust spacing between the form elements */
+                                                    .search-bar-container-main {
+                                                        flex-direction: column;
+                                                        /* Stack the form elements */
+                                                        gap: 20px;
+                                                        /* Add spacing between elements */
+                                                    }
+
+                                                    /* Adjust the vertical line divider for small screens */
+                                                    .vl {
+                                                        height: 1px;
+                                                        /* Reduce height */
+                                                        width: 80%;
+                                                        /* Increase width */
+                                                        margin: 10px auto;
+                                                        /* Center the divider */
+                                                    }
+                                                }
+
+                                                /* Hide mobile search bar initially */
+                                                .search-bar-mob {
+                                                    display: none;
+                                                }
+
+                                                @media (max-width: 376px) {
+                                                    .search-heading-main {
+                                                        font-size: 40px !important;
+                                                    }
+
+                                                    .search-container-main {
+                                                        transform: scale(0.9) !important;
+                                                    }
+                                                }
+
+                                                /* For screens below 1024px, show mobile search bar and hide web search bar */
+                                                @media (max-width: 1024px) {
+                                                    .search-container-main {
+                                                        height: 288px;
+                                                        border: 0;
+                                                        border-radius: 0;
+                                                        padding: 5px 20px;
+                                                        background-color: transparent;
+                                                        box-shadow: none;
+                                                        flex-direction: column;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                    }
+
+                                                    .search-heading-main {
+                                                        font-size: 4.0em;
+                                                        padding: 20px;
+                                                        font-weight: bolder;
+                                                        border-radius: 10px;
+                                                        margin-bottom: 30px;
+                                                        /* Space between the text and the search bar */
+                                                        transform: translateY(40px);
+                                                        /* Moves the text up by 60 pixels */
+                                                    }
+
+                                                    
+
+
+                                                    .search-container-main .form-select {
+                                                        background-color: #fff;
+                                                        text-align: justify;
+                                                        padding:  6px;
+                                                        
+                                                        border-radius: 8px;
+                                                    }
+
+                                                    .search-bar-mob {
+                                                        display: block !important;
+                                                        width: 100%;
+
+                                                    }
+
+                                                    .search-bar-mobile {
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        align-items: center;
+                                                        margin-bottom: 10px;
+							gap:6px;
+							width:90%;
+                                                    }
+
+                                                    .search-bar-mobile select,
+                                                    .search-bar-mobile input[type="text"] {
+                                                        width: 100%;
+                                                        padding: 10px;
+                                                        /*margin: 5px 0;*/
+                                                    }
+
+                                                    .search-bar-mobile button {
+                                                        width: 100%;
+                                                        padding: 10px;
+                                                        background-color: #6FB22B;
+                                                        color: white;
+                                                        font-size: 18px;
+                                                        border: none;
+                                                        cursor: pointer;
+                                                        border-radius: 5px;
+                                                    }
+
+                                                    .search-category-main {
+                                                        padding: 10px;
+                                                        border-right: 0;
+                                                        
+                                                    }
+
+                                                    .search-bar-mobile button:hover {
+                                                        background-color: #0F9A3A;
+                                                    }
+
+                                                    .search-jobs-main {
+                                                        font-size: 14px;
+                                                        margin-bottom: 10px;
+    color: #fff;
+    background: transparent;
+    position: initial;
+                                                    }
+                                                }
+                                            </style>
+                                            <section class="search-section-main">
+                                                <h1 class="search-heading-main web-btn">Drive your ambitions.<br> Fuel the
+                                                    future!</h1>
+	
+                                                <div class="search-container-main container web-btn">
+                                                     <form action="/hrfitui/career-4ever" method="GET">
+            <!-- Web Search Bar -->
+            <div class="search-bar-container-main row g-0 search-bar-web">
+                <div class="col-12 col-md-auto flex-grow-1 d-flex search-bar-main">
+
+
+                    <input type="text" name="keyword" placeholder="Search job" class="form-control">
+
+                     <div class="search-category-main align-items-center" style="border-right: none;">
+                        <img src="https://www.jiobp.com/sites/default/files/2024-11/mappin.png" style="height: 20px;">
+                        <select name="location" class="form-select">
+                            <option value=""><i class="fa fa-map-marker" aria-hidden="true"></i> Location</option>
+
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Gurgaon">Gurgaon</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Navi Mumbai">Navi Mumbai</option>
+                            <option value="PAN INDIA">PAN INDIA</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-auto flex-grow-1 mt-2 mt-md-0 px-0">
+                    <button type="submit" class="btn web-btn" id="searchButton">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+
+        </form>
+
+                                                </div>
+						<div id="job-page"></div>
+                                            </section>
+<section class=" mob-btn" style=" display:none;">
+    	<h1 class="search-heading-main position-" style="color: #018837;text-align: center;font-weight: 600;font-size: 3.0rem !important;position: inherit;">Drive your ambitions.<br> Fuel the
+                                                    future!</h1>
+        <form action="/hrfitui/career-4ever" method="GET">
+            <!-- Web Search Bar -->
+            <div class="search-bar-container-main row g-0 search-bar-web">
+                <div class="col-12 col-md-auto flex-grow-1 d-flex search-bar-main m-0" style="height:185px;">
+
+
+                    <input type="text" name="keyword" placeholder="Search job" class="form-control" style="border: 1px solid #dedede;">
+
+                    <div class="search-category-main align-items-center m-0" style="border: 1px solid #dedede; width:90%;justify-content: space-evenly;">
+                        <img src="https://www.jiobp.com/sites/default/files/2024-11/mappin.png" style="height: 20px;">
+                        <select name="location" class="form-select m-0">
+                            <option value=""> Location</option>
+
+                            <option value="Bangalore">Bangalore</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Gurgaon">Gurgaon</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Navi Mumbai">Navi Mumbai</option>
+                            <option value="PAN INDIA">PAN INDIA</option>
+                        </select>
+                    </div>
+		    <div style="width: 90%;" class="search-category-main align-items-center m-0 border-0 px-0">
+    <button type="submit" class="btn" id="searchBtn" style="
+    width: 100%;
+    border-radius: 30px;
+    height: 60px;
+    margin-top: 15px;
+    background: linear-gradient(to right, #6FB22B, #0F9A3A);
+">
+                        Search
+                    </button>
+</div>
+                </div>
+
+            </div>
+
+
+        </form>
+
+</section>
+     
+   <br>
+   <br>
+   <style>
+
+    .filters {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        gap: 15px;
+        width:100%;
+	margin:18px;
+	margin-left: 0;
+    }
+    @media (max-width: 714px) {
+    .filters {
+        flex-direction: column;
+    }
+}
+
+    .filters select {
+        padding: 10px;
+    
+    border: 0px solid black;
+    background-color: #ececec;
+    font-size: 16px;
+    color: #5c4b69;
+    flex-grow:1;
+    border-radius:10px;
+    }
+
+    .filters select:hover {
+        border-color: #b3b3b3;
+	border:0px;
+    }
+    .filters select:focus-visible{
+	    outline: none;
+    box-shadow: none;
+	}
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border-bottom: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+        font-size: 15px;
+        color: #2b2347;
+        cursor: pointer;
+    }
+
+    th {
+        background-color: #f7f6f9;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 13px;
+        color: #5c4b69;
+    }
+
+    tr:hover {
+        background-color: #cce7d7;
+    }
+
+    thead th:nth-child(1) {
+        width: 35%;
+    }
+
+    thead th:nth-child(2),
+    thead th:nth-child(3),
+    thead th:nth-child(4),
+    thead th:nth-child(5) {
+        width: 16%;
+    }
+
+    tbody tr td:nth-child(1) {
+        width: 35%;
+    }
+
+    tbody tr td:nth-child(2),
+    tbody tr td:nth-child(3),
+    tbody tr td:nth-child(4),
+    tbody tr td:nth-child(5) {
+        width: 16%;
+    }
+
+    tbody tr {
+        height: 50px;
+    }
+.loader{
+display:none;
+}
+    .custom-btn {
+        background-color: #018837;
+        color: white;
+        margin-bottom: 10px;
+        border-radius: 25px;
+        border: none;
+        padding: 5px 20px;
+    }
+    @media (max-width: 768px) {
+        .table-title{
+            width: 100%;
+            padding: 10px;
+        }
+    }
+
+    
+</style>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="table-title">
+                <h1 style="color: #018837;font-weight: 600;">
+                    Rewrite your future. Search and apply for a job today.
+                </h1>
+            </div>
+            
+        </div>
+        <br>
+        <br>
+
+<div class="row">
+    <div class="filters">
+        <select id="locationFilter" onchange="filterJobs()">
+            <option value="">Location</option>
+        </select>
+        <select id="experienceFilter" onchange="filterJobs()">
+            <option value="">Experience</option>
+        </select>
+        <select id="communityFilter" onchange="filterJobs()">
+            <option value="">Functional Area</option>
+	</select>
+        <a type="button" id="resetFilters" style="/* border: 1px solid; */" class="reset-button1" href="https://interakt.jiobp.com/hrfitui/career-4ever#job-page">Reset Filters</a>
+    </div>
+</div>
+
+        <div class="row" style="
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap;
+">
+
+            <table>
+                <thead>
+                <tr>
+				<th onclick="sortTable(0)">Job Id</th>
+                                    <th onclick="sortTable(1)">Job Title</th>
+                                    <th onclick="sortTable(2)">Location</th>
+                                    <th onclick="sortTable(3)">Experience</th>
+                                    <th onclick="sortTable(4)">Functional Area</th>
+                                    
+        </tr>
+                </thead>
+                <tbody id="jobTable">
+                    <!-- Dynamic job rows will be populated here -->
+                </tbody>
+            
+            </table>
+<div id="paginationControls" class="pagination justify-content-center w-100 mt-3">
+    <button id="prevBtn" onclick="changePage('prev')" class="page-item page-link">Prev</button>
+    <span id="pageNumbers"  class="page-item d-flex"></span>
+    <button id="nextBtn" onclick="changePage('next')"  class="page-item page-link">Next</button>
+</div>            
+    <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+<script>
+const pageSize = 10; // Number of items per page
+let currentPage = 1; // Current page number
+// Job data array
+const jobs = [
+  { id: 81321919, jobName: 'DGM - Application Management', location: 'Navi Mumbai', experience: '10-15 years', community: 'Digital', contract: 'Permanent' },
+  { id: 81721961, jobName: 'Senior Manager - Data Analyst', location: 'Navi Mumbai', experience: '6-9 years', community: 'Digital', contract: 'Permanent' },
+  { id: 81627576, jobName: 'Senior Manager - Lead Analyst', location: 'Navi Mumbai', experience: '10-15 years', community: 'Digital', contract: 'Permanent' },
+  { id: 81543177, jobName: 'Senior Mangaer - Instrument Automation', location: 'Navi Mumbai', experience: '7-12 years', community: 'Digital', contract:'Permanent' },
+  { id: 81685055, jobName: 'DGM - Product Development ', location: 'Navi Mumbai', experience: '10 years', community: 'Digital', contract: 'Permanent' },
+  { id: 81677157, jobName: 'Senior Manager - Fullstack Developer', location: 'Navi Mumbai', experience: '10-15 years', community: 'Digital', contract: 'Permanent' },
+  { id: 81300056, jobName: 'Senior Manager  - Procurement', location: 'Navi Mumbai', experience: '7-10 years', community: 'Procurement', contract: 'Permanent' },
+  { id: 81572374, jobName: 'Area Business Manager - Freight Aggregation', location: 'Anywhere India', experience: '5-8 years', community: 'Sales', contract: 'Permanent' },
+  { id: 81197904, jobName: 'Network Development Manager - Retail Fuel', location: 'PAN INDIA', experience: '5+ years', community: 'Sales', contract: 'Permanent' },
+  { id: 81623067, jobName: 'Key Account Manager - Retail Fuel', location: 'PAN INDIA', experience: '5+ years', community: 'Sales', contract: 'Permanent' },
+ /* { id: 81446837, jobName: 'City Network Development Manager - EV', location: 'Surat', experience: '10-15 years', community: 'Sales', contract: 'Permanent' },*/
+  { id: 81642476, jobName: 'Field Engineer - EV/BSS - EPC', location: 'Mumbai, Bangalore, Noida', experience: '6-8 years', community: 'EPC', contract: 'Permanent' },
+  { id: 81753641, jobName: 'TL Network Planning (Network Development)', location: 'Pan India', experience: '5+ years', community: 'Sales', contract: 'Permanent' },
+  { id: 30331926, jobName: 'Area Supply Manager', location: 'Anywhere India', experience: '5-8 years', community: 'Sales', contract: 'Permanent' }
+];
+
+// Filters data
+const locations = ['Bangalore', 'Chennai', 'Gurgaon', 'Navi Mumbai', 'PAN INDIA', 'Pune', 'Surat'];
+const experiences = ['5+ years', '5-8 years', '7-10 years', '7-12 years', '10-15 years'];
+const communities = ['Digital', 'Sales', 'Procurement', 'EPC'];
+
+// Function to populate filters
+function populateFilters() {
+    populateFilter('locationFilter', locations);
+    populateFilter('experienceFilter', experiences);
+    populateFilter('communityFilter', communities);
+}
+
+// Helper to populate individual filter dropdowns
+function populateFilter(filterId, filterArray) {
+    const filterSelect = document.getElementById(filterId);
+
+    filterArray.forEach(option => {
+        const opt = document.createElement('option');
+        opt.value = option;
+        opt.textContent = option;
+        filterSelect.appendChild(opt);
+    });
+}
+
+// Function to display jobs
+// Function to display jobs with pagination
+function displayJobs(filteredJobs) {
+    const totalJobs = filteredJobs.length;
+    const totalPages = Math.ceil(totalJobs / pageSize); // Calculate total pages
+    const startIndex = (currentPage - 1) * pageSize; // Get the start index for the current page
+    const endIndex = startIndex + pageSize; // Get the end index for the current page
+
+    // Get the jobs to display on the current page
+    const jobsToDisplay = filteredJobs.slice(startIndex, endIndex);
+
+    // Clear the existing table data
+    const tableBody = document.getElementById('jobTable');
+    tableBody.innerHTML = '';
+
+    // Create a DocumentFragment to insert rows into the table
+    const fragment = document.createDocumentFragment();
+
+    jobsToDisplay.forEach(job => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${job.id}</td> 
+            <td>${job.jobName}</td>
+            <td>${job.location}</td>
+            <td>${job.experience}</td>
+            <td>${job.community}</td>
+        `;
+        
+        // Add event listener to open job details in a new tab
+        row.addEventListener('click', () => {
+            window.open(`/hrfitui/job-des?id=${job.id}`, '_blank'); // Redirect with job id in new tab
+        });
+
+        fragment.appendChild(row);
+    });
+
+    tableBody.appendChild(fragment); // Append the rows to the table
+
+    // Update the pagination controls
+    updatePaginationControls(totalPages);
+}
+// Function to update pagination controls
+function updatePaginationControls(totalPages) {
+    const pageNumbers = document.getElementById('pageNumbers');
+    pageNumbers.innerHTML = ''; // Clear existing page numbers
+
+    // Create page number buttons
+    for (let i = 1; i <= totalPages; i++) {
+        const pageButton = document.createElement('button');
+        pageButton.textContent = i;
+        pageButton.classList.add('page-link');
+	pageButton.onclick = () => goToPage(i); // Go to selected page
+        if (i === currentPage) {
+            pageButton.disabled = true; // Disable the current page button
+        }
+        pageNumbers.appendChild(pageButton);
+    }
+
+    // Enable/disable Prev and Next buttons
+    document.getElementById('prevBtn').disabled = currentPage === 1;
+    document.getElementById('nextBtn').disabled = currentPage === totalPages;
+}
+// Function to change the current page
+function changePage(direction) {
+    if (direction === 'prev' && currentPage > 1) {
+        currentPage--;
+    } else if (direction === 'next' && currentPage < Math.ceil(jobs.length / pageSize)) {
+        currentPage++;
+    }
+    displayJobs(jobs); // Redisplay jobs for the new page
+}
+
+// Function to go to a specific page
+function goToPage(pageNumber) {
+    currentPage = pageNumber;
+    displayJobs(jobs); // Redisplay jobs for the selected page
+}
+// Initial call to display jobs
+displayJobs(jobs);
+
+// Function to get URL parameters and return an object
+function getURLParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+        career_area: params.get('career_area') || '',
+        keyword: params.get('keyword') || '',
+        location: params.get('location') || ''
+    };
+}
+
+// Filter jobs based on user input and URL parameters
+function filterJobs() {
+    const filters = getURLParams(); // Get search params from URL
+
+    const locationFilter = filters.location || document.getElementById('locationFilter').value;
+    const experienceFilter = document.getElementById('experienceFilter').value;
+    const communityFilter = filters.career_area || document.getElementById('communityFilter').value;
+    const keywordSearch = filters.keyword?.toLowerCase() || document.querySelector('input[name="keyword"]').value.toLowerCase();
+
+    // Filter jobs based on the selected criteria and keyword search
+    const filteredJobs = jobs.filter(job => {
+        const matchesLocation = !locationFilter || job.location.toLowerCase().includes(locationFilter.toLowerCase());
+        const matchesExperience = !experienceFilter || job.experience === experienceFilter;
+        const matchesCommunity = !communityFilter || job.community === communityFilter;
+        const matchesKeyword = !keywordSearch || job.jobName.toLowerCase().includes(keywordSearch);
+
+        return matchesLocation && matchesExperience && matchesCommunity && matchesKeyword;
+    });
+
+    // Display filtered jobs
+    displayJobs(filteredJobs);
+    handleNoResults(filteredJobs);
+}
+
+// Reset filters and call `filterJobs`
+function resetFilters() {
+    document.getElementById('locationFilter').value = "";
+    document.getElementById('experienceFilter').value = "";
+    document.getElementById('communityFilter').value = "";
+    document.querySelector('input[name="keyword"]').value = "";
+
+    filterJobs(); // Refresh job listings after resetting filters
+}
+
+// Sorting functionality
+let sortDirection = true; // True for ascending, false for descending
+function sortTable(columnKey) {
+    const sortedJobs = [...jobs].sort((a, b) => {
+        const valA = a[columnKey].toLowerCase();
+        const valB = b[columnKey].toLowerCase();
+        return sortDirection ? valA.localeCompare(valB) : valB.localeCompare(valA);
+    });
+
+    sortDirection = !sortDirection; // Toggle sorting direction for the next click
+    displayJobs(sortedJobs);
+}
+
+// Handle showing/hiding "No result matching your search" message
+function handleNoResults(filteredJobs) {
+    const table = document.querySelector('table');
+    const tableContainer = table.parentNode;
+    let noResultMessage = document.getElementById('no-results-message');
+
+    if (!noResultMessage) {
+        noResultMessage = document.createElement('p');
+        noResultMessage.id = 'no-results-message';
+        noResultMessage.textContent = 'No result matching your search';
+        noResultMessage.style.textAlign = 'center';
+        noResultMessage.style.fontSize = '30px';
+        noResultMessage.style.display = 'none';
+        noResultMessage.style.width = '100%';
+        noResultMessage.style.marginBottom = '100px';
+        tableContainer.appendChild(noResultMessage);
+    }
+
+    if (filteredJobs.length === 0) {
+        table.style.display = 'none'; // Hide the table
+        noResultMessage.style.display = 'block'; // Show the "no results" message
+    } else {
+        table.style.display = ''; // Show the table
+        noResultMessage.style.display = 'none'; // Hide the message
+    }
+}
+
+// Get query parameter by name
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+// Set dropdown values from URL parameters
+function setDropdownValuesFromURL() {
+    const careerArea = getQueryParam('career_area');
+    const location = getQueryParam('location');
+    const keyword = getQueryParam('keyword');
+
+    if (careerArea) {
+        document.getElementById('communityFilter').value = careerArea;
+    }
+    if (location) {
+        document.getElementById('locationFilter').value = location;
+    }
+    if (keyword) {
+        document.querySelector('input[name="keyword"]').value = keyword;
+    }
+}
+
+// Initialize page and add event listeners
+function initializePage() {
+    populateFilters();
+    setDropdownValuesFromURL(); // Set dropdowns based on URL params
+    filterJobs(); // Initial job filtering based on URL params
+
+    // Add filter change event listeners
+    document.getElementById('locationFilter').addEventListener('change', filterJobs);
+    document.getElementById('experienceFilter').addEventListener('change', filterJobs);
+    document.getElementById('communityFilter').addEventListener('change', filterJobs);
+    document.querySelector('input[name="keyword"]').addEventListener('input', filterJobs);
+
+    // Add reset button event listener
+    document.getElementById('resetFilters').addEventListener('click', resetFilters);
+}
+
+// Call initializePage on load
+window.onload = initializePage;
+</script>
+
+<script>
+    // Function to get the URL parameter by name
+    function getUrlParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+
+    // Get the 'keyword' parameter from the URL
+    const keyword = getUrlParam('keyword');
+
+    // If the keyword exists, set it as the value of the input field
+    if (keyword) {
+        document.getElementById('keywordInput').value = keyword;
+    }
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent traditional form submission
+    // Your URL building logic here
+});
+document.getElementById('searchButton').addEventListener('click', function() {
+    const careerArea = document.getElementById('careerArea').value;
+    const keyword = document.getElementById('keywordInput').value;
+    const location = document.getElementById('location').value;
+
+    const params = new URLSearchParams();
+
+    if (careerArea) params.set('career_area', careerArea);
+    if (keyword) params.set('keyword', keyword);
+    if (location) params.set('location', location);
+
+    // Redirect to the new URL with query parameters
+    const newUrl = `https://interakt.jiobp.com/hrfitui/career-4ever?${params.toString()}`;
+    window.location.href = newUrl; // Redirect
+});
+
+</script>
+

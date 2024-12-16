@@ -1,0 +1,11 @@
+name: Entity Track
+type: module
+description: This module provides an API to track entities.
+core_version_requirement: ^9
+configure: entity_track.settings.form
+package: Other
+
+# Information added by Drupal.org packaging script on 2021-03-04
+version: '1.0.x-dev'
+project: 'entity_track'
+datestamp: 1614871149

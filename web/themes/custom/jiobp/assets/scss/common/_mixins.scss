@@ -1,0 +1,22 @@
+@mixin easeInOut {
+    transition: 0.25s linear;
+}
+
+@mixin media($media) {
+    // check if media query is mobile then mobile media if tablet then tablet medi and desktop then desktop media
+    @if $media == "mobile" {
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $media == "tablet" {
+        @media only screen and (min-width: 769px) and (max-width: 1023px) {
+            @content;
+        }
+    }
+    @else if $media == "desktop" {
+        @media only screen and (min-width: 1024px) {
+            @content;
+        }
+    }
+}

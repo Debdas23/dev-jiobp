@@ -1,0 +1,11 @@
+services:
+  entity_usage.usage:
+    class: Drupal\entity_usage\EntityUsage
+    arguments: ['@database', '@event_dispatcher', '@config.factory', '@module_handler']
+    tags:
+      - { name: entity_track_storage }
+  entity_usage.route_subscriber:
+    class: Drupal\entity_usage\Routing\RouteSubscriber
+    arguments: ['@entity_type.manager', '@config.factory']
+    tags:
+      - { name: event_subscriber }

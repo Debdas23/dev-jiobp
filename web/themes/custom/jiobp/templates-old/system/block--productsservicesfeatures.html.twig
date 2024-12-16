@@ -1,0 +1,31 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'heretoserve',
+  ]
+%}
+{% block content %}
+<section>
+    <div class="gap_60"></div>
+    <div class="container">
+        <ul class="feature-block" data-aos="fade-in">
+            {% if content.field_icon_title %}
+                {% for key, item in content.field_icon_title if key|first != '#' %}
+                    <li>
+                        <div class="block-img" data-aos="fade-up" >
+                            <img src="{{ file_url(item['#paragraph'].field_icon.entity.fileuri) }}" class="img-fluid" alt="{{ item['#paragraph'].field_it_text[0].value|raw }}" />
+                        </div>
+                        <div class="block_info" data-aos="fade-up">
+                            <div class="block_info--text">
+                                {{ item['#paragraph'].field_it_text[0].value|raw }}
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+    <div class="gap_60"></div>
+</section>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'whatsnew',
+  ]
+%}
+{% block content %}
+<section class="why-choose">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2 class="block_info--title" data-aos="fade-up">
+            {{ content.field_eotitle.0 }}
+          </h2>
+          <span class="pill_underline mb-4" data-aos="fade-up"></span>
+        </div>
+        {% if content.field_types_of_engine_oil %}
+            {% for key, item in content.field_types_of_engine_oil if key|first != '#' %}
+            <div class="col-md-4">
+                <div class="why-choose--card mt-0" data-aos="fade-up">
+                    <h3 class="card-title" data-aos="fade-up">
+                        {{ item['#paragraph'].field_teotitle[0].value|raw }}
+                    </h3>
+                    <p class="card-desc" data-aos="fade-up">
+                        {{ item['#paragraph'].field_teotext[0].value|raw }}
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,65 @@
+<script>
+// Select only the direct child elements of .field__items
+
+const fieldItems = document.querySelectorAll('.field__items > .field__item');
+ 
+// Loop through each direct child and assign a unique ID
+
+fieldItems.forEach((item, index) => {
+
+  item.id = `field-item-${index + 1}`; // Setting a unique ID for direct children
+
+});
+
+ const Jobs = []; // Array to store job objects
+ 
+// Select all field__item elements
+
+const fieldItems = document.querySelectorAll('.field__item');
+ 
+// Loop through each field__item to create a job object
+
+fieldItems.forEach(item => {
+
+  const job = {}; // Object to store individual job details
+ 
+  // Extract job title
+
+  const jobTitle = item.querySelector('.field--name-field-job-title .field__item')?.textContent.trim();
+
+  if (jobTitle) job.jobTitle = jobTitle;
+ 
+  // Extract experience level
+
+  const exp = item.querySelector('.field--name-field-experience-level .field__item')?.textContent.trim();
+
+  if (exp) job.exp = exp;
+ 
+  // Extract location
+
+  const location = item.querySelector('.field--name-field-location .field__item')?.textContent.trim();
+
+  if (location) job.location = location;
+ 
+  // Extract validity (date)
+
+  const validity = item.querySelector('.field--name-field-validity .field__item time')?.textContent.trim();
+
+  if (validity) job.validity = validity;
+ 
+  // Add job object to the Jobs array if it has at least one field
+
+  if (Object.keys(job).length > 0) {
+
+    Jobs.push(job);
+
+  }
+
+});
+ 
+// Log the result
+
+console.log(Jobs);
+
+ 
+</script>

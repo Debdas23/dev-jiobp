@@ -1,0 +1,747 @@
+.ev-charging .popover {
+  border: 0;
+}
+.ev-charging .popover.-station {
+  width: 446px;
+}
+.ev-charging .popover .arrow::after {
+  border-bottom-color: #018837;
+  border-top-color: #018837;
+}
+.ev-charging .popover-body {
+  padding: 22px;
+  background-color: #018837;
+  border-radius: 10px;
+}
+.ev-charging .popover .map_pop_title {
+  font-family: JioType;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.ev-charging .popover .map_pop_text {
+  font-family: JioType;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+}
+.ev-charging .popover .map_pop_btn {
+  margin-top: 16px;
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  text-align: center;
+  color: #1823d7;
+  padding: 10px 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  max-width: 154px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ev-charging .contact__form {
+  /* margin-bottom: 80px; */
+  /* padding-bottom: 20px; */
+}
+.ev-charging .contact__form .contactForm {
+  width: calc(100% + 12px);
+}
+.ev-charging .contact__form .contactForm .form__grad {
+  /*background-image: linear-gradient(to bottom, #ffe041 0%, #fff088 100%);
+  */background-color: #fff;
+  border-radius: 10px;
+  z-index: 2;
+    position: relative;
+}
+.ev-charging .contact__form .contactForm .form__top {
+  padding: 24px 34px 24px 34px;
+  /* background-image: -webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e)); */
+  /* background-image: linear-gradient(to right, #018837, #68a81e); */
+  /* background-image: linear-gradient(to right, #1c0fd6, #000196); */
+  background-color: #E1EDFD;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.ev-charging .contact__form .contactForm .form__top .form__title {
+  font-family: JioType;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 38px;
+  text-align: left;
+  color: #191CD0;
+  margin-bottom: 8px;
+}
+
+.-bg_blue2{
+  background-color: #191CCE;
+}
+.ev-charging .contact__form .contactForm .form__top  .form__title-para{
+  font-family: JioType;  
+  font-size: 22px;
+  line-height: 38px;
+  text-align: left;
+  color: #000;
+  margin-bottom: 0px;
+}
+
+.ev-charging .contact__form .contactForm .form__top .pill_underline {
+  margin-bottom: 16px;
+}
+.ev-charging .contact__form .contactForm .form__top .form__subtitle {
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 34px;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 0;
+}
+.ev-charging .contact__form .contactForm .form__inputs {
+  padding: 24px 32px 32px;
+  text-align: center;
+}
+.ev-charging .contact__form .contactForm .form__inputs .form-group {
+  position: relative;
+  margin-bottom: 0;
+}
+.ev-charging .contact__form .contactForm .form__inputs .form-group:nth-child(1) {
+  margin-bottom: 32px;
+}
+.ev-charging .contact__form .contactForm .form__inputs .form-group .form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  padding: 16px;
+  font-size: 16px;
+  line-height: 22.5px;
+  height: 100%;
+  border: 1px solid #5f5f5f;
+  color: #5f5f5f;
+  border-radius: 2px;
+}
+.ev-charging .contact__form .contactForm .form__inputs .form-group .form-control::-webkit-input-placeholder {
+  color: #5f5f5f;
+}
+.ev-charging .contact__form .contactForm .form__inputs .form-group .form-control:-ms-input-placeholder {
+  color: #5f5f5f;
+}
+.ev-charging .contact__form .contactForm .form__inputs .form-group .form-control::-ms-input-placeholder {
+  color: #5f5f5f;
+}
+.ev-charging .contact__form .contactForm .form__inputs .form-group .form-control::-moz-placeholder {
+  color: #5f5f5f;
+}
+.ev-charging .contact__form .contactForm .form__inputs .form-group .form-control::placeholder {
+  color: #5f5f5f;
+}
+.ev-charging .contact__form .contactForm .form__inputs .form-group .form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgb(225 237 253);
+}
+.ev-charging .contact__form .contactForm .form__inputs .form-group .select_arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 12px;
+  width: 12px;
+  height: 6px;
+  display: block;
+  margin: auto;
+}
+.ev-charging .contact__form .contactForm .form__inputs .form__location {
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding: 0 9px;
+  background: transparent;
+  border: 0;
+}
+.ev-charging .contact__form .contactForm .form__inputs .form__location:focus {
+  border: 0;
+  box-shadow: none;
+  outline: none;
+}
+.ev-charging .contact__form .contactForm .form__inputs .or {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-family: JioType;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  color: #080808;
+}
+.ev-charging .contact__form .contactForm .form__inputs .show_result {
+  margin-top: 32px;
+  padding: 10px 30px;
+  background-color: #F0F0F0;
+  border-radius: 20px;
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  text-align: center;
+  color: #001090;
+  border: 0;
+}
+.ev-charging .contact__form .contactForm .form__inputs .show_result:focus {
+  box-shadow: none;
+  outline: none;
+}
+.ev-charging .contact__form .contactForm .form__resetSec {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 32px;
+}
+.ev-charging .contact__form .contactForm .form__resetSec .tags {
+  display: flex;
+}
+.ev-charging .contact__form .contactForm .form__resetSec .tags .tag {
+  padding: 10px 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px dashed #018837;
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  text-align: center;
+  color: #080808;
+}
+.ev-charging .contact__form .contactForm .form__resetSec .tags .tag:nth-child(n + 2) {
+  margin-left: 8px;
+}
+.ev-charging .contact__form .contactForm .form__resetSec .reset_btn {
+  padding: 10px 30px;
+  background-color: #018837;
+  border-radius: 20px;
+  border: 0;
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+}
+.ev-charging .contact__form .contactForm .form__resetSec .reset_btn:focus {
+  box-shadow: none;
+  outline: none;
+}
+.ev-charging .contact__form .contactForm .form__results {
+  padding-top: 4px;
+  padding-bottom: 10px;
+  max-height: 368px;
+  /* padding: 15px 32px; */
+  overflow-y: scroll;
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+  margin-top: -10px;
+}
+.ev-charging .contact__form .contactForm .form__results::-webkit-scrollbar {
+  width: 4px;
+}
+.ev-charging .contact__form .contactForm .form__results::-webkit-scrollbar-track {
+  background: #fff;
+}
+.ev-charging .contact__form .contactForm .form__results::-webkit-scrollbar-thumb {
+  background: #000196;
+  border-radius: 80px;
+}
+.ev-charging .contact__form .contactForm .form__results::-webkit-scrollbar-thumb:hover {
+  background: #1c0fd6;
+}
+.ev-charging .contact__form .contactForm .form__results.invert::-webkit-scrollbar-thumb {
+  background: #018837;
+  border-radius: 80px;
+}
+.ev-charging .contact__form .contactForm .form__results.invert::-webkit-scrollbar-thumb:hover {
+  background: #018837;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card {
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid rgba(1, 136, 55, 0.15);
+  box-shadow: 0px 1px 26px rgba(0, 0, 0, 0.04);
+  padding: 32px 15px 32px 24px;
+  width: 88%;
+    margin: 10px auto;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card:nth-child(n + 2) {
+  margin-top: 16px;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card_title {
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 25px;
+  text-align: left;
+  color: #080808;
+  margin-bottom: 8px;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .result_card_ro {
+  display: flex;
+  justify-content: space-between;
+  /* margin-bottom: 16px; */
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .result_card_ro .ro_ {
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: left;
+  color: gray;
+  width: auto;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .result_card_ro .ro_:last-child {
+  margin-right: 2.25rem;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .result_card_middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .contact_part .pretitle {
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  color: #018837;
+  margin-bottom: 4px;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .contact_part .name {
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: left;
+  color: #080808;
+  margin-bottom: 4px;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .contact_part .tel {
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  color: #080808;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .petrol_part {
+  display: flex;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .petrol_part .petrol_inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .petrol_part .petrol_inner:nth-child(n + 2) {
+  margin-left: 30px;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .petrol_part .petrol_inner .petrol_text {
+  font-family: JioType;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: #080808;
+  opacity: 0.7;
+  margin-top: 7px;
+  margin-bottom: 0;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .result_card_hr {
+  border-color: #c5dbca;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .result_card_swiper {
+  display: flex;
+  align-items: center;
+  margin-left: 15%;
+  margin-right: 20%;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .result_card_swiper .swiper-slide {
+  width: auto;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .result_card_swiper .result_card_data {
+  text-align: center;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .result_card_swiper .result_card_data .data_text {
+  font-family: JioType;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: #080808;
+  opacity: 0.7;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .result_swipe {
+  position: relative;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .result_swipe .swiper-button-prev {
+  width: auto;
+  height: auto;
+  padding: 0;
+  background-color: transparent;
+  left: 0;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .result_swipe .swiper-button-prev.swiper-button-disabled {
+  opacity: 0.5;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .result_swipe .swiper-button-next {
+  width: auto;
+  height: auto;
+  padding: 0;
+  background-color: transparent;
+  left: auto;
+  right: 44px;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .result_swipe .swiper-button-next.swiper-button-disabled {
+  opacity: 0.5;
+}
+.ev-charging .contact__form .iframe_map {
+  padding-left: 12px;
+  width: 100%;
+  height: auto;
+  max-height: 545px;
+}
+.ev-charging .contact_section {
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 67px;
+}
+.ev-charging .contact_section .floating_line {
+  position: absolute;
+  width: 1px;
+  height: 165px;
+  background-color: #ededed;
+  left: 46%;
+  top: 0;
+  bottom: 0;
+  display: block;
+  margin: auto;
+}
+.ev-charging .contact_section .contact-card {
+  border-radius: 10px;
+  background: linear-gradient(to right, #018837, #68a81e);
+  padding: 40px 80px;
+}
+.ev-charging .contact_section .contact-card .block_info--title {
+  font-family: JioType;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 0em;
+  color: #fff;
+}
+.ev-charging .contact_section .contact-card .pill_underline {
+  width: 60px;
+  margin-bottom: 40px;
+  background-color: #fff;
+}
+.ev-charging .contact_section .contact-card .side_contain:not(:last-child) {
+  margin-bottom: 40px;
+}
+.ev-charging .contact_section .contact-card .sms__info {
+  padding: 17px 53px;
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 25.5px;
+  margin-top: 34px;
+}
+.ev-charging .contact_section .contact-card .block_info--desc {
+  font-family: JioType;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 29px;
+  color: #fff;
+  margin-bottom: 0px;
+}
+.ev-charging .contact_section .contact-card .contact-list .cnt-name {
+  font-family: JioType;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 2px;
+}
+.ev-charging .contact_section .contact-card .contact-list .cnt-desc {
+  font-family: JioType;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+  color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  .ev-charging .contact__form .contactForm .form__top .form__title {
+    font-size: 28px;
+    line-height: 35px;
+}
+body.ev-charging .better {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+body.ev-charging .better .subtitle {
+  font-size: 20px;
+  line-height: 30px;
+}
+body.ev-charging .better .pill_underline {
+  margin-bottom: 24px;
+}
+  .ev-charging .contact__form .contactForm {
+    width: 100%;
+  }
+  .ev-charging .contact__form .contactForm .form__top {
+    padding: 24px 15px;
+  }
+  .ev-charging .contact__form .contactForm .form__resetSec {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+  .ev-charging .contact__form .contactForm .form__resetSec .reset_btn {
+    margin-top: 8px;
+  }
+  .ev-charging .contact__form .contactForm .form__results .result_card {
+    padding: 32px 15px;
+  }
+  .ev-charging .contact__form .contactForm .form__results .result_card .result_card_middle {
+    flex-wrap: wrap;
+  }
+  .ev-charging .contact__form .contactForm .form__results .result_card .result_card_middle .petrol_part {
+    margin-top: 15px;
+  }
+  .ev-charging .contact__form .contactForm .form__results .result_card .result_card_swiper {
+    margin-right: 15%;
+  }
+  .ev-charging .contact__form .contactForm .form__results .result_card .result_swipe .swiper-button-next {
+    right: 0;
+  }
+  .ev-charging .contact__form .iframe_map {
+    margin-top: 30px;
+    padding-left: 0;
+  }
+  .ev-charging .contact_section {
+    margin-top: 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  .ev-charging .contact_section .floating_line {
+    display: none;
+  }
+  .ev-charging .contact_section .contact-card {
+    padding: 30px 30px;
+  }
+  .ev-charging .contact_section .contact-card .sms__info {
+    line-height: 23px;
+  }
+  .ev-charging .contact_section .contact-card .brd-lft {
+    border: none;
+  }
+  .ev-charging .contact_section .contact-card .block_info--title {
+    font-size: 24px;
+  }
+  .ev-charging .contact_section .contact-card .block_info--desc {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  .ev-charging .contact_section .contact-card .contact-list {
+    margin-top: 30px;
+  }
+  .ev-charging .contact_section .contact-card .contact-list .cnt-name {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  .ev-charging .contact_section .contact-card .contact-list .cnt-desc {
+    font-size: 14px;
+  }
+}
+
+.ev-charging #map_canvas1 .gm-style .gm-style-iw-t::after, .ev-charging #map_canvas2 .gm-style .gm-style-iw-t::after {
+  background: #018837 !important;
+}
+.ev-charging #map_canvas1 .gm-style .gm-style-iw-t::before, .ev-charging #map_canvas2 .gm-style .gm-style-iw-t::before  {
+  background: #018837 !important;
+}
+.ev-charging #map_canvas1 .gm-style .gm-style-iw.gm-style-iw-c, .ev-charging #map_canvas2 .gm-style .gm-style-iw.gm-style-iw-c {
+  background: #018837;
+  padding: 22px;
+  border-radius: 10px;
+  max-width: 400px !important;
+}
+.gm-style-iw-d {
+  text-align: center;
+}
+h5.map_pop_title {
+  font-family: JioType;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 4px;
+}
+p.map_pop_text {
+  font-family: JioType;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+}
+a.btn.map_pop_btn {
+  margin-top: 16px;
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  text-align: center;
+  color: #1823d7;
+  padding: 10px 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  max-width: 154px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#map_canvas1, #map_canvas2 {
+  padding: 0;
+  flex-basis: 56%;
+  margin-left: 1.25%;
+  min-height: 494px;
+}
+
+@media only screen and (max-width: 320px) {
+  .ev-charging .contact_section .contact-card .contact-list .cnt-desc {
+    word-break: break-word;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #map_canvas1, #map_canvas2 {
+    min-height: 500px;
+    width: 100%;
+    flex-basis: 100%;
+    margin: 15px 15px 0;
+  }
+  .ev-charging #map_canvas1 .gm-style .gm-style-iw.gm-style-iw-c, .ev-charging #map_canvas2 .gm-style .gm-style-iw.gm-style-iw-c {
+    max-width: 300px !important;
+  }
+}
+.tooltip {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  font-family: JioType;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: #080808;
+  opacity: 1;
+  padding-left: 4px;
+}
+
+.tooltip .bottom {
+  min-width: 130px;
+  top: 30px;
+  left: -10px;
+  transform: translate(-80%, 0);
+  padding: 6px;
+  color: #fff;
+  background-color: #008b3b;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: left;
+  position: absolute;
+  z-index: 99999999;
+  box-sizing: border-box;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.tooltip:hover .bottom {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip .bottom i {
+  position: absolute;
+  bottom: 100%;
+  left: auto;
+  margin-left: -12px;
+  width: 24px;
+  height: 10px;
+  overflow: hidden;
+  right: 0px;
+}
+
+.tooltip .bottom i::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 50%;
+  transform: translate(-50%, 50%) rotate(45deg);
+  background-color: #129048;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .petrol_part .petrol_inner .petrol_text {
+  display: inline-flex;
+  opacity: 1;
+  color: rgb(8 8 8 / 70%);
+}
+
+.ev-charging .contact__form .contactForm .form__results .result_card .result_swipe .swiper-button-prev {
+  top: 65%;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .result_swipe .swiper-button-next {
+  right: 0;
+  top: 65%;
+}
+.ev-charging .contact__form .contactForm .form__results .result_card .result_card_swiper {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.station_charging .swiper-slide .img-fluid {
+  object-fit: cover;
+}
+
+/* Extra for this only remove when making live */
+/* body.ev-charging .diff .card {
+  background: linear-gradient(#018837 0%, #68a81e 100%);
+} */
+body.ev-charging .diff .card_title {
+  font-size: 20px;
+  line-height: 29px;
+}
+body.ev-charging .diff .card_title {
+  max-width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8px;
+}
+body.ev-charging .diff .card_subtitle {
+  /* color: #fff; */
+  font-size: 15px;
+  line-height: 22.5px;
+}
+body.ev-charging .diff .cards_row .col-md-3:nth-child(1) .card_subtitle,
+body.ev-charging .diff .cards_row .col-md-3:nth-child(4) .card_subtitle {
+  margin-top: 20px;
+}

@@ -1,0 +1,14 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 83" width="1400" height="83">
+	<title>header-line-bg-svg</title>
+	<style>
+		.s0 { fill: #ffffff } 
+		.s1 { fill: none;stroke: #ffe001;stroke-width: 8 } 
+		.s2 { fill: none;stroke: #178b49;stroke-width: 8 } 
+		.s3 { fill: none;stroke: #7cc445;stroke-width: 8 } 
+	</style>
+	<path id="Shape 2" class="s0" d="m94.5 18l19.5-115.7 116-17.3 52.3 105-83.7 82.3z"/>
+	<path id="Shape 1" class="s0" d="m-118-149h312v216h-312z"/>
+	<path id="Layer" class="s1" d="m0 62.5h187.8c5 0 9.8-1.8 13.6-5l53.6-45.8c5.8-5 13.2-7.7 20.8-7.7h1124.2"/>
+	<path id="Layer" class="s2" d="m0 78.5h187c9 0 17.8-3.2 24.7-9.1l52.7-45.1c3.6-3.1 8.2-4.8 13-4.8h1122.6"/>
+	<path id="Layer" class="s3" d="m0 70.5h187.7c7 0 13.7-2.5 19-7l52.1-45c5.3-4.5 12-7 19-7h1122.2"/>
+</svg>

@@ -1,0 +1,14 @@
+entity_track.batch_update:
+  path: '/admin/config/entity-track/batch-update'
+  defaults:
+    _form: 'Drupal\entity_track\Form\BatchUpdateForm'
+    _title: 'Batch Update'
+  requirements:
+    _permission: 'perform batch updates entity track'
+entity_track.settings.form:
+  path: '/admin/config/entity-track'
+  defaults:
+    _form: '\Drupal\entity_track\Form\EntityTrackSettingsForm'
+    _title: 'Entity Track Settings'
+  requirements:
+    _permission: 'administer entity track'

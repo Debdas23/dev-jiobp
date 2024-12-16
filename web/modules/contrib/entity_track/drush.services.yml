@@ -1,0 +1,6 @@
+services:
+  entity_track.commands:
+    class: \Drupal\entity_track\Commands\EntityTrackCommands
+    arguments: ['@entity_track.batch_manager']
+    tags:
+      - { name: drush.command }

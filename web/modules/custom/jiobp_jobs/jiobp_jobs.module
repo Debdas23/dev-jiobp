@@ -1,0 +1,156 @@
+<?php
+use Drupal\Core\Form\FormStateInterface;
+
+
+/**
+ * Implements hook_theme().
+ */
+function jiobp_jobs_theme($existing, $type, $theme, $path) {
+    return [
+        //block template
+        'job_block_template' => [
+          'variables' => [
+            'jobs' => [],
+            'locations' => [],
+            'experiences' => [],
+            'communities' => [],
+          ],
+          'template' => 'block--careerpage',
+        ],
+        //end block template
+        //job template using for controller
+        'job_template' => [
+          'variables' => [
+            'jobs' => [],
+            'locations' => [],
+            'experiences' => [],
+            'communities' => [],
+          ],
+          'template' => 'page--custom--career',
+        ],
+        //end job template
+      ];
+}
+  
+
+/**
+ * Implements hook_form_alter().
+ */
+function jiobp_jobs_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  // Target the form for the "Job Applicant" content type.
+  if ($form_id === 'node_job_applicant_form') {
+    // Get the current node entity.
+    $node = $form_state->getFormObject()->getEntity();
+
+    // Ensure we are in edit mode and the entity is a valid node.
+    if ($node instanceof \Drupal\node\Entity\Node && !$node->isNew()) {
+      // Ensure the field exists in the form.
+      if (isset($form['field_job_id']['widget'][0]['value'])) {
+        // Set the field as read-only by disabling it.
+        $form['field_job_id']['widget'][0]['value']['#disabled'] = TRUE;
+        
+        // Optionally, add a class for styling purposes.
+        $form['field_job_id']['widget'][0]['value']['#attributes']['class'][] = 'readonly-field';
+
+        // Add a title to the field to indicate it's not editable (Optional).
+        $form['field_job_id']['widget'][0]['value']['#title'] = 'Job ID (Read-Only)';
+      }
+    }
+  }
+}
+
+
+/**
+ * Custom validation handler for Job Applicant form.
+ */
+function jiobp_jobs_job_applicant_validate(array &$form, FormStateInterface $form_state) {
+  // Retrieve the job ID value from the form.
+  $job_id_field = $form_state->getValue('field_job_id');
+  $job_id = isset($job_id_field[0]['value']) ? $job_id_field[0]['value'] : '';
+
+  // Proceed only if a Job ID is provided.
+  if (!empty($job_id)) {
+    // Get the current node entity from the form state.
+    $node = $form_state->getFormObject()->getEntity();
+
+    // Build the entity query to check for duplicate Job IDs.
+    $query = \Drupal::entityQuery('node')
+      ->condition('type', 'job_applicant')
+      ->condition('field_job_id', $job_id);
+
+    // Exclude the current node ID during updates.
+    if ($node instanceof \Drupal\node\Entity\Node && !$node->isNew()) {
+      $query->condition('nid', $node->id(), '!=');
+    }
+
+    // Execute the query to find duplicates.
+    $existing = $query->execute();
+
+    // Set an error if duplicates are found.
+    if (!empty($existing)) {
+      $form_state->setErrorByName(
+        'field_job_id',
+        t('The Job ID "@id" is already in use. Please use a unique Job ID.', ['@id' => $job_id])
+      );
+    }
+  }
+}
+
+
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function jiobp_jobs_form_node_job_applicant_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  // Check if the field exists in the form.
+  if (isset($form['field_job_id'])) {
+    // Make the field read-only.
+   // $form['field_job_id']['#attributes']['readonly'] = 'readonly';
+   // $form['field_job_id']['#disabled'] = TRUE; // Disables interaction.
+
+    // Optional: Add a description to indicate that the field cannot be changed.
+    $form['field_job_id']['#description'] = t('This field is read-only and cannot be changed.');
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node templates.
+ */
+function my_theme_preprocess_node(array &$variables) {
+  // Ensure we are processing the 'job_applicant' content type.
+  if ($variables['node']->getType() === 'job_applicant') {
+    $node = $variables['node'];
+    $variables['field_job_id'] = $node->get('field_job_id')->value;
+  }
+}
+
+/**
+ * Implements hook_node_presave().
+ * This hook is triggered when a node is about to be saved.
+ */
+function your_module_node_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  // Ensure that we are working with a node and the node has the 'field_posted_on' field.
+  if ($entity->getEntityTypeId() == 'node' && $entity->hasField('field_posted_on')) {
+    
+    // Ensure that the node is of the correct content type (replace 'job_post' with your content type machine name).
+    if ($entity->bundle() == 'job_post') {
+      
+      // Get the "Validate Till Date" (field_posted_on) value from the node.
+      $validate_date = $entity->get('field_posted_on')->value;
+
+      // Check if the Validate Till Date exists.
+      if ($validate_date) {
+        
+        // Get the current date without time information (reset hours, minutes, and seconds).
+        $current_date = date('Y-m-d', time()); // Current date without time
+        $validate_date_formatted = date('Y-m-d', strtotime($validate_date)); // Validate date without time
+        
+        // Compare the "Validate Till Date" (formatted as Y-m-d) with today's date (also formatted as Y-m-d).
+        if ($validate_date_formatted < $current_date) {
+          // Unpublish the node by setting its status to unpublished (0).
+          $entity->set('status', 0); // 0 for unpublished, 1 for published.
+        }
+      }
+    }
+  }
+}

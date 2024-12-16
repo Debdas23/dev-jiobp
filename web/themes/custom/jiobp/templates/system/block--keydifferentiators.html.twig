@@ -1,0 +1,31 @@
+<section class="jiobp_curve">
+      <div class="container-fluid diff " data-aos="fade-in">
+        <!--<img src="/themes/custom/jiobp/assets/images/backgrounds/blue_curve_left.png" alt="" class="diff_topImg" />-->
+        <div class="container-fluid p-0 py-6">
+          <div class="container -custom diff_container">
+            <h2 class="title text-center" data-aos="fade-up">
+              {{ content.field_title.0 }}
+            </h2>
+            <span class="pill_underline -bg_blue mx-auto" data-aos="fade-up"></span>
+            <div class="row cards_row">
+            {% if content.field_why_jio %}
+                {% for key, item in content.field_why_jio if key|first != '#' %}
+                <div class="col-md-3" data-aos="fade-up">
+                    <div class="card">
+                    <div class="card_img">
+                        <img src="{{ file_url(item['#paragraph'].field_upload_image.entity.fileuri) }}" alt="" data-aos="fade-up" />
+                    </div>
+                    <div class="card_info">
+                        <h3 class="card_title" data-aos="fade-up">{{ item['#paragraph'].field_title[0].value|raw }}</h3>
+                        <p class="card_subtitle" data-aos="fade-up">{{ item['#paragraph'].field_text[0].value|raw }}</p>
+                    </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endif %}
+            </div>
+          </div>
+        </div>
+        <!--<img src="/themes/custom/jiobp/assets/images/backgrounds/blue_curve_right.png" alt="" class="diff_bottomImg" />-->
+      </div>
+    </section>

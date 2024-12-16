@@ -1,0 +1,30 @@
+// common
+@import "./common/var";
+@import "./common/fonts";
+@import "./common/typography";
+@import "./common/mixins";
+@import "./common/buttons";
+@import "./common/global";
+@import "./common/header";
+@import "./common/footer";
+
+// components
+@import "./components/blocks";
+@import "./components/swiper";
+@import "./components/tabs";
+@import "./components/news";
+@import "./components/modal";
+@import "./components/why-jio";
+@import "./components/about-us";
+@import "./components/static-banner";
+
+//pages
+@import "./_homepage";
+@import "./_who-we-are";
+@import "./_products-and-services";
+@import "./_partners";
+@import "./_news-room";
+@import "./_connect-with-us";
+@import "./_fuelLocator";
+@import "./_innerPage";
+

@@ -1,0 +1,23 @@
+.videoSection {
+    position: relative;
+    #muteBtn {
+        position: sticky;
+        bottom: 0;
+        right: 10px;
+        cursor: pointer;
+        img{
+            position: absolute;
+            right: 20px;
+            bottom: 15px;
+        }
+    }
+}
+
+@keyframes reveal {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}

@@ -1,0 +1,88 @@
+<style>
+.btn-tc {
+	padding: 14px 30px;
+    background-color: #018837;
+    border-radius: 20px;
+    font-family: JioType;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    border: 0;
+	display: inline-block;
+    position: relative;
+}
+.btn-tc:hover {
+	color: #fff;
+	opacity: 0.8;
+}
+.link-tc {
+	text-decoration: underline !important;
+}
+.text-tc {
+	display: block;
+    position: relative;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.how-it-work {
+	overflow: unset !important;
+}
+.tc-container {
+	position: absolute;
+    bottom: -142px;
+}
+.pos-re {
+	position: relative;
+}
+@media only screen and (max-width: 1024px) {
+.tc-container {
+	position: absolute;
+    bottom: -92px;
+}	
+}
+</style>
+<section class="how-it-work redeem">
+	<div class="gifts3"></div>
+	<div class="gifts3"></div>
+	<div id="stars"></div>
+    <div class="container">
+        <div class="row pos-re">
+            <div class="col-md-12">
+                <h1 class="block_info--title" data-aos="fade-up">
+                    {{ content.field_bottom_text.0 }}
+                </h1>
+            </div>
+            <div class="col-md-12">
+                <div class="how-it-work--wrapper">
+					<div class="path__img__con" data-aos="fade-right" data-aos-delay="900">
+						<img src="/themes/custom/jiobp/assets/images/loyalty-program_V3/path.gif" class="path__image" />
+					</div>
+                    <div class="row">
+                    {% set i = 1 %}
+                    {% if content.field_our_features %}
+                        {% for key, item in content.field_our_features if key|first != '#' %}
+                        <div class="col-md-4">
+                            <div class="how-it-work--card" data-aos="fade-right" data-aos-delay="{{i * 500}}">
+                                <div class="img_block" data-aos="fade" data-aos-delay="{{i * 600}}">
+                                    <img src="{{ file_url(item['#paragraph'].field_oficon.entity.fileuri) }}" alt="{{ item['#paragraph'].field_oftitle[0].value|raw }}">
+                                    <span>{{ i }}</span>
+                                </div>
+                                <h3 class="txt-title" data-aos="fade" data-aos-delay="{{i * 700}}">{{ item['#paragraph'].field_oftitle[0].value|raw }}</h3>
+                                <p class="txt-desc" data-aos="fade" data-aos-delay="{{i * 800}}">{{ item['#paragraph'].field_oftext[0].value|raw }}</p>
+                            </div>
+                        </div>
+                        {% set i = i + 1 %}
+                        {% endfor %}
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+			<div class="tc-container col-md-12 text-center" data-aos="fade-down" data-aos-delay="2000">
+				<p class="text-tc">{{ content.field_t_c_text.0 }} <a href="{{ content.field_t_c_file.0 }}" target="blank" class="link-tc">Terms & Conditions</a></p>
+				<a href="/locate-fuel-station" class="btn-tc" role="button">Locate a Mobility Station</a>
+            </div>
+        </div>
+    </div>
+</section>

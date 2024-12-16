@@ -1,0 +1,173 @@
+.addressList{ margin: 0; padding:1rem; list-style: none; overflow: auto;position: relative;height: 100%;max-height: 60vh;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;
+    > li{padding: 1rem; box-shadow: #d5eadd72 0px 0px 16px; border-radius: 15px; cursor: pointer;
+        // a{color: #000; text-decoration: none; display: block;}
+        small{ opacity: .4;}
+        span{
+            small + small {margin-left: 25px;}
+        }
+        .contactDtls{margin: 0; padding:0; list-style: none;
+            > li{position: relative; min-height: 50px; padding-top: 25px;
+                i{width: 50px; height: 50px; position: absolute; background: #F7FCF9;display: inline-block; vertical-align: middle; border-radius: 100%; left: 0; top: 12px;
+                    img{position: absolute; left:50%; top:50%; transform: translate(-50%, -50%);}
+                }
+                h4{font-size: 22px; font-weight: 500;}
+                a{color: #000; text-decoration: none;
+                    a:hover{text-decoration: none;}
+                }
+                padding-left: 60px;
+                .fuelPriceList{
+                    margin: 0 0 0 0; padding:0; list-style: none; display: flex; flex-wrap: wrap; gap: 20px 30px;
+                    li{ flex-basis: 43%; padding-left: 1rem; position: relative;
+                        &::before{content:''; width: 10px; height: 10px; background: #129048; border-radius: 100%; position: absolute; left:0; top:7px;}
+                        b{display: inline-block;}
+                        .tooltip{display: none;}
+                        .tooltipLink{width: 18px; height: 18px; background: url('../images/icons/tooltip-icon.svg') no-repeat ;display: inline-block;border-radius: 100%;position: relative;top: 4px;font-size: 10px;
+                        }
+                        small{display: block;}
+                    }
+                }
+            }
+            > li + li{margin-top: 10px;}
+        
+        }
+    }
+    > li + li{margin-top: 20px;}
+    > li.active,
+    > li:hover    {
+        background: #F7FCF9;
+        border: solid 1px #129048;
+        box-shadow:none;
+    }
+}
+.fuelLocator {overflow: hidden;}
+.gmapsection {position: relative;
+
+    ::-webkit-scrollbar { width: 4px;}
+    ::-webkit-scrollbar-track { background: #1291491a;}
+    ::-webkit-scrollbar-thumb { background: #129048;}
+    ::-webkit-scrollbar-thumb:hover { background: #129048;}
+}
+.gmapsection iframe {padding: 0;margin: 0;height: 60vh;}
+.embed-responsive-s {padding-bottom: 51.5%;}
+.locator {position: relative;left: 0;top: 0;background: #fff;padding: 0em 20px 2em 0px;height: 100%;}
+.locator h1 {color: #00adba;font-weight: 600;font-size: 2em;margin-bottom: 0.8em;}
+.locatorMap {height: 60vh;}
+.legendsWrap img.locatorIcons {width: 20px;height: 27px;max-width: 20px;}
+.gm-style-iw-d{overflow : auto!important; }
+.gm-style-iw.gm-style-iw-c{
+    border: solid 1px #129048;
+    padding: 2rem !important;
+    border-radius: 20px;
+    background: #F7FCF9;
+}
+.gm-style .gm-style-iw-t::before{ content: ''; display: block;
+    background: #F7FCF9; position: absolute; left: -10px; bottom: 1px; width: 21px; height: 1px; z-index: 1;}
+.gm-style .gm-style-iw-t::after{
+    border-bottom: solid 1px #129048;
+    border-left: solid 1px #129048;
+    background: linear-gradient(45deg,#f7fcf9 50%,#ffffff00 51%,#ffffff00 100%) !important;
+}
+.gm-ui-hover-effect{top:0!important; right: 0!important; 
+&:focus{outline:none}
+}
+.title{
+    font-size: 44px;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 40px;
+    line-height: 100%;
+    @media (max-width:1500px) {
+        font-size: 30px;
+        line-height: 28px;
+    }
+}
+.title2{
+    font-size: 34px;
+    color: #000;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 100%;
+    @media (max-width:1500px) {
+        font-size: 25px;
+        line-height: 28px;
+    }
+}
+.text{
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: 300;
+    @media (max-width:1500px) {
+        // font-size: 16px;
+        // line-height: 26px;
+    }
+}
+.form{
+    .field{
+        width: 100%;
+        border: solid 1px #F2F9F5;
+        height: 80px;
+        border-radius: 6px;
+        background: #FFF;
+        box-shadow: 0px 0px 15px 0px #F2F9F5;
+        padding: 0px 10px;
+        &:focus{
+            outline: none;
+        }
+    }
+    .field-textarea{
+        width: 100%;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 8px;
+        background: #FFF;
+        box-shadow: 0px 0px 10px 0px #F2F9F5;
+        height: 250px;
+        padding: 10px;
+        &:focus{
+            outline: none;
+        }
+    }
+
+    .btn_green{
+        width: 100%;
+        height: 80px;
+        resize: none;
+    }
+    #getLocation{position: absolute; right: 18px; top: 15px; width: 50px; height: 50px; background: none; border: 0;}
+}
+.title2,
+.locatorMap {display: none;}
+
+.contactBox {
+    background: #1290480d; max-width: 1640px; padding: 100px 15px; margin: 0 auto; border-radius: 30px;
+    ul {margin:0; padding: 0; list-style: none; display: flex; gap: 10%;
+        li{flex-basis: auto; display: flex; flex-direction: column; width: 100%; position: relative;
+            .btn_disabled{background: #9BA7A0; border: solid 1px #9BA7A0; color: #fff;}
+            p{font-weight: 300; margin-bottom: auto; font-size: 20px; line-height: 34px;padding-left:0;}
+        }
+        li + li:before{content:''; height: 120%; width: 1px; border-left:#1290484d solid 1px; position: absolute; left: -12%; top:-10%;}
+        li:nth-child(2){flex-basis:150%; padding-right: 10%;}
+    }
+    @media (max-width:767px) {
+        padding: 30px 15px;
+        ul{
+        flex-direction: column;
+        align-items: flex-start;
+        gap:30px;
+        padding-left:0;
+        li:nth-child(2){padding-left: 0;padding-right:0; width: 100%;}
+        li + li:before{border-top: #1290484d solid 1px; border-left: 0;top: -15px; width: 100%; height: 1px; left: 0;}
+        }
+        .btn_green{width: 100%;}
+    }
+    .queries-detail{
+        &--each{
+            &-icon{
+                background: #fff;
+            }
+            &-txt{
+                padding-left:10px;
+            }
+        }
+    }
+}

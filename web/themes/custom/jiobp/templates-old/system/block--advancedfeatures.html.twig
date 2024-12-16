@@ -1,0 +1,46 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'heretoserve',
+  ]
+%}
+{% block content %}
+<section>
+    <!-- title with 6 hoverable cards -->
+    <div class="container -custom features">
+    <div class="row">
+        <div class="col-12">
+        <div class="features_top">
+            <h2 class="features_title text-center" data-aos="fade-up">Advanced features</h2>
+            <span class="pill_underline -green mx-auto" data-aos="fade-up"></span>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+        <div class="row features_bottom">
+            {% if content.field_icon_title %}
+                {% for key, item in content.field_icon_title if key|first != '#' %}
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card align-items-center -hoverable">
+                        <div class="card-img" data-aos="fade-up">
+                            <picture>
+                                <img src="{{ file_url(item['#paragraph'].field_icon.entity.fileuri) }}" class="img-fluid" alt="jio-bp" />
+                            </picture>
+                        </div>
+                        <div class="card-info">
+                            <h3 class="subtitle" data-aos="fade-up">
+                                {{ item['#paragraph'].field_it_text[0].value|raw }}
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,9 @@
+entity_track.settings.form:
+  route_name: entity_track.settings.form
+  base_route: entity_track.settings.form
+  title: Settings
+entity_track.batch_update:
+  route_name: entity_track.batch_update
+  base_route: entity_track.settings.form
+  title: Batch Update
+  weight: 10

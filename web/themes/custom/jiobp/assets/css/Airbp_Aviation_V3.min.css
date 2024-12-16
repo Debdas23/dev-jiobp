@@ -1,0 +1,110 @@
+.AirbpAviation *{font-family:JioType}.AirbpAviation .container{max-width:1216px}.AirbpAviation .pill_underline{position:relative;display:block;border-radius:10px;width:40px;height:4px;background:#FFE041}.AirbpAviation .static-banner{position:relative;background:none;margin-bottom:0px;width:100%;padding-top:0px}.AirbpAviation .static-banner:after{content:"";position:absolute;width:100%;top:0;height:52%;z-index:-1;background:transparent linear-gradient(106deg, #018837 0%, #68A81E 100%) 0% 0% no-repeat padding-box}.AirbpAviation .static-banner .block_info--title{font-family:JioType;font-weight:bold;font-size:50px;letter-spacing:0em;line-height:49.5px;text-align:left;color:#ffe041;margin-top:80px}.AirbpAviation .static-banner .block_info--desc{font-family:JioType;margin-top:32px;font-weight:500;font-size:25px;line-height:34px;text-align:left;color:#fff}.AirbpAviation .static-banner picture{position:relative;display:inline-block}.AirbpAviation .static-banner picture .castrolTopRight{position:absolute;top:-30%;right:-9px;z-index:0}.AirbpAviation .static-banner picture .mainBanner{max-width:100%;height:auto;z-index:2;position:relative;margin-top:-150px;margin-bottom:100px}.AirbpAviation .vision .block_info--title,.AirbpAviation .SterlingCard .block_info--title{font-family:JioType;font-weight:bold;font-size:40px;letter-spacing:0em;line-height:49.5px;text-align:left;color:#018837;margin-top:0px}.AirbpAviation .vision img,.AirbpAviation .SterlingCard img{max-width:100%}.AirbpAviation .vision .pill_underline,.AirbpAviation .SterlingCard .pill_underline{background-color:#018837;width:58px}.AirbpAviation .vision .block_info--desc,.AirbpAviation .SterlingCard .block_info--desc{font-family:JioType;margin-top:32px;font-weight:500;font-size:20px;line-height:29px;text-align:left;color:#111}.AirbpAviation .mission{margin-top:126px;background:url(../images/air_bp/air-bp--Jio-aircraft-refuelling-Goa.jpg) no-repeat;width:100%;height:711px;background-size:cover !important;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.AirbpAviation .mission:after{content:"";position:absolute;width:100%;height:50px;z-index:1;top:0px;background-image:url(../../assets/images/curve-left-top.svg);background-repeat:no-repeat;background-size:contain}.AirbpAviation .mission::before{content:"";position:absolute;width:320px;height:50px;z-index:1;bottom:-1px;background:url(../../assets/images/curve-right-bottom.svg);background-repeat:no-repeat;background-size:cover;right:-1px}.AirbpAviation .mission .floating-Container{width:509px;border-radius:10px;background:-webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));background:linear-gradient(to right, #018837, #68a81e);padding:90px 66px;margin-left:50px}.AirbpAviation .mission .floating-Container .block_info--title{font-family:JioType;font-weight:bold;font-size:40px;letter-spacing:0em;line-height:49.5px;color:#FFE041}.AirbpAviation .mission .floating-Container .pill_underline{width:60px;margin-bottom:24px;background-color:#FFE041}.AirbpAviation .mission .floating-Container .block_info--desc{font-family:JioType;font-weight:500;font-size:20px;line-height:29px;color:#fff;margin-bottom:0px}.AirbpAviation .key_offerings{position:relative;margin-top:90px;margin-bottom:160px}.AirbpAviation .key_offerings .pill_underline{background:#018837;margin-bottom:30px}.AirbpAviation .key_offerings .block_info--title{font-family:JioType;font-weight:bold;font-size:40px;letter-spacing:0em;line-height:49.5px;text-align:left;color:#018837}.AirbpAviation .key_offerings .block_info--desc{margin-top:0px;font-family:JioType;font-weight:500;font-size:20px;line-height:29px;text-align:left;color:#111;margin-bottom:40px}.AirbpAviation .key_offerings picture img{max-width:100%;height:auto;position:relative}.AirbpAviation .key_offerings .card_li{width:calc(100% + 50px);height:auto;left:-15%;position:relative;z-index:-1;border-radius:10px;background:-webkit-gradient(linear, left top, left bottom, from(#018837), to(#68a81e));background:linear-gradient(#018837 0%, #68a81e 100%);padding-right:40px;padding-left:120px;padding-top:35px;padding-bottom:35px}.AirbpAviation .key_offerings .card_li ul{padding:0;list-style:none;margin:0}.AirbpAviation .key_offerings .card_li ul li{position:relative;font-family:JioType;font-weight:500;font-size:18px;line-height:29px;text-align:left;color:#fff;margin-bottom:20px}.AirbpAviation .key_offerings .card_li ul li:last-child{margin-bottom:0}.AirbpAviation .key_offerings .card_li ul li img{position:absolute;left:-50px;top:8px}.AirbpAviation .features-benefits{margin-top:160px;margin-bottom:160px}.AirbpAviation .features-benefits .block_info--title{font-family:JioType;font-weight:bold;font-size:40px;letter-spacing:0em;line-height:49.5px;text-align:center;color:#018837;margin-top:0px}.AirbpAviation .features-benefits .pill_underline{background-color:#018837;width:58px;margin:0 auto}.AirbpAviation .features-benefits .tabs{margin-top:43px}.AirbpAviation .features-benefits .tabs .nav-tabs{border-color:transparent}.AirbpAviation .features-benefits .tabs .nav-tabs li.nav-item a{width:200px;border-radius:10px 10px 0px 0px;background:#FFE041;font-family:JioType;font-weight:500;font-size:20px;line-height:30px;text-align:left;color:#111;padding:28px 22px 20px 22px;margin-right:13px}.AirbpAviation .features-benefits .tabs .nav-tabs li.nav-item a.active{color:#FFE041;background:#018837;border-color:transparent}.AirbpAviation .features-benefits .tabs .tab-content{padding:50px 80px 50px 80px;background-image:-webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));background-image:linear-gradient(to right, #018837, #68a81e);border-radius:10px;position:relative;left:-18px}.AirbpAviation .features-benefits .tabs .tab-content .brd-rlt{border-right:1px solid #FFE041}.AirbpAviation .features-benefits .tabs .tab-content .card_li{position:relative}.AirbpAviation .features-benefits .tabs .tab-content .card_li .block_info--title{color:#fff;font-size:25px;line-height:34px;font-weight:500;margin-bottom:35px}.AirbpAviation .features-benefits .tabs .tab-content .card_li ul{padding:0;list-style:none;margin:0}.AirbpAviation .features-benefits .tabs .tab-content .card_li ul li{position:relative;padding-left:50px;font-family:JioType;font-weight:500;font-size:15px;line-height:22px;text-align:left;color:#fff;margin-bottom:20px}.AirbpAviation .features-benefits .tabs .tab-content .card_li ul li:last-child{margin-bottom:0}.AirbpAviation .features-benefits .tabs .tab-content .card_li ul li img{position:absolute;left:0px;top:5px}.AirbpAviation .fual-station{margin-top:126px;background:-webkit-gradient(linear, left top, right top, from(#018837), to(#68a81e));background:linear-gradient(to right, #018837, #68a81e);width:100%;height:768px;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:120px}.AirbpAviation .fual-station:after{content:"";position:absolute;width:100%;height:50px;z-index:1;top:-1px;background-image:url(../../assets/images/curve-left-top.svg);background-repeat:no-repeat;background-size:contain}.AirbpAviation .fual-station::before{content:"";position:absolute;width:320px;height:50px;z-index:1;bottom:-1px;background:url(../../assets/images/curve-right-bottom.svg);background-repeat:no-repeat;background-size:cover;right:-0.5px}.AirbpAviation .fual-station .floating-Container .block_info--title{font-family:JioType;font-weight:bold;font-size:40px;letter-spacing:0em;line-height:49.5px;color:#FFE041}.AirbpAviation .fual-station .floating-Container .pill_underline{width:60px;margin-bottom:24px;background-color:#FFE041}.AirbpAviation .fual-station .floating-Container .block_info--desc{font-family:JioType;font-weight:500;font-size:20px;line-height:29px;color:#fff;margin-bottom:0px}.AirbpAviation .fual-station picture img{max-width:100%;height:auto}@media only screen and (max-width: 767px){.AirbpAviation .ord2{-webkit-box-ordinal-group:3;-ms-flex-order:2;order:2}.AirbpAviation .static-banner{margin-bottom:10px}.AirbpAviation .static-banner::after{height:85%}.AirbpAviation .static-banner .block_info--title{font-size:26px;line-height:1.3}.AirbpAviation .static-banner .block_info--desc{margin-top:12px;font-weight:500;font-size:18px;line-height:1.3}.AirbpAviation .static-banner .pill_underline{margin-bottom:15px}.AirbpAviation .static-banner picture .castrolTopRight{top:-15px;right:-3px;max-width:40%}.AirbpAviation .static-banner picture .mainBanner{top:0;margin-top:-20px;margin-bottom:10px}.AirbpAviation .static-banner .align-items-center .col-md-6:first-child{top:30px}.AirbpAviation .vision .block_info--title{font-size:30px;margin-top:20px;line-height:1.3}.AirbpAviation .vision .pill_underline{background-color:#018837;width:58px}.AirbpAviation .vision .block_info--desc{font-size:16px;line-height:1.3;margin-top:15px}.AirbpAviation .mission{height:520px;margin-top:60px}.AirbpAviation .mission .floating-Container{width:100%;padding:40px;margin-left:0px}.AirbpAviation .mission .floating-Container .block_info--title{font-size:36px;line-height:1.3}.AirbpAviation .mission .floating-Container .pill_underline{width:60px;margin-bottom:24px;background-color:#FFE041}.AirbpAviation .mission .floating-Container .block_info--desc{font-size:16px;line-height:1.3}.AirbpAviation .key_offerings{margin-top:80px;margin-bottom:80px}.AirbpAviation .key_offerings .block_info--title{font-size:26px;line-height:1.3}.AirbpAviation .key_offerings .block_info--desc{line-height:1.3;margin-bottom:25px;font-size:18px}.AirbpAviation .key_offerings .card_li{width:100%;left:0;padding-right:30px;padding-left:70px;padding-top:25px;padding-bottom:25px;margin-top:25px}.AirbpAviation .key_offerings .card_li ul li{font-size:16px;line-height:1.3}.AirbpAviation .SterlingCard .block_info--title{font-size:26px;line-height:1.3}.AirbpAviation .SterlingCard .block_info--desc{line-height:1.3;margin-bottom:25px;font-size:18px}.AirbpAviation .features-benefits{margin-top:60px;margin-bottom:60px}.AirbpAviation .features-benefits .block_info--title{font-size:30px;line-height:1.3}.AirbpAviation .features-benefits .block_info--desc{line-height:1.3;margin-bottom:25px}.AirbpAviation .features-benefits .tabs{margin-top:43px}.AirbpAviation .features-benefits .tabs .nav-tabs{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;overflow-x:auto;margin-left:15px}.AirbpAviation .features-benefits .tabs .nav-tabs li.nav-item a{width:160px;font-size:16px;line-height:1.3;padding:10px 20px;height: 100%;}.AirbpAviation .features-benefits .tabs .tab-content{padding:20px;left:0px}.AirbpAviation .features-benefits .tabs .tab-content .brd-rlt{border:none}.AirbpAviation .features-benefits .tabs .tab-content .card_li{padding-left:0 !important}.AirbpAviation .features-benefits .tabs .tab-content .card_li .block_info--title{font-size:20px;line-height:1.3;margin-bottom:15px}.AirbpAviation .features-benefits .tabs .tab-content .card_li ul{padding-right:0 !important;margin-bottom:15px}.AirbpAviation .features-benefits .tabs .tab-content .card_li ul li{padding-left:30px;line-height:1.3}.AirbpAviation .features-benefits .tabs .tab-content .card_li ul li img{width:18px}.AirbpAviation .fual-station{margin-top:100px;width:100%;height:auto;margin-bottom:50px}.AirbpAviation .fual-station .floating-Container{margin-top:80px;margin-bottom:40px}.AirbpAviation .fual-station .floating-Container .block_info--title{font-size:32px;line-height:1.3}.AirbpAviation .fual-station .floating-Container .pill_underline{width:60px;margin-bottom:24px;background-color:#FFE041}.AirbpAviation .fual-station .floating-Container .block_info--desc{font-size:16px;line-height:1.3}.AirbpAviation .fual-station picture img{margin-bottom:60px}}@media screen and (max-width: 1024px) and (min-width: 768px){.AirbpAviation .static-banner{padding-top:100px}.AirbpAviation .static-banner .block_info--title{margin-top:0;font-size:36px}.AirbpAviation .static-banner .block_info--desc{font-size:20px;margin-top:12px;margin-bottom:40px;line-height:1.3}.AirbpAviation .static-banner picture{position:relative;display:inline-block}.AirbpAviation .static-banner picture .mainBanner{margin-top:-120px}.AirbpAviation .static-banner picture .castrolTopRight{top:-26%;right:-6px;z-index:0;max-width:30%}.AirbpAviation .static-banner .mainBanner{max-width:100%;height:auto;z-index:99;position:relative}.AirbpAviation .fual-station{margin-top:100px;width:100%;height:auto;margin-bottom:50px}.AirbpAviation .fual-station .floating-Container{margin-top:80px;margin-bottom:40px}.AirbpAviation .fual-station .floating-Container .block_info--title{font-size:32px;line-height:1.3}.AirbpAviation .fual-station .floating-Container .pill_underline{width:60px;margin-bottom:24px;background-color:#FFE041}.AirbpAviation .fual-station .floating-Container .block_info--desc{font-size:16px;line-height:1.3}.AirbpAviation .fual-station picture img{margin-bottom:60px}}@media screen and (max-width: 1366px) and (min-width: 1024px){.AirbpAviation .static-banner{padding-top:120px}.AirbpAviation .static-banner .block_info--title{margin-top:0}.AirbpAviation .static-banner picture{position:relative;display:inline-block}.AirbpAviation .static-banner picture .castrolTopRight{top:-26%;right:-6px;z-index:0;max-width:30%}.AirbpAviation .static-banner .mainBanner{max-width:100%;height:auto;z-index:99;position:relative}.Airbp_Aviation_V3 .our-feature{margin-top:60px}.Airbp_Aviation_V3 .our-feature .our_feature--card{margin-top:0;padding:20px}.Airbp_Aviation_V3 .our-feature.feature2 .our_feature--card{padding:20px}.Airbp_Aviation_V3 .castrol_brand .block_info--desc{margin-bottom:75px}.Airbp_Aviation_V3 .castrol_brand .card_li{padding-top:50px;padding-bottom:50px}.Airbp_Aviation_V3 .castrol_brand .card_li ul li img{top:28%}}
+
+
+.AirbpAviation .features-benefits .tabs .nav-tabs li.nav-item a {
+    line-height: 1.2;
+    height: 100%;
+}
+
+ .AirbpAviation .mission .floating-Container p{
+	    font-family: JioType;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    color: #fff;
+    margin-bottom: 0px;
+}
+
+.AirbpAviation  .SterlingCard p , .AirbpAviation .vision {
+    font-family: JioType;
+    margin-top: 32px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    text-align: left;
+    color: #111;
+}
+
+.AirbpAviation .fual-station .floating-Container .block_info--title {
+    max-width: 70%;
+}
+
+.sticky-menu {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background: linear-gradient(145deg, #018837 0%, #68a81e 100%);
+    box-shadow: #00000029 0px 4px 15px 0px;
+    transition: all 0.6s ease-in-out;
+  }
+  .sticky-menu.sticky-menu-active {
+    /* position: sticky; */
+    position: fixed;
+    top: 100px;
+    padding-top: 40px;
+  }
+  .sticky-menu .nav-tabs {
+    margin-bottom: 20px;
+  }
+  @media only screen and (max-width: 768px) {
+.sticky-menu {
+width: 100%;
+overflow: hidden;
+padding-left: 10px;
+justify-content: flex-start;
+overflow-x: scroll;
+}
+    .sticky-menu.sticky-menu-active {
+	padding-top: 70px;
+    }
+.jio_tabs .nav-tabs {
+gap:0;
+}
+
+  }
+
+.jio_tabs .nav-tabs .nav-link.active {
+    border: none;
+    color: #FFE001;
+    background: transparent;
+    border-bottom: solid 2px #FFE001 !important;
+}
+
+@media only screen and (max-width: 767px) {
+	.AirbpAviation .vision , .AirbpAviation .mission, .AirbpAviation .key_offerings,.AirbpAviation .SterlingCard,
+	.AirbpAviation .features-benefits,.AirbpAviation  .fual-station
+	{
+		overflow: hidden;
+	}
+	.AirbpAviation .mission div.floating-Container {
+  	      padding: 30px;
+	}
+ 	.AirbpAviation .mission .floating-Container p{
+	     font-size: 16px;
+   	     line-height: 1.3;
+	}
+	.AirbpAviation .SterlingCard p{
+		    line-height: 1.3;
+   		 margin-bottom: 25px;
+   		 font-size: 18px;
+	}
+	.AirbpAviation .vision p {
+  	  font-size: 16px;
+   	 line-height: 1.3;
+   	 margin-top: 15px;
+	}
+	.AirbpAviation .fual-station .floating-Container .block_info--title {
+ 	   max-width: 100%;
+	}
+
+	.AirbpAviation section.fual-station{
+		overflow: visible;
+	}
+
+}
+
+.contact_section{margin-top:120px;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;margin-bottom:120px}.contact_section .brd-lft{border-left:2px solid #fff}.contact_section .contact-card{border-radius:10px;background:-webkit-linear-gradient(left, #018837, #68a81e);background:linear-gradient(to right, #018837, #68a81e);padding:80px 102px}.contact_section .contact-card .block_info--title{font-family:JioType;font-weight:bold;font-size:30px;letter-spacing:0em;color:#ffe041}.contact_section .contact-card .pill_underline{width:60px;margin-bottom:24px;background-color:#ffe041}.contact_section .contact-card .block_info--desc{font-family:JioType;font-weight:500;font-size:20px;line-height:29px;color:#fff;margin-bottom:0px}.contact_section .contact-card .contact-list .cnt-name{font-family:JioType;font-weight:300;font-size:20px;line-height:29px;text-align:left;color:#fff;margin-bottom:2px}.contact_section .contact-card .contact-list .cnt-desc{font-family:JioType;font-weight:bold;font-size:15px;text-align:left;color:#fff}@media only screen and (max-width: 767px){.contact_section{margin-top:60px;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;margin-bottom:100px}.contact_section .brd-lft{border-left:2px solid #fff}.contact_section .contact-card{padding:30px 30px}.contact_section .contact-card .brd-lft{border:none}.contact_section .contact-card .block_info--title{font-size:24px}.contact_section .contact-card .block_info--desc{font-size:16px;line-height:1.3}.contact_section .contact-card .contact-list{margin-top:30px}.contact_section .contact-card .contact-list .cnt-name{font-size:18px;line-height:1.3}.contact_section .contact-card .contact-list .cnt-desc{font-size:14px}}@media screen and (max-width: 1024px)and (min-width: 768px){.contact_section{margin-top:60px;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;margin-bottom:100px}.contact_section .brd-lft{border-left:2px solid #fff}.contact_section .contact-card{padding:30px 30px}.contact_section .contact-card .brd-lft{border:none}.contact_section .contact-card .block_info--title{font-size:24px}.contact_section .contact-card .block_info--desc{font-size:16px;line-height:1.3}.contact_section .contact-card .contact-list{margin-top:30px}.contact_section .contact-card .contact-list .cnt-name{font-size:18px;line-height:1.3}.contact_section .contact-card .contact-list .cnt-desc{font-size:14px}}@media screen and (max-width: 1366px)and (min-width: 1024px){.contact_section{margin-top:60px;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;margin-bottom:100px}.contact_section .brd-lft{border-left:2px solid #fff}.contact_section .contact-card{padding:30px 30px}.contact_section .contact-card .brd-lft{border:none}.contact_section .contact-card .block_info--title{font-size:24px}.contact_section .contact-card .block_info--desc{font-size:16px;line-height:1.3}.contact_section .contact-card .contact-list{margin-top:30px}.contact_section .contact-card .contact-list .cnt-name{font-size:18px;line-height:1.3}.contact_section .contact-card .contact-list .cnt-desc{font-size:14px}}

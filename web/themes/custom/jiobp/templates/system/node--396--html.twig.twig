@@ -1,0 +1,2027 @@
+
+<style>
+                                                    .form-container {
+                                                        max-width: 1200px;
+                                                        margin: 0;
+                                                        padding: 20px;
+                                                        border-radius: 8px;
+                                                        background-color: #fff;
+                                                    }
+                                            
+                                                    .form-group {
+                                                        margin-bottom: 0px;
+                                                    }
+                                                    .error{
+							font-size:12px;
+						    }
+                                                    label {
+                                                        text-align: left;
+                                                        font-size: 16px;
+                                                        font-weight: bold;
+                                                        display: block;
+                                                        margin-bottom: 8px;
+                                                    }
+                                            
+                                                    .required {
+                                                        color: red;
+                                                    }
+                                            
+                                                    input[type="text"], input[type="email"], input[type="number"], input[type="date"], select {
+                                                        width: 100%;
+                                                        padding: 10px;
+                                                        margin-top: 5px;
+                                                        border: 1px solid #ccc;
+                                                        font-size: 16px;
+                                                    }
+                                            
+                                                    .input-select {
+                                                        display: flex;
+                                                    }
+                                            
+                                                    select {
+                                                        width: 80px;
+                                                    }
+                                            
+                                                    
+                                            
+                                                    .flex-row .form-group {
+                                                        flex-basis: 48%;
+                                                    }
+                                                    
+                                            
+                                                    /* New Form Section Styles */
+                                                    .resume-upload-container {
+                                                        max-width: 1200px;
+                                                        margin: 0px;
+                                                        border-radius: 8px;
+                                                        }
+                                            
+                                                    .resume-upload-group {
+                                                        margin-bottom: 20px;
+                                                    }
+                                            
+                                                    .resume-file-upload {
+                                                        border: 2px dashed #ccc;
+                                                        padding: 30px;
+                                                        width: 100%;
+                                                        margin-top: 5px;
+                                                        height: 180px;
+                                                        text-align: center;
+                                                        border-radius: 8px;
+                                                        margin-bottom: 20px;
+                                                    }
+                                            
+                                                    .resume-file-upload input[type="file"] {
+                                                        display: none;
+                                                    }
+                                            
+                                                    .resume-file-upload p {
+                                                        margin: 10px 0;
+                                                        font-size: 14px;
+                                                        color: #666;
+                                                    }
+                                            
+                                                    .resume-file-upload .browse-btn {
+                                                        display: inline-block;
+                                                        padding: 14px 30px;
+                                                        color: rgb(15, 14, 14);
+                                                        border-radius: 4px;
+                                                        cursor: pointer;
+                                                        border: 1px solid #ccc;            
+                                                        font-size: 16px;
+                                                    }
+                                            
+                                                    .privacy-checkbox-resume {
+                                                        display: flex;
+                                                        align-items: baseline;
+                                                    }
+                                            
+                                                    .privacy-checkbox-resume label {
+							    margin-left: 10px;
+    margin-top: 6px;
+    font-weight: 100;
+    font-size: 13px;
+                                                    }
+                    body{
+overflow-x:hidden;
+}                        
+                                                    .privacy-checkbox-resume a {
+                                                        color: #007bff;
+                                                        text-decoration: none;
+                                                    }
+                                            
+                                                    .privacy-checkbox-resume a:hover {
+                                                        text-decoration: underline;
+                                                    }
+                                                    @media (max-width: 768px) {
+                                                        .form-container .flex-row {
+                                                            flex-direction: column !important; /* Stack elements vertically */
+                                                        }
+                                                    
+                                                        .form-container .form-group {
+                                                            width: 100% !important; /* Make each form group take the full width */
+                                                            margin-bottom: 15px !important; /* Add space between elements */
+                                                        }
+                                                    
+                                                        .form-container .input-select {
+                                                            display: flex; /* Keep select and input inline */
+                                                            flex-direction: row; /* Align items in a row */
+                                                        }
+                                                    
+                                                        .form-container .input-select select {
+                                                            
+                                                            margin-right: 10px; /* Space between select and input */
+                                                        }
+                                                    
+                                                        
+                                                    }
+                                                    .custom-background {
+                                                        background: linear-gradient(45deg, #0F9A3A, #6FB22B);
+                                                        background-size: cover;
+                                                        background-repeat: no-repeat;
+                                                        height: 400px;
+                                                        /* Reduced height to fit the design */
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        text-align: center;
+                                                        padding: 20px;
+
+                                                    }
+
+                                                    .custom-job-location {
+                                                        font-size: 22px;
+                                                        font-weight: 300;
+                                                        color: white;
+                                                        margin-bottom: 10px;
+                                                    }
+
+                                                    .custom-job-title {
+                                                        font-size: 40px;
+                                                        font-weight: bold;
+                                                        color: white;
+                                                        margin-bottom: 20px;
+                                                    }
+
+                                                    .container-fluid {
+                                                        padding-left: 0px;
+                                                        padding-right: 0px;
+                                                    }
+
+                                                    .custom-job-info {
+                                                        font-size: 18px;
+                                                        font-weight: 400;
+                                                        color: white;
+                                                        margin-bottom: 30px;
+                                                    }
+
+                                                    .custom-apply-btn1 {
+                                                            padding: 11px 20px;
+    background: #1d9305;
+    color: #fff;
+    border-radius: 26px;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    display: inline-block;
+    min-width: 120px;
+    text-align: center;
+    font-size: 16px;
+                                                    }
+
+                                                    .custom-apply-btn:hover {
+                                                        background-color: #f1c300;
+                                                    }
+                                                    .show-apply-btn{
+                                                        display: none;
+                                                    }
+
+                                                    .custom-arrow {
+                                                        margin-left: 10px;
+                                                        font-size: 18px;
+                                                    }
+
+                                                    .custom-container {
+                                                        border-radius: 8px;
+                                                        margin-top: 40px;
+                                                    }
+
+                                                    .custom-title {
+                                                        color: #018837;
+                                                        margin-bottom: 10px;
+                                                        font-size: 18px;
+                                                        font-weight: bold;
+                                                    }
+
+                                                    .custom-section-title {
+                                                        color: #018837;
+                                                        font-size: 18px;
+                                                        font-weight: bold;
+                                                        margin-top: 20px;
+                                                    }
+
+                                                    .custom-list {
+                                                        margin-left: 20px;
+                                                        list-style-type: disc;
+                                                    }
+                                                    .custom-apply-box {
+                                                        padding: 20px;
+                                                        margin-left: 50px;
+                                                        width: 360px;
+                                                        border-radius: 4px;
+                                                        
+                                                        border: 2px solid #E7F0FA;
+                                                        
+                                                        margin-top: 20px;
+                                                    }
+                                            
+                                                    .custom-apply-box h3 {
+                                                        font-size: 16px;
+                                                        font-weight: bold;
+                                                        color: #333;
+                                                        margin-bottom: 20px;
+                                                    }
+                                            
+                                                    /* Job detail section */
+                                                    .job-overview {
+                                                        display: grid;
+                                                        grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+                                                        grid-gap: 20px;
+                                                        margin-bottom: 45px;
+                                                    }
+                                                    .share-section {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        margin-top: 10px;
+                                                    }
+                                            
+                                                    .share-title {
+                                                        margin-right: 10px;
+                                                        font-weight: bold;
+                                                    }
+                                            
+                                                    .social-buttons {
+                                                        display: flex;
+                                                        gap: 10px;
+                                                    }
+                                            
+                                                    .social-button {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        padding: 10px;
+                                                        border-radius: 8px;
+                                                        background-color: #f0f8ff; /* Light blue background */
+                                                        color: #006400; /* Dark green text color */
+                                                        font-size: 14px;
+                                                        text-decoration: none;
+                                                        transition: background-color 0.3s;
+                                                    }
+                                            
+                                                    .social-button i {
+                                                        margin-right: 5px;
+                                                    }
+                                            
+                                                    .social-button.copy-link {
+                                                        padding-left: 10px;
+                                                        padding-right: 10px;
+                                                    }
+                                            
+                                                    .social-button.linkedin {
+                                                        background-color: #e6f4f1;
+                                                    }
+                                            
+                                                    .social-button.facebook {
+                                                        color: #018837;
+                                                    }
+                                            
+                                                    .social-button.twitter {
+                                                        background-color: #f0f8ff;
+                                                    }
+                                            
+                                                    .social-button.email {
+                                                        background-color: #e6f4f1;
+                                                    }
+                                            
+                                                    .social-button:hover {
+                                                        background-color: #dcdcdc; /* Slight hover effect */
+                                                    }
+                                            
+                                                    .social-button.facebook:hover {
+                                                        background-color: #018837;
+                                                        ;
+                                                    }
+                                            
+                                                    .social-button.linkedin:hover {
+                                                        background-color: #018837;
+                                                    }
+                                            
+                                                    .social-button.twitter:hover {
+                                                        background-color: #018837;
+                                                    }
+                                            
+                                                    .social-button.email:hover {
+                                                        background-color: #018837;
+                                                    }
+                                            
+                                                    .job-detail {
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        align-items: flex-start;
+                                                        text-align: center;
+                                                    }
+                                            
+                                                    .job-detail i {
+                                                        color: #018837;
+                                                        font-size: 18px;
+                                                        margin-bottom: 10px;
+                                                    }
+                                            
+                                                    .job-detail strong {
+                                                        font-size: 14px;
+                                                        color: #555;
+                                                        margin-bottom: 5px;
+                                                    }
+                                            
+                                                    .job-detail span {
+                                                        color: #777;
+                                                        font-size: 14px;
+                                                    }
+                                            
+                                                    /* Apply button */
+                                                    custom-apply-btn {
+                                                        background-color: #FFE001;
+                                                        color: #018837;
+                                                        
+                                                        border: none;
+                                                        padding: 10px 20px;
+                                                        font-size: 16px;
+                                                        border-radius: 25px;
+                                                        cursor: pointer;
+                                                        font-weight: bold;
+                                                        display: inline-block;
+                                                        margin-top: 20px;
+                                                    }
+                                            
+                                                    .custom-apply-btn:hover {
+                                                        background-color: #f1c300;
+                                                    }
+                                            
+                                                    /* Social sharing icons */
+                                                    .social-icons h4 {
+                                                        margin-top: 40px;
+                                                        margin-bottom: 15px;
+                                                        color: #333;
+                                                    }
+                                                    
+                                            
+                                                    .social-icons a {
+                                                        margin-right: 10px;
+                                                        text-decoration: none;
+                                                        font-size: 24px;
+                                                        color: #0F9A3A;
+                                                    }
+                                            
+                                                    .social-icons a:hover {
+                                                        color: #018837;
+                                                    }
+                                                    #copyButton{
+                                                        background-color: #e6f4f1;
+                                                        border: none;
+                                                        color: #018837;
+                                                    }
+                                            
+
+                                                    @media screen and (max-width: 768px) {
+                                                        .custom-background {
+                                                            background: linear-gradient(45deg, #0F9A3A, #6FB22B);
+                                                            background-size: cover;
+                                                            background-repeat: no-repeat;
+                                                            height: 300px;
+                                                            /* Reduced height to fit the design */
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                            justify-content: end;
+                                                            align-items: center;
+                                                            text-align: center;
+                                                            padding: 20px;
+
+                                                        }
+
+                                                        .custom-job-title {
+                                                            font-size: 24px;
+
+                                                        }
+                                                        .custom-apply-btn{
+                                                            margin-top: 0px;
+                                                            margin-left: 0px;
+                                                            padding: 6px 20px;
+
+                                                        }
+                                                        .custom-apply-box{
+                                                            margin-left: 0px;
+                                                        }
+                                                        .custom-apply-btn1{
+                                                            margin-left: 0px;
+                                                        }
+                                                    }
+
+                                                    @media screen and (max-width: 480px) {
+                                                        .custom-background {
+                                                            background: linear-gradient(45deg, #0F9A3A, #6FB22B);
+                                                            background-size: cover;
+                                                            background-repeat: no-repeat;
+                                                            height: 300px;
+                                                            /* Reduced height to fit the design */
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                            justify-content: end;
+                                                            align-items: center;
+                                                            text-align: center;
+                                                            padding: 20px;
+
+                                                        }
+							.custom-job-location{
+							        font-size: 18px;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 10px;	
+							}
+
+                                                        .custom-job-title {
+                                                            font-size: 28px;
+
+                                                        }
+                                                        .custom-apply-btn{
+                                                            margin-top: 0px;
+                                                            margin-left: 0px;
+                                                            padding: 6px 20px;
+
+                                                        }
+                                                        .custom-apply-box{
+                                                            margin-left: 0px;
+                                                        }
+                                                        .custom-apply-btn1{
+                                                            margin-left: 0px;
+                                                        }
+                                                    }
+                                                    .modal {
+                                                        display: none; /* Hidden by default */
+                                                        position: fixed; /* Stay in place */
+                                                        z-index: 11; /* Sit on top */
+                                                        padding-top: 100px; /* Location of the box */
+                                                        left: 0;
+                                                        top: 0;
+                                                        width: 100%; /* Full width */
+                                                        height: 100%; /* Full height */
+                                                        overflow: auto; /* Enable scroll if needed */
+                                                        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                                                    }
+                                                    
+                                                    /* Modal Content Box with Box Model */
+                                                    .modal-content {
+                                                        background-color: #fefefe;
+                                                        margin: auto;
+                                                        top: 50px;
+                                                        padding: 17px 18px 20px;
+                                                        border: 2px solid #888; /* Border around the content */
+                                                        width: 65vw; /* Define width */
+                                                        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for effect */
+                                                        box-sizing: border-box; /* Ensure padding and border are inside the width */
+                                                    }
+                                                    .close {
+                                                        text-align: right;
+                                                       font-weight: bold;
+                                                        margin: -6px; /* Adjust positioning in relation to content */
+                                                       
+                                                    }
+                                                    
+                                                    .close:hover,
+                                                    .close:focus {
+                                                        color: #000;
+                                                        text-decoration: none;
+                                                        cursor: pointer;
+                                                    }
+                                                    .custom-background {
+                                                        background: linear-gradient(45deg, #0F9A3A, #6FB22B);
+                                                        background-size: cover;
+                                                        background-repeat: no-repeat;
+                                                        height: 400px;
+                                                        /* Reduced height to fit the design */
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        text-align: center;
+                                                        padding: 20px;
+
+                                                    }
+
+                                                    .custom-job-location {
+                                                        font-size: 22px;
+                                                        font-weight: 300;
+                                                        color: white;
+                                                        margin-bottom: 10px;
+                                                    }
+
+                                                    .custom-job-title {
+                                                        font-size: 40px;
+                                                        font-weight: bold;
+                                                        color: white;
+                                                        margin-bottom: 20px;
+                                                    }
+
+                                                    .container-fluid {
+                                                        padding-left: 0px;
+                                                        padding-right: 0px;
+                                                    }
+
+                                                    .custom-job-info {
+                                                        font-size: 18px;
+                                                        font-weight: 400;
+                                                        color: white;
+                                                        margin-bottom: 30px;
+                                                    }
+
+                                                    .custom-apply-btn1 {
+                                                        
+                                                        color: #fff;
+                                                        border: none;
+                                                        font-weight: bold;
+                                                        margin-left: 20px;
+                                                        font-size: 16px;
+                                                        border-radius: 30px;
+                                                    }
+                                                    .custom-apply-btn2 {
+                                                        background: linear-gradient(180deg, #6EB12C 0%, #0E993A 100%);                                                        color: #fff;
+                                                        border: none;
+                                                        font-weight: bold;
+                                                        font-size: 18px;
+                                                        padding-left: 15px;
+                                                        padding-right: 15px;
+                                                        border-radius: 30px;
+                                                    }
+
+                                                    .custom-apply-btn:hover {
+                                                        background-color: #f1c300;
+                                                    }
+
+                                                    .job-des{
+                                                        flex-direction: column-reverse;
+                                                    }
+                                                    .custom-arrow {
+                                                        margin-left: 10px;
+                                                        font-size: 18px;
+                                                    }
+
+                                                    .custom-container {
+                                                        border-radius: 8px;
+                                                        margin-top: 40px;
+                                                    }
+
+                                                    .custom-title {
+                                                        color: #018837;
+                                                        margin-bottom: 10px;
+                                                        font-size: 18px;
+                                                        font-weight: bold;
+                                                        margin-left: 15px;
+
+                                                    }
+
+                                                    .custom-section-title {
+                                                        color: #018837;
+                                                        margin-left: 15px;
+                                                        font-size: 18px;
+                                                        font-weight: bold;
+                                                        margin-top: 20px;
+                                                    }
+
+                                                    .custom-list {
+                                                        margin-left: 20px;
+                                                        list-style-type: disc;
+                                                        margin-bottom: 30px;
+                                                    }
+                                                    .custom-apply-box {
+                                                        padding: 20px;
+                                                        margin-left: 50px;
+                                                        width: 360px;
+                                                        border-radius: 4px;
+                                                        
+                                                        border: 2px solid #E7F0FA;
+                                                        
+                                                        margin-top: 20px;
+                                                    }
+                                            
+                                                    .custom-apply-box h3 {
+                                                        font-size: 16px;
+                                                        font-weight: bold;
+                                                        color: #333;
+                                                        margin-bottom: 20px;
+                                                    }
+                                            
+                                                    /* Job detail section */
+                                                    .job-overview {
+                                                        display: grid;
+                                                        grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+                                                        grid-gap: 20px;
+                                                        margin-bottom: 45px;
+                                                    }
+                                                    .share-section {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        margin-top: 10px;
+                                                    }
+                                            
+                                                    .share-title {
+                                                        margin-right: 10px;
+                                                        font-weight: bold;
+                                                    }
+                                            
+                                                    .social-buttons {
+                                                        display: flex;
+                                                        gap: 10px;
+                                                    }
+                                            
+                                                    .social-button {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        padding: 10px;
+                                                        border-radius: 8px;
+                                                        background-color: #f0f8ff; /* Light blue background */
+                                                        color: #006400; /* Dark green text color */
+                                                        font-size: 14px;
+                                                        text-decoration: none;
+                                                        transition: background-color 0.3s;
+                                                    }
+                                            
+                                                    .social-button i {
+                                                        margin-right: 5px;
+                                                    }
+                                            
+                                                    .social-button.copy-link {
+                                                        padding-left: 10px;
+                                                        padding-right: 10px;
+                                                    }
+                                            
+                                                    .social-button.linkedin {
+                                                        background-color: #e6f4f1;
+                                                    }
+                                            
+                                                    .social-button.facebook {
+                                                        color: #018837;
+                                                    }
+                                            
+                                                    .social-button.twitter {
+                                                        background-color: #f0f8ff;
+                                                    }
+                                            
+                                                    .social-button.email {
+                                                        background-color: #e6f4f1;
+                                                    }
+                                            
+                                                    .social-button:hover {
+                                                        background-color: #dcdcdc; /* Slight hover effect */
+                                                    }
+                                            
+                                                    .social-button.facebook:hover {
+                                                        background-color: #018837;
+                                                        ;
+                                                    }
+                                            
+                                                    .social-button.linkedin:hover {
+                                                        background-color: #018837;
+                                                    }
+                                            
+                                                    .social-button.twitter:hover {
+                                                        background-color: #018837;
+                                                    }
+                                            
+                                                    .social-button.email:hover {
+                                                        background-color: #018837;
+                                                    }
+                                            
+                                                    .job-detail {
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        align-items: flex-start;
+                                                        text-align: center;
+                                                    }
+                                            
+                                                    .job-detail i {
+                                                        color: #018837;
+                                                        font-size: 18px;
+                                                        margin-bottom: 10px;
+                                                    }
+                                            
+                                                    .job-detail strong {
+                                                        font-size: 14px;
+                                                        color: #555;
+                                                        margin-bottom: 5px;
+                                                    }
+                                            
+                                                    .job-detail span {
+                                                        color: #777;
+                                                        font-size: 14px;
+                                                    }
+                                            
+                                                    /* Apply button */
+                                                    .custom-apply-btn {
+                                                        background-color: #FFE001;
+                                                        color: #018837;
+                                                        
+                                                        border: none;
+                                                        padding: 10px 20px;
+                                                        font-size: 16px;
+                                                        border-radius: 25px;
+                                                        cursor: pointer;
+                                                        font-weight: bold;
+                                                        display: inline-block;
+                                                        margin-top: 20px;
+                                                    }
+                                            
+                                                    .custom-apply-btn:hover {
+                                                        background-color: #f1c300;
+                                                    }
+                                            
+                                                    /* Social sharing icons */
+                                                    .social-icons h4 {
+                                                        margin-top: 40px;
+                                                        margin-bottom: 15px;
+                                                        color: #333;
+                                                    }
+                                                    
+                                            
+                                                    .social-icons a {
+                                                        margin-right: 10px;
+                                                        text-decoration: none;
+                                                        font-size: 24px;
+                                                        color: #0F9A3A;
+                                                    }
+                                            
+                                                    .social-icons a:hover {
+                                                        color: #018837;
+                                                    }
+                                                    #copyButton{
+                                                        background-color: #e6f4f1;
+                                                        border: none;
+                                                        color: #018837;
+                                                    }
+                                                    
+                                                      /* Trigger the sliding effect */
+                                                      .page-leave {
+                                                        animation: slideOutToLeft s ease-out forwards;
+                                                      }
+                                                      
+                                                      @media screen and (max-width: 1240px){
+                                                        .custom-background {
+                                                            background: linear-gradient(45deg, #0F9A3A, #6FB22B);
+                                                            background-size: cover;
+                                                            background-repeat: no-repeat;
+                                                            height: 300px;
+                                                            /* Reduced height to fit the design */
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                            justify-content: end;
+                                                            align-items: center;
+                                                            text-align: center;
+                                                            padding: 20px;
+
+                                                        }
+                                                        .my-row{
+                                                            flex-direction: column-reverse;
+                                                        }
+
+                                                        .custom-job-title {
+                                                            font-size: 24px;
+
+                                                        }
+                                                        .custom-apply-btn{
+                                                            margin-top: 0px;
+                                                            margin-left: 0px;
+                                                            padding: 6px 20px;
+
+                                                        }
+                                                        .custom-apply-box{
+                                                            margin-bottom: 15px;
+                                                            margin-left: 0px;
+                                                            margin-top: 0px;
+                                                            padding-top: 0px;
+                                                        }
+                                                        .custom-apply-btn1{
+                                                            margin-left: 0px;
+                                                            
+                                                        }
+                                                        .show-apply-btn {
+                                                            display: block;
+                                                        }
+                                                    }
+                                                    
+
+                                                    @media screen and (max-width: 768px) {
+                                                        .custom-background {
+                                                            background: linear-gradient(45deg, #0F9A3A, #6FB22B);
+                                                            background-size: cover;
+                                                            background-repeat: no-repeat;
+                                                            height: 300px;
+                                                            /* Reduced height to fit the design */
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                            justify-content: end;
+                                                            align-items: center;
+                                                            text-align: center;
+                                                            padding: 20px;
+
+                                                        }
+                                                        .my-row{
+                                                            flex-direction: column-reverse;
+                                                        }
+
+                                                        .custom-job-title {
+                                                            font-size: 24px;
+
+                                                        }
+                                                        .custom-apply-btn{
+                                                            margin-top: 0px;
+                                                            margin-left: 0px;
+                                                            padding: 6px 20px;
+
+                                                        }
+                                                        .custom-apply-box{
+                                                            margin-left: 0px;
+                                                            margin-top: 0px;
+                                                            padding-top: 0px;
+                                                            margin-bottom: 15px;
+
+                                                        }
+                                                        .custom-apply-btn1{
+                                                            margin-left: 0px;
+                                                            
+                                                        }
+                                                        .show-apply-btn {
+                                                            display: block;
+                                                        }
+                                                    }
+
+                                                    @media screen and (max-width: 480px) {
+                                                        .custom-background {
+                                                            background: linear-gradient(45deg, #0F9A3A, #6FB22B);
+                                                            background-size: cover;
+                                                            background-repeat: no-repeat;
+                                                            height: 300px;
+                                                            /* Reduced height to fit the design */
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                            justify-content: end;
+                                                            align-items: center;
+                                                            text-align: center;
+                                                            padding: 20px;
+
+                                                        }
+                                                        .my-row{
+                                                            flex-direction: column-reverse;
+                                                        }
+
+                                                        .custom-job-title {
+                                                            font-size: 24px;
+
+                                                        }
+                                                        .custom-apply-btn{
+                                                            margin-top: 0px;
+                                                            margin-left: 0px;
+                                                            padding: 6px 20px;
+
+                                                        }
+                                                        .show-apply-btn{
+                                                            display: block;
+                                                        }
+                                                        .custom-apply-box{
+                                                            margin-left: 0px;
+                                                            margin-top: 0px;
+                                                            padding-top: 0px;
+                                                            margin-bottom: 15px;
+                                                        }
+                                                        .custom-apply-btn1{
+                                                            margin-left: 0px;
+                                                        }
+                                                        
+                                                    }
+                                                    @media screen and (max-width: 480px) {
+                                                        .modal-content {
+                                                            width: 85%;
+                                                        }
+                                                        .resume-file-upload {
+                                                            border: 2px dashed #ccc;
+                                                            padding: 18px;
+                                                            width: 100%;
+                                                            margin-top: 5px;
+                                                            height: 180px;
+                                                            text-align: center;
+                                                            border-radius: 8px;
+                                                            margin-bottom: 20px;
+                                                        }
+                                                        .resume-file-upload p {
+                                                            margin: 10px 0;
+                                                            font-size: 14px;
+                                                            color: #666;
+                                                        }
+                                                        .form-container {
+                                                            max-width: 1200px;
+                                                            margin: 0 auto;
+                                                            padding: 18px;
+                                                            border-radius: 8px;
+                                                            background-color: #fff;
+                                                        }
+                                                    }
+
+                                                    @media screen and (max-width: 768px){
+                                                        .modal-content {
+                                                            width: 85%;
+                                                        }
+                                                        .resume-file-upload {
+                                                            border: 2px dashed #ccc;
+                                                            padding: 18px;
+                                                            width: 100%;
+                                                            margin-top: 5px;
+                                                            height: 180px;
+                                                            text-align: center;
+                                                            border-radius: 8px;
+                                                            margin-bottom: 20px;
+                                                        }
+                                                        .resume-file-upload p {
+                                                            margin: 10px 0;
+                                                            font-size: 14px;
+                                                            color: #666;
+                                                        }
+                                                        .form-container {
+                                                            max-width: 1200px;
+                                                            margin: 0 auto;
+                                                            padding: 18px;
+                                                            border-radius: 8px;
+                                                            background-color: #fff;
+                                                        }
+                                                    }
+                                                    
+                                                </style>
+                            
+
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="custom-background">
+                                                                <div class="custom-job-location">Posted On - <span id="posted-date"></span></div>
+                                                                <div class="custom-job-title" id="job-title">
+                                                                </div>
+                                                                
+                                                                    <button id="myBtn" class="custom-apply-btn apply-btn">Apply Now</button>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                
+                                                </div>
+
+                                        
+
+            
+
+                                            <br>
+
+                                            <hr style="width: 90%; margin-bottom: 20px; border: 0.8px solid #018837; ">
+
+                                            <div class="container custom-container">
+                                                <div class="row my-row">
+                                                    <!-- Left Column: Job Description -->
+                                                    <div class="col-md-12 mb-5">
+                                                        <h3 class="custom-title">Job Purpose</h3>
+
+                                                        <ul class="custom-list" id="job-purpose">
+                                                        
+                                                        </ul>
+
+                                                        <h3 class="custom-title">Job Accountabilities</h3>
+
+                                                        <ul class="custom-list" id="job-accountabilities"  >
+                                                            
+                                                        </ul>
+                                                        <h3 class="custom-title">Qualification & Experience</h3>
+                                                        <ul class="custom-list" id="job-qualification">
+                                                           
+                                                                
+                                                        </ul>
+
+
+
+                                                        <h3 class="custom-title">Skills Required
+                                                        </h3>
+                                                        <ul class="custom-list" id="skills-required">
+
+                                                        </ul>
+                                                        <button id="myBtn" class="custom-apply-btn1 apply-btn">Apply Now</button>
+
+
+                                                    </div>
+
+                                                    <!-- Right Column: Job Overview & Apply Section -->
+                                                   
+                                                </div>
+                                            </div>
+
+
+                                            <div id="myModal" class="modal">
+  <div id="modal-cont" class="modal-content">
+    <div class="d-flex justify-content-between banner-title-text">
+      <h6 style="font-size: 16px;width:95%;color: #018837;font-weight: 800;" id="head-modal">Ready to get started? Reach out to our team</h6>
+      <span class="close">×</span>
+    </div>
+
+<div class="form-container resume-upload-container">
+    <form id="resume-form" action="/hrfitui/submit-application" method="POST" enctype="multipart/form-data" novalidate="novalidate">
+         <input type="hidden" id="job-id" name="job-id" value="">
+        <input type="hidden" id="email-to" name="email_to" value="example@domain.com">
+
+        <div class="flex-row">
+            <div class="form-group">
+                <label for="full-name">Full Name (as per Aadhaar Card) <span class="required">*</span></label>
+                <input type="text" id="full-name" name="full-name" placeholder="Full Name (as per Aadhaar Card)" minlength="3" required="">
+            </div>
+
+            <div class="form-group">
+                <label for="contact-number">Contact Number <span class="required">*</span></label>
+                <div class="input-select">
+                    <input type="number" id="contact-number" name="contact-number" placeholder="Contact Number" min="1000000000" max="9999999999" required="" oninput="this.value = this.value.slice(0, 10);">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email-address">Email Address <span class="required">*</span></label>
+            <input type="email" id="email-address" name="email-address" placeholder="Email Address" required="">
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth <span class="required">*</span></label>
+            <input type="date" id="dob" name="dob" required="">
+        </div>
+
+        <div class="resume-upload-container">
+            <div class="resume-upload-group">
+    <label for="resume-upload">Upload Resume <span class="required">*</span></label>
+    <div class="resume-file-upload">
+        <input type="file" id="resume-upload" name="resume-upload" accept=".docx, .doc, .pdf, .rtf, .txt" required="" onchange="updateFileName()">
+        <label for="resume-upload" class="browse-btn">Browse file</label>
+        <p id="file-name" class="file-name-display"></p>
+        <p>Supported Formats: docx, doc, pdf, rtf, txt<br>Maximum file size: Less than 2 MB</p>
+	<p id="error-message" style="color: red; display: none;font-size: 12px;">File size must be less than 2 MB.</p>
+    </div>
+</div>
+
+
+            <div class="resume-upload-group">
+                <label for="video-resume">Video Resume</label>
+                <input type="text" id="video-resume" name="video-resume" placeholder="Paste Video Resume link here">
+            </div>
+
+            <div class="resume-upload-group privacy-checkbox-resume">
+                <input type="checkbox" id="privacy-notice" name="privacy-notice" required="">
+                <label for="privacy-notice">
+                    I agree and acknowledge that the information and details I have provided above are accurate and complete.
+                </label>
+            </div>
+
+            <button type="submit" class="custom-apply-btn1 mx-0">Submit</button>
+        </div>
+    </form>
+
+   <!-- <div id="thank-you-message" style="display: none;">
+        <h3>Thank you for applying!</h3>
+        <p>Thank you for applying! Your application has been successfully submitted. Your application ID is: <span id="app-id"></span>. Please keep this ID for future reference.</p>
+    </div> -->
+	<div id="thank-you-message" style="display: none;">
+    <h3>Thank you for applying to Jio-bp!</h3>
+    <p>We have successfully received your application for the position of <strong id="job-name"></strong> - <strong id="job-req-id"></strong>. Your unique applicant ID is <strong id="app-id"></strong>.</p>
+    <p>Our team will review your application, and if your qualifications match the requirements for the role, we will contact you for the next steps. We appreciate your interest in joining Jio-bp, and we wish you the best of luck throughout the selection process.</p>
+    <p>Thank you again for considering a career with us!</p>
+</div>
+
+</div>
+
+
+ 
+
+ 
+ 
+  </div>
+</div>
+
+
+                                            <script>
+
+                                                    var modal = document.getElementById("myModal");
+
+// Get all buttons that open the modal
+var btns = document.getElementsByClassName("apply-btn"); 
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// Function to open the modal
+function openModal() {
+    modal.style.display = "block";
+}
+
+// Add event listeners to all buttons
+for (var i = 0; i < btns.length; i++) {
+    btns[i].onclick = openModal;
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+                                                
+                                                    // Copy URL functionality
+                                                    document.getElementById("copyButton").addEventListener("click", function() {
+                                                        // Get the current URL
+                                                        const url = window.location.href;
+                                                
+                                                        // Create a temporary input element to hold the URL
+                                                        const tempInput = document.createElement("input");
+                                                        tempInput.value = url;
+                                                        document.body.appendChild(tempInput);
+                                                
+                                                        // Select and copy the URL
+                                                        tempInput.select();
+                                                        tempInput.setSelectionRange(0, 99999); // For mobile devices
+                                                        document.execCommand("copy");
+                                                
+                                                        // Remove the temporary input element
+                                                        document.body.removeChild(tempInput);
+                                                
+                                                        // Show confirmation message
+                                                        const message = document.getElementById("copyMessage");
+                                                        message.style.display = "inline";
+                                                
+                                                        // Hide the message after 5 seconds
+                                                        setTimeout(() => {
+                                                            message.style.display = "none";
+                                                        }, 5000);
+                                                    });
+
+                                                    document.getElementById('job-application-form').addEventListener('submit', function(event) {
+                                                        let isValid = true;
+                                                        
+                                                        // Validate file size (2MB max)
+                                                        
+                                                    
+                                                        // Check if all required fields are filled
+                                                        const fullName = document.getElementById('full-name').value.trim();
+                                                        if (fullName === '') {
+                                                            isValid = false;
+                                                            alert('Please enter your full name.');
+                                                        }
+                                                    
+                                                        const contactNumber = document.getElementById('contact-number').value;
+                                                        if (!/^[0-9]{10}$/.test(contactNumber)) {
+                                                            isValid = false;
+                                                            alert('Please enter a valid 10-digit contact number.');
+                                                        }
+                                                    
+                                                        const email = document.getElementById('email-address').value;
+                                                        if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email)) {
+                                                            isValid = false;
+                                                            alert('Please enter a valid email address.');
+                                                        }
+                                                    
+                                                        const privacyNotice = document.getElementById('privacy-notice').checked;
+                                                        if (!privacyNotice) {
+                                                            isValid = false;
+                                                            alert('You must acknowledge the privacy notice.');
+                                                        }
+                                                    
+                                                        // Prevent form submission if any validation fails
+                                                        if (!isValid) {
+                                                            event.preventDefault();
+                                                        }
+                                                    });
+                                                
+                                                
+                                            </script>
+
+
+<script>
+// Dummy job data array (jdList)
+const jdList = [
+    {
+        "jobId": 81321919,
+        "jobName": "Deputy General Manager - Lead Application Management - Freight Aggregation",
+	"postedDate":"Thursday, 08/10/2024",
+        "jobPurpose": [
+          "We are looking for an experienced candidate with strong knowledge of Micro Services Architecture.",
+          "Container and Orchestration tools is a MUST.",
+          "Responsible for designing and building solutions that ensure platform reliability, performance, security, troubleshooting, and resolving platform issues.",
+          "Hands-on with testing, debugging, and quality assurance.",
+          "Must be well-versed with DevOps.",
+          "Owning the development methodology.",
+          "Aligning with the vendor’s team to improve the development process, prioritize projects, and manage multiple work streams.",
+          "ML/AI exposure would be a value add to the profile."
+        ],
+        "jobAccountability": [
+          "Exposure to ETL, Data Analysis, Image & Video processing, Algorithm development.",
+          "Experience in Java/Python/Julia/TypeScript/Scala.",
+          "Conduct research to stay up-to-date with the latest AI technologies and development and apply this knowledge to develop new AI capabilities.",
+          "Provide innovative and optimized solutions for assigned features.",
+          "Authentication standards and protocols (OAuth2).",
+          "Knowledge of CI/CD pipeline with Maven, Jenkins, Nexus.",
+          "Hands-on experience in developing scalable and robust RESTful APIs.",
+          "Hands-on experience with frameworks: Spring, Hibernate, JPA.",
+          "Deep knowledge of REST/SOAP.",
+          "Experience with Spring Boot, Microservice, Message Queues, SQL.",
+          "Experience on Microsoft Azure App Services.",
+          "Strong experience using BDD and TDD approaches and tooling.",
+          "Ensure timely release of committed features with very high quality.",
+          "Help improve the overall experience of our product through improving the quality of features both in group and features that benefit other groups.",
+          "Agile software development experience.",
+          "Knowledge of Containerized Deployment – Docker, Kubernetes.",
+          "Clean Coding/Refactoring.",
+          "Unit testing.",
+          "Code Review.",
+          "Documentation."
+        ],
+        "jobQualification": [
+            "Experience - 10 – 15 years","Qualification - BE/B.Tech"
+        ],
+        "skillsRequired": [
+          {
+            "name": "Primary Skill",
+            "description": "Experience in JAVA, J2EE, Java - Spring, Java - Spring boot, AWS, Multi-threading, Big Data - Hadoop, Kafka, Scala, Spark, Payment Gateway, Server-less architecture, Blockchain, Performance & Scaling, etc."
+          },
+          {
+            "name": "Secondary Skill",
+            "description": "Azure, AWS Services, Structured & Non-Structured Databases, Docker, Kubernetes, Confluent Kafka."
+          },
+          {
+            "name": "Feature Delivery",
+            "description": "Experience of owning and delivering complex features for various components of a cloud-based platform is highly desired."
+          },
+          {
+            "name": "Algorithm Skills",
+            "description": "Very good algorithm and data structure skills."
+          },
+          {
+            "name": "Testing Frameworks",
+            "description": "Experience with platforms like Azure and testing frameworks and methodologies."
+          }
+        ]
+      },
+      {
+        "jobId": 81721961,
+        "jobName": "Senior Manager - Data Analyst",
+	 "postedDate":"Thursday, 08/10/2024",
+        "jobPurpose": [
+          "A highly skilled and motivated Data Scientist to join our dynamic team.",
+          "The ideal candidate will have a strong background in data analysis, statistical modeling, and machine learning.",
+          "Passion for using data to drive business decisions and innovations.",
+          "You will work closely with cross-functional teams to analyze complex datasets, build predictive models, and deliver actionable insights that help shape the future of our organization."
+        ],
+        "jobAccountability": [
+          "Lead the development, training, and deployment of machine learning models to solve complex problems.",
+          "Develop and deploy NLP-based solutions for a wide range of text analytics tasks, including natural language understanding (NLU), sentiment analysis, text classification, and entity recognition.",
+          "Build and refine chatbots, virtual assistants, and other conversational AI applications that use natural language generation (NLG) and dialogue management systems.",
+          "Lead the development and implementation of Computer Vision models to address image and video processing tasks, such as object detection, segmentation, and tracking.",
+          "Utilize CNNs (Convolutional Neural Networks), transformers, and generative models to develop solutions for real-time applications in image recognition, facial recognition, and video analytics.",
+          "Develop and execute a data strategy that aligns with long-term business goals, ensuring that AI/ML and NLP solutions add measurable value to business processes.",
+          "Data Analysis.",
+          "Model Building.",
+          "Reporting & Visualization.",
+          "Work closely with product managers, engineers, and other stakeholders to understand business requirements."
+        ],
+        "jobQualification": [
+            "Experience - 6 – 9 years","Qualification - BE/B.Tech"
+        ],
+        "skillsRequired": [
+          {
+            "name": "Primary Skill",
+            "description": "Python, R, Statistical Techniques, Machine Learning Algorithms"
+          },
+          {
+            "name": "Secondary Skill",
+            "description": "Azure, Hadoop/Spark, Tableau/Power BI, Development Practices"
+          },
+          {
+            "name": "Machine Learning Techniques",
+            "description": "Techniques like decision trees, random forests, SVMs, and clustering techniques."
+          }
+        ]
+      },
+      {
+        "jobId": 81627576,
+        "jobName": "Senior Manager - Lead Analyst",
+	 "postedDate":"Thursday, 08/10/2024 ",
+        "jobPurpose": [
+          "Full Stack Developer with 10+ Years of Experience in Application development and maintenance.",
+          "Hands on experience in Angular, .Net Core, Web API, Oracle or MS SQL.",
+          "Experienced in Agile, Waterfall, DevOps mode of software delivery process.",
+          "Good experience in coordinating and working with developers (Offshore and Onsite) and End Users in Team based environment.",
+          "Self-motivated team member possessing communication, analytical and innovative skills that have been leveraged to deliver on-schedule and to initiate consistent and progressive work by all team members."
+        ],
+        "jobAccountability": [
+          "Full Software Development Lifecycle (SDLC) Participation.",
+          "Requirement Analysis: Collaborate with stakeholders, project managers, and business analysts to understand the functional and non-functional requirements of a project.",
+          "Design: Create architectural designs for scalable, efficient, and maintainable web applications. Participate in discussions regarding the technical stack and ensure adherence to best practices.",
+          "Development: Write clean, maintainable, and well-documented code for both front-end (UI) and back-end (business logic, database) components using .NET technologies.",
+          "Back-End Development.",
+          "API and Microservices Development: Build and maintain APIs, services, and business logic using .NET (ASP.NET Core or MVC).",
+          "Database Management: Design and implement databases, manage data access layers, and ensure secure and efficient data storage and retrieval (using SQL Server, Entity Framework, etc.)."
+        ],
+        "jobQualification": [
+            "Experience - 10 – 15 years","Qualification - Graduate from a reputed/recognized institute (BE/B. Tech in IT / Computer Science Engineering"
+ 
+        ],
+        "skillsRequired": [
+          {
+            "name": "Core / Java 8+",
+            "description": "Development experience in Core / Java 8+ and J2EE."
+          },
+          {
+            "name": "Design Patterns",
+            "description": "Experience in Design Patterns."
+          },
+          {
+            "name": "Technical Documentation",
+            "description": "Experience in design and technical documentation."
+          },
+          {
+            "name": "Spring Boot and Microservices",
+            "description": "Experience in Spring boot and microservices."
+          },
+          {
+            "name": "DevOps",
+            "description": "Strong understanding of DevOps, CI/CD, TDD/BDD, Monitoring, Alerting, logging, operational support models, Resilience, Scaling and Continuous planning."
+          },
+          {
+            "name": "Cloud Technologies",
+            "description": "Strong understanding on any cloud technologies (AWS/Azure/JCP) and container platform like Kubernetes involving in application and infrastructure design."
+          }
+        ]
+      },
+      {
+        "jobId": 81543177,
+        "jobName": "Senior Mangaer - Video Analytics & IoT Solution - Instrument Automation",
+	 "postedDate":"Thursday, 08/10/2024 ",
+        "jobPurpose": [
+          "The role will be responsible for evaluation and implementation of new Innovative technologies for Jio-bp.",
+          "This includes Automation, CCTV Surveillance, Video Analytics, AR/VR, AI & ML and Digital Technology Solutions team within all Jio-bp domains.",
+          "The ideal candidate will be responsible for managing and enhancing our surveillance systems.",
+          "This middle management role requires a combination of technical acumen, leadership abilities, and industry expertise."
+        ],
+        "jobAccountability": [
+          "Leadership & Management: Lead, develop, and manage a team of surveillance and digital technology professionals, fostering a collaborative and innovative environment.",
+          "Surveillance Strategy: Develop and implement comprehensive CCTV surveillance strategies to ensure the security and safety of retail operations.",
+          "Video Analytics: Utilize advanced video analytics to gather insights and enhance decision-making processes related to security, customer behavior, and operational efficiency.",
+          "Digital Technology Integration: Drive the integration of digital technologies to streamline operations, improve customer experiences, and increase overall efficiency.",
+          "Project Management: Plan, execute, and oversee projects related to surveillance and digital technology solutions, ensuring timely and successful completion within budget.",
+          "Stakeholder Collaboration: Work closely with internal stakeholders, including operations, IT, and senior management, to align technology initiatives with business objectives.",
+          "Vendor Management: Manage relationships with external vendors and service providers, ensuring the delivery of high-quality and cost-effective solutions.",
+          "Continuous Improvement: Identify and implement opportunities for continuous improvement in surveillance and digital technology processes.",
+          "Compliance & Safety: Ensure all systems and processes comply with relevant security, safety, and regulatory standards."
+        ],
+        "jobQualification": [
+            "Experience - At least 7-12 years of experience in CCTV surveillance, video analytics, and digital technology roles, preferably within the petro retail or a similar industry","Qualification - Bachelor’s degree in Instrumentation, Information Technology, Computer Science, Engineering, or a related field."
+        ],
+ 
+        "skillsRequired": [
+          {
+            "name": "Technical Expertise",
+            "description": "Deep understanding of CCTV surveillance systems, video analytics, and digital technology solutions relevant to the petro retail industry."
+          },
+          {
+            "name": "Leadership Skills",
+            "description": "Strong leadership and team management capabilities, with the ability to inspire and guide a diverse team."
+          },
+          {
+            "name": "Analytical Skills",
+            "description": "Excellent analytical and problem-solving skills, with the ability to derive actionable insights from video data."
+          },
+          {
+            "name": "Project Management",
+            "description": "Proficient in project management practices and tools, with a proven track record of successfully managing complex projects."
+          },
+          {
+            "name": "Communication Skills",
+            "description": "Exceptional verbal and written communication skills, with the ability to convey technical information to non-technical stakeholders."
+          },
+          {
+            "name": "Industry Knowledge",
+            "description": "Solid understanding of the petro retail industry, including current trends, challenges, and regulatory requirements."
+          },
+          {
+            "name": "Education",
+            "description": "Bachelor’s degree in Instrumentation, Information Technology, Computer Science, Engineering, or a related field."
+          },
+          {
+            "name": "Experience",
+            "description": "At least 7-12 years of experience in CCTV surveillance, video analytics, and digital technology roles, preferably within the petro retail or a similar industry."
+          },
+          {
+            "name": "Proven Track Record",
+            "description": "Demonstrated success in leading teams, implementing surveillance and digital technology solutions, and achieving operational improvements."
+          },
+          {
+            "name": "Technical Skills",
+            "description": "Proficiency with surveillance software, video analytics tools, and relevant digital technology platforms."
+          }
+        ]
+      },
+      {
+        "jobId": 81685055,
+        "jobName": "Deputy Genaral Manager - Lead Product Development - Mobile Fueling",
+	 "postedDate":"Thursday, 08/10/2024 ",
+        "jobPurpose": [
+          "We are seeking an experienced B2C Digital Platform Technology Lead with over 10 years of expertise in .NET Core, Node.js, and database technologies like Oracle/MySQL.",
+          "The ideal candidate will drive solution design, platform architecture, DevOps processes, manage data-intensive applications.",
+          "The role involves requirement management, leading a team, overseeing code releases, resolving conflicts, and deploying.",
+          "If you have a proven track record in these areas and a passion for leading innovative digital solutions, we encourage you to apply."
+        ],
+        "jobAccountability": [
+          "Full Software Development Lifecycle (SDLC) Participation",
+          "Have good understanding of B2C digital platforms, solutions and processes.",
+          "Drive solution design and technical architecture of digital platform",
+          "Drive business critical / strategic platform dev projects as per operating plan.",
+          "Ensure business continuity and high availability of business applications as per SLA",
+          "Ensure on time delivery of business requirements.",
+          "Must be a good Team Player with team leading capabilities.",
+          "Education: Engineering Degree in any stream such as Instrumentation, Information Technology, Computer Science, Engineering, or a related field.",
+          "Over 10 years of experience in .NET Core, Node.js, and RDBMS"
+        ],
+        "jobQualification": [
+            "Experience - 10 years of experience in .NET Core, Node.js, and RDBMS","Qualification - Engineering Degree in any stream such as Instrumentation, Information Technology, Computer Science, Engineering, or a related field."
+        ],
+        "skillsRequired": [
+          {
+            "name": "DevOps Processes",
+            "description": "Proven expertise in driving DevOps processes and practices."
+          },
+          {
+            "name": "Angular and PWA",
+            "description": "Proficient in Angular and Progressive Web Apps (PWA)."
+          },
+          {
+            "name": "Web Services and APIs",
+            "description": "Extensive experience with Web Services, WebAPI, and REST APIs."
+          },
+          {
+            "name": "Database Knowledge",
+            "description": "In-depth knowledge of Oracle/SQL Server databases, query design, procedures, functions."
+          },
+          {
+            "name": "Release Management",
+            "description": "Skilled in release management, including merging, conflict resolution, and deployment."
+          },
+          {
+            "name": "Publishing Experience",
+            "description": "Experience with publishing on Linux/Ubuntu, IIS, and NGINX is preferred."
+          }
+        ]
+      },
+      {
+        "jobId": 81677157,
+        "jobName": "Senior Manager - Fullstack Developer -Mobile Fueling",
+	 "postedDate":"Thursday, 08/10/2024 ",
+        "jobPurpose": [
+          "Full Stack Developer with 10+ Years of Experience in Application development and maintenance",
+          "Hands on experience in Angular, .Net Core, Web API, Oracle or MS SQL",
+          "Experienced in Agile, Waterfall, DevOps mode of software delivery process.",
+          "Good experience in coordinating and working with developers (Offshore and Onsite) and End Users in Team based environment.",
+          "Self-motivated team member possessing communication, analytical and innovative skills that have been leveraged to deliver on-schedule and to initiate consistent and progressive work by all team members."
+        ],
+        "jobAccountability": [
+          "Full Software Development Lifecycle (SDLC) Participation",
+          "Requirement Analysis: Collaborate with stakeholders, project managers, and business analysts to understand the functional and non-functional requirements of a project.",
+          "Design: Create architectural designs for scalable, efficient, and maintainable web applications. Participate in discussions regarding the technical stack and ensure adherence to best practices.",
+          "Development: Write clean, maintainable, and well-documented code for both front-end (UI) and back-end (business logic, database) components using .NET technologies.",
+          "Back-End Development",
+          "API and Microservices Development: Build and maintain APIs, services, and business logic using .NET (ASP.NET Core or MVC).",
+          "Database Management: Design and implement databases, manage data access layers, and ensure secure and efficient data storage and retrieval (using SQL Server, Entity Framework, etc.)."
+        ],
+        "jobQualification": [
+            "Experience - 10 – 15 years","Qualification - Graduate from a reputed/recognized institute (BE/B. Tech in IT / Computer Science Engineering)"
+        ],
+        "skillsRequired": [
+          {
+            "name": "Core / Java 8+",
+            "description": "Development experience in Core / Java 8+ and J2EE."
+          },
+          {
+            "name": "Design Patterns",
+            "description": "Experience in Design Patterns."
+          },
+          {
+            "name": "Design and Technical Documentation",
+            "description": "Experience in design and technical documentation."
+          },
+          {
+            "name": "Spring Boot and Microservices",
+            "description": "Experience in Spring boot and microservices."
+          },
+          {
+            "name": "DevOps and CI/CD",
+            "description": "Strong understanding of DevOps, CI/CD, TDD/BDD, Monitoring, Alerting, logging, operational support models, Resilience, Scaling and Continuous planning."
+          },
+          {
+            "name": "Cloud Technologies",
+            "description": "Strong understanding on any cloud technologies (AWS/Azure/JCP) and container platform like Kubernetes involving in application and infrastructure design."
+          }
+        ]
+        },
+ 
+        {
+        "jobId": 81300056,
+        "jobName": "Senior Manager  - Procurement",
+	 "postedDate":"Thursday, 08/10/2024 ",
+        "jobPurpose": [
+          "Sourcing requirements within P&C team also using effective and consistent sourcing processes and methodologies and in alignment to defined category strategies.",
+          "Actively participate during understanding requirements, negotiation with vendors, execution of orders, post award contract management, supplier relationship management."
+        ],
+        "jobAccountability": [
+          "Sourcing of critical Mechanical items in alignment with Category Management.",
+  "Develop demand profile.",
+  "Specify sourcing events.",
+  "Technical & price evaluation.",
+  "Preparing for negotiation & selection of suppliers for major items.",
+  "Ensure & review PO generation.",
+  "Understand requirements for services and item procurement for the critical Mechanical items and provide inputs to stakeholders in defining overall procurement strategy.",
+  "Execute Orders & Coordinate Expediting.",
+  "Monitor post-award project management.",
+  "Manage Change Order Process.",
+  "Manage Supplier Relationships at working Level.",
+  "Use technology extensively to increase efficiency & control costs."
+        ],
+	"jobQualification": [
+            "Qualification: Mechanical Engineer.",
+  "Experience: 7 to 10 years."
+        ],
+        "skillsRequired": [
+           {
+            "name": "Mechanical Procurement",
+            "description": "8yrs, Strategic Sourcing, Negotiation Skills, Purchase Planning, Procurement, Pricing ​"
+          },
+        ]
+        },
+ 
+        {
+        "jobId": 81572374,
+        "jobName": "Area Business Manager - Freight Aggregation",
+	 "postedDate":"Thursday, 08/10/2024 ",
+        "jobPurpose": [
+          "The Area Business Manager is responsible for driving business growth and profitability across assigned regions.",
+          "This role involves developing and executing strategic plans, managing relationships with key clients and stakeholders, and leading a team to achieve sales targets and operational excellence.",
+          "The Area Business Manager will analyze market trends, identify opportunities for expansion, and ensure that all business activities align with the company's vision and values."
+        ],
+        "jobAccountability": [
+          "Market combing - Identify, engage and convert new shipment opportunities from MSME shippers and increase wallet share with existing customers.",
+          "Responsible for complete cycle of demand acquisition and revenue generation for a set of customers in defined industry segments.",
+          "Responsible for driving revenues and growing the market share as per targets assigned for particular micro-markets in the cluster.",
+          "Coordinate with Clients and Supply team for transportation of shipment.",
+          "Ensure proper documentation for on-boarding shipper.",
+          "Build strategies to increase trips, yield and repeat shipments from existing customers, and ensure <5% dormant accounts.",
+          "Generate market intelligence of the assigned area.",
+          "Responsible for sales outstanding Collections & Sales Recovery."
+        ],
+        "jobQualification": [
+            "Experience - 5-8 Years of experience in sales","Qualification - Graduation or Post Graduation (MBA)"
+        ],
+        "skillsRequired": [
+          {
+            "name": "A Go-Getter",
+            "description": "You are a highly driven individual who goes that extra mile to decide on the strategic direction of the business."
+          },
+          {
+            "name": "Analytical and a Problem Solver",
+            "description": "Thinker and problem solver."
+          },
+          {
+            "name": "Ownership",
+            "description": "Entrepreneurial mindset."
+          },
+          {
+            "name": "Adaptable",
+            "description": "You demonstrate the ability to work in a fast paced and hyper-growth environment where the requirements are constantly changing."
+          },
+          {
+            "name": "A Technology Geek",
+            "description": "You are fanatical about technology and are always on the lookout for newer better ways of building solutions."
+          },
+          {
+            "name": "A Team Builder",
+            "description": "You are a go-to person and can work with different teams. A hands-on collaborative style of working is a must!"
+          }
+        ]
+      },
+     
+      {
+        "jobId": 81197904,
+        "jobName": "Network Development Senior Manager - Retail",
+	 "postedDate":"Thursday, 08/10/2024 ",
+        "jobPurpose": [
+          "Bringing Revenue to the company"
+        ],
+        "jobAccountability": [
+          "Job Accountabilities & Responsibilities",
+          "Network Expansion / Business Development",
+          "Evaluate and analyse un-represented / under-represented Markets to Identify potential business opportunities for setting up new sites.",
+          "Network Expansion / Business Development",
+          "Evaluate and analyse un-represented / under-represented Markets to Identify potential business opportunities for setting up new sites.",
+          "Network Expansion / Business Development",
+          "Evaluate and analyse un-represented / under-represented Markets to Identify potential business opportunities for setting up new sites."
+        ],
+        "jobQualification": [
+            "Experience - 5+ years","Qualification - MBA / Btech – Ful time"
+        ],
+        "skillsRequired": [
+          {
+            "name": "Sales",
+            "description": "Experience in handling sales activities and bringing in revenue."
+          },
+          {
+            "name": "Channel Sales",
+            "description": "Involvement in channel sales processes and developing partnerships."
+          },
+          {
+            "name": "BD",
+            "description": "Business development skills to identify and grow new opportunities."
+          }
+        ]
+      },
+     
+ 
+        {
+            "jobId": 81623067,
+            "jobName": "Senior Key Account Manager - Retail",
+	     "postedDate":"Thursday, 08/10/2024 ",
+            "jobPurpose": [
+              "Bringing Revenue to the company",
+              "Selling to Transconnect",
+              "Selling to Fleets"
+            ],
+            "jobAccountability": [
+              "Network Expansion / Business Development",
+              "Evaluate and analyse un-represented / under-represented Markets to Identify potential business opportunities for setting up new sites."
+            ],
+            "jobQualification": [
+            "Experience - 5+ years","Qualification - MBA / Btech – Ful time"
+        ],
+            "skillsRequired": [
+              {
+                "name": "Sales",
+                "description": "Experience in driving sales and revenue generation."
+              },
+              {
+                "name": "Channel Sales",
+                "description": "Ability to work with channel partners to grow the business."
+              },
+              {
+                "name": "BD",
+                "description": "Strong business development skills in identifying new markets."
+              }
+            ]
+          },
+         
+ 
+        {
+        "jobId": 81446837,
+        "jobName": "Senior Manager - Network Development - Pulse",
+	 "postedDate":"Thursday, 08/10/2024 ",
+        "jobPurpose": [
+         
+        ],
+        "jobAccountability": [
+ 
+        ],
+        "skillsRequired": [
+           
+        ]
+        },
+        {
+            "jobId": 81642476,
+            "jobName": "Field Engineer - EV/BSS - EPC",
+	     "postedDate":"Thursday, 08/10/2024 ",
+            "jobPurpose": [
+              "Coordinate among internal and external stakeholders in Projects, Contractors & Operations teams for smooth & efficient commissioning of charging stations.",
+              "Implement RBML Quality & HSSE Management at Project sites involving electrical and civil construction activities.",
+              "Perform Risk Management."
+            ],
+            "jobAccountability": [
+              "Project completion on time, within the budget.",
+              "Ensure availability on time, the materials and manpower for construction activities.",
+              "Ensure implementation of uniform procedures, methods & control philosophies.",
+              "Review, control & ensure optimal value on time, cost, resources, safety & quality parameters.",
+              "Prepare, coordinate & control schedule for all project activities.",
+              "Prepare MIS reports.",
+              "Manage Construction at sites.",
+              "Coordinate among internal and external stakeholders in Projects, Contractors & Operations teams for smooth & efficient commissioning of charging stations.",
+              "Implement RBML Quality & HSSE Management at Project sites involving electrical and civil construction activities.",
+              "Perform Risk Management.",
+              "Direct site supervision, Installation, Testing & Commissioning of EV Charging stations, clearing punch points & hand over to O&M team.",
+              "Timely contractor’s work certification."
+            ],
+            "jobQualification": [
+            "Experience - 6 to 8 years related works experience","Qualification - BE/BTech – Electrical / Civil / Mechanical"
+        ],
+            "skillsRequired": [
+              {
+                "name": "Electrical Distribution Systems",
+                "description": "Knowledge of HT/LT electrical distribution systems like HT/LT Power cable, Cable tray, Earthing, UPS, Lighting system etc."
+              },
+              {
+                "name": "Power Transformers & HT/LT Switchboards",
+                "description": "Installation of Power Transformers, HT/LT Switchboards, HT Meters & familiar with DISCOM practices for getting power connection."
+              },
+              {
+                "name": "Civil Engineering",
+                "description": "Basic knowledge & understanding of civil engineering, civil foundations & structural steel work."
+              },
+              {
+                "name": "Automotive & Electric Vehicle Industry",
+                "description": "Knowledge and understanding of the automotive OEM industry and electric vehicle industry."
+              },
+              {
+                "name": "Mobility Services & EV Technology",
+                "description": "Knowledge of mobility services & electric vehicle technology."
+              },
+              {
+                "name": "Medium Voltage Electric Infrastructure",
+                "description": "Experience delivering Medium Voltage electric infrastructure projects in an on-site project execution role."
+              },
+              {
+                "name": "Solar Projects & EV Charging Infrastructure",
+                "description": "Preferred experience with solar projects execution, EV charging infrastructure projects execution, or execution experience in related fields."
+              },
+              {
+                "name": "Travel",
+                "description": "Willing to travel to sites as per project requirements."
+              }
+            ]
+          },
+          {
+            "jobId": 81753641,
+            "jobName": "TL Network Planning (Network Development)",
+	     "postedDate":"Thursday, 08/10/2024 ",
+            "jobPurpose": [
+              "Bringing Revenue to the company"
+            ],
+            "jobAccountability": [
+              "Network Expansion / Business Development",
+              "Evaluate and analyse un-represented / under-represented Markets to Identify potential business opportunities for setting up new sites.",
+              "TL Network Planning (Network Development)",
+              "Devise Network plans for assigned Regions and implement at field level through BD team.",
+              "Interphase with respective regions / various stake holders including external agencies to develop Network Planning Tool to identify stretches for network expansion."
+            ],
+            "jobQualification": [
+            "Experience - 5+ years","Qualification - MBA / Btech – Full time"
+        ],
+            "skillsRequired": [
+              {
+                "name": "Sales",
+                "description": "Ability to manage and drive sales operations across channels."
+              },
+              {
+                "name": "Channel Sales",
+                "description": "Experience in managing sales through various distribution channels."
+              },
+              {
+                "name": "BD",
+                "description": "Expertise in business development and expanding the network."
+              }
+            ]
+          },
+          {
+            "jobId": 30331926,
+            "jobName": "Area Supply Manager",
+	     "postedDate":"Thursday, 08/10/2024 ",
+            "jobPurpose": [
+              "The Area Supply Manager is responsible for driving business growth and profitability across assigned regions.",
+              "This role involves developing and executing strategic plans, managing relationships with Truck owners, and leading a team to achieve sales targets and operational excellence.",
+              "The Area Supply Manager will analyze market trends, identify opportunities for expansion, and ensure that all business activities align with the company's vision and values."
+            ],
+            "jobAccountability": [
+              "Responsible for managing fleet of 25-50 at micro-market levels and managing 5-10 freight promoters.",
+              "On-board Freight Promoters and Owner-cum-drivers on the platform.",
+              "Responsible for driving operations metrics (such as loading and unloading detention, Pod uploads etc.).",
+              "Train Freight Promoters in selling ancillary services.",
+              "Manage monthly billing of vendors, Freight Promoters; Provide ad-hoc vehicles at lower-than mandi rates.",
+              "Ensuring 100% compliance with necessary documentation."
+            ],
+            "jobQualification": [
+            "Experience - 5-8 Years of experience in sales","Qualification - Graduation or Post Graduation (MBA)"
+        ],
+            "skillsRequired": [
+              {
+                "name": "Go-Getter",
+                "description": "You are a highly driven individual who goes that extra mile to decide on the strategic direction of the business."
+              },
+              {
+                "name": "Analytical and Problem Solver",
+                "description": "Thinker and problem solver."
+              },
+              {
+                "name": "Ownership",
+                "description": "Entrepreneurial mindset."
+              },
+              {
+                "name": "Adaptable",
+                "description": "You demonstrate the ability to work in a fast paced and hyper-growth environment where the requirements are constantly changing."
+              },
+              {
+                "name": "Technology Geek",
+                "description": "You are fanatical about technology and are always on the look-out of newer better ways of building solutions."
+              },
+              {
+                "name": "Team Builder",
+                "description": "You are a go to person and can work with different teams. A hands-on collaborative style of working is a must!"
+              }
+            ]
+          }
+         
+         
+];
+ 
+ 
+// Extract job ID from URL
+
+const urlParams = new URLSearchParams(window.location.search);
+
+const jobId = parseInt(urlParams.get('id'), 10);
+ 
+// Find the job with matching ID
+
+const job = jdList.find(job => job.jobId === jobId);
+ 
+if (job) {
+
+    // Populate job name
+
+    document.getElementById('job-title').textContent = job.jobName;
+ 
+    // Populate posted date
+
+    document.getElementById('posted-date').textContent = job.postedDate;
+ 
+    // Populate job purpose (string array)
+
+    const jobPurposeEl = document.getElementById('job-purpose');
+
+    job.jobPurpose.forEach(purpose => {
+
+        const li = document.createElement('li');
+
+        li.textContent = purpose;
+
+        jobPurposeEl.appendChild(li);
+
+    });
+ 
+    // Populate job accountabilities (string array)
+
+    const jobAccountabilitiesEl = document.getElementById('job-accountabilities');
+
+    job.jobAccountability.forEach(accountability => {
+
+        const li = document.createElement('li');
+
+        li.textContent = accountability;
+
+        jobAccountabilitiesEl.appendChild(li);
+
+    });
+ 
+    // Populate qualifications (string array)
+
+    const jobQualificationEl = document.getElementById('job-qualification');
+
+    job.jobQualification.forEach(qual => {
+
+        const li = document.createElement('li');
+
+        li.textContent = qual;
+
+        jobQualificationEl.appendChild(li);
+
+    });
+ 
+    // Populate skills required (JSON object array)
+
+    const skillsRequiredEl = document.getElementById('skills-required');
+
+    job.skillsRequired.forEach(skill => {
+
+        const li = document.createElement('li');
+
+        li.innerHTML = `<strong>${skill.name}:</strong> ${skill.description}`;
+
+        skillsRequiredEl.appendChild(li);
+
+    });
+
+} else {
+
+    console.error("Job not found!");
+
+}
+
+ 
+</script>
+<script>
+window.onload = function() {
+    // Date of Birth Validation (18 to 60 years)
+    const dobInput = document.getElementById('dob');
+    const today = new Date();
+    
+    // Calculate the max date (60 years ago)
+    const maxDate = new Date(today);
+    maxDate.setFullYear(today.getFullYear() - 18); // Max age 60
+    dobInput.max = maxDate.toISOString().split('T')[0];  // Set max date (18 years ago)
+
+    // Calculate the min date (18 years ago)
+    const minDate = new Date(today);
+    minDate.setFullYear(today.getFullYear() - 60); // Min age 18
+    dobInput.min = minDate.toISOString().split('T')[0]; // Set min date (60 years ago)
+
+    // File Size Validation for Resume Upload
+    const fileInput = document.getElementById('resume-upload');
+    const fileNameDisplay = document.getElementById('file-name');
+    const errorMessage = document.getElementById('error-message');
+
+
+    <article class="custom-article">
+    <h1>{{ node.title.value }}</h1>
+    <div class="content">
+    {{ content.body }}
+    </div>
+    </article>
+    
+    // Listen for file input changes
+    fileInput.addEventListener('change', function() {
+        const file = fileInput.files[0]; // Get the selected file
+
+        // If a file is selected
+        if (file) {
+            // Log the file size to the console
+            console.log('File Size:', file.size);
+
+            // Display the selected file name
+            fileNameDisplay.textContent = file.name;
+
+            // Check the file size (in bytes)
+            const fileSize = file.size; // Size in bytes
+            const maxSize = 2 * 1024 * 1024; // 2 MB in bytes
+
+
+            {% if node.id == '396' %}
+  <article class="custom-node">
+    <h1>{{ node.title.value }}</h1>
+    <div class="content">
+      {{ content.body }}
+    </div>
+  </article>
+{% elseif node.bundle == 'article' %}
+  <article class="article-node">
+    <h1>{{ node.title.value }}</h1>
+    <div class="content">
+      {{ content.body }}
+    </div>
+  </article>
+{% else %}
+  <article class="default-node">
+    <h1>{{ node.title.value }}</h1>
+    <div class="content">
+      {{ content.body }}
+    </div>
+  </article>
+{% endif %}
+
+
+            // Validate file size
+            if (fileSize > maxSize) {
+                console.log('File size exceeds limit'); // Log when file size exceeds limit
+                errorMessage.style.display = 'block'; // Show error message
+                fileInput.setCustomValidity('File size must be less than 2 MB'); // Block form submission
+            } else {
+                console.log('File size is within limit'); // Log when file size is valid
+                errorMessage.style.display = 'none'; // Hide error message
+                fileInput.setCustomValidity(''); // Clear custom validity
+            }
+        }
+    });
+};
+
+
+
+</script>

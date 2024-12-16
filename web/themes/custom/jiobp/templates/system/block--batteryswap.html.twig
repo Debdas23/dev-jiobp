@@ -1,0 +1,170 @@
+<section id="swap">
+      <div class="container -custom better">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="better_container">
+              <h2 class="title" data-aos="fade-up">{{ content.field_cbtitle.0 }}</h2>
+              <span class="pill_underline -bg_blue mx-auto" data-aos="fade-up"></span>
+            </div>
+          </div>
+          <div class="blue_patch" data-aos="fade-up"></div>
+          <div class="col-md-6 pdl-0">
+            <p class="subtitle" data-aos="fade-up">{{ content.field_cbtext.0 }}</p>
+            <img src="{{ content.field_cbupload_image.0 }}" data-aos="fade-up" alt="{{ content.field_cbtitle.0 }}">
+          </div>
+          <div class="col-md-6">
+            <p class="better_text" data-aos="fade-up">
+              {{ content.field_content.0|raw }}
+            </p>
+            <h3 class="better_list_title" data-aos="fade-up">Key differentiators of Battery Swap</h3>
+            <ul class="list-unstyled">
+                {% if content.field_features %}
+                    {% for key, item in content.field_features if key|first != '#' %}
+                    <li data-aos="fade-up">
+                        <img src="../themes/custom/jiobp/assets/images/fuels-at-jio-bp/icons/checked.svg" alt="" />
+                        <p class="list_text">{{ item['#paragraph'].field_cbftext[0].value|raw }}</p>
+                    </li>
+                    {% endfor %}
+                {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section>
+        <div class="container-fluid station" data-aos="fade-in">
+            <img src="assets/images/backgrounds/blue_curve_left.png" alt="" class="station_topImg" />
+
+         
+            <div class="container-fluid p-0">
+                <div class="container -custom station_container">
+                  
+                    <section class="pt-4 pb-4">
+                        <div class="contact__form2 contact__form">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <form method="post" novalidate class="contactForm">
+                                        <div class="form__grad">
+                                            <div class="form__top">
+                                                <h2 class="form__title">Locate a Battery Swap Station</h2>
+                                                <span class="pill_underline -bg_blue2 mb=0"></span>
+                                                <p class="form__title-para">Find the nearest one.</p>
+                                            </div>
+                                            <div class="form__inputs2 form__inputs">
+                                                <div class="form-group mb-0">
+                                                    <select class="form-control" id="stateSelect2">
+                                                        <option selected value="">Enter State</option>
+                                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                        <option value="Assam">Assam</option>
+                                                        <option value="Bihar">Bihar</option>
+                                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                                        <<option value="Delhi">Delhi</option>
+						 	<option value="Goa">Goa</option>
+                                                        <option value="Gujarat">Gujarat</option>
+                                                        <option value="Haryana">Haryana</option>
+                                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                        <option value="Jharkhand">Jharkhand</option>
+                                                        <option value="Karnataka">Karnataka</option>
+                                                        <option value="Kerala">Kerala</option>
+                                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                        <option value="Maharashtra">Maharashtra</option>
+                                                        <option value="Manipur">Manipur</option>
+                                                        <option value="Meghalaya">Meghalaya</option>
+                                                        <option value="Mizoram">Mizoram</option>
+                                                        <option value="Nagaland">Nagaland</option>
+                                                        <option value="Odisha">Odisha</option>
+                                                        <option value="Punjab">Punjab</option>
+                                                        <option value="Rajasthan">Rajasthan</option>
+                                                        <option value="Sikkim">Sikkim</option>
+                                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                                        <option value="Telangana">Telangana</option>
+                                                        <option value="Tripura">Tripura</option>
+                                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                        <option value="Uttarakhand">Uttarakhand</option>
+                                                        <option value="West Bengal">West Bengal</option>
+                                                    </select>
+                                                    <img src="/themes/custom/jiobp/assets/images/contact-us/dropdown.svg" alt=""
+                                                        class="select_arrow" />
+                                                </div>
+                                                <button type="button" class="show_result2 show_result">Show
+                                                    Results</button>
+                                            </div>
+                                            <div class="form__resetSec2 form__resetSec d-none">
+                                                <div class="tags">
+                                                    <div id="setstate2" class="tag">Karnataka</div>
+                                                </div>
+                                                <button type="button" class="reset_btn2 reset_btn">Reset</button>
+                                            </div>
+                                        </div>
+                                        <div class="form__results2 form__results invert1 d-none">
+                                            <div class="result_card">
+                                                <h3 class="result_card_title">Doddaballapur - Bangalore - Rural</h3>
+                                                <div class="result_card_ro">
+                                                    <div class="ro_">
+                                                        Lorem ipsum dolor sit amet,<br /> consectetur adipiscing
+                                                        elit,<br /> sed do eiusmod magna aliqua.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="result_card">
+                                                <h3 class="result_card_title">Doddaballapur - Bangalore - Rural</h3>
+                                                <div class="result_card_ro">
+                                                    <div class="ro_">
+                                                        Lorem ipsum dolor sit amet,<br /> consectetur adipiscing
+                                                        elit,<br /> sed do eiusmod magna aliqua.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="result_card">
+                                                <h3 class="result_card_title">Doddaballapur - Bangalore - Rural</h3>
+                                                <div class="result_card_ro">
+                                                    <div class="ro_">
+                                                        Lorem ipsum dolor sit amet,<br /> consectetur adipiscing
+                                                        elit,<br /> sed do eiusmod magna aliqua.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-7" id="map_canvas2" style="border-radius: 10px;">
+                                    <img src="assets/images/contact-us/group_11668.png" alt="" class="iframe_map" />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <img src="assets/images/backgrounds/blue_curve_right.png" alt="" class="station_bottomImg" />
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://maps.google.co.in/maps/api/js?v=3.exp&sensor=false&key=AIzaSyDuq_o_RC-8qyLviXbOobDaLxGh8VvwHbc"></script>
+    <style>
+        #map_canvas1 .gm-style .gm-style-iw.gm-style-iw-c {
+            background: #0F09B9;
+            padding: 22px;
+            border-radius: 10px;
+            max-width: 400px !important;
+        }
+    </style>
+    <style>
+        .ev-charging #map_canvas1 .gm-style .gm-style-iw.gm-style-iw-c, .ev-charging #map_canvas2 .gm-style .gm-style-iw.gm-style-iw-c,
+        .ev-charging #map_canvas1 .gm-style .gm-style-iw-t::after, .ev-charging #map_canvas2 .gm-style .gm-style-iw-t::after,
+        .ev-charging #map_canvas1 .gm-style .gm-style-iw-t::before, .ev-charging #map_canvas2 .gm-style .gm-style-iw-t::before
+        {
+           background: #0F09B9 !important;
+        }
+        .gm-style-iw.gm-style-iw-c
+	{
+	    border: 1px solid #0F09B9 !important;
+	}
+        #map_canvas2 .gm-style .gm-style-iw.gm-style-iw-c {
+            background: #0F09B9;
+            padding: 22px;
+            border-radius: 10px;
+            max-width: 400px !important;
+        }
+    </style>

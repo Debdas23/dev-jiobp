@@ -1,0 +1,42 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'heretoserve',
+  ]
+%}
+{% block content %}
+<section class="castrol_brand" style="overflow-x: hidden">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2 class="block_info--title" data-aos="fade">
+            {{ content.field_cbtitle.0 }}
+          </h2>
+          <span class="pill_underline" data-aos="fade"></span>
+          <p class="block_info--desc" data-aos="fade">
+            {{ content.field_cbtext.0 }}
+          </p>
+
+          <div class="card_li" data-aos="patch-left">
+            <ul>
+            {% if content.field_features %}
+                {% for key, item in content.field_features if key|first != '#' %}
+                <li data-aos="fade">
+                    <img src="../themes/custom/jiobp/assets/images/fuels-at-jio-bp/icons/checked.svg" alt="jio-bp">
+                    {{ item['#paragraph'].field_cbftext[0].value|raw }}
+                </li>
+                {% endfor %}
+            {% endif %}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <picture>
+            <img src="{{ content.field_cbupload_image.0 }}" alt="{{ content.field_cbtitle.0 }}">
+          </picture>
+        </div>
+      </div>
+    </div>
+</section>
+{% endblock %}

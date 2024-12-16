@@ -1,0 +1,28 @@
+name: JIO-BP
+type: theme
+description: 'Custom Theme for JIO-BP.'
+package: Other
+core_version_requirement: ^8 || ^9
+libraries:
+- jiobp/global-styling
+
+base theme: bartik
+
+regions:
+  logo: 'Logo Area'
+  menu_area: 'Menu Area'
+  jio_social: 'Jio Social'
+  banner: 'Main Banner'
+  sidebar_first: 'Sidebar First Area'
+  content: 'Content Area'
+  sidebar_second: 'Sidebar Second Area'
+  why_jio: 'Why JIO'
+  here_to_serve: 'Here to Serve'
+  products_services: 'Products and Services'
+  offerings: 'Offerings'
+  hp_about: 'HP About'
+  jio_news: 'JIO News'
+  quick_overview: 'Quick Overview'
+  footer: 'Footer'
+  footer_bottom: 'Footer Bottom'
+  notice: 'Notice'

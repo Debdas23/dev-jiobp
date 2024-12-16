@@ -1,0 +1,99 @@
+<style>
+.queries-form .btn_sub {
+    position: relative;
+}
+.__uploading {
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+}
+.__uploading .uploading__circle {
+    background-color: #018837;
+}
+.queries-form .btn_sub:hover .__uploading .uploading__circle {
+    background-color: #fff;
+}
+</style>
+<section id="mediaQueries" class="mediaQueries jiobp_curve">
+    <div class="gap_60"></div>
+    <div class="container">
+        <div class="row" data-aos="fade-in">
+            <div class="col-md-12">
+                <h2 class="title" data-aos="fade-up">{{ content.field_mqtitle.0 }}</h2>
+                <div class="desc hidePart" data-aos="fade-up">
+                    {{ content.field_mqtext.0 }}
+                </div>
+                <div class="queries-detail hidePart" data-aos="fade-up">
+                    <div class="queries-detail--each">
+                        <span class="queries-detail--each-icon"><img src="themes/custom/jiobp/assets/images/news-room/email-icom.svg"
+                                class="img-fluid" alt=""></span>
+                        <a href="mailto:{{ content.field_email.0 }}"
+                            class="queries-detail--each-txt">{{ content.field_email.0 }}</a>
+                    </div>
+                </div>
+                <form id="queryForm" class="queries-form">
+                    <input type="hidden" name="action" value="Media Queries ">
+                    <input type="hidden" name="id" value="3">
+                    <div class="row">
+                        <div class="col-md-6 form-group" data-aos="fade-up">
+                            <input class="field" name="name" id="name" type="text" minlength="2" placeholder="Name"
+                                data-rule-required="true" data-msg-required="Please enter name"
+                                data-rule-notplaceholder="true" data-msg-notplaceholder="Please enter name">
+                            <span id="name_error"></span>
+                        </div>
+                        <div class="col-md-6 form-group" data-aos="fade-up">
+                            <input class="field" name="email" id="email" type="text" placeholder="Email Address"
+                                data-rule-required="true" data-msg-required="Please enter email"
+                                data-rule-notplaceholder="true" data-msg-notplaceholder="Please enter email"
+                                data-rule-email="true" data-msg-email="Please enter valid email id">
+                            <span id="email_error"></span>
+                        </div>
+                        <div class="col-md-12 form-group" data-aos="fade-up">
+                            <textarea class="field-textarea" name="message" id="message" placeholder="Write your message here"></textarea>
+                            <span id="message_error"></span>
+                        </div>
+                        <div class="col-md-12 form-group text-right" data-aos="fade-up">
+                            <!-- <button class="btn_sub" id="queryform_submit" type="submit2" value="Submit">Send</button> -->
+			    <button type="submit" class="btn_sub" id="queryform_submit" name="submit2" >
+              <span class="btn__text">Send</span>
+	      <div class="__uploading hide"><span class="uploading__circle"></span><span class="uploading__circle"></span><span class="uploading__circle"></span><span class="uploading__circle"></span></div>
+	    </button>
+                        </div>
+                    </div>
+                    <span class="validation_error redmessage" id="validation_error"></span>
+                    <div class="spinner-border text-secondary" style="display: none;"></div>
+                </form>
+                <div id="thanksMsg" class="thanksMsg">
+                    <div class="gap_60"></div>
+                    <h2>Thank you for sharing. We shall reach out to you with a timely response.</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gap_100"></div>
+</section>
+<section>
+    <div class="container">
+        <div class="swiper queriesSwiper" data-aos="fade-in">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="queries-slide-each">
+                        <picture data-aos="fade-in">
+                            <source media="(min-width:768px)" srcset="{{ content.field_upload_image.0 }}">
+                            <source media="(max-width:767px)" srcset="{{ content.field_upload_image.0 }}">
+                            <img src="{{ content.field_upload_image.0 }}" class="img-fluid" alt="">
+                        </picture>
+                        <div class="txt" >
+                            <p data-aos="fade-up">{{ content.field_mqbottom_text.0 }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+    <div class="gap_100"></div>

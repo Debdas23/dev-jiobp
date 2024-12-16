@@ -1,0 +1,146 @@
+.btn_green {
+  background: #129048;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 6px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  border: #129048 1px solid;
+  color: #fff;
+  min-width: 170px;
+  font-size: 18px;
+  @include easeInOut();
+
+  @media (max-width: 1500px) {
+    height: 45px;
+    font-size: 16px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #129048;
+  }
+}
+
+.btn_green_lg {
+  background: #129048;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 6px;
+  height: 74px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  border: #129048 1px solid;
+  color: #fff;
+  min-width: 280px;
+  font-size: 18px;
+  @include easeInOut();
+
+  @media (max-width: 1500px) {
+    height: 60px;
+    font-size: 16px;
+    min-width: 250px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #129048;
+  }
+}
+
+.btn_normal {
+  font-size: 18px;
+  color: #129048;
+  @include easeInOut();
+
+  @media (max-width: 1500px) {
+    font-size: 16px;
+  }
+
+  &:hover {
+    color: #129048;
+    opacity: 0.8;
+    text-decoration: none;
+  }
+}
+
+.btn_white_lg {
+  background: #fff;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 6px;
+  height: 74px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  border: #fff 1px solid;
+  color: #129048;
+  min-width: 280px;
+  font-size: 18px;
+  @include easeInOut();
+
+  @media (max-width: 1500px) {
+    height: 60px;
+    font-size: 16px;
+    min-width: 250px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background: #129048;
+    color: #fff;
+  }
+}
+
+.btn_transparent_lg {
+  background: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 6px;
+  height: 74px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  border: #fff 1px solid;
+  color: #fff;
+  min-width: 280px;
+  font-size: 18px;
+  @include easeInOut();
+
+  @media (max-width: 1500px) {
+    height: 60px;
+    font-size: 16px;
+    min-width: 250px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #129048;
+  }
+}
+.btn_gray {
+  background-color: $gray2;
+  font-family: JioType;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+  text-align: center;
+  color: $white;
+  min-width: 176px;
+  padding: 15px 32px;
+  border-radius: 80px;
+}

@@ -1,0 +1,40 @@
+{% set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'heretoserve',
+  ]
+%}
+{% block content %}
+<section class="our-feature">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="block_info--title" data-aos="fade-up">
+                    Benefits of CNG
+                </h2>
+                <span class="pill_underline" data-aos="fade-up"></span>
+            </div>
+        </div>
+        <div class="row">
+        {% if content.field_our_features %}
+            {% for key, item in content.field_our_features if key|first != '#' %}
+            <div class="col-md-4">
+                <div class="our_feature--card" data-aos="fade-up">
+                <picture data-aos="fade-up">
+                    <img src="{{ file_url(item['#paragraph'].field_oficon.entity.fileuri) }}" alt="{{ item['#paragraph'].field_oftitle[0].value|raw }}">
+                </picture>
+                <h3 class="card-title" data-aos="fade-up">
+                    {{ item['#paragraph'].field_oftitle[0].value|raw }}
+                </h3>
+                <p class="card-desc" data-aos="fade-up">
+                    {{ item['#paragraph'].field_oftext[0].value|raw }}
+                </p>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}
